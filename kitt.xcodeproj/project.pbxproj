@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A7ECCDC01F04C03000011805 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDBF1F04C03000011805 /* main.cpp */; };
+		A7ECCDC91F04C0F900011805 /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDC71F04C0F900011805 /* IReader.cpp */; };
+		A7ECCDCC1F04C55300011805 /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDCA1F04C55300011805 /* FileReader.cpp */; };
+		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
+		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,12 @@
 /* Begin PBXFileReference section */
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDBF1F04C03000011805 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A7ECCDC71F04C0F900011805 /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
+		A7ECCDC81F04C0F900011805 /* IReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IReader.hpp; sourceTree = "<group>"; };
+		A7ECCDCA1F04C55300011805 /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
+		A7ECCDCB1F04C55300011805 /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
+		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */,
+				A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +55,7 @@
 			children = (
 				A7ECCDBE1F04C03000011805 /* kitt */,
 				A7ECCDBD1F04C03000011805 /* Products */,
+				A7ECCDCD1F04CA1200011805 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +70,30 @@
 		A7ECCDBE1F04C03000011805 /* kitt */ = {
 			isa = PBXGroup;
 			children = (
+				A7ECCDC61F04C0C600011805 /* Content */,
 				A7ECCDBF1F04C03000011805 /* main.cpp */,
 			);
 			path = kitt;
+			sourceTree = "<group>";
+		};
+		A7ECCDC61F04C0C600011805 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				A7ECCDC71F04C0F900011805 /* IReader.cpp */,
+				A7ECCDC81F04C0F900011805 /* IReader.hpp */,
+				A7ECCDCA1F04C55300011805 /* FileReader.cpp */,
+				A7ECCDCB1F04C55300011805 /* FileReader.hpp */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		A7ECCDCD1F04CA1200011805 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */,
+				A7ECCDCF1F04CA1300011805 /* SDL2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7ECCDC91F04C0F900011805 /* IReader.cpp in Sources */,
+				A7ECCDCC1F04C55300011805 /* FileReader.cpp in Sources */,
 				A7ECCDC01F04C03000011805 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +256,10 @@
 		A7ECCDC41F04C03000011805 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					/opt/local/include,
 					/usr/include,
@@ -244,7 +283,10 @@
 		A7ECCDC51F04C03000011805 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					/opt/local/include,
 					/usr/include,

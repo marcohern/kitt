@@ -12,6 +12,8 @@
 		A7ECCDCC1F04C55300011805 /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDCA1F04C55300011805 /* FileReader.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
+		A7ECCDD91F05CC5900011805 /* Vector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDD71F05CC5900011805 /* Vector2D.cpp */; };
+		A7ECCDDC1F0608D900011805 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDDA1F0608D900011805 /* Matrix.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,10 @@
 		A7ECCDCB1F04C55300011805 /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		A7ECCDD71F05CC5900011805 /* Vector2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
+		A7ECCDD81F05CC5900011805 /* Vector2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2D.hpp; sourceTree = "<group>"; };
+		A7ECCDDA1F0608D900011805 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
+		A7ECCDDB1F0608D900011805 /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		A7ECCDBE1F04C03000011805 /* kitt */ = {
 			isa = PBXGroup;
 			children = (
+				A7ECCDD61F05CC2A00011805 /* Core */,
 				A7ECCDC61F04C0C600011805 /* Content */,
 				A7ECCDBF1F04C03000011805 /* main.cpp */,
 			);
@@ -94,6 +101,17 @@
 				A7ECCDCF1F04CA1300011805 /* SDL2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7ECCDD61F05CC2A00011805 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A7ECCDD71F05CC5900011805 /* Vector2D.cpp */,
+				A7ECCDD81F05CC5900011805 /* Vector2D.hpp */,
+				A7ECCDDA1F0608D900011805 /* Matrix.cpp */,
+				A7ECCDDB1F0608D900011805 /* Matrix.hpp */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +173,9 @@
 			files = (
 				A7ECCDC91F04C0F900011805 /* IReader.cpp in Sources */,
 				A7ECCDCC1F04C55300011805 /* FileReader.cpp in Sources */,
+				A7ECCDD91F05CC5900011805 /* Vector2D.cpp in Sources */,
 				A7ECCDC01F04C03000011805 /* main.cpp in Sources */,
+				A7ECCDDC1F0608D900011805 /* Matrix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

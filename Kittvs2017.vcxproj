@@ -82,6 +82,8 @@
     <ClCompile Include="kitt\main.cpp" />
     <ClCompile Include="kitt\Testing\Assert.cpp" />
     <ClCompile Include="kitt\Testing\Test.cpp" />
+    <ClCompile Include="kitt\Testing\TestSuite.cpp" />
+    <ClCompile Include="kitt\Tests\KittTestSuite.cpp" />
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +98,8 @@
     <ClInclude Include="kitt\Exceptions\KittException.hpp" />
     <ClInclude Include="kitt\Testing\Assert.hpp" />
     <ClInclude Include="kitt\Testing\Test.hpp" />
+    <ClInclude Include="kitt\Testing\TestSuite.hpp" />
+    <ClInclude Include="kitt\Tests\KittTestSuite.hpp" />
     <ClInclude Include="kitt\Tests\Vector2DTest.hpp" />
   </ItemGroup>
   <ItemGroup>

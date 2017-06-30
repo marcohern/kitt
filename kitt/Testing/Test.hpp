@@ -10,8 +10,8 @@ namespace Testing {
 
 	public:
 
-		virtual void setup() = 0;
-		virtual void teardown() = 0;
+		virtual void setup();
+		virtual void teardown();
 		virtual void run() = 0;
 	};
 

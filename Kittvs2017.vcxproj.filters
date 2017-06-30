@@ -21,6 +21,8 @@
     <ClCompile Include="kitt\Exceptions\KittException.cpp" />
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp" />
     <ClCompile Include="kitt\Exceptions\AssertException.cpp" />
+    <ClCompile Include="kitt\Testing\TestSuite.cpp" />
+    <ClCompile Include="kitt\Tests\KittTestSuite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -49,6 +51,8 @@
     <ClInclude Include="kitt\Tests\Vector2DTest.hpp" />
     <ClInclude Include="kitt\Exceptions\KittException.hpp" />
     <ClInclude Include="kitt\Exceptions\AssertException.hpp" />
+    <ClInclude Include="kitt\Testing\TestSuite.hpp" />
+    <ClInclude Include="kitt\Tests\KittTestSuite.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

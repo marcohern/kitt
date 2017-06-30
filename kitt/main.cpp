@@ -4,7 +4,7 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include <iostream>
-#include "./Tests/Vector2DTest.hpp"
+#include "./Tests/KittTestSuite.hpp"
 // ============================================================================
 // [SdlApplication]
 // ============================================================================
@@ -150,8 +150,8 @@ void SdlApplication::Render()
 int main(int argc, char* argv[])
 {
 	std::cout<<"Testing"<<std::endl;
-	Tests::Vector2DTests test;
-	test.run();
+	Tests::KittTestSuite testSuite;
+	testSuite.run();
 
 	/*
 	SdlApplication app;

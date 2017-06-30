@@ -2,7 +2,7 @@
 // [Include Section]
 // ============================================================================
 #include <SDL2/SDL.h>
-#include <SDL2_image/SDL_image.h>
+#include <stdio.h>
 
 // ============================================================================
 // [SdlApplication]
@@ -60,14 +60,7 @@ int SdlApplication::init(int width, int height)
 	{
 		fprintf(stderr, "SDL_Init() failed: %s\n", SDL_GetError());
 		return APP_FAILED;
-	}
-    
-    if (!IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG)) {
-        
-        fprintf(stderr, "IMG_Init() failed: %s\n", IMG_GetError());
-        return APP_FAILED;
-    }
-	
+	}	
 	win = SDL_CreateWindow(APPTITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	
@@ -81,7 +74,6 @@ void SdlApplication::destroy()
 	{
 		SDL_DestroyWindow(win);
 		SDL_DestroyRenderer(renderer);
-        IMG_Quit();
 		SDL_Quit();
 	}
 }

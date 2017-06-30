@@ -29,8 +29,8 @@ namespace Core {
         void setX(double x);
         void setY(double y);
         void set(double x, double y);
+
         void add(double x, double y);
-        
         void add(const Vector2D &v);
         void sub(double x, double y);
         void sub(const Vector2D &v);
@@ -38,6 +38,8 @@ namespace Core {
         double magnitude();
         void multiply(double s);
         void divide(double s);
+		double dot(const Vector2D &v);
+		double angleBetween(Vector2D &v);
         
         inline friend Vector2D operator + (const Vector2D &v);
         inline friend Vector2D operator - (const Vector2D &v);
@@ -46,6 +48,7 @@ namespace Core {
         
         inline friend Vector2D operator * (const Vector2D &v, double s);
         inline friend Vector2D operator * (double s, const Vector2D &v);
+		inline friend double   operator * (const Vector2D &v1, const Vector2D &v2);
         
         inline friend Vector2D operator / (const Vector2D &v, double s);
         

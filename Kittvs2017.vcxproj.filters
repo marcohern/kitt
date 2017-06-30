@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{04c5b5a8-0732-4e4f-9e4f-338794c05147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{1d06544e-19f3-40e6-963e-4c0d873d50d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kitt\Matrix.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Vector2D.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\FileReader.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\IReader.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Placeable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kitt\Matrix.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Vector2D.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\FileReader.hpp">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\IReader.hpp">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Camera.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Window.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Placeable.hpp" />
+  </ItemGroup>
+</Project>

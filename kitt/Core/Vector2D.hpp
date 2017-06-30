@@ -29,13 +29,14 @@ namespace Core {
         void setX(double x);
         void setY(double y);
         void set(double x, double y);
+		void set(const Vector2D &v);
 
         void add(double x, double y);
         void add(const Vector2D &v);
         void sub(double x, double y);
         void sub(const Vector2D &v);
         
-        double magnitude();
+        double magnitude() const;
         void multiply(double s);
         void divide(double s);
 		double dot(const Vector2D &v);
@@ -51,7 +52,8 @@ namespace Core {
 		inline friend double   operator * (const Vector2D &v1, const Vector2D &v2);
         
         inline friend Vector2D operator / (const Vector2D &v, double s);
-        
+		inline friend bool operator == (const Vector2D &v1, const Vector2D &v2);
+		inline friend bool operator > (const Vector2D &v1, const Vector2D &v2);
     };
 }
 

@@ -23,8 +23,12 @@ namespace Tests {
 		void execute(string name, Vector2DTestMethod method);
 
 		void constructor_Test();
+		void constructor_vector_Test();
 		void setX_Test();
 		void setY_Test();
+		void set_Test();
+		void set_vector_Test();
+		void add_Test();
 
 		void run();
 	};

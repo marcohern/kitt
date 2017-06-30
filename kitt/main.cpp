@@ -11,6 +11,9 @@
 #define APPTITLE "SDL Template Program"
 // SdlApplication is nothing more than thin wrapper to SDL library. You need
 // just to instantiate it and call run() to enter the SDL event loop.
+
+using namespace std;
+
 struct SdlApplication
 {
 	SdlApplication();
@@ -149,7 +152,7 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
-	std::cout<<"Testing"<<std::endl;
+	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;
 	testSuite.run();
 

@@ -43,6 +43,10 @@ namespace Core {
 		this->y = y;
 	}
 
+	void Vector2D::set(const Vector2D &v) {
+		this->set(v.x, v.y);
+	}
+
 	void Vector2D::add(double x, double y) {
 		this->x += x;
 		this->y += y;
@@ -63,7 +67,7 @@ namespace Core {
 		this->y -= v.y;
 	}
 
-	double Vector2D::magnitude() {
+	double Vector2D::magnitude() const {
 		return sqrt(this->x*this->x + this->y*this->y);
 	}
 
@@ -117,5 +121,13 @@ namespace Core {
 
 	Vector2D operator / (const Vector2D &v, double s) {
 		return Vector2D(v.x / s, v.y / s);
+	}
+
+	bool operator == (const Vector2D &v1, const Vector2D &v2) {
+		return (v1.x == v2.x && v1.y == v2.y);
+	}
+
+	bool operator > (const Vector2D &v1, const Vector2D &v2) {
+		return (v1.magnitude() > v2.magnitude());
 	}
 }

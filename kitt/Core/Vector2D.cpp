@@ -7,7 +7,7 @@
 //
 #include <math.h>
 
-#include "Vector2D.hpp"
+#include "./Vector2D.hpp"
 
 namespace Core {
 	Vector2D::Vector2D() {

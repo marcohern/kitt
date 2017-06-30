@@ -72,21 +72,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="kitt\FileReader.cpp" />
-    <ClCompile Include="kitt\IReader.cpp" />
+    <ClCompile Include="kitt\Content\FileReader.cpp" />
+    <ClCompile Include="kitt\Content\IReader.cpp" />
+    <ClCompile Include="kitt\Core\Matrix.cpp" />
+    <ClCompile Include="kitt\Core\Placeable.cpp" />
+    <ClCompile Include="kitt\Core\Vector2D.cpp" />
     <ClCompile Include="kitt\main.cpp" />
-    <ClCompile Include="kitt\Matrix.cpp" />
-    <ClCompile Include="kitt\Placeable.cpp" />
-    <ClCompile Include="kitt\Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="kitt\Camera.hpp" />
-    <ClInclude Include="kitt\FileReader.hpp" />
-    <ClInclude Include="kitt\IReader.hpp" />
-    <ClInclude Include="kitt\Matrix.hpp" />
-    <ClInclude Include="kitt\Placeable.hpp" />
-    <ClInclude Include="kitt\Vector2D.hpp" />
-    <ClInclude Include="kitt\Window.hpp" />
+    <ClInclude Include="kitt\Content\FileReader.hpp" />
+    <ClInclude Include="kitt\Content\IReader.hpp" />
+    <ClInclude Include="kitt\Core\Camera.hpp" />
+    <ClInclude Include="kitt\Core\Matrix.hpp" />
+    <ClInclude Include="kitt\Core\Placeable.hpp" />
+    <ClInclude Include="kitt\Core\Vector2D.hpp" />
+    <ClInclude Include="kitt\Core\Window.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

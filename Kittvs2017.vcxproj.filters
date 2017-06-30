@@ -16,6 +16,11 @@
     <ClCompile Include="kitt\Core\Vector2D.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="kitt\Testing\Assert.cpp" />
+    <ClCompile Include="kitt\Testing\Test.cpp" />
+    <ClCompile Include="kitt\Exceptions\KittException.cpp" />
+    <ClCompile Include="kitt\Tests\Vector2DTests.cpp" />
+    <ClCompile Include="kitt\Exceptions\AssertException.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -39,6 +44,11 @@
     <ClInclude Include="kitt\Core\Window.hpp">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="kitt\Testing\Assert.hpp" />
+    <ClInclude Include="kitt\Testing\Test.hpp" />
+    <ClInclude Include="kitt\Tests\Vector2DTest.hpp" />
+    <ClInclude Include="kitt\Exceptions\KittException.hpp" />
+    <ClInclude Include="kitt\Exceptions\AssertException.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -47,5 +57,8 @@
     <Filter Include="Content">
       <UniqueIdentifier>{8df36948-8a66-4f91-8323-73d0c8bad16d}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

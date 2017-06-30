@@ -3,7 +3,8 @@
 // ============================================================================
 #include <SDL2/SDL.h>
 #include <stdio.h>
-
+#include <iostream>
+#include "./Tests/Vector2DTest.hpp"
 // ============================================================================
 // [SdlApplication]
 // ============================================================================
@@ -148,7 +149,13 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
-    printf("dir:%s\n",argv[0]);
+	std::cout<<"Testing"<<std::endl;
+	Tests::Vector2DTests test;
+	test.run();
+
+	/*
 	SdlApplication app;
 	return app.run(800, 600);
+	*/
+	return 0;
 }

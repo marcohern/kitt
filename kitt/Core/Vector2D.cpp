@@ -10,20 +10,24 @@
 
 #include "./Vector2D.hpp"
 #include "../Exceptions/DivideByZeroException.hpp"
+#include "../Exceptions/NullReferenceException.hpp"
 
 namespace Core {
     using namespace std;
     using namespace Exceptions;
     
-	Vector2D::Vector2D() {
+    Vector2D::Vector2D(Trigonometry *trigo) {
+        HasTrigonometry::setTrigonometry(trigo);
 		this->set(0, 0);
 	}
 
-	Vector2D::Vector2D(double x, double y) {
+    Vector2D::Vector2D(double x, double y, Trigonometry *trigo) {
+        HasTrigonometry::setTrigonometry(trigo);
 		this->set(x, y);
 	}
 
-	Vector2D::Vector2D(const Vector2D &v) {
+    Vector2D::Vector2D(const Vector2D &v, Trigonometry *trigo) {
+        HasTrigonometry::setTrigonometry(trigo);
 		this->set(v.x, v.y);
 	}
     
@@ -102,25 +106,30 @@ namespace Core {
 		double bottom = (this->magnitude() * v.magnitude());
 		return top / bottom;
 	}
+    
+    void Vector2D::rotate(double radians) {
+        this->x = this->x*trigo->cos(radians) - this->y*trigo->sin(radians);
+        this->y = this->x*trigo->sin(radians) + this->y*trigo->cos(radians);
+    }
 
 	Vector2D operator + (const Vector2D &v) {
-		return Vector2D(v.x, v.y);
+		return Vector2D(v.x, v.y, v.trigo);
 	}
 
 	Vector2D operator - (const Vector2D &v) {
-		return Vector2D(-v.x, -v.y);
+		return Vector2D(-v.x, -v.y, v.trigo);
 	}
 
 	Vector2D operator + (const Vector2D &v1, const Vector2D &v2) {
-		return Vector2D(v1.x + v2.x, v1.y + v2.y);
+		return Vector2D(v1.x + v2.x, v1.y + v2.y, v1.trigo);
 	}
 
 	Vector2D operator - (const Vector2D &v1, const Vector2D &v2) {
-		return Vector2D(v1.x - v2.x, v1.y - v2.y);
+		return Vector2D(v1.x - v2.x, v1.y - v2.y, v1.trigo);
 	}
 
 	Vector2D operator * (const Vector2D &v, double s) {
-		return Vector2D(v.x * s, v.y * s);
+		return Vector2D(v.x * s, v.y * s, v.trigo);
 	}
 
 	Vector2D operator * (double s, const Vector2D &v) {
@@ -134,7 +143,7 @@ namespace Core {
     Vector2D operator / (const Vector2D &v, double s) {
         if (s==0)
             throw DivideByZeroException("Divide Vector by zero not allowed.");
-		return Vector2D(v.x / s, v.y / s);
+		return Vector2D(v.x / s, v.y / s, v.trigo);
     }
     
     bool operator == (const Vector2D &v1, const Vector2D &v2) {

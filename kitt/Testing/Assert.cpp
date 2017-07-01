@@ -1,6 +1,7 @@
 
 #include <string>
 #include <sstream>
+#include <cmath>
 
 #include "Assert.hpp"
 #include "../Core/Vector2D.hpp"
@@ -18,7 +19,7 @@ namespace Testing {
         return this->calls;
     }
 
-	void Assert::areEqual(Vector2D &v1, Vector2D &v2) {
+	void Assert::areEqual(Vector2D v1, Vector2D v2) {
         calls++;
 		bool r = (v1.getX() == v2.getX() && v1.getY() == v2.getY());
 		if (!r) throw AssertException("Vectors are not equal, " + v1.toString() + " != " + v2.toString());
@@ -38,8 +39,24 @@ namespace Testing {
             ss<<"doubles are not equal, '"<<n1<<"' != '"<<n2<<"'";
             throw AssertException(ss.str());
         }
-	}
+    }
     
+    void Assert::areClose(Vector2D v1, Vector2D v2, int digits) {
+        calls++;
+        double dd = (double)digits;
+        double error = 1.0/dd;
+        double deltaX = v1.getX() - v2.getX();
+        double deltaY = v1.getY() - v2.getY();
+        if (abs(deltaX) > error || abs(deltaY) > error) throw AssertException("Vectors expected to be closer");
+    }
+    
+    void Assert::areClose(double n1, double n2, int digits) {
+        calls++;
+        double dd = (double)digits;
+        double error = 1.0/dd;
+        double delta = n1 - n2;
+        if (abs(delta) > error) throw AssertException("Values expected to be closer");
+    }
     void Assert::isTrue(bool b) {
         calls++;
         if (!b) {

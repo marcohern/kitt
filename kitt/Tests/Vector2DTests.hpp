@@ -4,11 +4,13 @@
 #include <string>
 #include <exception>
 
+#include "../Core/Trigonometry.hpp"
 #include "../Testing/Assert.hpp"
 #include "../Testing/Test.hpp"
 
 namespace Tests {
 
+    using namespace Core;
 	using namespace Testing;
 	using namespace std;
 
@@ -16,13 +18,16 @@ namespace Tests {
 	typedef void (Vector2DTests::*Vector2DTestMethod)();
 
 	class Vector2DTests : public Test {
+    private:
+        Trigonometry *trigonometry;
 	public:
 
 		void setup();
 		void teardown();
         void runtest(string name, Vector2DTestMethod method);
 
-		void constructor_Test();
+        void constructor_Test();
+        void constructor_NoTrigo_Test();
 		void constructor_vector_Test();
         void toString_Test();
 		void setX_Test();
@@ -39,6 +44,8 @@ namespace Tests {
         void divide_ByZero_Test();
         void dot_Test();
         void angleBetween_Test();
+        void rotate_Test();
+        void rotate_TigoNull_Test();
         
         void op_positive_Test();
         void op_negative_Test();

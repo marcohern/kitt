@@ -1,7 +1,9 @@
 #include "./Vector2DTests.hpp"
 #include "../Exceptions/AssertException.hpp"
 #include "../Exceptions/DivideByZeroException.hpp"
+#include "../Exceptions/NullReferenceException.hpp"
 #include "../Testing/TestRunner.hpp"
+#include "../Core/New.hpp"
 
 namespace Tests {
 
@@ -9,111 +11,125 @@ namespace Tests {
 
 	void Vector2DTests::setup() {
         this->name = "Vector2D";
+        this->trigonometry = new Trigonometry();
         Test::setup();
 	}
 
 	void Vector2DTests::teardown() {
+        delete this->trigonometry;
         Test::teardown();
-	}
+    }
+    
+    void Vector2DTests::runtest(string name, Vector2DTestMethod method) {
+        TestRunner<Vector2DTests, Vector2DTestMethod>(name, this, method).run();
+    }
 
 	void Vector2DTests::constructor_Test() {
-		Vector2D v(1.23, 4.56);
+		Vector2D v(1.23, 4.56, trigonometry);
 		assert.areEqual(v.getX(), 1.23);
 		assert.areEqual(v.getY(), 4.56);
 	}
+    
+    void Vector2DTests::constructor_NoTrigo_Test() {
+        try {
+            Vector2D v(1.23, 4.56, NULL);
+        } catch(NullReferenceException &ex) {
+            assert.isTrue(true);
+        }
+    }
 
 	void Vector2DTests::constructor_vector_Test() {
-		Vector2D v1(1.23, 4.56);
+		Vector2D v1(1.23, 4.56, trigonometry);
 		Vector2D v2(v1);
 		assert.areEqual(v2.getX(), 1.23);
 		assert.areEqual(v2.getY(), 4.56);
 	}
     
     void Vector2DTests::toString_Test() {
-        Vector2D v(1.23, 4.56);
+        Vector2D v(1.23, 4.56, trigonometry);
         assert.areEqual(v.toString(),"(1.23,4.56)");
     }
 
 	void Vector2DTests::setX_Test() {
-		Vector2D v(0, 0);
+		Vector2D v(0, 0, trigonometry);
 		v.setX(12.34);
 		assert.areEqual(v.getX(), 12.34);
 	}
 
 	void Vector2DTests::setY_Test() {
-		Vector2D v(0, 0);
+		Vector2D v(0, 0, trigonometry);
 		v.setY(4.321);
 		assert.areEqual(v.getY(), 4.321);
 	}
 
 	void Vector2DTests::set_Test() {
-		Vector2D v(0, 0);
+		Vector2D v(0, 0, trigonometry);
 		v.set(1.234,5.678);
 		assert.areEqual(v.getX(), 1.234);
 		assert.areEqual(v.getY(), 5.678);
 	}
 
 	void Vector2DTests::set_vector_Test() {
-		Vector2D v1(1.234, 5.678);
-		Vector2D v2;
+		Vector2D v1(1.234, 5.678, trigonometry);
+		Vector2D v2(trigonometry);
 		v2.set(v1);
 		assert.areEqual(v1, v2);
 	}
 
 	void Vector2DTests::add_Test() {
-		Vector2D v(1.234, 5.678);
+		Vector2D v(1.234, 5.678, trigonometry);
 		v.add(8.766, 4.322);
 		assert.areEqual(v.getX(), 10.00);
 		assert.areEqual(v.getY(), 10.00);
 	}
     
     void Vector2DTests::add_vector_Test() {
-        Vector2D v1(1.234, 5.678);
-        Vector2D v2(8.766, 4.322);
+        Vector2D v1(1.234, 5.678, trigonometry);
+        Vector2D v2(8.766, 4.322, trigonometry);
         
         v1.add(v2);
-        Vector2D vr(10.00,10.00);
+        Vector2D vr(10.00,10.00, trigonometry);
         assert.areEqual(v1, vr);
     }
     
     void Vector2DTests::sub_Test() {
-        Vector2D v(2.56,1.28);
+        Vector2D v(2.56,1.28, trigonometry);
         v.sub(0.64, 0.32);
         
-        Vector2D vr(1.92, 0.96);
+        Vector2D vr(1.92, 0.96, trigonometry);
         assert.areEqual(v, vr);
     }
     
     void Vector2DTests::sub_vector_Test() {
-        Vector2D v1(2.56, 1.28);
-        Vector2D v2(0.64, 0.32);
+        Vector2D v1(2.56, 1.28, trigonometry);
+        Vector2D v2(0.64, 0.32, trigonometry);
         
         v1.sub(v2);
-        Vector2D vr(1.92, 0.96);
+        Vector2D vr(1.92, 0.96, trigonometry);
         assert.areEqual(v1, vr);
     }
     
     void Vector2DTests::magnitude_Test() {
-        Vector2D v(3.0, 4.0);
+        Vector2D v(3.0, 4.0, trigonometry);
         assert.areEqual(v.magnitude(), 5.0);
     }
     
     void Vector2DTests::multiply_Test() {
-        Vector2D v(2.5, 7.5);
+        Vector2D v(2.5, 7.5, trigonometry);
         v.multiply(2.0);
-        Vector2D vr(5.0, 15.0);
+        Vector2D vr(5.0, 15.0, trigonometry);
         assert.areEqual(v, vr);
     }
     
     void Vector2DTests::divide_Test() {
-        Vector2D v(2.5, 7.5);
+        Vector2D v(2.5, 7.5, trigonometry);
         v.divide(2.0);
-        Vector2D vr(1.25, 3.75);
+        Vector2D vr(1.25, 3.75, trigonometry);
         assert.areEqual(v, vr);
     }
     
     void Vector2DTests::divide_ByZero_Test() {
-        Vector2D v(2.5, 7.5);
+        Vector2D v(2.5, 7.5, trigonometry);
         try {
             v.divide(0.0);
         } catch (DivideByZeroException &ex) {
@@ -122,8 +138,8 @@ namespace Tests {
     }
     
     void Vector2DTests::dot_Test() {
-        Vector2D v1(2.56, 1.28);
-        Vector2D v2(0.64, 0.32);
+        Vector2D v1(2.56, 1.28, trigonometry);
+        Vector2D v2(0.64, 0.32, trigonometry);
         
         double d = v1.dot(v2);
         assert.areEqual(d, 2.048);
@@ -131,73 +147,75 @@ namespace Tests {
     
     void Vector2DTests::angleBetween_Test() {
         
-        Vector2D v1(3.0, 4.0);
-        Vector2D v2(4.0, 3.0);
+        Vector2D v1(3.0, 4.0, trigonometry);
+        Vector2D v2(4.0, 3.0, trigonometry);
         
         double a = v1.angleBetween(v2);
         assert.areEqual(a, 0.96);
     }
-    
-    void Vector2DTests::runtest(string name, Vector2DTestMethod method) {
-        TestRunner<Vector2DTests, Vector2DTestMethod>(name, this, method).run();
+    void Vector2DTests::rotate_Test() {
+        Vector2D v(1.0, 0.0, trigonometry);
+        v.rotate(3.14159265359);
+        Vector2D vr(-1.0, 0.0, trigonometry);
+        assert.areClose(v, vr, 5);
     }
     
     void Vector2DTests::op_positive_Test() {
-        Vector2D v1(4.0, 5.0);
+        Vector2D v1(4.0, 5.0, trigonometry);
         Vector2D v2 = +v1;
         
-        Vector2D vr(4.0, 5.0);
+        Vector2D vr(4.0, 5.0, trigonometry);
         assert.areEqual(v2, vr);
     }
     
     void Vector2DTests::op_negative_Test() {
-        Vector2D v1(4.0, 5.0);
+        Vector2D v1(4.0, 5.0, trigonometry);
         Vector2D v2 = -v1;
         
-        Vector2D vr(-4.0, -5.0);
+        Vector2D vr(-4.0, -5.0, trigonometry);
         assert.areEqual(v2, vr);
     }
     
     void Vector2DTests::op_add_Test() {
-        Vector2D v1(4.0, 5.0);
-        Vector2D v2(6.0, 7.0);
+        Vector2D v1(4.0, 5.0, trigonometry);
+        Vector2D v2(6.0, 7.0, trigonometry);
         Vector2D v3 = v1 + v2;
         
-        Vector2D vr(10.00, 12.00);
+        Vector2D vr(10.00, 12.00, trigonometry);
         assert.areEqual(v3, vr);
     }
     
     void Vector2DTests::op_sub_Test() {
-        Vector2D v1(4.0, 5.0);
-        Vector2D v2(2.0, 3.0);
+        Vector2D v1(4.0, 5.0, trigonometry);
+        Vector2D v2(2.0, 3.0, trigonometry);
         Vector2D v3 = v1 - v2;
         
-        Vector2D vr(2.00, 2.00);
+        Vector2D vr(2.00, 2.00, trigonometry);
         assert.areEqual(v3, vr);
     }
     
     void Vector2DTests::op_multiply_s_Test() {
-        Vector2D v1(1.23, 4.56);
+        Vector2D v1(1.23, 4.56, trigonometry);
         double s = 2.0;
         Vector2D v2 = v1 * s;
         
-        Vector2D vr(2.46, 9.12);
+        Vector2D vr(2.46, 9.12, trigonometry);
         assert.areEqual(v2, vr);
     }
     
     void Vector2DTests::op_s_multiply_Test() {
-        Vector2D v1(1.23, 4.56);
+        Vector2D v1(1.23, 4.56, trigonometry);
         double s = 2.0;
         Vector2D v2 = v1 * s;
         
-        Vector2D vr(2.46, 9.12);
+        Vector2D vr(2.46, 9.12, trigonometry);
         assert.areEqual(v2, vr);
     }
     
     void Vector2DTests::op_dot_product_Test() {
         
-        Vector2D v1(4.0, 5.0);
-        Vector2D v2(2.0, 3.0);
+        Vector2D v1(4.0, 5.0, trigonometry);
+        Vector2D v2(2.0, 3.0, trigonometry);
         double r = v1 * v2;
         
         assert.areEqual(r, 23.00);
@@ -205,18 +223,18 @@ namespace Tests {
     
     void Vector2DTests::op_div_Test() {
         
-        Vector2D v1(1.23, 4.56);
+        Vector2D v1(1.23, 4.56, trigonometry);
         double s = 2.0;
         Vector2D v2 = v1 / s;
         
-        Vector2D vr(0.615, 2.280);
+        Vector2D vr(0.615, 2.280, trigonometry);
         
         assert.areEqual(v2, vr);
     }
     
     void Vector2DTests::op_div_ByZero_Test(){
         
-        Vector2D v1(1.23, 4.56);
+        Vector2D v1(1.23, 4.56, trigonometry);
         try {
             v1 / 0.0;
         } catch (DivideByZeroException &ex) {
@@ -224,8 +242,9 @@ namespace Tests {
         }
     }
     
-	void Vector2DTests::run() {
-        runtest("constructor_Test--------", &Vector2DTests::constructor_Test);
+    void Vector2DTests::run() {
+        runtest("constructor_Test---------", &Vector2DTests::constructor_Test);
+        runtest("constructor_NoTrigo_Test-", &Vector2DTests::constructor_NoTrigo_Test);
         runtest("constructor_vector_Test-", &Vector2DTests::constructor_vector_Test);
         runtest("toString_Test-----------", &Vector2DTests::toString_Test);
 		runtest("setX_Test---------------", &Vector2DTests::setX_Test);
@@ -242,6 +261,7 @@ namespace Tests {
         runtest("divide_ByZero_Test------", &Vector2DTests::divide_ByZero_Test);
         runtest("dot_Test----------------", &Vector2DTests::dot_Test);
         runtest("angleBetween_Test-------", &Vector2DTests::angleBetween_Test);
+        runtest("rotate_Test-------------", &Vector2DTests::rotate_Test);
         runtest("op_positive_Test--------", &Vector2DTests::op_positive_Test);
         runtest("op_negative_Test--------", &Vector2DTests::op_negative_Test);
         runtest("op_add_Test-------------", &Vector2DTests::op_add_Test);

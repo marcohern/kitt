@@ -13,18 +13,20 @@
 #include <stdio.h>
 #include <math.h>
 #include "Object.hpp"
+#include "Trigonometry.hpp"
+#include "HasTrigonometry.hpp"
 
 namespace Core {
     using namespace std;
     
-    class Vector2D : public Object {
+    class Vector2D : public Object, public HasTrigonometry {
     private:
         double x, y;
         
     public:
-        Vector2D();
-        Vector2D(double x, double y);
-        Vector2D(const Vector2D &v);
+        Vector2D(Trigonometry *trigo);
+        Vector2D(double x, double y, Trigonometry *trigo);
+        Vector2D(const Vector2D &v, Trigonometry *trigo);
         
         virtual string toString();
         
@@ -46,6 +48,7 @@ namespace Core {
         void divide(double s);
 		double dot(const Vector2D &v) const;
 		double angleBetween(Vector2D &v) const;
+        void rotate(double radians);
         
         //inline friend Vector2D & operator = (const Vector2D &v);
         friend Vector2D operator + (const Vector2D &v);

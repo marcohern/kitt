@@ -1,13 +1,14 @@
 #include "./Vector2DTests.hpp"
+#include "../Core/MemoizedTrigonometry.hpp"
 #include "../Exceptions/AssertException.hpp"
 #include "../Exceptions/DivideByZeroException.hpp"
 #include "../Exceptions/NullReferenceException.hpp"
 #include "../Testing/TestRunner.hpp"
-#include "../Core/New.hpp"
 
 namespace Tests {
 
 	using namespace Exceptions;
+    using namespace Core;
 
 	void Vector2DTests::setup() {
         this->name = "Vector2D";

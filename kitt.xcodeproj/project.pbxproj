@@ -28,6 +28,7 @@
 		A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4091F080CB7009A673B /* NullReferenceException.cpp */; };
 		A76EE40E1F081D0C009A673B /* RealtimeTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE40C1F081D0C009A673B /* RealtimeTrigonometry.cpp */; };
 		A76EE4111F081E08009A673B /* MemoizedTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */; };
+		A76EE4141F0864C4009A673B /* RealtimeTrigonometryTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4121F0864C4009A673B /* RealtimeTrigonometryTest.cpp */; };
 		A7ECCDC01F04C03000011805 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDBF1F04C03000011805 /* main.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
@@ -90,6 +91,8 @@
 		A76EE40D1F081D0C009A673B /* RealtimeTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealtimeTrigonometry.hpp; sourceTree = "<group>"; };
 		A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoizedTrigonometry.cpp; sourceTree = "<group>"; };
 		A76EE4101F081E08009A673B /* MemoizedTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoizedTrigonometry.hpp; sourceTree = "<group>"; };
+		A76EE4121F0864C4009A673B /* RealtimeTrigonometryTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RealtimeTrigonometryTest.cpp; sourceTree = "<group>"; };
+		A76EE4131F0864C4009A673B /* RealtimeTrigonometryTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealtimeTrigonometryTest.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDBF1F04C03000011805 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 				A76EE3DF1F0736B6009A673B /* KittTestSuite.hpp */,
 				A76EE3E01F0736B6009A673B /* Vector2DTests.hpp */,
 				A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */,
+				A76EE4121F0864C4009A673B /* RealtimeTrigonometryTest.cpp */,
+				A76EE4131F0864C4009A673B /* RealtimeTrigonometryTest.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				A7ECCDC01F04C03000011805 /* main.cpp in Sources */,
 				A76EE4111F081E08009A673B /* MemoizedTrigonometry.cpp in Sources */,
 				A76EE3EA1F0736B6009A673B /* Test.cpp in Sources */,
+				A76EE4141F0864C4009A673B /* RealtimeTrigonometryTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,8 @@ namespace Testing {
 	class Assert {
     private:
         int calls;
+        
+        void pre();
 	public:
         void resetCalls();
         int getCalls();

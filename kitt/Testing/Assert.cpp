@@ -18,21 +18,25 @@ namespace Testing {
     int Assert::getCalls() {
         return this->calls;
     }
+    
+    void Assert::pre() {
+        calls++;
+    }
 
 	void Assert::areEqual(Vector2D v1, Vector2D v2) {
-        calls++;
+        this->pre();
 		bool r = (v1.getX() == v2.getX() && v1.getY() == v2.getY());
 		if (!r) throw AssertException("Vectors are not equal, " + v1.toString() + " != " + v2.toString());
 	}
 
     void Assert::areEqual(string s1, string s2) {
-        calls++;
+        this->pre();
 		bool r = (s1 == s2);
 		if (!r) throw AssertException("strings are not equal, '"+ s1 + "' != '" + s2 + "'");
 	}
 
     void Assert::areEqual(double n1, double n2) {
-        calls++;
+        this->pre();
 		bool r = (n1 == n2);
         if (!r) {
             stringstream ss;
@@ -42,7 +46,7 @@ namespace Testing {
     }
     
     void Assert::areClose(Vector2D v1, Vector2D v2, int digits) {
-        calls++;
+        this->pre();
         double dd = (double)digits;
         double error = 1.0/pow(10.0, dd);
         double deltaX = v1.getX() - v2.getX();
@@ -52,7 +56,7 @@ namespace Testing {
     }
     
     void Assert::areClose(double n1, double n2, int digits) {
-        calls++;
+        this->pre();
         double dd = (double)digits;
         double error = 1.0/pow(10.0, dd);
         double delta = n1 - n2;
@@ -60,13 +64,13 @@ namespace Testing {
             throw AssertException("Values expected to be closer");
     }
     void Assert::isTrue(bool b) {
-        calls++;
+        this->pre();
         if (!b) {
             throw AssertException("Expected to be true");
         }
     }
     void Assert::isFalse(bool b) {
-        calls++;
+        this->pre();
         if (b) {
             throw AssertException("Expected to be false");
         }

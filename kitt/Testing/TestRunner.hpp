@@ -46,7 +46,7 @@ namespace Testing {
                 test->setup();
                 (test->*method)();
                 test->teardown();
-                cout << test->getName() << "_" << name <<":OK" << endl;
+                //cout << test->getName() << "_" << name <<":OK" << endl;
             }
             catch (AssertException &ex) {
                 cout << test->getName() << "_" << name << ":ERROR " << ex.getMessage() << endl;

@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "./Tests/KittTestSuite.hpp"
+#include "./Core/Injector.hpp"
+#include "./Core/Trigonometry.hpp"
 // ============================================================================
 // [SdlApplication]
 // ============================================================================

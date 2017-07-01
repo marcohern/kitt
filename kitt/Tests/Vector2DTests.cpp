@@ -157,7 +157,7 @@ namespace Tests {
         Vector2D v(1.0, 0.0, trigonometry);
         v.rotate(3.14159265359);
         Vector2D vr(-1.0, 0.0, trigonometry);
-        assert.areClose(v, vr, 5);
+        assert.areClose(v, vr, 10);
     }
     
     void Vector2DTests::op_positive_Test() {
@@ -245,32 +245,32 @@ namespace Tests {
     void Vector2DTests::run() {
         runtest("constructor_Test---------", &Vector2DTests::constructor_Test);
         runtest("constructor_NoTrigo_Test-", &Vector2DTests::constructor_NoTrigo_Test);
-        runtest("constructor_vector_Test-", &Vector2DTests::constructor_vector_Test);
-        runtest("toString_Test-----------", &Vector2DTests::toString_Test);
-		runtest("setX_Test---------------", &Vector2DTests::setX_Test);
-		runtest("setY_Test---------------", &Vector2DTests::setY_Test);
-		runtest("set_Test----------------", &Vector2DTests::set_Test);
-        runtest("set_vector_Test---------", &Vector2DTests::set_vector_Test);
-        runtest("add_Test----------------", &Vector2DTests::add_Test);
-        runtest("add_vector_Test---------", &Vector2DTests::add_vector_Test);
-        runtest("sub_Test----------------", &Vector2DTests::sub_Test);
-        runtest("sub_vector_Test---------", &Vector2DTests::sub_vector_Test);
-        runtest("magnitude_Test----------", &Vector2DTests::magnitude_Test);
-        runtest("multiply_Test-----------", &Vector2DTests::multiply_Test);
-        runtest("divide_Test-------------", &Vector2DTests::divide_Test);
-        runtest("divide_ByZero_Test------", &Vector2DTests::divide_ByZero_Test);
-        runtest("dot_Test----------------", &Vector2DTests::dot_Test);
-        runtest("angleBetween_Test-------", &Vector2DTests::angleBetween_Test);
-        runtest("rotate_Test-------------", &Vector2DTests::rotate_Test);
-        runtest("op_positive_Test--------", &Vector2DTests::op_positive_Test);
-        runtest("op_negative_Test--------", &Vector2DTests::op_negative_Test);
-        runtest("op_add_Test-------------", &Vector2DTests::op_add_Test);
-        runtest("op_sub_Test-------------", &Vector2DTests::op_sub_Test);
-        runtest("op_multiply_s_Test------", &Vector2DTests::op_multiply_s_Test);
-        runtest("op_s_multiply_Test------", &Vector2DTests::op_s_multiply_Test);
-        runtest("op_dot_product_Test-----", &Vector2DTests::op_dot_product_Test);
-        runtest("op_div_Test-------------", &Vector2DTests::op_div_Test);
-        runtest("op_div_ByZero_Test------", &Vector2DTests::op_div_ByZero_Test);
+        runtest("constructor_vector_Test--", &Vector2DTests::constructor_vector_Test);
+        runtest("toString_Test------------", &Vector2DTests::toString_Test);
+		runtest("setX_Test----------------", &Vector2DTests::setX_Test);
+		runtest("setY_Test----------------", &Vector2DTests::setY_Test);
+		runtest("set_Test-----------------", &Vector2DTests::set_Test);
+        runtest("set_vector_Test----------", &Vector2DTests::set_vector_Test);
+        runtest("add_Test-----------------", &Vector2DTests::add_Test);
+        runtest("add_vector_Test----------", &Vector2DTests::add_vector_Test);
+        runtest("sub_Test-----------------", &Vector2DTests::sub_Test);
+        runtest("sub_vector_Test----------", &Vector2DTests::sub_vector_Test);
+        runtest("magnitude_Test-----------", &Vector2DTests::magnitude_Test);
+        runtest("multiply_Test------------", &Vector2DTests::multiply_Test);
+        runtest("divide_Test--------------", &Vector2DTests::divide_Test);
+        runtest("divide_ByZero_Test-------", &Vector2DTests::divide_ByZero_Test);
+        runtest("dot_Test-----------------", &Vector2DTests::dot_Test);
+        runtest("angleBetween_Test--------", &Vector2DTests::angleBetween_Test);
+        runtest("rotate_Test--------------", &Vector2DTests::rotate_Test);
+        runtest("op_positive_Test---------", &Vector2DTests::op_positive_Test);
+        runtest("op_negative_Test---------", &Vector2DTests::op_negative_Test);
+        runtest("op_add_Test--------------", &Vector2DTests::op_add_Test);
+        runtest("op_sub_Test--------------", &Vector2DTests::op_sub_Test);
+        runtest("op_multiply_s_Test-------", &Vector2DTests::op_multiply_s_Test);
+        runtest("op_s_multiply_Test-------", &Vector2DTests::op_s_multiply_Test);
+        runtest("op_dot_product_Test------", &Vector2DTests::op_dot_product_Test);
+        runtest("op_div_Test--------------", &Vector2DTests::op_div_Test);
+        runtest("op_div_ByZero_Test-------", &Vector2DTests::op_div_ByZero_Test);
         
 	}
 }

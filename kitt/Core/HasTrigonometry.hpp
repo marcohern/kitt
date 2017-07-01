@@ -18,7 +18,7 @@ namespace Core {
     protected:
         Trigonometry *trigo = NULL;
     public:
-        void setTrigonometry(Trigonometry *trigo);
+        HasTrigonometry(Trigonometry *trigo);
     };
 }
 

@@ -7,10 +7,12 @@
 //
 
 #include <math.h>
+#include <iostream>
+#include <iomanip>
 #include "Trigonometry.hpp"
 
 namespace Core {
-    
+    using namespace std;
     Trigonometry::Trigonometry() {
     }
     
@@ -35,5 +37,17 @@ namespace Core {
             return this->cost[r];
         }
         return v->second;
+    }
+    
+    void Trigonometry::print_cos() {
+        for (auto it:this->cost) {
+            cout<<setw(8)<<left<<it.first<<":"<<it.second<<endl;
+        }
+    }
+    
+    void Trigonometry::print_sin() {
+        for (auto it:this->sint) {
+            cout<<setw(8)<<left<<it.first<<":"<<it.second<<endl;
+        }
     }
 }

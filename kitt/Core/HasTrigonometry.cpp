@@ -13,8 +13,8 @@ namespace Core
 {
     using namespace Exceptions;
     
-    void HasTrigonometry::setTrigonometry(Trigonometry *trigo) {
+    HasTrigonometry::HasTrigonometry(Trigonometry *trigo)
+    : trigo(trigo) {
         if (trigo==NULL) throw NullReferenceException("Vector not allowed to function without Trigonometry");
-        this->trigo = trigo;
     }
 }

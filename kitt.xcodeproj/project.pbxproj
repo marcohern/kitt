@@ -24,7 +24,6 @@
 		A76EE3FC1F07EC76009A673B /* Trigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3FA1F07EC76009A673B /* Trigonometry.cpp */; };
 		A76EE3FF1F07F1F2009A673B /* HasTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3FD1F07F1F2009A673B /* HasTrigonometry.cpp */; };
 		A76EE4021F07FCE9009A673B /* New.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4001F07FCE9009A673B /* New.cpp */; };
-		A76EE4051F07FDB6009A673B /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4031F07FDB6009A673B /* State.cpp */; };
 		A76EE4081F080360009A673B /* Injector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4061F080360009A673B /* Injector.cpp */; };
 		A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4091F080CB7009A673B /* NullReferenceException.cpp */; };
 		A7ECCDC01F04C03000011805 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDBF1F04C03000011805 /* main.cpp */; };
@@ -81,8 +80,6 @@
 		A76EE3FE1F07F1F2009A673B /* HasTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HasTrigonometry.hpp; sourceTree = "<group>"; };
 		A76EE4001F07FCE9009A673B /* New.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = New.cpp; sourceTree = "<group>"; };
 		A76EE4011F07FCE9009A673B /* New.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = New.hpp; sourceTree = "<group>"; };
-		A76EE4031F07FDB6009A673B /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
-		A76EE4041F07FDB6009A673B /* State.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
 		A76EE4061F080360009A673B /* Injector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Injector.cpp; sourceTree = "<group>"; };
 		A76EE4071F080360009A673B /* Injector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Injector.hpp; sourceTree = "<group>"; };
 		A76EE4091F080CB7009A673B /* NullReferenceException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullReferenceException.cpp; sourceTree = "<group>"; };
@@ -134,8 +131,6 @@
 				A76EE3FE1F07F1F2009A673B /* HasTrigonometry.hpp */,
 				A76EE4001F07FCE9009A673B /* New.cpp */,
 				A76EE4011F07FCE9009A673B /* New.hpp */,
-				A76EE4031F07FDB6009A673B /* State.cpp */,
-				A76EE4041F07FDB6009A673B /* State.hpp */,
 				A76EE4061F080360009A673B /* Injector.cpp */,
 				A76EE4071F080360009A673B /* Injector.hpp */,
 			);
@@ -287,7 +282,6 @@
 				A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */,
 				A76EE3F01F075715009A673B /* Object.cpp in Sources */,
 				A76EE3E71F0736B6009A673B /* AssertException.cpp in Sources */,
-				A76EE4051F07FDB6009A673B /* State.cpp in Sources */,
 				A76EE3E91F0736B6009A673B /* Assert.cpp in Sources */,
 				A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */,
 				A76EE4021F07FCE9009A673B /* New.cpp in Sources */,

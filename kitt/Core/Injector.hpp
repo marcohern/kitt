@@ -10,13 +10,13 @@
 #define Injector_hpp
 
 #include <stdio.h>
-#include "./State.hpp"
+#include "./Trigonometry.hpp"
 
 namespace Core {
     class Injector {
     private:
         static Injector *instance;
-        State *state;
+        Trigonometry *trigonometry;
         
         Injector();
         
@@ -24,7 +24,7 @@ namespace Core {
         ~Injector();
         static Injector *get();
         
-        State *getState();
+        Trigonometry *getTrigonometry();
     };
 }
 #endif /* Injector_hpp */

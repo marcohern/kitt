@@ -44,18 +44,20 @@ namespace Testing {
     void Assert::areClose(Vector2D v1, Vector2D v2, int digits) {
         calls++;
         double dd = (double)digits;
-        double error = 1.0/dd;
+        double error = 1.0/pow(10.0, dd);
         double deltaX = v1.getX() - v2.getX();
         double deltaY = v1.getY() - v2.getY();
-        if (abs(deltaX) > error || abs(deltaY) > error) throw AssertException("Vectors expected to be closer");
+        if (abs(deltaX) > error || abs(deltaY) > error)
+            throw AssertException("Vectors expected to be closer");
     }
     
     void Assert::areClose(double n1, double n2, int digits) {
         calls++;
         double dd = (double)digits;
-        double error = 1.0/dd;
+        double error = 1.0/pow(10.0, dd);
         double delta = n1 - n2;
-        if (abs(delta) > error) throw AssertException("Values expected to be closer");
+        if (abs(delta) > error)
+            throw AssertException("Values expected to be closer");
     }
     void Assert::isTrue(bool b) {
         calls++;

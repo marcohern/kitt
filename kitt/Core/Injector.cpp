@@ -12,7 +12,11 @@ namespace Core {
     Injector *Injector::instance = NULL;
     
     Injector::Injector() {
-        state = new State();
+        trigonometry = new Trigonometry();
+    }
+    
+    Injector::~Injector() {
+        delete trigonometry;
     }
     
     Injector *Injector::get() {
@@ -22,7 +26,7 @@ namespace Core {
         return instance;
     }
     
-    State *Injector::getState() {
-        return state;
+    Trigonometry *Injector::getTrigonometry() {
+        return trigonometry;
     }
 }

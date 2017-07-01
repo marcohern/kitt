@@ -16,7 +16,7 @@
 namespace Core {
     class New {
         Injector *injector;
-        State *state;
+        Trigonometry *trigonometry;
     public:
         New();
         

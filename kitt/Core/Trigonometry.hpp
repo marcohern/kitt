@@ -28,6 +28,9 @@ namespace Core {
         
         double sin(double r);
         double cos(double r);
+        
+        void print_cos();
+        void print_sin();
     };
 }
 #endif /* Trigonometry_hpp */

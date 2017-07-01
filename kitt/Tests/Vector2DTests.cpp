@@ -11,7 +11,7 @@ namespace Tests {
 
 	void Vector2DTests::setup() {
         this->name = "Vector2D";
-        this->trigonometry = new Trigonometry();
+        this->trigonometry = new MemoizedTrigonometry();
         Test::setup();
 	}
 
@@ -271,6 +271,5 @@ namespace Tests {
         runtest("op_dot_product_Test------", &Vector2DTests::op_dot_product_Test);
         runtest("op_div_Test--------------", &Vector2DTests::op_div_Test);
         runtest("op_div_ByZero_Test-------", &Vector2DTests::op_div_ByZero_Test);
-        
 	}
 }

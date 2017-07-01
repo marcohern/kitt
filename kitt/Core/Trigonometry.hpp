@@ -12,25 +12,16 @@
 #include <stdio.h>
 #include <map>
 
-
-//TRIGO_MAX = int(PI << 10)
-
 namespace Core {
     using namespace std;
     
     class Trigonometry {
-    private:
-        map<double,double> sint;
-        map<double,double> cost;
     public:
         Trigonometry();
         virtual ~Trigonometry();
         
-        double sin(double r);
-        double cos(double r);
-        
-        void print_cos();
-        void print_sin();
+        virtual double sin(double r) = 0;
+        virtual double cos(double r) = 0;
     };
 }
 #endif /* Trigonometry_hpp */

@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "./Trigonometry.hpp"
+#include "./MemoizedTrigonometry.hpp"
 
 namespace Core {
     class Injector {

@@ -12,7 +12,7 @@ namespace Core {
     Injector *Injector::instance = NULL;
     
     Injector::Injector() {
-        trigonometry = new Trigonometry();
+        trigonometry = new MemoizedTrigonometry();
     }
     
     Injector::~Injector() {

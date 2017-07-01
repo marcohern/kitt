@@ -9,9 +9,11 @@
 #include <sstream>
 
 #include "./Vector2D.hpp"
+#include "../Exceptions/DivideByZeroException.hpp"
 
 namespace Core {
     using namespace std;
+    using namespace Exceptions;
     
 	Vector2D::Vector2D() {
 		this->set(0, 0);
@@ -86,6 +88,7 @@ namespace Core {
 	}
 
 	void Vector2D::divide(double s) {
+        if (s==0.0) throw DivideByZeroException("Divide Vector by zero not allowed.");
 		this->x /= s;
 		this->y /= s;
 	}
@@ -128,7 +131,9 @@ namespace Core {
 		return v1.x*v2.x + v1.y*v2.y;
 	}
 
-	Vector2D operator / (const Vector2D &v, double s) {
+    Vector2D operator / (const Vector2D &v, double s) {
+        if (s==0)
+            throw DivideByZeroException("Divide Vector by zero not allowed.");
 		return Vector2D(v.x / s, v.y / s);
     }
     

@@ -39,4 +39,17 @@ namespace Testing {
             throw AssertException(ss.str());
         }
 	}
-}
+    
+    void Assert::isTrue(bool b) {
+        calls++;
+        if (!b) {
+            throw AssertException("Expected to be true");
+        }
+    }
+    void Assert::isFalse(bool b) {
+        calls++;
+        if (b) {
+            throw AssertException("Expected to be false");
+        }
+    }
+};

@@ -16,6 +16,8 @@ namespace Testing {
         int getCalls();
 		void areEqual(Vector2D &v1, Vector2D &v2);
 		void areEqual(string s1, string s2);
-		void areEqual(double n1, double n2);
+        void areEqual(double n1, double n2);
+        void isTrue(bool b);
+        void isFalse(bool b);
 	};
 }

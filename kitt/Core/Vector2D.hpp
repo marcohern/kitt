@@ -47,23 +47,24 @@ namespace Core {
 		double dot(const Vector2D &v) const;
 		double angleBetween(Vector2D &v) const;
         
-        inline friend Vector2D operator + (const Vector2D &v);
-        inline friend Vector2D operator - (const Vector2D &v);
-        inline friend Vector2D operator + (const Vector2D &v1, const Vector2D &v2);
-        inline friend Vector2D operator - (const Vector2D &v1, const Vector2D &v2);
+        //inline friend Vector2D & operator = (const Vector2D &v);
+        friend Vector2D operator + (const Vector2D &v);
+        friend Vector2D operator - (const Vector2D &v);
+        friend Vector2D operator + (const Vector2D &v1, const Vector2D &v2);
+        friend Vector2D operator - (const Vector2D &v1, const Vector2D &v2);
         
-        inline friend Vector2D operator * (const Vector2D &v, double s);
-        inline friend Vector2D operator * (double s, const Vector2D &v);
-		inline friend double   operator * (const Vector2D &v1, const Vector2D &v2);
+        friend Vector2D operator * (const Vector2D &v, double s);
+        friend Vector2D operator * (double s, const Vector2D &v);
+		friend double   operator * (const Vector2D &v1, const Vector2D &v2);
         
-        inline friend Vector2D operator / (const Vector2D &v, double s);
+        friend Vector2D operator / (const Vector2D &v, double s);
         
-        inline friend bool operator == (const Vector2D &v1, const Vector2D &v2);
-        inline friend bool operator != (const Vector2D &v1, const Vector2D &v2);
-        inline friend bool operator >  (const Vector2D &v1, const Vector2D &v2);
-        inline friend bool operator >= (const Vector2D &v1, const Vector2D &v2);
-        inline friend bool operator <  (const Vector2D &v1, const Vector2D &v2);
-        inline friend bool operator <= (const Vector2D &v1, const Vector2D &v2);
+        friend bool operator == (const Vector2D &v1, const Vector2D &v2);
+        friend bool operator != (const Vector2D &v1, const Vector2D &v2);
+        friend bool operator >  (const Vector2D &v1, const Vector2D &v2);
+        friend bool operator >= (const Vector2D &v1, const Vector2D &v2);
+        friend bool operator <  (const Vector2D &v1, const Vector2D &v2);
+        friend bool operator <= (const Vector2D &v1, const Vector2D &v2);
     };
 }
 

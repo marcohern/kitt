@@ -9,6 +9,7 @@ namespace Testing {
 	class TestSuite {
 	private:
 		list<Test *> tests;
+        int ran = 0;
 
 	protected:
 		void add(Test *test);

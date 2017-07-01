@@ -9,12 +9,15 @@
 #ifndef Vector2D_hpp
 #define Vector2D_hpp
 
+#include <string>
 #include <stdio.h>
 #include <math.h>
+#include "Object.hpp"
 
 namespace Core {
+    using namespace std;
     
-    class Vector2D {
+    class Vector2D : public Object {
     private:
         double x, y;
         
@@ -22,6 +25,8 @@ namespace Core {
         Vector2D();
         Vector2D(double x, double y);
         Vector2D(const Vector2D &v);
+        
+        virtual string toString();
         
         double getX();
         double getY();
@@ -39,8 +44,8 @@ namespace Core {
         double magnitude() const;
         void multiply(double s);
         void divide(double s);
-		double dot(const Vector2D &v);
-		double angleBetween(Vector2D &v);
+		double dot(const Vector2D &v) const;
+		double angleBetween(Vector2D &v) const;
         
         inline friend Vector2D operator + (const Vector2D &v);
         inline friend Vector2D operator - (const Vector2D &v);
@@ -52,8 +57,10 @@ namespace Core {
 		inline friend double   operator * (const Vector2D &v1, const Vector2D &v2);
         
         inline friend Vector2D operator / (const Vector2D &v, double s);
-		inline friend bool operator == (const Vector2D &v1, const Vector2D &v2);
-		inline friend bool operator > (const Vector2D &v1, const Vector2D &v2);
+        
+        inline friend bool operator == (const Vector2D &v1, const Vector2D &v2);
+        inline friend bool operator > (const Vector2D &v1, const Vector2D &v2);
+        inline friend bool operator < (const Vector2D &v1, const Vector2D &v2);
     };
 }
 

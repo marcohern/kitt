@@ -6,10 +6,13 @@
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 #include <math.h>
+#include <sstream>
 
 #include "./Vector2D.hpp"
 
 namespace Core {
+    using namespace std;
+    
 	Vector2D::Vector2D() {
 		this->set(0, 0);
 	}
@@ -21,6 +24,12 @@ namespace Core {
 	Vector2D::Vector2D(const Vector2D &v) {
 		this->set(v.x, v.y);
 	}
+    
+    string Vector2D::toString() {
+        stringstream ss;
+        ss<<"("<<this->x<<","<<this->y<<")";
+        return ss.str();
+    }
 
 	double Vector2D::getX() {
 		return this->x;
@@ -81,11 +90,11 @@ namespace Core {
 		this->y /= s;
 	}
 
-	double Vector2D::dot(const Vector2D &v) {
+	double Vector2D::dot(const Vector2D &v) const {
 		return this->x*v.x + this->y*v.y;
 	}
 
-	double Vector2D::angleBetween(Vector2D &v) {
+	double Vector2D::angleBetween(Vector2D &v) const {
 		double top = this->dot(v);
 		double bottom = (this->magnitude() * v.magnitude());
 		return top / bottom;
@@ -125,9 +134,13 @@ namespace Core {
 
 	bool operator == (const Vector2D &v1, const Vector2D &v2) {
 		return (v1.x == v2.x && v1.y == v2.y);
-	}
-
-	bool operator > (const Vector2D &v1, const Vector2D &v2) {
-		return (v1.magnitude() > v2.magnitude());
-	}
+    }
+    
+    bool operator > (const Vector2D &v1, const Vector2D &v2) {
+        return (v1.magnitude() > v2.magnitude());
+    }
+    
+    bool operator < (const Vector2D &v1, const Vector2D &v2) {
+        return (v1.magnitude() < v2.magnitude());
+    }
 }

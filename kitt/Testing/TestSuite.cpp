@@ -19,7 +19,6 @@ namespace Testing {
 			(*it)->run();
 			++it;
 		}
-
 		this->teardown();
 	}
 }

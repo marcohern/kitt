@@ -6,6 +6,10 @@ namespace Testing {
 
     using namespace Exceptions;
     
+    Test::Test() {
+        this->name = "Test";
+    }
+    
 	void Test::setup() {
         this->assert.resetCalls();
 	}

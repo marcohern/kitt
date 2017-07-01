@@ -2,6 +2,7 @@
 // [Include Section]
 // ============================================================================
 #include <SDL2/SDL.h>
+//#include <SDL2_image/SDL_image.h>
 #include <stdio.h>
 #include <iostream>
 #include "./Tests/KittTestSuite.hpp"

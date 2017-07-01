@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3C41F0736B6009A673B /* FileReader.cpp */; };
+		A76EE3E31F0736B6009A673B /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3C61F0736B6009A673B /* IReader.cpp */; };
+		A76EE3E41F0736B6009A673B /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3CA1F0736B6009A673B /* Matrix.cpp */; };
+		A76EE3E51F0736B6009A673B /* Placeable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3CC1F0736B6009A673B /* Placeable.cpp */; };
+		A76EE3E61F0736B6009A673B /* Vector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3CE1F0736B6009A673B /* Vector2D.cpp */; };
+		A76EE3E71F0736B6009A673B /* AssertException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3D21F0736B6009A673B /* AssertException.cpp */; };
+		A76EE3E81F0736B6009A673B /* KittException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3D41F0736B6009A673B /* KittException.cpp */; };
+		A76EE3E91F0736B6009A673B /* Assert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3D71F0736B6009A673B /* Assert.cpp */; };
+		A76EE3EA1F0736B6009A673B /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3D91F0736B6009A673B /* Test.cpp */; };
+		A76EE3EB1F0736B6009A673B /* TestSuite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3DB1F0736B6009A673B /* TestSuite.cpp */; };
+		A76EE3EC1F0736B6009A673B /* KittTestSuite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3DE1F0736B6009A673B /* KittTestSuite.cpp */; };
+		A76EE3ED1F0736B6009A673B /* Vector2DTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */; };
 		A7ECCDC01F04C03000011805 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDBF1F04C03000011805 /* main.cpp */; };
-		A7ECCDC91F04C0F900011805 /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDC71F04C0F900011805 /* IReader.cpp */; };
-		A7ECCDCC1F04C55300011805 /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDCA1F04C55300011805 /* FileReader.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
-		A7ECCDD91F05CC5900011805 /* Vector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDD71F05CC5900011805 /* Vector2D.cpp */; };
-		A7ECCDDC1F0608D900011805 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDDA1F0608D900011805 /* Matrix.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,18 +37,36 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A76EE3C41F0736B6009A673B /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
+		A76EE3C51F0736B6009A673B /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
+		A76EE3C61F0736B6009A673B /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
+		A76EE3C71F0736B6009A673B /* IReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IReader.hpp; sourceTree = "<group>"; };
+		A76EE3C91F0736B6009A673B /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		A76EE3CA1F0736B6009A673B /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
+		A76EE3CB1F0736B6009A673B /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
+		A76EE3CC1F0736B6009A673B /* Placeable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Placeable.cpp; sourceTree = "<group>"; };
+		A76EE3CD1F0736B6009A673B /* Placeable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Placeable.hpp; sourceTree = "<group>"; };
+		A76EE3CE1F0736B6009A673B /* Vector2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
+		A76EE3CF1F0736B6009A673B /* Vector2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2D.hpp; sourceTree = "<group>"; };
+		A76EE3D01F0736B6009A673B /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		A76EE3D21F0736B6009A673B /* AssertException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssertException.cpp; sourceTree = "<group>"; };
+		A76EE3D31F0736B6009A673B /* AssertException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AssertException.hpp; sourceTree = "<group>"; };
+		A76EE3D41F0736B6009A673B /* KittException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KittException.cpp; sourceTree = "<group>"; };
+		A76EE3D51F0736B6009A673B /* KittException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KittException.hpp; sourceTree = "<group>"; };
+		A76EE3D71F0736B6009A673B /* Assert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Assert.cpp; sourceTree = "<group>"; };
+		A76EE3D81F0736B6009A673B /* Assert.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Assert.hpp; sourceTree = "<group>"; };
+		A76EE3D91F0736B6009A673B /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		A76EE3DA1F0736B6009A673B /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
+		A76EE3DB1F0736B6009A673B /* TestSuite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestSuite.cpp; sourceTree = "<group>"; };
+		A76EE3DC1F0736B6009A673B /* TestSuite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestSuite.hpp; sourceTree = "<group>"; };
+		A76EE3DE1F0736B6009A673B /* KittTestSuite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KittTestSuite.cpp; sourceTree = "<group>"; };
+		A76EE3DF1F0736B6009A673B /* KittTestSuite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KittTestSuite.hpp; sourceTree = "<group>"; };
+		A76EE3E01F0736B6009A673B /* Vector2DTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2DTests.hpp; sourceTree = "<group>"; };
+		A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2DTests.cpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDBF1F04C03000011805 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		A7ECCDC71F04C0F900011805 /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
-		A7ECCDC81F04C0F900011805 /* IReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IReader.hpp; sourceTree = "<group>"; };
-		A7ECCDCA1F04C55300011805 /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
-		A7ECCDCB1F04C55300011805 /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
-		A7ECCDD71F05CC5900011805 /* Vector2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
-		A7ECCDD81F05CC5900011805 /* Vector2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2D.hpp; sourceTree = "<group>"; };
-		A7ECCDDA1F0608D900011805 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
-		A7ECCDDB1F0608D900011805 /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A76EE3C31F0736B6009A673B /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				A76EE3C41F0736B6009A673B /* FileReader.cpp */,
+				A76EE3C51F0736B6009A673B /* FileReader.hpp */,
+				A76EE3C61F0736B6009A673B /* IReader.cpp */,
+				A76EE3C71F0736B6009A673B /* IReader.hpp */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		A76EE3C81F0736B6009A673B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A76EE3C91F0736B6009A673B /* Camera.hpp */,
+				A76EE3CA1F0736B6009A673B /* Matrix.cpp */,
+				A76EE3CB1F0736B6009A673B /* Matrix.hpp */,
+				A76EE3CC1F0736B6009A673B /* Placeable.cpp */,
+				A76EE3CD1F0736B6009A673B /* Placeable.hpp */,
+				A76EE3CE1F0736B6009A673B /* Vector2D.cpp */,
+				A76EE3CF1F0736B6009A673B /* Vector2D.hpp */,
+				A76EE3D01F0736B6009A673B /* Window.hpp */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A76EE3D11F0736B6009A673B /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				A76EE3D21F0736B6009A673B /* AssertException.cpp */,
+				A76EE3D31F0736B6009A673B /* AssertException.hpp */,
+				A76EE3D41F0736B6009A673B /* KittException.cpp */,
+				A76EE3D51F0736B6009A673B /* KittException.hpp */,
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		A76EE3D61F0736B6009A673B /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				A76EE3D71F0736B6009A673B /* Assert.cpp */,
+				A76EE3D81F0736B6009A673B /* Assert.hpp */,
+				A76EE3D91F0736B6009A673B /* Test.cpp */,
+				A76EE3DA1F0736B6009A673B /* Test.hpp */,
+				A76EE3DB1F0736B6009A673B /* TestSuite.cpp */,
+				A76EE3DC1F0736B6009A673B /* TestSuite.hpp */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		A76EE3DD1F0736B6009A673B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A76EE3DE1F0736B6009A673B /* KittTestSuite.cpp */,
+				A76EE3DF1F0736B6009A673B /* KittTestSuite.hpp */,
+				A76EE3E01F0736B6009A673B /* Vector2DTests.hpp */,
+				A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		A7ECCDB31F04C03000011805 = {
 			isa = PBXGroup;
 			children = (
@@ -76,22 +163,14 @@
 		A7ECCDBE1F04C03000011805 /* kitt */ = {
 			isa = PBXGroup;
 			children = (
-				A7ECCDD61F05CC2A00011805 /* Core */,
-				A7ECCDC61F04C0C600011805 /* Content */,
+				A76EE3C31F0736B6009A673B /* Content */,
+				A76EE3C81F0736B6009A673B /* Core */,
+				A76EE3D11F0736B6009A673B /* Exceptions */,
+				A76EE3D61F0736B6009A673B /* Testing */,
+				A76EE3DD1F0736B6009A673B /* Tests */,
 				A7ECCDBF1F04C03000011805 /* main.cpp */,
 			);
 			path = kitt;
-			sourceTree = "<group>";
-		};
-		A7ECCDC61F04C0C600011805 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				A7ECCDC71F04C0F900011805 /* IReader.cpp */,
-				A7ECCDC81F04C0F900011805 /* IReader.hpp */,
-				A7ECCDCA1F04C55300011805 /* FileReader.cpp */,
-				A7ECCDCB1F04C55300011805 /* FileReader.hpp */,
-			);
-			name = Content;
 			sourceTree = "<group>";
 		};
 		A7ECCDCD1F04CA1200011805 /* Frameworks */ = {
@@ -101,17 +180,6 @@
 				A7ECCDCF1F04CA1300011805 /* SDL2.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A7ECCDD61F05CC2A00011805 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				A7ECCDD71F05CC5900011805 /* Vector2D.cpp */,
-				A7ECCDD81F05CC5900011805 /* Vector2D.hpp */,
-				A7ECCDDA1F0608D900011805 /* Matrix.cpp */,
-				A7ECCDDB1F0608D900011805 /* Matrix.hpp */,
-			);
-			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,11 +239,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7ECCDC91F04C0F900011805 /* IReader.cpp in Sources */,
-				A7ECCDCC1F04C55300011805 /* FileReader.cpp in Sources */,
-				A7ECCDD91F05CC5900011805 /* Vector2D.cpp in Sources */,
+				A76EE3E41F0736B6009A673B /* Matrix.cpp in Sources */,
+				A76EE3E31F0736B6009A673B /* IReader.cpp in Sources */,
+				A76EE3EB1F0736B6009A673B /* TestSuite.cpp in Sources */,
+				A76EE3E61F0736B6009A673B /* Vector2D.cpp in Sources */,
+				A76EE3E71F0736B6009A673B /* AssertException.cpp in Sources */,
+				A76EE3E91F0736B6009A673B /* Assert.cpp in Sources */,
+				A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */,
+				A76EE3E81F0736B6009A673B /* KittException.cpp in Sources */,
+				A76EE3ED1F0736B6009A673B /* Vector2DTests.cpp in Sources */,
+				A76EE3EC1F0736B6009A673B /* KittTestSuite.cpp in Sources */,
 				A7ECCDC01F04C03000011805 /* main.cpp in Sources */,
-				A7ECCDDC1F0608D900011805 /* Matrix.cpp in Sources */,
+				A76EE3E51F0736B6009A673B /* Placeable.cpp in Sources */,
+				A76EE3EA1F0736B6009A673B /* Test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +422,7 @@
 				A7ECCDC51F04C03000011805 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

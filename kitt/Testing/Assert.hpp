@@ -9,7 +9,11 @@ namespace Testing {
 	using namespace Core;
 
 	class Assert {
+    private:
+        int calls;
 	public:
+        void resetCalls();
+        int getCalls();
 		void areEqual(Vector2D &v1, Vector2D &v2);
 		void areEqual(string s1, string s2);
 		void areEqual(double n1, double n2);

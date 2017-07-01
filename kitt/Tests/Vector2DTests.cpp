@@ -1,4 +1,4 @@
-#include "./Vector2DTest.hpp"
+#include "./Vector2DTests.hpp"
 #include "../Exceptions/AssertException.hpp"
 
 namespace Tests {
@@ -6,11 +6,11 @@ namespace Tests {
 	using namespace Exceptions;
 
 	void Vector2DTests::setup() {
-
+        Test::setup();
 	}
 
 	void Vector2DTests::teardown() {
-
+        Test::teardown();
 	}
 
 	void Vector2DTests::execute(string name, Vector2DTestMethod method) {
@@ -27,7 +27,7 @@ namespace Tests {
 			cout << name << ":ERROR " << ex.what() << endl;
 		}
 		catch (...) {
-			cout << "UNKNOWN ERROR in " << name << endl;
+			cout << name << ":UNKNOWN ERROR" << endl;
 		}
 
 	}

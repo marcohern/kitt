@@ -1,5 +1,6 @@
 #include "./Vector2DTests.hpp"
 #include "../Exceptions/AssertException.hpp"
+#include "../Testing/TestRunner.hpp"
 
 namespace Tests {
 
@@ -12,25 +13,6 @@ namespace Tests {
 
 	void Vector2DTests::teardown() {
         Test::teardown();
-	}
-
-	void Vector2DTests::execute(string name, Vector2DTestMethod method) {
-		try {
-			this->setup();
-			(this->*method)();
-			this->teardown();
-			cout << this->name << "_" << name <<":OK" << endl;
-		}
-		catch (AssertException &ex) {
-			cout << this->name << "_" << name << ":ERROR " << ex.getMessage() << endl;
-		}
-		catch (exception &ex) {
-			cout << this->name << "_" << name << ":ERROR " << ex.what() << endl;
-		}
-		catch (...) {
-			cout << this->name << "_" << name << ":UNKNOWN ERROR" << endl;
-		}
-
 	}
 
 	void Vector2DTests::constructor_Test() {
@@ -84,7 +66,7 @@ namespace Tests {
 		assert.areEqual(v.getY(), 10.00);
 	}
     
-    void Vector2DTests::add_vector_test() {
+    void Vector2DTests::add_vector_Test() {
         Vector2D v1(1.234, 5.678);
         Vector2D v2(8.766, 4.322);
         
@@ -145,25 +127,27 @@ namespace Tests {
         double a = v1.angleBetween(v2);
         assert.areEqual(a, 0.96);
     }
+    
+    void Vector2DTests::runtest(string name, Vector2DTestMethod method) {
+        TestRunner<Vector2DTests, Vector2DTestMethod>(name, this, method).run();
+    }
 
 	void Vector2DTests::run() {
-        this->execute("constructor_Test--------", &Vector2DTests::constructor_Test);
-        this->execute("constructor_vector_Test-", &Vector2DTests::constructor_vector_Test);
-        this->execute("toString_Test-----------", &Vector2DTests::toString_Test);
-		this->execute("setX_Test---------------", &Vector2DTests::setX_Test);
-		this->execute("setY_Test---------------", &Vector2DTests::setY_Test);
-		this->execute("set_Test----------------", &Vector2DTests::set_Test);
-        this->execute("set_vector_Test---------", &Vector2DTests::set_vector_Test);
-        this->execute("add_Test----------------", &Vector2DTests::add_Test);
-        this->execute("add_vector_Test---------", &Vector2DTests::add_vector_test);
-        this->execute("sub_Test----------------", &Vector2DTests::sub_Test);
-        this->execute("sub_vector_Test---------", &Vector2DTests::sub_vector_Test);
-        this->execute("magnitude_Test----------", &Vector2DTests::magnitude_Test);
-        this->execute("multiply_Test-----------", &Vector2DTests::multiply_Test);
-        this->execute("divide_Test-------------", &Vector2DTests::divide_Test);
-        this->execute("dot_Test----------------", &Vector2DTests::dot_Test);
-        this->execute("angleBetween_Test-------", &Vector2DTests::angleBetween_Test);
-		
-
+        runtest("constructor_Test--------", &Vector2DTests::constructor_Test);
+        runtest("constructor_vector_Test-", &Vector2DTests::constructor_vector_Test);
+        runtest("toString_Test-----------", &Vector2DTests::toString_Test);
+		runtest("setX_Test---------------", &Vector2DTests::setX_Test);
+		runtest("setY_Test---------------", &Vector2DTests::setY_Test);
+		runtest("set_Test----------------", &Vector2DTests::set_Test);
+        runtest("set_vector_Test---------", &Vector2DTests::set_vector_Test);
+        runtest("add_Test----------------", &Vector2DTests::add_Test);
+        runtest("add_vector_Test---------", &Vector2DTests::add_vector_Test);
+        runtest("sub_Test----------------", &Vector2DTests::sub_Test);
+        runtest("sub_vector_Test---------", &Vector2DTests::sub_vector_Test);
+        runtest("magnitude_Test----------", &Vector2DTests::magnitude_Test);
+        runtest("multiply_Test-----------", &Vector2DTests::multiply_Test);
+        runtest("divide_Test-------------", &Vector2DTests::divide_Test);
+        runtest("dot_Test----------------", &Vector2DTests::dot_Test);
+        runtest("angleBetween_Test-------", &Vector2DTests::angleBetween_Test);
 	}
 }

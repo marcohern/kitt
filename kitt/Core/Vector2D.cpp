@@ -130,17 +130,29 @@ namespace Core {
 
 	Vector2D operator / (const Vector2D &v, double s) {
 		return Vector2D(v.x / s, v.y / s);
-	}
-
-	bool operator == (const Vector2D &v1, const Vector2D &v2) {
-		return (v1.x == v2.x && v1.y == v2.y);
+    }
+    
+    bool operator == (const Vector2D &v1, const Vector2D &v2) {
+        return (v1.x == v2.x && v1.y == v2.y);
+    }
+    
+    bool operator != (const Vector2D &v1, const Vector2D &v2) {
+        return (v1.x != v2.x && v1.y != v2.y);
     }
     
     bool operator > (const Vector2D &v1, const Vector2D &v2) {
         return (v1.magnitude() > v2.magnitude());
     }
     
+    bool operator >= (const Vector2D &v1, const Vector2D &v2) {
+        return (v1.magnitude() >= v2.magnitude());
+    }
+    
     bool operator < (const Vector2D &v1, const Vector2D &v2) {
         return (v1.magnitude() < v2.magnitude());
+    }
+    
+    bool operator <= (const Vector2D &v1, const Vector2D &v2) {
+        return (v1.magnitude() <= v2.magnitude());
     }
 }

@@ -14,6 +14,7 @@ namespace Testing {
 
 	public:
         Test();
+        string getName();
         
 		virtual void setup();
 		virtual void teardown();

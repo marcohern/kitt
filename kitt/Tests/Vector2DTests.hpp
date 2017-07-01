@@ -20,7 +20,7 @@ namespace Tests {
 
 		void setup();
 		void teardown();
-		void execute(string name, Vector2DTestMethod method);
+        void runtest(string name, Vector2DTestMethod method);
 
 		void constructor_Test();
 		void constructor_vector_Test();
@@ -30,7 +30,7 @@ namespace Tests {
 		void set_Test();
 		void set_vector_Test();
 		void add_Test();
-        void add_vector_test();
+        void add_vector_Test();
         void sub_Test();
         void sub_vector_Test();
         void magnitude_Test();

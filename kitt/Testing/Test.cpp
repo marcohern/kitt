@@ -10,6 +10,10 @@ namespace Testing {
         this->name = "Test";
     }
     
+    string Test::getName() {
+        return this->name;
+    }
+    
 	void Test::setup() {
         this->assert.resetCalls();
 	}

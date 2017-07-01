@@ -59,8 +59,11 @@ namespace Core {
         inline friend Vector2D operator / (const Vector2D &v, double s);
         
         inline friend bool operator == (const Vector2D &v1, const Vector2D &v2);
-        inline friend bool operator > (const Vector2D &v1, const Vector2D &v2);
-        inline friend bool operator < (const Vector2D &v1, const Vector2D &v2);
+        inline friend bool operator != (const Vector2D &v1, const Vector2D &v2);
+        inline friend bool operator >  (const Vector2D &v1, const Vector2D &v2);
+        inline friend bool operator >= (const Vector2D &v1, const Vector2D &v2);
+        inline friend bool operator <  (const Vector2D &v1, const Vector2D &v2);
+        inline friend bool operator <= (const Vector2D &v1, const Vector2D &v2);
     };
 }
 

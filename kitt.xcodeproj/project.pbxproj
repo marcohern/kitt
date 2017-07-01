@@ -20,6 +20,7 @@
 		A76EE3EC1F0736B6009A673B /* KittTestSuite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3DE1F0736B6009A673B /* KittTestSuite.cpp */; };
 		A76EE3ED1F0736B6009A673B /* Vector2DTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */; };
 		A76EE3F01F075715009A673B /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3EE1F075715009A673B /* Object.cpp */; };
+		A76EE3F61F07CEFE009A673B /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3F41F07CEFE009A673B /* TestRunner.cpp */; };
 		A7ECCDC01F04C03000011805 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDBF1F04C03000011805 /* main.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
@@ -66,6 +67,8 @@
 		A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2DTests.cpp; sourceTree = "<group>"; };
 		A76EE3EE1F075715009A673B /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Object.cpp; path = kitt/Core/Object.cpp; sourceTree = SOURCE_ROOT; };
 		A76EE3EF1F075715009A673B /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Object.hpp; path = kitt/Core/Object.hpp; sourceTree = SOURCE_ROOT; };
+		A76EE3F41F07CEFE009A673B /* TestRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRunner.cpp; sourceTree = "<group>"; };
+		A76EE3F51F07CEFE009A673B /* TestRunner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestRunner.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDBF1F04C03000011805 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				A76EE3DA1F0736B6009A673B /* Test.hpp */,
 				A76EE3DB1F0736B6009A673B /* TestSuite.cpp */,
 				A76EE3DC1F0736B6009A673B /* TestSuite.hpp */,
+				A76EE3F41F07CEFE009A673B /* TestRunner.cpp */,
+				A76EE3F51F07CEFE009A673B /* TestRunner.hpp */,
 			);
 			path = Testing;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				A76EE3E91F0736B6009A673B /* Assert.cpp in Sources */,
 				A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */,
 				A76EE3E81F0736B6009A673B /* KittException.cpp in Sources */,
+				A76EE3F61F07CEFE009A673B /* TestRunner.cpp in Sources */,
 				A76EE3ED1F0736B6009A673B /* Vector2DTests.cpp in Sources */,
 				A76EE3EC1F0736B6009A673B /* KittTestSuite.cpp in Sources */,
 				A7ECCDC01F04C03000011805 /* main.cpp in Sources */,

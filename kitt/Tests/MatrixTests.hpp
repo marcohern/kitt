@@ -31,10 +31,16 @@ namespace Tests {
         void constructor_value_Test();
         void constructor_invalid_size_Test();
         void get_outofrange_Test();
+        void set_Test();
+        void set_outofrange_Test();
         void add_Test();
         void add_mismatch_Test();
+        void sub_Test();
+        void sub_mismatch_Test();
         void toString_Test();
         void op_access_Test();
+        void op_positive_Test();
+        void op_negative_Test();
         
         void run();
     };

@@ -82,6 +82,15 @@ namespace Core {
         }
     }
     
+    void Matrix::sub(const Matrix &mx) {
+        this->validate_match_size(mx);
+        for (int i=0;i<n;i++) {
+            for (int j=0;j<n;j++) {
+                v[i][j] -= mx.get(i,j);
+            }
+        }
+    }
+    
     string Matrix::toString() {
         stringstream ss;
         for (int i=0;i<n;i++) {
@@ -97,5 +106,17 @@ namespace Core {
     double *Matrix::operator[](int i) const {
         if (i<0 || i>=n) throw OutOfRangeException("Matrix index out of range");
         return v[i];
+    }
+    
+    Matrix operator + (const Matrix &mx) {
+        Matrix r(mx.cols(), mx.rows());
+        r.add(mx);
+        return r;
+    }
+    
+    Matrix operator - (const Matrix &mx) {
+        Matrix r(mx.cols(), mx.rows());
+        r.sub(mx);
+        return r;
     }
 }

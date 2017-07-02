@@ -34,8 +34,12 @@ namespace Core {
         void set(int i, int j, double value);
         
         void add(const Matrix &mx);
+        void sub(const Matrix &mx);
         
         double* operator [] (int i) const;
+        friend Matrix operator + (const Matrix &mx);
+        friend Matrix operator - (const Matrix &mx);
+        
         
         virtual string toString();
     };

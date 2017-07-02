@@ -17,15 +17,15 @@
 namespace Tests {
     using namespace Testing;
     
-    class RealtimeTrigonometryTest;
-    typedef void (RealtimeTrigonometryTest::*RealtimeTrigonometryTestMethod)();
+    class RealtimeTrigonometryTests;
+    typedef void (RealtimeTrigonometryTests::*RealtimeTrigonometryTestsMethod)();
     
-    class RealtimeTrigonometryTest : public Test {
+    class RealtimeTrigonometryTests : public Test {
     public:
         
         void setup();
         void teardown();
-        void runtest(string name, RealtimeTrigonometryTestMethod method);
+        void runtest(string name, RealtimeTrigonometryTestsMethod method);
         
         void cos_00_Test();
         void cos_05_Test();

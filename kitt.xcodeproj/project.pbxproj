@@ -129,6 +129,7 @@
 		A76EE3C81F0736B6009A673B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A76EE4181F087952009A673B /* Trigonometry */,
 				A76EE3EE1F075715009A673B /* Object.cpp */,
 				A76EE3EF1F075715009A673B /* Object.hpp */,
 				A76EE3C91F0736B6009A673B /* Camera.hpp */,
@@ -137,18 +138,10 @@
 				A76EE3CE1F0736B6009A673B /* Vector2D.cpp */,
 				A76EE3CF1F0736B6009A673B /* Vector2D.hpp */,
 				A76EE3D01F0736B6009A673B /* Window.hpp */,
-				A76EE3FA1F07EC76009A673B /* Trigonometry.cpp */,
-				A76EE3FB1F07EC76009A673B /* Trigonometry.hpp */,
-				A76EE3FD1F07F1F2009A673B /* HasTrigonometry.cpp */,
-				A76EE3FE1F07F1F2009A673B /* HasTrigonometry.hpp */,
 				A76EE4001F07FCE9009A673B /* New.cpp */,
 				A76EE4011F07FCE9009A673B /* New.hpp */,
 				A76EE4061F080360009A673B /* Injector.cpp */,
 				A76EE4071F080360009A673B /* Injector.hpp */,
-				A76EE40C1F081D0C009A673B /* RealtimeTrigonometry.cpp */,
-				A76EE40D1F081D0C009A673B /* RealtimeTrigonometry.hpp */,
-				A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */,
-				A76EE4101F081E08009A673B /* MemoizedTrigonometry.hpp */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -196,6 +189,21 @@
 				A76EE4161F0874C6009A673B /* MemoizedTrigonometryTests.hpp */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		A76EE4181F087952009A673B /* Trigonometry */ = {
+			isa = PBXGroup;
+			children = (
+				A76EE3FA1F07EC76009A673B /* Trigonometry.cpp */,
+				A76EE3FB1F07EC76009A673B /* Trigonometry.hpp */,
+				A76EE3FD1F07F1F2009A673B /* HasTrigonometry.cpp */,
+				A76EE3FE1F07F1F2009A673B /* HasTrigonometry.hpp */,
+				A76EE40C1F081D0C009A673B /* RealtimeTrigonometry.cpp */,
+				A76EE40D1F081D0C009A673B /* RealtimeTrigonometry.hpp */,
+				A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */,
+				A76EE4101F081E08009A673B /* MemoizedTrigonometry.hpp */,
+			);
+			name = Trigonometry;
 			sourceTree = "<group>";
 		};
 		A7ECCDB31F04C03000011805 = {

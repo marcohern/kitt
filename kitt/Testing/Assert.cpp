@@ -51,8 +51,11 @@ namespace Testing {
         double error = 1.0/pow(10.0, dd);
         double deltaX = v1.getX() - v2.getX();
         double deltaY = v1.getY() - v2.getY();
-        if (abs(deltaX) > error || abs(deltaY) > error)
-            throw AssertException("Vectors expected to be closer");
+        if (abs(deltaX) > error || abs(deltaY) > error) {
+            stringstream ss;
+            ss<<"Vectors expected to be closer, "<<v1.toString()<<"' != '"<<v2.toString()<<"'";
+            throw AssertException(ss.str());
+        }
     }
     
     void Assert::areClose(double n1, double n2, int digits) {
@@ -61,7 +64,11 @@ namespace Testing {
         double error = 1.0/pow(10.0, dd);
         double delta = n1 - n2;
         if (abs(delta) > error)
-            throw AssertException("Values expected to be closer");
+        {
+            stringstream ss;
+            ss<<"Values expected to be closer, "<<n1<<"' != '"<<n2<<"'";
+            throw AssertException(ss.str());
+        }
     }
     void Assert::isTrue(bool b) {
         this->pre();

@@ -84,6 +84,20 @@ namespace Tests {
         assert.areClose(r, 0.0, 10);
     }
     
+    void RealtimeTrigonometryTests::cos_random_Test() {
+        RealtimeTrigonometry rtt;
+        double start = time(NULL);
+        for (int i=0;i<1000000;i++) {
+            double rnd = (double) rand()/RAND_MAX;
+            double num = rnd*1000;
+            rtt.cos(num);
+        }
+        double end = time(NULL);
+        double diff = end - start;
+        cout<<"Duration:"<<diff<<endl;
+        assert.isTrue(true);
+    }
+    
     void RealtimeTrigonometryTests::runtest(string name, RealtimeTrigonometryTestsMethod method) {
         TestRunner<RealtimeTrigonometryTests, RealtimeTrigonometryTestsMethod>
             (name, this, method).run();
@@ -101,6 +115,8 @@ namespace Tests {
         runtest("sin_10_Test--", &RealtimeTrigonometryTests::sin_10_Test);
         runtest("sin_20_Test--", &RealtimeTrigonometryTests::sin_20_Test);
         runtest("sin_pi_Test--", &RealtimeTrigonometryTests::sin_pi_Test);
+        
+        runtest("cos_random_Test--", &RealtimeTrigonometryTests::cos_random_Test);
     }
 
 }

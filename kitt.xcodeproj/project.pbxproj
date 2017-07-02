@@ -23,7 +23,6 @@
 		A76EE3F91F07E136009A673B /* DivideByZeroException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3F71F07E136009A673B /* DivideByZeroException.cpp */; };
 		A76EE3FC1F07EC76009A673B /* Trigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3FA1F07EC76009A673B /* Trigonometry.cpp */; };
 		A76EE3FF1F07F1F2009A673B /* HasTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3FD1F07F1F2009A673B /* HasTrigonometry.cpp */; };
-		A76EE4021F07FCE9009A673B /* New.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4001F07FCE9009A673B /* New.cpp */; };
 		A76EE4081F080360009A673B /* Injector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4061F080360009A673B /* Injector.cpp */; };
 		A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4091F080CB7009A673B /* NullReferenceException.cpp */; };
 		A76EE40E1F081D0C009A673B /* RealtimeTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE40C1F081D0C009A673B /* RealtimeTrigonometry.cpp */; };
@@ -82,8 +81,6 @@
 		A76EE3FB1F07EC76009A673B /* Trigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trigonometry.hpp; sourceTree = "<group>"; };
 		A76EE3FD1F07F1F2009A673B /* HasTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HasTrigonometry.cpp; sourceTree = "<group>"; };
 		A76EE3FE1F07F1F2009A673B /* HasTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HasTrigonometry.hpp; sourceTree = "<group>"; };
-		A76EE4001F07FCE9009A673B /* New.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = New.cpp; sourceTree = "<group>"; };
-		A76EE4011F07FCE9009A673B /* New.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = New.hpp; sourceTree = "<group>"; };
 		A76EE4061F080360009A673B /* Injector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Injector.cpp; sourceTree = "<group>"; };
 		A76EE4071F080360009A673B /* Injector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Injector.hpp; sourceTree = "<group>"; };
 		A76EE4091F080CB7009A673B /* NullReferenceException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullReferenceException.cpp; sourceTree = "<group>"; };
@@ -96,6 +93,7 @@
 		A76EE4131F0864C4009A673B /* RealtimeTrigonometryTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealtimeTrigonometryTests.hpp; sourceTree = "<group>"; };
 		A76EE4151F0874C6009A673B /* MemoizedTrigonometryTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoizedTrigonometryTests.cpp; sourceTree = "<group>"; };
 		A76EE4161F0874C6009A673B /* MemoizedTrigonometryTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoizedTrigonometryTests.hpp; sourceTree = "<group>"; };
+		A76EE41A1F094726009A673B /* constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDBF1F04C03000011805 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
@@ -138,10 +136,9 @@
 				A76EE3CE1F0736B6009A673B /* Vector2D.cpp */,
 				A76EE3CF1F0736B6009A673B /* Vector2D.hpp */,
 				A76EE3D01F0736B6009A673B /* Window.hpp */,
-				A76EE4001F07FCE9009A673B /* New.cpp */,
-				A76EE4011F07FCE9009A673B /* New.hpp */,
 				A76EE4061F080360009A673B /* Injector.cpp */,
 				A76EE4071F080360009A673B /* Injector.hpp */,
+				A76EE41A1F094726009A673B /* constants.hpp */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -312,7 +309,6 @@
 				A76EE3E71F0736B6009A673B /* AssertException.cpp in Sources */,
 				A76EE3E91F0736B6009A673B /* Assert.cpp in Sources */,
 				A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */,
-				A76EE4021F07FCE9009A673B /* New.cpp in Sources */,
 				A76EE4081F080360009A673B /* Injector.cpp in Sources */,
 				A76EE3E81F0736B6009A673B /* KittException.cpp in Sources */,
 				A76EE40E1F081D0C009A673B /* RealtimeTrigonometry.cpp in Sources */,

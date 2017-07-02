@@ -39,6 +39,8 @@ namespace Tests {
         void sin_20_Test();
         void sin_pi_Test();
         
+        void cos_random_Test();
+        
         void run();
     };
 }

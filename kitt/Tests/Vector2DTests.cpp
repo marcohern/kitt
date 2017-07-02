@@ -1,5 +1,6 @@
 #include "./Vector2DTests.hpp"
 #include "../Core/MemoizedTrigonometry.hpp"
+#include "../Core/RealtimeTrigonometry.hpp"
 #include "../Exceptions/AssertException.hpp"
 #include "../Exceptions/DivideByZeroException.hpp"
 #include "../Exceptions/NullReferenceException.hpp"
@@ -12,7 +13,7 @@ namespace Tests {
 
 	void Vector2DTests::setup() {
         this->name = "Vector2D";
-        this->trigonometry = new MemoizedTrigonometry();
+        this->trigonometry = new RealtimeTrigonometry();
         Test::setup();
 	}
 

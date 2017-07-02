@@ -115,8 +115,6 @@ namespace Tests {
         runtest("sin_10_Test--", &RealtimeTrigonometryTests::sin_10_Test);
         runtest("sin_20_Test--", &RealtimeTrigonometryTests::sin_20_Test);
         runtest("sin_pi_Test--", &RealtimeTrigonometryTests::sin_pi_Test);
-        
-        runtest("cos_random_Test--", &RealtimeTrigonometryTests::cos_random_Test);
     }
 
 }

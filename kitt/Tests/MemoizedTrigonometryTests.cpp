@@ -129,8 +129,6 @@ namespace Tests {
         runtest("sin_20_Test--", &MemoizedTrigonometryTests::sin_20_Test);
         runtest("sin_pi_Test--", &MemoizedTrigonometryTests::sin_pi_Test);
         
-        runtest("cos_random_Test--", &MemoizedTrigonometryTests::cos_random_Test);
-        
         
     }
     

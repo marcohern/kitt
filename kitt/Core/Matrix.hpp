@@ -10,23 +10,34 @@
 #define Matrix_hpp
 
 #include <stdio.h>
+#include "Object.hpp"
 
 namespace Core {
-    class Matrix {
+    class Matrix : public Object {
     private:
         int n, m;
         double **v;
         
         void allocate(int n, int m);
+        void validate_size(int n, int m) const;
+        void validate_access(int i, int j) const;
+        void validate_match_size(const Matrix &mx) const;
         
     public:
-        Matrix(int n, int m, double **v);
+        Matrix(int n, int m, double v[]);
         Matrix(int n, int m);
         
-        double get(int i, int j);
+        int cols() const;
+        int rows() const;
+        
+        double get(int i, int j) const;
         void set(int i, int j, double value);
         
         void add(const Matrix &mx);
+        
+        double* operator [] (int i) const;
+        
+        virtual string toString();
     };
 }
 #endif /* Matrix_hpp */

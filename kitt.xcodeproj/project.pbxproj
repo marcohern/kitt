@@ -29,6 +29,9 @@
 		A76EE4111F081E08009A673B /* MemoizedTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */; };
 		A76EE4141F0864C4009A673B /* RealtimeTrigonometryTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4121F0864C4009A673B /* RealtimeTrigonometryTests.cpp */; };
 		A76EE4171F0874C6009A673B /* MemoizedTrigonometryTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4151F0874C6009A673B /* MemoizedTrigonometryTests.cpp */; };
+		A76EE41E1F097B9B009A673B /* MatrixTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE41C1F097B9B009A673B /* MatrixTests.cpp */; };
+		A76EE4211F0989B8009A673B /* OutOfRangeException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE41F1F0989B8009A673B /* OutOfRangeException.cpp */; };
+		A76EE4241F098DDF009A673B /* MismatchException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4221F098DDF009A673B /* MismatchException.cpp */; };
 		A7ECCDC01F04C03000011805 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDBF1F04C03000011805 /* main.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
@@ -94,6 +97,12 @@
 		A76EE4151F0874C6009A673B /* MemoizedTrigonometryTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoizedTrigonometryTests.cpp; sourceTree = "<group>"; };
 		A76EE4161F0874C6009A673B /* MemoizedTrigonometryTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoizedTrigonometryTests.hpp; sourceTree = "<group>"; };
 		A76EE41A1F094726009A673B /* constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
+		A76EE41C1F097B9B009A673B /* MatrixTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixTests.cpp; sourceTree = "<group>"; };
+		A76EE41D1F097B9B009A673B /* MatrixTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MatrixTests.hpp; sourceTree = "<group>"; };
+		A76EE41F1F0989B8009A673B /* OutOfRangeException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OutOfRangeException.cpp; sourceTree = "<group>"; };
+		A76EE4201F0989B8009A673B /* OutOfRangeException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OutOfRangeException.hpp; sourceTree = "<group>"; };
+		A76EE4221F098DDF009A673B /* MismatchException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MismatchException.cpp; sourceTree = "<group>"; };
+		A76EE4231F098DDF009A673B /* MismatchException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MismatchException.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDBF1F04C03000011805 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
@@ -154,6 +163,10 @@
 				A76EE3F81F07E136009A673B /* DivideByZeroException.hpp */,
 				A76EE4091F080CB7009A673B /* NullReferenceException.cpp */,
 				A76EE40A1F080CB7009A673B /* NullReferenceException.hpp */,
+				A76EE41F1F0989B8009A673B /* OutOfRangeException.cpp */,
+				A76EE4201F0989B8009A673B /* OutOfRangeException.hpp */,
+				A76EE4221F098DDF009A673B /* MismatchException.cpp */,
+				A76EE4231F098DDF009A673B /* MismatchException.hpp */,
 			);
 			path = Exceptions;
 			sourceTree = "<group>";
@@ -184,6 +197,8 @@
 				A76EE4131F0864C4009A673B /* RealtimeTrigonometryTests.hpp */,
 				A76EE4151F0874C6009A673B /* MemoizedTrigonometryTests.cpp */,
 				A76EE4161F0874C6009A673B /* MemoizedTrigonometryTests.hpp */,
+				A76EE41C1F097B9B009A673B /* MatrixTests.cpp */,
+				A76EE41D1F097B9B009A673B /* MatrixTests.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -302,6 +317,8 @@
 				A76EE3E41F0736B6009A673B /* Matrix.cpp in Sources */,
 				A76EE3E31F0736B6009A673B /* IReader.cpp in Sources */,
 				A76EE3EB1F0736B6009A673B /* TestSuite.cpp in Sources */,
+				A76EE4241F098DDF009A673B /* MismatchException.cpp in Sources */,
+				A76EE4211F0989B8009A673B /* OutOfRangeException.cpp in Sources */,
 				A76EE3FC1F07EC76009A673B /* Trigonometry.cpp in Sources */,
 				A76EE3E61F0736B6009A673B /* Vector2D.cpp in Sources */,
 				A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */,
@@ -315,6 +332,7 @@
 				A76EE3F91F07E136009A673B /* DivideByZeroException.cpp in Sources */,
 				A76EE3FF1F07F1F2009A673B /* HasTrigonometry.cpp in Sources */,
 				A76EE3F61F07CEFE009A673B /* TestRunner.cpp in Sources */,
+				A76EE41E1F097B9B009A673B /* MatrixTests.cpp in Sources */,
 				A76EE3ED1F0736B6009A673B /* Vector2DTests.cpp in Sources */,
 				A76EE3EC1F0736B6009A673B /* KittTestSuite.cpp in Sources */,
 				A7ECCDC01F04C03000011805 /* main.cpp in Sources */,

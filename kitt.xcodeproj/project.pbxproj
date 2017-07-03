@@ -32,6 +32,9 @@
 		A76EE41E1F097B9B009A673B /* MatrixTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE41C1F097B9B009A673B /* MatrixTests.cpp */; };
 		A76EE4211F0989B8009A673B /* OutOfRangeException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE41F1F0989B8009A673B /* OutOfRangeException.cpp */; };
 		A76EE4241F098DDF009A673B /* MismatchException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4221F098DDF009A673B /* MismatchException.cpp */; };
+		A76EE4271F09A157009A673B /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4251F09A157009A673B /* Texture.cpp */; };
+		A76EE42B1F09CF47009A673B /* TrigonometryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4291F09CF47009A673B /* TrigonometryFactory.cpp */; };
+		A76EE42E1F09D1CF009A673B /* Vector2DFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE42C1F09D1CF009A673B /* Vector2DFactory.cpp */; };
 		A7ECCDC01F04C03000011805 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDBF1F04C03000011805 /* main.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
@@ -103,6 +106,12 @@
 		A76EE4201F0989B8009A673B /* OutOfRangeException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OutOfRangeException.hpp; sourceTree = "<group>"; };
 		A76EE4221F098DDF009A673B /* MismatchException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MismatchException.cpp; sourceTree = "<group>"; };
 		A76EE4231F098DDF009A673B /* MismatchException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MismatchException.hpp; sourceTree = "<group>"; };
+		A76EE4251F09A157009A673B /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = Graphics/Texture.cpp; sourceTree = "<group>"; };
+		A76EE4261F09A157009A673B /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Texture.hpp; path = Graphics/Texture.hpp; sourceTree = "<group>"; };
+		A76EE4291F09CF47009A673B /* TrigonometryFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrigonometryFactory.cpp; sourceTree = "<group>"; };
+		A76EE42A1F09CF47009A673B /* TrigonometryFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrigonometryFactory.hpp; sourceTree = "<group>"; };
+		A76EE42C1F09D1CF009A673B /* Vector2DFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2DFactory.cpp; sourceTree = "<group>"; };
+		A76EE42D1F09D1CF009A673B /* Vector2DFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2DFactory.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDBF1F04C03000011805 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
@@ -136,14 +145,11 @@
 		A76EE3C81F0736B6009A673B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A76EE42F1F09D502009A673B /* Math */,
 				A76EE4181F087952009A673B /* Trigonometry */,
 				A76EE3EE1F075715009A673B /* Object.cpp */,
 				A76EE3EF1F075715009A673B /* Object.hpp */,
 				A76EE3C91F0736B6009A673B /* Camera.hpp */,
-				A76EE3CA1F0736B6009A673B /* Matrix.cpp */,
-				A76EE3CB1F0736B6009A673B /* Matrix.hpp */,
-				A76EE3CE1F0736B6009A673B /* Vector2D.cpp */,
-				A76EE3CF1F0736B6009A673B /* Vector2D.hpp */,
 				A76EE3D01F0736B6009A673B /* Window.hpp */,
 				A76EE4061F080360009A673B /* Injector.cpp */,
 				A76EE4071F080360009A673B /* Injector.hpp */,
@@ -214,8 +220,32 @@
 				A76EE40D1F081D0C009A673B /* RealtimeTrigonometry.hpp */,
 				A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */,
 				A76EE4101F081E08009A673B /* MemoizedTrigonometry.hpp */,
+				A76EE4291F09CF47009A673B /* TrigonometryFactory.cpp */,
+				A76EE42A1F09CF47009A673B /* TrigonometryFactory.hpp */,
 			);
 			name = Trigonometry;
+			sourceTree = "<group>";
+		};
+		A76EE4281F09A1B8009A673B /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				A76EE4251F09A157009A673B /* Texture.cpp */,
+				A76EE4261F09A157009A673B /* Texture.hpp */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		A76EE42F1F09D502009A673B /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				A76EE3CA1F0736B6009A673B /* Matrix.cpp */,
+				A76EE3CB1F0736B6009A673B /* Matrix.hpp */,
+				A76EE3CE1F0736B6009A673B /* Vector2D.cpp */,
+				A76EE3CF1F0736B6009A673B /* Vector2D.hpp */,
+				A76EE42C1F09D1CF009A673B /* Vector2DFactory.cpp */,
+				A76EE42D1F09D1CF009A673B /* Vector2DFactory.hpp */,
+			);
+			name = Math;
 			sourceTree = "<group>";
 		};
 		A7ECCDB31F04C03000011805 = {
@@ -238,6 +268,7 @@
 		A7ECCDBE1F04C03000011805 /* kitt */ = {
 			isa = PBXGroup;
 			children = (
+				A76EE4281F09A1B8009A673B /* Graphics */,
 				A76EE3C31F0736B6009A673B /* Content */,
 				A76EE3C81F0736B6009A673B /* Core */,
 				A76EE3D11F0736B6009A673B /* Exceptions */,
@@ -335,11 +366,14 @@
 				A76EE41E1F097B9B009A673B /* MatrixTests.cpp in Sources */,
 				A76EE3ED1F0736B6009A673B /* Vector2DTests.cpp in Sources */,
 				A76EE3EC1F0736B6009A673B /* KittTestSuite.cpp in Sources */,
+				A76EE4271F09A157009A673B /* Texture.cpp in Sources */,
 				A7ECCDC01F04C03000011805 /* main.cpp in Sources */,
+				A76EE42B1F09CF47009A673B /* TrigonometryFactory.cpp in Sources */,
 				A76EE4111F081E08009A673B /* MemoizedTrigonometry.cpp in Sources */,
 				A76EE3EA1F0736B6009A673B /* Test.cpp in Sources */,
 				A76EE4171F0874C6009A673B /* MemoizedTrigonometryTests.cpp in Sources */,
 				A76EE4141F0864C4009A673B /* RealtimeTrigonometryTests.cpp in Sources */,
+				A76EE42E1F09D1CF009A673B /* Vector2DFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

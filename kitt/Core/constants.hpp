@@ -16,4 +16,9 @@
 
 #define TRIGO_TABLE_SIZE 200000
 
+#define TRIGO_TYPE_REALTIME 0x01
+#define TRIGO_TYPE_MEMOIZED 0x02
+
+#define TRIGO_TYPE TRIGO_TYPE_MEMOIZED
+
 #endif /* constants_hpp */

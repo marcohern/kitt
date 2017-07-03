@@ -7,12 +7,13 @@
 //
 
 #include "Injector.hpp"
+#include "./TrigonometryFactory.hpp"
 
 namespace Core {
     Injector *Injector::instance = NULL;
     
     Injector::Injector() {
-        trigonometry = new MemoizedTrigonometry();
+        trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
     }
     
     Injector::~Injector() {

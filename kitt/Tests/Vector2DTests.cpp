@@ -8,7 +8,8 @@
 
 namespace Tests {
 
-	using namespace Exceptions;
+    using namespace Exceptions;
+    using namespace Testing;
     using namespace Core;
 
 	void Vector2DTests::setup() {

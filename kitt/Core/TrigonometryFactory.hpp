@@ -16,7 +16,7 @@
 namespace Core {
     class TrigonometryFactory {
     public:
-        static Trigonometry create(const int &type);
+        static Trigonometry* create(const int &type);
         
     };
 }

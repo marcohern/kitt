@@ -13,6 +13,7 @@
 namespace Tests {
     
     using namespace Exceptions;
+    using namespace Testing;
     using namespace Core;
     
     void RealtimeTrigonometryTests::setup() {

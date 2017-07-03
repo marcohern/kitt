@@ -12,8 +12,16 @@
 #include "./Injector.hpp"
 
 namespace Core{
-    Vector2D create(const int &trigoType) {
+    Vector2D create() {
         Trigonometry *t = Injector::get()->getTrigonometry();
         return Vector2D(t);
+    }
+    Vector2D create(double x, double y) {
+        Trigonometry *t = Injector::get()->getTrigonometry();
+        return Vector2D(x,y,t);
+    }
+    Vector2D create(const Vector2D &v) {
+        Trigonometry *t = Injector::get()->getTrigonometry();
+        return Vector2D(v,t);
     }
 }

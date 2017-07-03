@@ -11,13 +11,13 @@
 #include "./MemoizedTrigonometry.hpp"
 
 namespace Core {
-    Trigonometry TrigonometryFactory::create(const int &type) {
+    Trigonometry* TrigonometryFactory::create(const int &type) {
         switch (type) {
         case TRIGO_TYPE_MEMOIZED:
-            return MemoizedTrigonometry();
+            return new MemoizedTrigonometry();
         case TRIGO_TYPE_REALTIME:
         default:
-            return RealtimeTrigonometry();
+            return new RealtimeTrigonometry();
             
         }
     }

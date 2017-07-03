@@ -9,13 +9,14 @@
 #include <iostream>
 
 #include "MemoizedTrigonometryTests.hpp"
-#include "../Testing/TestRunner.hpp"
 #include "../Core/MemoizedTrigonometry.hpp"
+#include "../Testing/TestRunner.hpp"
 
 namespace Tests {
     
     using namespace Exceptions;
     using namespace Core;
+    using namespace Testing;
     using namespace std;
     
     void MemoizedTrigonometryTests::setup() {

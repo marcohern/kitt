@@ -15,7 +15,9 @@
 namespace Core {
     class Vector2DFactory {
     public:
-        static Vector2D create(const int &trigoType);
+        static Vector2D create();
+        static Vector2D create(double x, double y);
+        static Vector2D create(const Vector2D &v);
     };
 }
 

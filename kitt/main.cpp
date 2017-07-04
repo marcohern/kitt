@@ -2,7 +2,7 @@
 // [Include Section]
 // ============================================================================
 #include <SDL2/SDL.h>
-//#include <SDL2_image/SDL_image.h>
+#include <SDL2/SDL_image.h>
 #include <stdio.h>
 #include <math.h>
 #include <iostream>
@@ -78,7 +78,9 @@ int SdlApplication::init(int width, int height)
 	win = SDL_CreateWindow(APPTITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	
-    this->courier = SDL_LoadBMP("/Users/marcoh/Development/kitt/content/fonts/courier.bmp");
+    //this->courier = SDL_LoadBMP("/Users/marcoh/Development/kitt/content/fonts/courier.bmp");
+	this->courier = SDL_LoadBMP("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
+
     this->couriertx = SDL_CreateTextureFromSurface(renderer, this->courier);
     
     this->letter.x=0;

@@ -55,6 +55,14 @@ namespace Core {
     void Directable::setDirection(const Core::Vector2D &dir) {
         this->direction.set(dir);
     }
+
+	void Directable::addDirection(double dx, double dy) {
+		this->direction.add(dx, dy);
+	}
+
+	void Directable::addDirection(const Vector2D &v) {
+		this->direction.add(v);
+	}
     
     void Directable::updateLocation() {
         this->delta.add(direction.getX() * time->getDelta(), direction.getY() * time->getDelta());

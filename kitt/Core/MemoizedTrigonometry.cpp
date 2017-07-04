@@ -9,7 +9,6 @@
 #include <math.h>
 #include <iostream>
 #include <iomanip>
-#include <tgmath.h>
 #include "MemoizedTrigonometry.hpp"
 #include "./constants.hpp"
 

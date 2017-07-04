@@ -9,7 +9,7 @@
 #include "./Tests/KittTestSuite.hpp"
 #include "./Core/Injector.hpp"
 #include "./Core/Trigonometry.hpp"
-#include "./Core/Settings.hpp"
+#include "./Core/Path.hpp"
 // ============================================================================
 // [SdlApplication]
 // ============================================================================
@@ -198,8 +198,8 @@ void SdlApplication::Render()
 int main(int argc, char* argv[])
 {
 	
-	Core::Settings::get()->setRootFromArgs(argv[0]);
-	string path = Core::Settings::get()->getFullPath("/fonts/courier.bmp");
+	Core::Path::get()->setRootFromArgs(argv[0],"content");
+	string path = Core::Path::get()->getFullPath("/fonts/courier.bmp");
 
     /*
 	cout<<"Testing"<<endl;

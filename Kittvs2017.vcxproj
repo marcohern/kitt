@@ -96,7 +96,7 @@
     <ClCompile Include="kitt\Exceptions\NullReferenceException.cpp" />
     <ClCompile Include="kitt\Exceptions\OutOfRangeException.cpp" />
     <ClCompile Include="kitt\Graphics\SdlTexture.cpp" />
-    <ClCompile Include="kitt\Core\Settings.cpp" />
+    <ClCompile Include="kitt\Core\Path.cpp" />
     <ClCompile Include="kitt\Graphics\Texture.cpp" />
     <ClCompile Include="kitt\Graphics\TextureFactory.cpp" />
     <ClCompile Include="kitt\main.cpp" />
@@ -140,7 +140,7 @@
     <ClInclude Include="kitt\Exceptions\NullReferenceException.hpp" />
     <ClInclude Include="kitt\Exceptions\OutOfRangeException.hpp" />
     <ClInclude Include="kitt\Graphics\SdlTexture.hpp" />
-    <ClInclude Include="kitt\Core\Settings.hpp" />
+    <ClInclude Include="kitt\Core\Path.hpp" />
     <ClInclude Include="kitt\Graphics\Texture.hpp" />
     <ClInclude Include="kitt\Graphics\Renderer.hpp" />
     <ClInclude Include="kitt\Graphics\TextureFactory.hpp" />

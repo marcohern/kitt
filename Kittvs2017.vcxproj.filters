@@ -111,7 +111,7 @@
     <ClCompile Include="kitt\Core\TimeFactory.cpp">
       <Filter>Core\Time</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Core\Settings.cpp">
+    <ClCompile Include="kitt\Core\Path.cpp">
       <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
@@ -233,10 +233,10 @@
     <ClInclude Include="kitt\Core\Time.hpp">
       <Filter>Core\Time</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Core\Settings.hpp">
+    <ClInclude Include="kitt\constants.hpp">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\constants.hpp">
+    <ClInclude Include="kitt\Core\Path.hpp">
       <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>

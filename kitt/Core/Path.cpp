@@ -1,28 +1,28 @@
 #include <string>
 #include <algorithm>
-#include "Settings.hpp"
+#include "Path.hpp"
 #include "../constants.hpp"
 
 namespace Core {
 	using namespace std;
-	Settings *Settings::instance = NULL;
+	Path *Path::instance = NULL;
 
-	Settings::Settings() {
-
-	}
-
-	Settings::~Settings() {
+	Path::Path() {
 
 	}
 
-	Settings *Settings::get() {
+	Path::~Path() {
+
+	}
+
+	Path *Path::get() {
 		if (instance == NULL) {
-			instance = new Settings();
+			instance = new Path();
 		}
 		return instance;
 	}
 
-	void Settings::setRootFromArgs(const char *arg) {
+	void Path::setRootFromArgs(const char *arg, const char *folder) {
 		string exe(arg);
 		int pos;
 		char app[2] = { DS, '\0' };
@@ -31,19 +31,19 @@ namespace Core {
 		pos = exe.find_last_of(DS); //root
 		string root = exe.substr(0, pos);
 		root.append(app);
-		root.append("content");
+		root.append(folder);
 		this->setRoot(root);
 	}
 
-	void Settings::setRoot(const string &root) {
+	void Path::setRoot(const string &root) {
 		this->root = root;
 	}
 
-	string Settings::getRoot() const {
+	string Path::getRoot() const {
 		return this->root;
 	}
 
-	string Settings::getFullPath(const string &path) const {
+	string Path::getFullPath(const string &path) const {
 #ifdef _WIN32
 		string result = path;
 		replace(result.begin(), result.end(), UDS, WDS);

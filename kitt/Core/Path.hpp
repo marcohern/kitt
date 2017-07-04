@@ -5,19 +5,19 @@
 namespace Core {
 	using namespace std;
 
-	class Settings {
+	class Path {
 	private:
-		static Settings *instance;
+		static Path *instance;
 		string root;
-		Settings();
+		Path();
 
 	public:
-		virtual ~Settings();
+		virtual ~Path();
 		
-		static Settings *get();
+		static Path *get();
 
 		void setRoot(const string &root);
-		void setRootFromArgs(const char *arg);
+		void setRootFromArgs(const char *arg, const char*folder);
 		string getRoot() const;
 		string getFullPath(const string &path) const;
 		

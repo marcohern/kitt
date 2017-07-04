@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "../Graphics/Texture.hpp"
 #include "../Graphics/TextureFactory.hpp"
-#include "../Core/Settings.hpp"
+#include "../Core/Path.hpp"
 #include "FileReader.hpp"
 
 namespace Content {
@@ -20,7 +20,7 @@ namespace Content {
 	using namespace Graphics;
     
 	FileReader::FileReader() {
-		this->root = Settings::get()->getRoot();
+		this->root = Path::get()->getRoot();
 	}
 
     FileReader::FileReader(const string &root) {

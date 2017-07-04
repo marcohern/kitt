@@ -17,6 +17,10 @@ namespace Core {
         this->setStart(seconds);
     }
     
+    SdlTime::~SdlTime() {
+        Time::~Time();
+    }
+    
     void SdlTime::update() {
         double ticks = (double)SDL_GetTicks();
         double seconds = ticks/1000;

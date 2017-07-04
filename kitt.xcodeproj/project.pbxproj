@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A74E81FE1F09FBB600B8C90F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A74E81FD1F09FBB600B8C90F /* README.md */; };
+		A74E82051F0A708900B8C90F /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E82031F0A708900B8C90F /* Renderer.cpp */; };
+		A74E820C1F0B209800B8C90F /* Placeable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E820A1F0B209800B8C90F /* Placeable.cpp */; };
+		A74E82101F0B239C00B8C90F /* Moveable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E820E1F0B239C00B8C90F /* Moveable.cpp */; };
 		A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3C41F0736B6009A673B /* FileReader.cpp */; };
 		A76EE3E31F0736B6009A673B /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3C61F0736B6009A673B /* IReader.cpp */; };
 		A76EE3E41F0736B6009A673B /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3CA1F0736B6009A673B /* Matrix.cpp */; };
@@ -59,11 +62,18 @@
 
 /* Begin PBXFileReference section */
 		A74E81FD1F09FBB600B8C90F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A74E82031F0A708900B8C90F /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		A74E82041F0A708900B8C90F /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		A74E82071F0A891C00B8C90F /* file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
+		A74E82091F0A891C00B8C90F /* courier.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = courier.bmp; sourceTree = "<group>"; };
+		A74E820A1F0B209800B8C90F /* Placeable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Placeable.cpp; sourceTree = "<group>"; };
+		A74E820B1F0B209800B8C90F /* Placeable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Placeable.hpp; sourceTree = "<group>"; };
+		A74E820E1F0B239C00B8C90F /* Moveable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Moveable.cpp; sourceTree = "<group>"; };
+		A74E820F1F0B239C00B8C90F /* Moveable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Moveable.hpp; sourceTree = "<group>"; };
 		A76EE3C41F0736B6009A673B /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
 		A76EE3C51F0736B6009A673B /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
 		A76EE3C61F0736B6009A673B /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
 		A76EE3C71F0736B6009A673B /* IReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IReader.hpp; sourceTree = "<group>"; };
-		A76EE3C91F0736B6009A673B /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
 		A76EE3CA1F0736B6009A673B /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
 		A76EE3CB1F0736B6009A673B /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
 		A76EE3CE1F0736B6009A673B /* Vector2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
@@ -145,6 +155,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A74E82061F0A891C00B8C90F /* content */ = {
+			isa = PBXGroup;
+			children = (
+				A74E82071F0A891C00B8C90F /* file.txt */,
+				A74E82081F0A891C00B8C90F /* fonts */,
+			);
+			path = content;
+			sourceTree = "<group>";
+		};
+		A74E82081F0A891C00B8C90F /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A74E82091F0A891C00B8C90F /* courier.bmp */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		A74E820D1F0B234A00B8C90F /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				A74E820A1F0B209800B8C90F /* Placeable.cpp */,
+				A74E820B1F0B209800B8C90F /* Placeable.hpp */,
+				A74E820E1F0B239C00B8C90F /* Moveable.cpp */,
+				A74E820F1F0B239C00B8C90F /* Moveable.hpp */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
 		A76EE3C31F0736B6009A673B /* Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,15 +197,15 @@
 		A76EE3C81F0736B6009A673B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A74E820D1F0B234A00B8C90F /* Interfaces */,
 				A76EE4301F09EDEA009A673B /* Timing */,
 				A76EE42F1F09D502009A673B /* Math */,
 				A76EE4181F087952009A673B /* Trigonometry */,
 				A76EE3EE1F075715009A673B /* Object.cpp */,
 				A76EE3EF1F075715009A673B /* Object.hpp */,
-				A76EE3C91F0736B6009A673B /* Camera.hpp */,
-				A76EE3D01F0736B6009A673B /* Window.hpp */,
 				A76EE4061F080360009A673B /* Injector.cpp */,
 				A76EE4071F080360009A673B /* Injector.hpp */,
+				A76EE3D01F0736B6009A673B /* Window.hpp */,
 				A76EE41A1F094726009A673B /* constants.hpp */,
 			);
 			path = Core;
@@ -242,6 +280,8 @@
 			children = (
 				A76EE4251F09A157009A673B /* Texture.cpp */,
 				A76EE4261F09A157009A673B /* Texture.hpp */,
+				A74E82031F0A708900B8C90F /* Renderer.cpp */,
+				A74E82041F0A708900B8C90F /* Renderer.hpp */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -297,6 +337,7 @@
 		A7ECCDB31F04C03000011805 = {
 			isa = PBXGroup;
 			children = (
+				A74E82061F0A891C00B8C90F /* content */,
 				A74E81FD1F09FBB600B8C90F /* README.md */,
 				A7ECCDBE1F04C03000011805 /* kitt */,
 				A7ECCDBD1F04C03000011805 /* Products */,
@@ -395,14 +436,17 @@
 				A76EE3E41F0736B6009A673B /* Matrix.cpp in Sources */,
 				A76EE3E31F0736B6009A673B /* IReader.cpp in Sources */,
 				A76EE3EB1F0736B6009A673B /* TestSuite.cpp in Sources */,
+				A74E820C1F0B209800B8C90F /* Placeable.cpp in Sources */,
 				A76EE4241F098DDF009A673B /* MismatchException.cpp in Sources */,
 				A76EE4211F0989B8009A673B /* OutOfRangeException.cpp in Sources */,
 				A76EE3FC1F07EC76009A673B /* Trigonometry.cpp in Sources */,
 				A76EE3E61F0736B6009A673B /* Vector2D.cpp in Sources */,
+				A74E82101F0B239C00B8C90F /* Moveable.cpp in Sources */,
 				A76EE4391F09F395009A673B /* TimeFactory.cpp in Sources */,
 				A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */,
 				A76EE3F01F075715009A673B /* Object.cpp in Sources */,
 				A76EE3E71F0736B6009A673B /* AssertException.cpp in Sources */,
+				A74E82051F0A708900B8C90F /* Renderer.cpp in Sources */,
 				A76EE3E91F0736B6009A673B /* Assert.cpp in Sources */,
 				A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */,
 				A76EE4081F080360009A673B /* Injector.cpp in Sources */,

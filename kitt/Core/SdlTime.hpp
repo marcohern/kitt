@@ -16,6 +16,7 @@ namespace Core {
     class SdlTime : public Time {
     public:
         SdlTime();
+        virtual ~SdlTime();
         
         void update();
     };

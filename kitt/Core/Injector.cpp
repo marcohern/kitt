@@ -8,16 +8,19 @@
 
 #include "Injector.hpp"
 #include "./TrigonometryFactory.hpp"
+#include "./TimeFactory.hpp"
 
 namespace Core {
     Injector *Injector::instance = NULL;
     
     Injector::Injector() {
         trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
+        time = TimeFactory::create();
     }
     
     Injector::~Injector() {
         delete trigonometry;
+        delete time;
     }
     
     Injector *Injector::get() {
@@ -29,5 +32,9 @@ namespace Core {
     
     Trigonometry *Injector::getTrigonometry() {
         return trigonometry;
+    }
+    
+    Time *Injector::getTime() {
+        return time;
     }
 }

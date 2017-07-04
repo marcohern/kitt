@@ -4,6 +4,7 @@
 #include <SDL2/SDL.h>
 //#include <SDL2_image/SDL_image.h>
 #include <stdio.h>
+#include <math.h>
 #include <iostream>
 #include "./Tests/KittTestSuite.hpp"
 #include "./Core/Injector.hpp"
@@ -48,6 +49,12 @@ struct SdlApplication
 	bool _running;
 	SDL_Window *win;
 	SDL_Renderer *renderer;
+    
+    SDL_Surface *courier;
+    SDL_Texture *couriertx;
+    SDL_Rect letter;
+    SDL_Rect dst;
+    void RenderText(string text, int x, int y);
 };
 
 SdlApplication::SdlApplication() :
@@ -71,8 +78,36 @@ int SdlApplication::init(int width, int height)
 	win = SDL_CreateWindow(APPTITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	
+    this->courier = SDL_LoadBMP("/Users/marcoh/Development/kitt/content/fonts/courier.bmp");
+    this->couriertx = SDL_CreateTextureFromSurface(renderer, this->courier);
+    
+    this->letter.x=0;
+    this->letter.y=0;
+    this->letter.w=16;
+    this->letter.h=16;
+    
 	// Success.
 	return APP_OK;
+}
+
+void SdlApplication::RenderText(string text, int x, int y) {
+    this->dst.w = this->letter.w*2;
+    this->dst.h = this->letter.h*2;
+    this->dst.x = x;
+    this->dst.y = y;
+    
+    for (int i=0;i<text.size();i++) {
+        char c = text[i];
+        int cv = (int)c;
+        int sx = cv%16;
+        int sy = cv/16;
+        
+        this->letter.x = sx*16;
+        this->letter.y = sy*16;
+    
+        SDL_RenderCopy(renderer, this->couriertx, &this->letter, &this->dst);
+        this->dst.x+=16;
+    }
 }
 
 void SdlApplication::destroy()
@@ -140,10 +175,13 @@ void SdlApplication::Render()
 	
 	
 	//
-	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0, 0xff);
+	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0xFF, 0xff);
 	SDL_RenderClear(renderer);
+    
+    //SDL_RenderCopy(renderer, this->couriertx, NULL, &this->courier->clip_rect);
+    RenderText("Hello. I Love you. Wont you Tell me your name?",10,10);
 	
-	SDL_SetRenderDrawColor(renderer, 0xff, 0xff, 0, 0xff);
+	SDL_SetRenderDrawColor(renderer, 0xff, 0xff, 0x00, 0xff);
 	SDL_RenderFillRect(renderer, &r);
 	SDL_RenderPresent(renderer);
 }
@@ -155,13 +193,12 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
+    /*
 	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;
-	testSuite.run();
+	testSuite.run();*/
 
-	/*
 	SdlApplication app;
 	return app.run(800, 600);
-	*/
 	return 0;
 }

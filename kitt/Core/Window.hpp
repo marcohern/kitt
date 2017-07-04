@@ -11,7 +11,7 @@ namespace Core {
 		void setSize(int width, int height);
 		
 
-		virtual void init() = 0;
+		virtual void open() = 0;
 
 		virtual void close() = 0;
 	};

@@ -23,6 +23,7 @@ namespace Core {
         void setNow(double now);
     public:
         Time();
+        virtual ~Time();
         
         double getStart();
         double getNow();

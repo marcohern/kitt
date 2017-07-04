@@ -11,13 +11,14 @@
 
 #include <stdio.h>
 #include "./Trigonometry.hpp"
-#include "./MemoizedTrigonometry.hpp"
+#include "./Time.hpp"
 
 namespace Core {
     class Injector {
     private:
         static Injector *instance;
         Trigonometry *trigonometry;
+        Time *time;
         
         Injector();
         
@@ -26,6 +27,7 @@ namespace Core {
         static Injector *get();
         
         Trigonometry *getTrigonometry();
+        Time *getTime();
     };
 }
 #endif /* Injector_hpp */

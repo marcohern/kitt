@@ -14,6 +14,10 @@ namespace Core {
         this->setStart(0.0);
     }
     
+    Time::~Time() {
+        
+    }
+    
     void Time::setStart(double start){
         this->start = start;
         this->prev = start;

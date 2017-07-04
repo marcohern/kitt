@@ -18,6 +18,7 @@ namespace Graphics
 	}
 
 	SdlWindow::~SdlWindow() {
+		
 	}
 
 	int SdlWindow::w() const {

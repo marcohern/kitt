@@ -6,59 +6,55 @@
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
-#include "Injector.hpp"
-#include "../Core/TrigonometryFactory.hpp"
+#include "Game.hpp"
+
 #include "../Core/Trigonometry.hpp"
 #include "../Core/TimeFactory.hpp"
 #include "../Core/Vector2D.hpp"
 #include "../Content/IReader.hpp"
 #include "../Content/FileReader.hpp"
+#include "../Graphics/SdlWindow.hpp"
+
+#include "../Core/TrigonometryFactory.hpp"
 
 namespace Game {
 	using namespace Core;
 	using namespace Content;
-
-    Injector *Injector::instance = NULL;
+	using namespace Graphics;
     
-    Injector::Injector() {
+	Game::Game() {
         trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
         time = TimeFactory::create();
 		reader = new FileReader();
+		window = new SdlWindow(TITLE, 640, 480, false);
     }
     
-    Injector::~Injector() {
+	Game::~Game() {
         delete trigonometry;
         delete time;
     }
     
-    Injector *Injector::get() {
-        if (instance== NULL) {
-            instance = new Injector();
-        }
-        return instance;
-    }
-    
-    Trigonometry *Injector::getTrigonometry() {
+    Trigonometry *Game::getTrigonometry() {
         return trigonometry;
     }
     
-    Time *Injector::getTime() {
+    Time *Game::getTime() {
         return time;
     }
 
-	IReader *Injector::getReader() {
+	IReader *Game::getReader() {
 		return reader;
 	}
 
-	Vector2D Injector::createVector2D() {
+	Vector2D Game::createVector2D() {
 		return Vector2D(trigonometry);
 	}
 
-	Vector2D Injector::createVector2D(double x, double y) {
+	Vector2D Game::createVector2D(double x, double y) {
 		return Vector2D(x, y, trigonometry);
 	}
 
-	Vector2D Injector::createVector2D(const Vector2D &v) {
+	Vector2D Game::createVector2D(const Vector2D &v) {
 		return Vector2D(v, trigonometry);
 	}
 }

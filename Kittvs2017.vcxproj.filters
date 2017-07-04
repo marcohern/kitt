@@ -119,7 +119,7 @@
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Game\Injector.cpp">
+    <ClCompile Include="kitt\Game\Game.cpp">
       <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
@@ -248,7 +248,7 @@
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp">
       <Filter>Tests</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Game\Injector.hpp">
+    <ClInclude Include="kitt\Game\Game.hpp">
       <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>

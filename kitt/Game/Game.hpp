@@ -21,9 +21,9 @@ namespace Game {
 	using namespace Content;
 	using namespace Graphics;
 
-    class Injector {
+    class Game {
     private:
-        static Injector *instance;
+
         Trigonometry *trigonometry;
         Time *time;
 		Window *window;
@@ -31,11 +31,9 @@ namespace Game {
 
 		IReader *reader;
         
-        Injector();
-        
     public:
-        ~Injector();
-        static Injector *get();
+		Game();
+        ~Game();
         
         Trigonometry *getTrigonometry();
         Time *getTime();

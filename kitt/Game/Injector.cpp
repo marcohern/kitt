@@ -7,15 +7,23 @@
 //
 
 #include "Injector.hpp"
-#include "./TrigonometryFactory.hpp"
-#include "./TimeFactory.hpp"
+#include "../Core/TrigonometryFactory.hpp"
+#include "../Core/Trigonometry.hpp"
+#include "../Core/TimeFactory.hpp"
+#include "../Core/Vector2D.hpp"
+#include "../Content/IReader.hpp"
+#include "../Content/FileReader.hpp"
 
-namespace Core {
+namespace Game {
+	using namespace Core;
+	using namespace Content;
+
     Injector *Injector::instance = NULL;
     
     Injector::Injector() {
         trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
         time = TimeFactory::create();
+		reader = new FileReader();
     }
     
     Injector::~Injector() {
@@ -37,4 +45,20 @@ namespace Core {
     Time *Injector::getTime() {
         return time;
     }
+
+	IReader *Injector::getReader() {
+		return reader;
+	}
+
+	Vector2D Injector::createVector2D() {
+		return Vector2D(trigonometry);
+	}
+
+	Vector2D Injector::createVector2D(double x, double y) {
+		return Vector2D(x, y, trigonometry);
+	}
+
+	Vector2D Injector::createVector2D(const Vector2D &v) {
+		return Vector2D(v, trigonometry);
+	}
 }

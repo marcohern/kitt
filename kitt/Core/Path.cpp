@@ -36,21 +36,25 @@ namespace Core {
 	}
 
 	void Path::setRoot(const string &root) {
-		this->root = root;
+		this->_root = root;
 	}
 
 	string Path::getRoot() const {
-		return this->root;
+		return this->_root;
 	}
 
 	string Path::getFullPath(const string &path) const {
 #ifdef _WIN32
 		string result = path;
 		replace(result.begin(), result.end(), UDS, WDS);
-		result = root + result;
+		result = _root + result;
 		return result;
 #else
 		return path;
 #endif
+	}
+
+	string Path::root() {
+		return Path::get()->getRoot();
 	}
 }

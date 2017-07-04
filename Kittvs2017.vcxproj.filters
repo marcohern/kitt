@@ -7,7 +7,6 @@
     <ClCompile Include="kitt\Content\IReader.cpp">
       <Filter>Content</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Tests\Vector2DTests.cpp" />
     <ClCompile Include="kitt\main.cpp" />
     <ClCompile Include="kitt\Testing\Assert.cpp">
       <Filter>Testing</Filter>
@@ -26,9 +25,6 @@
     </ClCompile>
     <ClCompile Include="kitt\Exceptions\OutOfRangeException.cpp">
       <Filter>Exceptions</Filter>
-    </ClCompile>
-    <ClCompile Include="kitt\Core\Injector.cpp">
-      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Tests\KittTestSuite.cpp">
       <Filter>Tests</Filter>
@@ -63,13 +59,7 @@
     <ClCompile Include="kitt\Graphics\Renderer.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Graphics\SdlTexture.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="kitt\Graphics\Texture.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="kitt\Graphics\TextureFactory.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp">
@@ -88,9 +78,6 @@
       <Filter>Core\Trigonometry</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Vector2D.cpp">
-      <Filter>Core\Math</Filter>
-    </ClCompile>
-    <ClCompile Include="kitt\Core\Vector2DFactory.cpp">
       <Filter>Core\Math</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Matrix.cpp">
@@ -114,6 +101,27 @@
     <ClCompile Include="kitt\Core\Path.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="kitt\Graphics\SdlRenderer.cpp">
+      <Filter>Graphics\Sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\SdlTexture.cpp">
+      <Filter>Graphics\Sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\Window.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\SdlWindow.cpp">
+      <Filter>Graphics\Sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Content\Load.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\Vector2DTests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Game\Injector.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -125,11 +133,6 @@
     <ClInclude Include="kitt\Core\Camera.hpp">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Core\Window.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="kitt\Tests\Vector2DTest.hpp" />
-    <ClInclude Include="kitt\Tests\Vector2DTests.hpp" />
     <ClInclude Include="kitt\SDL.h" />
     <ClInclude Include="kitt\Testing\Assert.hpp">
       <Filter>Testing</Filter>
@@ -148,9 +151,6 @@
     </ClInclude>
     <ClInclude Include="kitt\Exceptions\OutOfRangeException.hpp">
       <Filter>Exceptions</Filter>
-    </ClInclude>
-    <ClInclude Include="kitt\Core\Injector.hpp">
-      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Tests\KittTestSuite.hpp">
       <Filter>Tests</Filter>
@@ -185,13 +185,7 @@
     <ClInclude Include="kitt\Graphics\Renderer.hpp">
       <Filter>Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Graphics\SdlTexture.hpp">
-      <Filter>Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="kitt\Graphics\Texture.hpp">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="kitt\Graphics\TextureFactory.hpp">
       <Filter>Graphics</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\HasTrigonometry.hpp">
@@ -210,9 +204,6 @@
       <Filter>Core\Trigonometry</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Vector2D.hpp">
-      <Filter>Core\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="kitt\Core\Vector2DFactory.hpp">
       <Filter>Core\Math</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Matrix.hpp">
@@ -237,6 +228,27 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Path.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\SdlRenderer.hpp">
+      <Filter>Graphics\Sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\SdlTexture.hpp">
+      <Filter>Graphics\Sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\Window.hpp">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\SdlWindow.hpp">
+      <Filter>Graphics\Sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Content\Load.hpp">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\Vector2DTests.hpp">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Game\Injector.hpp">
       <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>
@@ -270,6 +282,9 @@
     </Filter>
     <Filter Include="Core\Time">
       <UniqueIdentifier>{9707aa52-de6e-4094-9818-0a5e719c3bbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Sdl">
+      <UniqueIdentifier>{5538a9df-4054-4674-80ee-a116fe42758c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

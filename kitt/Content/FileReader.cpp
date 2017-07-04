@@ -9,7 +9,6 @@
 #include "../SDL.h"
 #include <stdio.h>
 #include "../Graphics/Texture.hpp"
-#include "../Graphics/TextureFactory.hpp"
 #include "../Core/Path.hpp"
 #include "FileReader.hpp"
 
@@ -20,7 +19,7 @@ namespace Content {
 	using namespace Graphics;
     
 	FileReader::FileReader() {
-		this->root = Path::get()->getRoot();
+		this->root = Path::root();
 	}
 
     FileReader::FileReader(const string &root) {
@@ -48,7 +47,7 @@ namespace Content {
     Texture* FileReader::readSurface(const string &path) {
 		string fullpath = this->root;
 		fullpath.append(path);
-		return TextureFactory::load(fullpath.c_str());
+		return NULL;
     }
     
     void FileReader::close() {

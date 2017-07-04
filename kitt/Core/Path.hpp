@@ -8,7 +8,7 @@ namespace Core {
 	class Path {
 	private:
 		static Path *instance;
-		string root;
+		string _root;
 		Path();
 
 	public:
@@ -20,6 +20,8 @@ namespace Core {
 		void setRootFromArgs(const char *arg, const char*folder);
 		string getRoot() const;
 		string getFullPath(const string &path) const;
+
+		static string root();
 		
 	};
 }

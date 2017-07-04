@@ -7,7 +7,7 @@
 #include <string>
 #include <iostream>
 #include "./Tests/KittTestSuite.hpp"
-#include "./Core/Injector.hpp"
+#include "./Game/Injector.hpp"
 #include "./Core/Trigonometry.hpp"
 #include "./Core/Path.hpp"
 // ============================================================================

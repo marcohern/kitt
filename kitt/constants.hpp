@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 
+#define TITLE "kitt"
+
 #define PI  3.141592653589793
 #define TAU 6.283185307179586
 

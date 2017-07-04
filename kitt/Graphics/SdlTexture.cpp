@@ -1,9 +1,11 @@
 #include "SdlTexture.hpp"
+#include "SdlRenderer.hpp"
 
 namespace Graphics {
-	SdlTexture::SdlTexture(SDL_Surface *surface)
+	SdlTexture::SdlTexture(SdlRenderer *renderer, SDL_Surface *surface)
 	: Texture() {
 		this->surface = surface;
+		this->texture = SDL_CreateTextureFromSurface(renderer->getRenderer(), this->surface);
 	}
 
 	SdlTexture::~SdlTexture() {
@@ -16,5 +18,13 @@ namespace Graphics {
 
 	int SdlTexture::h() const {
 		return this->surface->h;
+	}
+
+	SDL_Surface *SdlTexture::getSdlSurface() {
+		return this->surface;
+	}
+
+	SDL_Texture *SdlTexture::getSdlTexture() {
+		return this->texture;
 	}
 }

@@ -7,3 +7,7 @@
 //
 
 #include "Renderer.hpp"
+
+namespace Graphics {
+
+}

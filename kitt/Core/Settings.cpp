@@ -47,6 +47,7 @@ namespace Core {
 #ifdef _WIN32
 		string result = path;
 		replace(result.begin(), result.end(), UDS, WDS);
+		result = root + result;
 		return result;
 #else
 		return path;

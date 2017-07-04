@@ -199,6 +199,8 @@ int main(int argc, char* argv[])
 {
 	
 	Core::Settings::get()->setRootFromArgs(argv[0]);
+	string path = Core::Settings::get()->getFullPath("/fonts/courier.bmp");
+
     /*
 	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;

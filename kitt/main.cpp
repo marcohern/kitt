@@ -79,7 +79,7 @@ int SdlApplication::init(int width, int height)
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	
     //this->courier = SDL_LoadBMP("/Users/marcoh/Development/kitt/content/fonts/courier.bmp");
-	this->courier = SDL_LoadBMP("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
+	this->courier = IMG_Load("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
 
     this->couriertx = SDL_CreateTextureFromSurface(renderer, this->courier);
     

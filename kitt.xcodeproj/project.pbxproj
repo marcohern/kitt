@@ -10,7 +10,7 @@
 		A74E81FE1F09FBB600B8C90F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A74E81FD1F09FBB600B8C90F /* README.md */; };
 		A74E82051F0A708900B8C90F /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E82031F0A708900B8C90F /* Renderer.cpp */; };
 		A74E820C1F0B209800B8C90F /* Placeable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E820A1F0B209800B8C90F /* Placeable.cpp */; };
-		A74E82101F0B239C00B8C90F /* Moveable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E820E1F0B239C00B8C90F /* Moveable.cpp */; };
+		A74E82101F0B239C00B8C90F /* Directable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E820E1F0B239C00B8C90F /* Directable.cpp */; };
 		A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3C41F0736B6009A673B /* FileReader.cpp */; };
 		A76EE3E31F0736B6009A673B /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3C61F0736B6009A673B /* IReader.cpp */; };
 		A76EE3E41F0736B6009A673B /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3CA1F0736B6009A673B /* Matrix.cpp */; };
@@ -68,8 +68,8 @@
 		A74E82091F0A891C00B8C90F /* courier.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = courier.bmp; sourceTree = "<group>"; };
 		A74E820A1F0B209800B8C90F /* Placeable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Placeable.cpp; sourceTree = "<group>"; };
 		A74E820B1F0B209800B8C90F /* Placeable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Placeable.hpp; sourceTree = "<group>"; };
-		A74E820E1F0B239C00B8C90F /* Moveable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Moveable.cpp; sourceTree = "<group>"; };
-		A74E820F1F0B239C00B8C90F /* Moveable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Moveable.hpp; sourceTree = "<group>"; };
+		A74E820E1F0B239C00B8C90F /* Directable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Directable.cpp; sourceTree = "<group>"; };
+		A74E820F1F0B239C00B8C90F /* Directable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Directable.hpp; sourceTree = "<group>"; };
 		A76EE3C41F0736B6009A673B /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
 		A76EE3C51F0736B6009A673B /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
 		A76EE3C61F0736B6009A673B /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
@@ -177,8 +177,8 @@
 			children = (
 				A74E820A1F0B209800B8C90F /* Placeable.cpp */,
 				A74E820B1F0B209800B8C90F /* Placeable.hpp */,
-				A74E820E1F0B239C00B8C90F /* Moveable.cpp */,
-				A74E820F1F0B239C00B8C90F /* Moveable.hpp */,
+				A74E820E1F0B239C00B8C90F /* Directable.cpp */,
+				A74E820F1F0B239C00B8C90F /* Directable.hpp */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -441,7 +441,7 @@
 				A76EE4211F0989B8009A673B /* OutOfRangeException.cpp in Sources */,
 				A76EE3FC1F07EC76009A673B /* Trigonometry.cpp in Sources */,
 				A76EE3E61F0736B6009A673B /* Vector2D.cpp in Sources */,
-				A74E82101F0B239C00B8C90F /* Moveable.cpp in Sources */,
+				A74E82101F0B239C00B8C90F /* Directable.cpp in Sources */,
 				A76EE4391F09F395009A673B /* TimeFactory.cpp in Sources */,
 				A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */,
 				A76EE3F01F075715009A673B /* Object.cpp in Sources */,

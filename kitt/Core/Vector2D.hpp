@@ -28,10 +28,10 @@ namespace Core {
         Vector2D(double x, double y, Trigonometry *trigo);
         Vector2D(const Vector2D &v, Trigonometry *trigo);
         
-        virtual string toString();
+        virtual string toString() const;
         
-        double getX();
-        double getY();
+        double getX() const;
+        double getY() const;
         
         void setX(double x);
         void setY(double y);
@@ -44,11 +44,22 @@ namespace Core {
         void sub(const Vector2D &v);
         
         double magnitude() const;
+        inline double getMagnitude() const;
+        void setMagnitude(double m);
+        void addMagnitude(double dm);
+        
         void multiply(double s);
         void divide(double s);
 		double dot(const Vector2D &v) const;
-		double angleBetween(Vector2D &v) const;
+        double angleBetween(Vector2D &v) const;
+        double angle() const;
+        inline double getAngle() const;
+        void setAngle(double radians);
         void rotate(double radians);
+        inline void addAngle(double radians);
+        
+        Vector2D u() const;
+        void setU();
         
         //inline friend Vector2D & operator = (const Vector2D &v);
         friend Vector2D operator + (const Vector2D &v);

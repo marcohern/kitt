@@ -1,13 +1,13 @@
 //
-//  Moveable.hpp
+//  Directable.hpp
 //  kitt
 //
 //  Created by Marco Hernandez on 3/07/17.
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
-#ifndef Moveable_hpp
-#define Moveable_hpp
+#ifndef Directable_hpp
+#define Directable_hpp
 
 #include <stdio.h>
 #include "./Placeable.hpp"
@@ -15,7 +15,7 @@
 #include "./Time.hpp"
 
 namespace Core {
-    class Moveable : public Placeable {
+    class Directable : public Placeable {
     private:
         Vector2D delta;
         void setTime(Time *time);
@@ -23,13 +23,13 @@ namespace Core {
         Vector2D direction;
         Time *time;
     public:
-        Moveable(Trigonometry *trigo, Time *time);
-        Moveable(double x, double y, Trigonometry *trigo, Time *time);
-        Moveable(double x, double y, double dx, double dy, Trigonometry *trigo, Time *time);
-        Moveable(const Vector2D &loc, Trigonometry *trigo, Time *time);
-        Moveable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo, Time *time);
+        Directable(Trigonometry *trigo, Time *time);
+        Directable(double x, double y, Trigonometry *trigo, Time *time);
+        Directable(double x, double y, double dx, double dy, Trigonometry *trigo, Time *time);
+        Directable(const Vector2D &loc, Trigonometry *trigo, Time *time);
+        Directable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo, Time *time);
         
-        virtual ~Moveable();
+        virtual ~Directable();
         
         Vector2D getDirection();
         
@@ -42,4 +42,4 @@ namespace Core {
         void updateLocation();
     };
 }
-#endif /* Moveable_hpp */
+#endif /* Directable_hpp */

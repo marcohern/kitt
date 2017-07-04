@@ -17,7 +17,7 @@ namespace Core {
     
     class Object {
     public:
-        virtual string toString();
+        virtual string toString() const;
     };
 }
 

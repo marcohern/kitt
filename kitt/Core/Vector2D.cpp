@@ -28,17 +28,17 @@ namespace Core {
     : x(v.x), y(v.y), HasTrigonometry(trigo) {
 	}
     
-    string Vector2D::toString() {
+    string Vector2D::toString() const {
         stringstream ss;
         ss<<"("<<this->x<<","<<this->y<<")";
         return ss.str();
     }
 
-	double Vector2D::getX() {
+	double Vector2D::getX() const {
 		return this->x;
 	}
 
-	double Vector2D::getY() {
+	double Vector2D::getY() const {
 		return this->y;
 	}
 
@@ -81,7 +81,20 @@ namespace Core {
 
 	double Vector2D::magnitude() const {
 		return sqrt(this->x*this->x + this->y*this->y);
-	}
+    }
+    
+    inline double Vector2D::getMagnitude() const {
+        return this->magnitude();
+    }
+    
+    void Vector2D::setMagnitude(double m) {
+        this->set(this->u());
+        this->multiply(m);
+    }
+    
+    void Vector2D::addMagnitude(double m) {
+        this->setMagnitude(m-magnitude());
+    }
 
 	void Vector2D::multiply(double s) {
 		this->x *= s;
@@ -102,11 +115,39 @@ namespace Core {
 		double top = this->dot(v);
 		double bottom = (this->magnitude() * v.magnitude());
 		return top / bottom;
-	}
+    }
+    
+    double Vector2D::angle() const {
+        Vector2D r(*this);
+        Vector2D positivex(1.0, 0.0, trigo);
+        return r.angleBetween(positivex);
+    }
+    
+    inline double Vector2D::getAngle() const {
+        return this->angle();
+    }
+    
+    void Vector2D::setAngle(double radians) {
+        this->rotate(radians-angle());
+    }
     
     void Vector2D::rotate(double radians) {
         this->x = this->x*trigo->cos(radians) - this->y*trigo->sin(radians);
         this->y = this->x*trigo->sin(radians) + this->y*trigo->cos(radians);
+    }
+    
+    inline void Vector2D::addAngle(double radians) {
+        return this->rotate(radians);
+    }
+    
+    Vector2D Vector2D::u() const {
+        Vector2D r(*this);
+        r.divide(r.magnitude());
+        return r;
+    }
+    
+    void Vector2D::setU() {
+        this->divide(this->magnitude());
     }
 
 	Vector2D operator + (const Vector2D &v) {

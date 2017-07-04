@@ -11,7 +11,7 @@
 namespace Core {
     using namespace std;
     
-    string Object::toString() {
+    string Object::toString()  const {
         return "[Object]";
     }
 }

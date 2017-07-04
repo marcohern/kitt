@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "./Trigonometry.hpp"
-#include "./constants.hpp"
+#include "../constants.hpp"
 
 namespace Core {
     class TrigonometryFactory {

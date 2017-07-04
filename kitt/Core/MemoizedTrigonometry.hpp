@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <map>
 #include "Trigonometry.hpp"
-#include "constants.hpp"
+#include "../constants.hpp"
 
 namespace Core {
     using namespace std;

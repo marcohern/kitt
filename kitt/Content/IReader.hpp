@@ -12,16 +12,19 @@
 #include <stdio.h>
 #include <string>
 #include <SDL2/SDL.h>
+#include "../Graphics/Texture.hpp"
 
 namespace Content {
 
     using namespace std;
+	using namespace Graphics;
 
     class IReader {
     public:
         virtual void open() = 0;
-        virtual string readString(string path) = 0;
-        virtual SDL_Surface* readSurface(string path) = 0;
+		virtual bool exists(const string &path) = 0;
+        virtual string readString(const string &path) = 0;
+        virtual Texture* readSurface(const string &path) = 0;
         virtual void close() = 0;
     };
     

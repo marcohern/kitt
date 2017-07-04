@@ -1,14 +1,15 @@
 // ============================================================================
 // [Include Section]
 // ============================================================================
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "SDL.h"
 #include <stdio.h>
 #include <math.h>
+#include <string>
 #include <iostream>
 #include "./Tests/KittTestSuite.hpp"
 #include "./Core/Injector.hpp"
 #include "./Core/Trigonometry.hpp"
+#include "./Core/Settings.hpp"
 // ============================================================================
 // [SdlApplication]
 // ============================================================================
@@ -17,6 +18,7 @@
 // just to instantiate it and call run() to enter the SDL event loop.
 
 using namespace std;
+
 
 struct SdlApplication
 {
@@ -87,7 +89,7 @@ int SdlApplication::init(int width, int height)
     this->letter.y=0;
     this->letter.w=16;
     this->letter.h=16;
-    
+
 	// Success.
 	return APP_OK;
 }
@@ -195,6 +197,8 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
+	
+	Core::Settings::get()->setRootFromArgs(argv[0]);
     /*
 	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;

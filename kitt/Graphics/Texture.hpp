@@ -14,7 +14,11 @@
 namespace Graphics {
     class Texture {
     public:
-        
+		Texture();
+		virtual ~Texture();
+
+		virtual int w() const = 0;
+		virtual int h() const = 0;
     };
 }
 

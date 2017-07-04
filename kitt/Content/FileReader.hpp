@@ -11,22 +11,25 @@
 
 #include <stdio.h>
 #include <string>
-#include <SDL2/SDL.h>
-
+#include "../SDL.h"
 #include "IReader.hpp"
+#include "../Graphics/Texture.hpp"
 
 namespace Content {
     using namespace std;
+	using namespace Graphics;
     
     class FileReader : public IReader {
     private:
         string root;
     public:
-        FileReader(string root);
-        
+		FileReader();
+        FileReader(const string &root);
+
+		bool exists(const string &path);
         void open();
-        string readString(string path);
-        SDL_Surface* readSurface(string path);
+        string readString(const string &path);
+        Texture* readSurface(const string &path);
         void close();
     };
 }

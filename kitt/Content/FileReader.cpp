@@ -6,30 +6,53 @@
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
+#include "../SDL.h"
+#include <stdio.h>
+#include "../Graphics/Texture.hpp"
+#include "../Graphics/TextureFactory.hpp"
+#include "../Core/Settings.hpp"
 #include "FileReader.hpp"
 
 namespace Content {
     
     using namespace std;
+	using namespace Core;
+	using namespace Graphics;
     
-    FileReader::FileReader(string root) {
+	FileReader::FileReader() {
+		this->root = Settings::get()->getRoot();
+	}
+
+    FileReader::FileReader(const string &root) {
         this->root = root;
     }
+
+	bool FileReader::exists(const string &path) {
+		string fullpath = this->root;
+		fullpath.append(path);
+		if (FILE *f = fopen(fullpath.c_str(), "r")) {
+			fclose(f);
+			return true;
+		}
+		return false;
+	}
     
     void FileReader::open() {
-        
+        //nothing to do
     }
     
-    string FileReader::readString(string path) {
+    string FileReader::readString(const string &path) {
         return "";
     }
     
-    SDL_Surface* FileReader::readSurface(string path) {
-        return NULL;
+    Texture* FileReader::readSurface(const string &path) {
+		string fullpath = this->root;
+		fullpath.append(path);
+		return TextureFactory::load(fullpath.c_str());
     }
     
     void FileReader::close() {
-        
+		//nothing to do
     }
     
 }

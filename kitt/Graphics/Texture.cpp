@@ -7,3 +7,13 @@
 //
 
 #include "Texture.hpp"
+
+namespace Graphics {
+	Texture::Texture() {
+
+	}
+
+	Texture::~Texture() {
+
+	}
+}

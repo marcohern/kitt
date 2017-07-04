@@ -21,4 +21,13 @@
 
 #define TRIGO_TYPE TRIGO_TYPE_MEMOIZED
 
+#define WDS '\\'
+#define UDS '/'
+
+#ifdef _WIN32
+	#define DS WDS
+#else 
+	#define DS UDS
+#endif
+
 #endif /* constants_hpp */

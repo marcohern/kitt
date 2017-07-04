@@ -10,7 +10,7 @@
 #include <iostream>
 #include <iomanip>
 #include "MemoizedTrigonometry.hpp"
-#include "./constants.hpp"
+#include "../constants.hpp"
 
 namespace Core {
     using namespace std;

@@ -24,7 +24,6 @@
     <ClCompile Include="kitt\Testing\TestSuite.cpp" />
     <ClCompile Include="kitt\Tests\KittTestSuite.cpp" />
     <ClCompile Include="kitt\main.cpp" />
-    <ClCompile Include="kitt\Renderer.cpp" />
     <ClCompile Include="kitt\Graphics\Texture.cpp" />
     <ClCompile Include="kitt\Core\Directable.cpp" />
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp" />
@@ -47,6 +46,7 @@
     <ClCompile Include="kitt\Exceptions\MismatchException.cpp" />
     <ClCompile Include="kitt\Exceptions\NullReferenceException.cpp" />
     <ClCompile Include="kitt\Exceptions\OutOfRangeException.cpp" />
+    <ClCompile Include="kitt\Graphics\Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -77,7 +77,6 @@
     <ClInclude Include="kitt\Exceptions\AssertException.hpp" />
     <ClInclude Include="kitt\Testing\TestSuite.hpp" />
     <ClInclude Include="kitt\Tests\KittTestSuite.hpp" />
-    <ClInclude Include="kitt\Renderer.hpp" />
     <ClInclude Include="kitt\Graphics\Texture.hpp" />
     <ClInclude Include="kitt\Core\constants.hpp" />
     <ClInclude Include="kitt\Core\Directable.hpp" />
@@ -102,6 +101,7 @@
     <ClInclude Include="kitt\Exceptions\MismatchException.hpp" />
     <ClInclude Include="kitt\Exceptions\NullReferenceException.hpp" />
     <ClInclude Include="kitt\Exceptions\OutOfRangeException.hpp" />
+    <ClInclude Include="kitt\Graphics\Renderer.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

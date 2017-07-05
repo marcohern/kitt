@@ -83,7 +83,7 @@ int SdlApplication::init(int width, int height)
 	win = SDL_CreateWindow(APPTITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     
-    string path = Core::Path::get()->getFullPath("content","/fonts/courier.bmp");
+    string path = Core::Path::get()->getFullPath("/content","/fonts/courier.bmp");
     this->courier = SDL_LoadBMP(path.c_str());
 	//this->courier = IMG_Load("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
 

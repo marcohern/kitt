@@ -18,7 +18,8 @@ namespace Graphics
 	}
 
 	SdlWindow::~SdlWindow() {
-		
+		SDL_DestroyWindow(window);
+		delete renderer;
 	}
 
 	int SdlWindow::w() const {

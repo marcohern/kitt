@@ -10,6 +10,7 @@
 #define Injector_hpp
 
 #include <stdio.h>
+#include "../SDL.h"
 #include "../Core/Trigonometry.hpp"
 #include "../Core/Time.hpp"
 #include "../Core/Vector2D.hpp"
@@ -23,7 +24,7 @@ namespace Game {
 
     class Game {
     private:
-
+		bool running;
         Trigonometry *trigonometry;
         Time *time;
 		Window *window;
@@ -34,10 +35,15 @@ namespace Game {
     public:
 		Game();
         ~Game();
-        
+
+		void init();
+		void update();
+		void draw();
+		void onevent(SDL_Event *ev);
+		void run();
+
         Trigonometry *getTrigonometry();
-        Time *getTime();
-		
+        Time *getTime();		
 		IReader *getReader();
 
 		Vector2D createVector2D();

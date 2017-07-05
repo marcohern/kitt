@@ -3,13 +3,14 @@
 // ============================================================================
 #include "SDL.h"
 #include <stdio.h>
-#include <math.h>
+#include <cmath>
 #include <string>
 #include <iostream>
 #include "./Tests/KittTestSuite.hpp"
 #include "./Game/Game.hpp"
 #include "./Core/Trigonometry.hpp"
 #include "./Core/Path.hpp"
+#include "./Game/Game.hpp"
 // ============================================================================
 // [SdlApplication]
 // ============================================================================
@@ -106,12 +107,16 @@ void SdlApplication::RenderText(string text, int x, int y) {
         int cv = (int)c;
         int sx = cv%16;
         int sy = cv/16;
+
+		double ddx = (double)rand() / RAND_MAX;
+		int tx = this->dst.x;
+		int dx = ddx*4;
         
         this->letter.x = sx*16;
         this->letter.y = sy*16;
-    
+		this->dst.x += dx;
         SDL_RenderCopy(renderer, this->couriertx, &this->letter, &this->dst);
-        this->dst.x+=16;
+        this->dst.x= tx + 16;
     }
 }
 
@@ -134,12 +139,12 @@ int SdlApplication::run(int width, int height)
 	// Enter to the SDL event loop.
 	SDL_Event ev;
 	_running = true;
-	
-	while (SDL_WaitEvent(&ev))
-	{
-		onEvent(&ev);
+	while (_running) {
+		if (SDL_PollEvent(&ev) != 0) {
+			onEvent(&ev);
+		}
 		Render();
-		
+
 		if (_running == false)
 		{
 			break;
@@ -200,13 +205,16 @@ int main(int argc, char* argv[])
 {
     
     Core::Path::get()->setRootFromArgs(argv[0],"content");
-
-    /*
+	
+	Game::Game game;
+	game.run();
+	return 0;
+	/*
 	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;
-	testSuite.run();*/
-
+	testSuite.run();
+	
 	SdlApplication app;
 	return app.run(800, 600);
-	return 0;
+	return 0;*/
 }

@@ -122,6 +122,7 @@
     <ClCompile Include="kitt\Game\Game.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="kitt\Content\ZipReader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -251,6 +252,7 @@
     <ClInclude Include="kitt\Game\Game.hpp">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="kitt\Content\ZipReader.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

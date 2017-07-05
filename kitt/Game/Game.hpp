@@ -45,10 +45,6 @@ namespace Game {
         Trigonometry *getTrigonometry();
         Time *getTime();		
 		IReader *getReader();
-
-		Vector2D createVector2D();
-		Vector2D createVector2D(double x, double y);
-		Vector2D createVector2D(const Vector2D &v);
     };
 }
 #endif /* Injector_hpp */

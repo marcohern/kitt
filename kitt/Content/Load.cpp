@@ -7,7 +7,7 @@ namespace Content
 	Load *Load::instance = NULL;
 
 	Load::Load() {
-		reader = new FileReader();
+		reader = new FileReader("content", false);
 	}
 
 	Load::~Load() {

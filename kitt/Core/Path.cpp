@@ -22,10 +22,10 @@ namespace Core {
 		return instance;
 	}
 
-	void Path::setRootFromArgs(const char *arg, const char *folder) {
+	void Path::setRootFromArgs(const char *arg) {
 		string exe(arg);
 		unsigned long pos;
-		char app[2] = { DS, '\0' };
+		//char app[2] = { DS, '\0' };
         pos = exe.find_last_of(DS); //Debug or Release
         exe = exe.substr(0, pos);
         pos = exe.find_last_of(DS); //root (win)
@@ -42,8 +42,6 @@ namespace Core {
         pos = exe.find_last_of(DS);
 #endif
 		string root = exe.substr(0, pos);
-		root.append(app);
-		root.append(folder);
 		this->setRoot(root);
 	}
 

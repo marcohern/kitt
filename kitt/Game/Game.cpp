@@ -44,7 +44,7 @@ namespace Game {
 		}
 		trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
 		time = TimeFactory::create();
-		reader = new FileReader();
+		reader = new FileReader("content", false);
 		window = new SdlWindow(TITLE, 800, 600, false);
 		renderer = window->getRenderer();
 	}
@@ -60,7 +60,7 @@ namespace Game {
 		rect.x = window->w() / 2 - (rect.w / 2);
 		rect.y = window->h() / 2 - (rect.h / 2);
 		SdlRenderer *r = (SdlRenderer*)renderer;
-		SDL_SetRenderDrawColor(r->getRenderer(), 0x00, 0x00, 0xFF, 0xff);
+		SDL_SetRenderDrawColor(r->getRenderer(), 0x00, 0x00, 0x00, 0xff);
 		SDL_RenderClear(r->getRenderer());
 
 		SDL_SetRenderDrawColor(r->getRenderer(), 0xff, 0xff, 0x00, 0xff);
@@ -111,17 +111,5 @@ namespace Game {
 
 	IReader *Game::getReader() {
 		return reader;
-	}
-
-	Vector2D Game::createVector2D() {
-		return Vector2D(trigonometry);
-	}
-
-	Vector2D Game::createVector2D(double x, double y) {
-		return Vector2D(x, y, trigonometry);
-	}
-
-	Vector2D Game::createVector2D(const Vector2D &v) {
-		return Vector2D(v, trigonometry);
 	}
 }

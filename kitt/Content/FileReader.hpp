@@ -14,6 +14,7 @@
 #include "../SDL.h"
 #include "IReader.hpp"
 #include "../Graphics/Texture.hpp"
+#include "../Graphics/Renderer.hpp"
 
 namespace Content {
     using namespace std;
@@ -21,10 +22,10 @@ namespace Content {
     
     class FileReader : public IReader {
     private:
+		Renderer *renderer;
         string root;
     public:
-		FileReader();
-        FileReader(const string &root);
+		FileReader(const string &path, Renderer *renderer, bool fullpath=true);
 
 		bool exists(const string &path);
         void open();

@@ -62,12 +62,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Src\marcohern.com\kitt\packages\win32\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Src\marcohern.com\kitt\packages\win32\SDL2-2.0.5\lib\x86;C:\Src\marcohern.com\kitt\packages\win32\SDL2_image-2.0.1\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Src\marcohern.com\kitt\packages\win32\SDL2-2.0.5\include;C:\Src\marcohern.com\kitt\packages\win32\physfs-2.0.3;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Src\marcohern.com\kitt\packages\win32\physfs-2.0.3\Release;C:\Src\marcohern.com\kitt\packages\win32\SDL2-2.0.5\lib\x86;C:\Src\marcohern.com\kitt\packages\win32\SDL2_image-2.0.1\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Link>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;physfs.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -75,6 +75,7 @@
     <ClCompile Include="kitt\Content\FileReader.cpp" />
     <ClCompile Include="kitt\Content\IReader.cpp" />
     <ClCompile Include="kitt\Content\Load.cpp" />
+    <ClCompile Include="kitt\Content\ZipReader.cpp" />
     <ClCompile Include="kitt\Core\Directable.cpp" />
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp" />
     <ClCompile Include="kitt\Game\Game.cpp" />
@@ -117,6 +118,7 @@
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp" />
     <ClInclude Include="kitt\Content\IReader.hpp" />
+    <ClInclude Include="kitt\Content\ZipReader.hpp" />
     <ClInclude Include="kitt\Core\Camera.hpp" />
     <ClInclude Include="kitt\constants.hpp" />
     <ClInclude Include="kitt\Core\Directable.hpp" />

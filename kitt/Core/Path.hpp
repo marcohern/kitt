@@ -17,7 +17,7 @@ namespace Core {
 		static Path *get();
 
 		void setRoot(const string &root);
-		void setRootFromArgs(const char *arg, const char*folder);
+		void setRootFromArgs(const char *arg);
 		string getRoot() const;
 		string getFullPath(const string &path) const;
 

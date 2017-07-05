@@ -9,8 +9,11 @@
 #include "../SDL.h"
 #include <stdio.h>
 #include "../Graphics/Texture.hpp"
+#include "../Graphics/SdlTexture.hpp"
 #include "../Core/Path.hpp"
 #include "FileReader.hpp"
+#include "../constants.hpp"
+#include "../Graphics/Renderer.hpp"
 
 namespace Content {
     
@@ -18,13 +21,16 @@ namespace Content {
 	using namespace Core;
 	using namespace Graphics;
     
-	FileReader::FileReader() {
-		this->root = Path::root();
+	FileReader::FileReader(const string &path, Renderer *renderer, bool fullpath) {
+		this->renderer = renderer;
+		if (fullpath) {
+			this->root = path;
+		} else {
+			this->root = Path::root();
+			this->root.append(new char[2] { DS, '\0' });
+			this->root.append(path);
+		}
 	}
-
-    FileReader::FileReader(const string &root) {
-        this->root = root;
-    }
 
 	bool FileReader::exists(const string &path) {
 		string fullpath = this->root;
@@ -47,7 +53,9 @@ namespace Content {
     Texture* FileReader::readSurface(const string &path) {
 		string fullpath = this->root;
 		fullpath.append(path);
-		return NULL;
+		SDL_Surface *surf= IMG_Load(fullpath.c_str());
+		SdlTexture *txt = new SdlTexture((SdlRenderer *)renderer, surf);
+		return txt;
     }
     
     void FileReader::close() {

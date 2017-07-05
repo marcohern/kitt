@@ -11,6 +11,8 @@
 #include "./Core/Trigonometry.hpp"
 #include "./Core/Path.hpp"
 #include "./Game/Game.hpp"
+#include <physfs.h>
+
 // ============================================================================
 // [SdlApplication]
 // ============================================================================
@@ -203,8 +205,17 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
-    
-    Core::Path::get()->setRootFromArgs(argv[0],"content");
+
+    Core::Path::get()->setRootFromArgs(argv[0]);
+	PHYSFS_init(argv[0]);
+
+	PHYSFS_mount("C:\\Src\\marcohern.com\\kitt\\content.zip", "/", 0);
+
+	PHYSFS_File *file = PHYSFS_openRead("/fonts/courier.bmp");
+	int size = PHYSFS_fileLength(file);
+	
+	PHYSFS_close(file);
+	PHYSFS_deinit();
 	
 	Game::Game game;
 	game.run();
@@ -217,4 +228,6 @@ int main(int argc, char* argv[])
 	SdlApplication app;
 	return app.run(800, 600);
 	return 0;*/
+
+
 }

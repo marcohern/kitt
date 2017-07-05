@@ -6,7 +6,7 @@
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
-#include <math.h>
+#include <cmath>
 #include <iostream>
 #include <iomanip>
 #include "MemoizedTrigonometry.hpp"

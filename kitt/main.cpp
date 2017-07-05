@@ -79,9 +79,10 @@ int SdlApplication::init(int width, int height)
 	}	
 	win = SDL_CreateWindow(APPTITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	
-    //this->courier = SDL_LoadBMP("/Users/marcoh/Development/kitt/content/fonts/courier.bmp");
-	this->courier = IMG_Load("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
+    
+    string path = Core::Path::get()->getFullPath("/fonts/courier.bmp");
+    this->courier = SDL_LoadBMP(path.c_str());
+	//this->courier = IMG_Load("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
 
     this->couriertx = SDL_CreateTextureFromSurface(renderer, this->courier);
     
@@ -197,9 +198,8 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
-	
-	Core::Path::get()->setRootFromArgs(argv[0],"content");
-	string path = Core::Path::get()->getFullPath("/fonts/courier.bmp");
+    
+    Core::Path::get()->setRootFromArgs(argv[0],"content");
 
     /*
 	cout<<"Testing"<<endl;

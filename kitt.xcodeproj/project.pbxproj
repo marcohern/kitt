@@ -7,43 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A72550631F0CA18D00301290 /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500B1F0CA18D00301290 /* FileReader.cpp */; };
+		A72550641F0CA18D00301290 /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500D1F0CA18D00301290 /* IReader.cpp */; };
+		A72550651F0CA18D00301290 /* Load.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500F1F0CA18D00301290 /* Load.cpp */; };
+		A72550661F0CA18D00301290 /* Directable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550121F0CA18D00301290 /* Directable.cpp */; };
+		A72550671F0CA18D00301290 /* HasTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550141F0CA18D00301290 /* HasTrigonometry.cpp */; };
+		A72550681F0CA18D00301290 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550161F0CA18D00301290 /* Matrix.cpp */; };
+		A72550691F0CA18D00301290 /* MemoizedTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550181F0CA18D00301290 /* MemoizedTrigonometry.cpp */; };
+		A725506A1F0CA18D00301290 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725501A1F0CA18D00301290 /* Object.cpp */; };
+		A725506B1F0CA18D00301290 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725501C1F0CA18D00301290 /* Path.cpp */; };
+		A725506C1F0CA18D00301290 /* Placeable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725501E1F0CA18D00301290 /* Placeable.cpp */; };
+		A725506D1F0CA18D00301290 /* RealtimeTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550201F0CA18D00301290 /* RealtimeTrigonometry.cpp */; };
+		A725506E1F0CA18D00301290 /* SdlTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550221F0CA18D00301290 /* SdlTime.cpp */; };
+		A725506F1F0CA18D00301290 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550241F0CA18D00301290 /* Time.cpp */; };
+		A72550701F0CA18D00301290 /* TimeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550261F0CA18D00301290 /* TimeFactory.cpp */; };
+		A72550711F0CA18D00301290 /* Trigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550281F0CA18D00301290 /* Trigonometry.cpp */; };
+		A72550721F0CA18D00301290 /* TrigonometryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725502A1F0CA18D00301290 /* TrigonometryFactory.cpp */; };
+		A72550731F0CA18D00301290 /* Vector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725502C1F0CA18D00301290 /* Vector2D.cpp */; };
+		A72550741F0CA18D00301290 /* AssertException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725502F1F0CA18D00301290 /* AssertException.cpp */; };
+		A72550751F0CA18D00301290 /* DivideByZeroException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550311F0CA18D00301290 /* DivideByZeroException.cpp */; };
+		A72550761F0CA18D00301290 /* KittException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550331F0CA18D00301290 /* KittException.cpp */; };
+		A72550771F0CA18D00301290 /* MismatchException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550351F0CA18D00301290 /* MismatchException.cpp */; };
+		A72550781F0CA18D00301290 /* NullReferenceException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550371F0CA18D00301290 /* NullReferenceException.cpp */; };
+		A72550791F0CA18D00301290 /* OutOfRangeException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550391F0CA18D00301290 /* OutOfRangeException.cpp */; };
+		A725507A1F0CA18D00301290 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725503C1F0CA18D00301290 /* Game.cpp */; };
+		A725507B1F0CA18D00301290 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725503F1F0CA18D00301290 /* Renderer.cpp */; };
+		A725507C1F0CA18D00301290 /* SdlRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550411F0CA18D00301290 /* SdlRenderer.cpp */; };
+		A725507D1F0CA18D00301290 /* SdlTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550431F0CA18D00301290 /* SdlTexture.cpp */; };
+		A725507E1F0CA18D00301290 /* SdlWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550451F0CA18D00301290 /* SdlWindow.cpp */; };
+		A725507F1F0CA18D00301290 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550471F0CA18D00301290 /* Texture.cpp */; };
+		A72550801F0CA18D00301290 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550491F0CA18D00301290 /* Window.cpp */; };
+		A72550811F0CA18D00301290 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725504B1F0CA18D00301290 /* main.cpp */; };
+		A72550821F0CA18D00301290 /* Assert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725504E1F0CA18D00301290 /* Assert.cpp */; };
+		A72550831F0CA18D00301290 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550501F0CA18D00301290 /* Test.cpp */; };
+		A72550841F0CA18D00301290 /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550521F0CA18D00301290 /* TestRunner.cpp */; };
+		A72550851F0CA18D00301290 /* TestSuite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550541F0CA18D00301290 /* TestSuite.cpp */; };
+		A72550861F0CA18D00301290 /* KittTestSuite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550571F0CA18D00301290 /* KittTestSuite.cpp */; };
+		A72550871F0CA18D00301290 /* MatrixTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550591F0CA18D00301290 /* MatrixTests.cpp */; };
+		A72550881F0CA18D00301290 /* MemoizedTrigonometryTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725505B1F0CA18D00301290 /* MemoizedTrigonometryTests.cpp */; };
+		A72550891F0CA18D00301290 /* RealtimeTrigonometryTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725505D1F0CA18D00301290 /* RealtimeTrigonometryTests.cpp */; };
+		A725508A1F0CA18D00301290 /* SdlTimeTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725505F1F0CA18D00301290 /* SdlTimeTests.cpp */; };
+		A725508B1F0CA18D00301290 /* Vector2DTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550611F0CA18D00301290 /* Vector2DTests.cpp */; };
+		A725508D1F0CAB1A00301290 /* content in CopyFiles */ = {isa = PBXBuildFile; fileRef = A725508C1F0CAB1A00301290 /* content */; };
 		A74E81FE1F09FBB600B8C90F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A74E81FD1F09FBB600B8C90F /* README.md */; };
-		A74E82051F0A708900B8C90F /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E82031F0A708900B8C90F /* Renderer.cpp */; };
-		A74E820C1F0B209800B8C90F /* Placeable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E820A1F0B209800B8C90F /* Placeable.cpp */; };
-		A74E82101F0B239C00B8C90F /* Directable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74E820E1F0B239C00B8C90F /* Directable.cpp */; };
-		A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3C41F0736B6009A673B /* FileReader.cpp */; };
-		A76EE3E31F0736B6009A673B /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3C61F0736B6009A673B /* IReader.cpp */; };
-		A76EE3E41F0736B6009A673B /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3CA1F0736B6009A673B /* Matrix.cpp */; };
-		A76EE3E61F0736B6009A673B /* Vector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3CE1F0736B6009A673B /* Vector2D.cpp */; };
-		A76EE3E71F0736B6009A673B /* AssertException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3D21F0736B6009A673B /* AssertException.cpp */; };
-		A76EE3E81F0736B6009A673B /* KittException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3D41F0736B6009A673B /* KittException.cpp */; };
-		A76EE3E91F0736B6009A673B /* Assert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3D71F0736B6009A673B /* Assert.cpp */; };
-		A76EE3EA1F0736B6009A673B /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3D91F0736B6009A673B /* Test.cpp */; };
-		A76EE3EB1F0736B6009A673B /* TestSuite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3DB1F0736B6009A673B /* TestSuite.cpp */; };
-		A76EE3EC1F0736B6009A673B /* KittTestSuite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3DE1F0736B6009A673B /* KittTestSuite.cpp */; };
-		A76EE3ED1F0736B6009A673B /* Vector2DTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */; };
-		A76EE3F01F075715009A673B /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3EE1F075715009A673B /* Object.cpp */; };
-		A76EE3F61F07CEFE009A673B /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3F41F07CEFE009A673B /* TestRunner.cpp */; };
-		A76EE3F91F07E136009A673B /* DivideByZeroException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3F71F07E136009A673B /* DivideByZeroException.cpp */; };
-		A76EE3FC1F07EC76009A673B /* Trigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3FA1F07EC76009A673B /* Trigonometry.cpp */; };
-		A76EE3FF1F07F1F2009A673B /* HasTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE3FD1F07F1F2009A673B /* HasTrigonometry.cpp */; };
-		A76EE4081F080360009A673B /* Injector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4061F080360009A673B /* Injector.cpp */; };
-		A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4091F080CB7009A673B /* NullReferenceException.cpp */; };
-		A76EE40E1F081D0C009A673B /* RealtimeTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE40C1F081D0C009A673B /* RealtimeTrigonometry.cpp */; };
-		A76EE4111F081E08009A673B /* MemoizedTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */; };
-		A76EE4141F0864C4009A673B /* RealtimeTrigonometryTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4121F0864C4009A673B /* RealtimeTrigonometryTests.cpp */; };
-		A76EE4171F0874C6009A673B /* MemoizedTrigonometryTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4151F0874C6009A673B /* MemoizedTrigonometryTests.cpp */; };
-		A76EE41E1F097B9B009A673B /* MatrixTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE41C1F097B9B009A673B /* MatrixTests.cpp */; };
-		A76EE4211F0989B8009A673B /* OutOfRangeException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE41F1F0989B8009A673B /* OutOfRangeException.cpp */; };
-		A76EE4241F098DDF009A673B /* MismatchException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4221F098DDF009A673B /* MismatchException.cpp */; };
-		A76EE4271F09A157009A673B /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4251F09A157009A673B /* Texture.cpp */; };
-		A76EE42B1F09CF47009A673B /* TrigonometryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4291F09CF47009A673B /* TrigonometryFactory.cpp */; };
-		A76EE42E1F09D1CF009A673B /* Vector2DFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE42C1F09D1CF009A673B /* Vector2DFactory.cpp */; };
-		A76EE4331F09EDFE009A673B /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4311F09EDFE009A673B /* Time.cpp */; };
-		A76EE4361F09EEA7009A673B /* SdlTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4341F09EEA7009A673B /* SdlTime.cpp */; };
-		A76EE4391F09F395009A673B /* TimeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE4371F09F395009A673B /* TimeFactory.cpp */; };
-		A76EE43E1F09F800009A673B /* SdlTimeTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A76EE43C1F09F800009A673B /* SdlTimeTests.cpp */; };
-		A7ECCDC01F04C03000011805 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7ECCDBF1F04C03000011805 /* main.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
 /* End PBXBuildFile section */
@@ -52,92 +58,104 @@
 		A7ECCDBA1F04C03000011805 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = myfolder;
+			dstSubfolderSpec = 16;
 			files = (
+				A725508D1F0CAB1A00301290 /* content in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A72550091F0CA18D00301290 /* constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
+		A725500B1F0CA18D00301290 /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
+		A725500C1F0CA18D00301290 /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
+		A725500D1F0CA18D00301290 /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
+		A725500E1F0CA18D00301290 /* IReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IReader.hpp; sourceTree = "<group>"; };
+		A725500F1F0CA18D00301290 /* Load.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Load.cpp; sourceTree = "<group>"; };
+		A72550101F0CA18D00301290 /* Load.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Load.hpp; sourceTree = "<group>"; };
+		A72550121F0CA18D00301290 /* Directable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Directable.cpp; sourceTree = "<group>"; };
+		A72550131F0CA18D00301290 /* Directable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Directable.hpp; sourceTree = "<group>"; };
+		A72550141F0CA18D00301290 /* HasTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HasTrigonometry.cpp; sourceTree = "<group>"; };
+		A72550151F0CA18D00301290 /* HasTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HasTrigonometry.hpp; sourceTree = "<group>"; };
+		A72550161F0CA18D00301290 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
+		A72550171F0CA18D00301290 /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
+		A72550181F0CA18D00301290 /* MemoizedTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoizedTrigonometry.cpp; sourceTree = "<group>"; };
+		A72550191F0CA18D00301290 /* MemoizedTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoizedTrigonometry.hpp; sourceTree = "<group>"; };
+		A725501A1F0CA18D00301290 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		A725501B1F0CA18D00301290 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
+		A725501C1F0CA18D00301290 /* Path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
+		A725501D1F0CA18D00301290 /* Path.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Path.hpp; sourceTree = "<group>"; };
+		A725501E1F0CA18D00301290 /* Placeable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Placeable.cpp; sourceTree = "<group>"; };
+		A725501F1F0CA18D00301290 /* Placeable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Placeable.hpp; sourceTree = "<group>"; };
+		A72550201F0CA18D00301290 /* RealtimeTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RealtimeTrigonometry.cpp; sourceTree = "<group>"; };
+		A72550211F0CA18D00301290 /* RealtimeTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealtimeTrigonometry.hpp; sourceTree = "<group>"; };
+		A72550221F0CA18D00301290 /* SdlTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlTime.cpp; sourceTree = "<group>"; };
+		A72550231F0CA18D00301290 /* SdlTime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlTime.hpp; sourceTree = "<group>"; };
+		A72550241F0CA18D00301290 /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
+		A72550251F0CA18D00301290 /* Time.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Time.hpp; sourceTree = "<group>"; };
+		A72550261F0CA18D00301290 /* TimeFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeFactory.cpp; sourceTree = "<group>"; };
+		A72550271F0CA18D00301290 /* TimeFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeFactory.hpp; sourceTree = "<group>"; };
+		A72550281F0CA18D00301290 /* Trigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trigonometry.cpp; sourceTree = "<group>"; };
+		A72550291F0CA18D00301290 /* Trigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trigonometry.hpp; sourceTree = "<group>"; };
+		A725502A1F0CA18D00301290 /* TrigonometryFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrigonometryFactory.cpp; sourceTree = "<group>"; };
+		A725502B1F0CA18D00301290 /* TrigonometryFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrigonometryFactory.hpp; sourceTree = "<group>"; };
+		A725502C1F0CA18D00301290 /* Vector2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
+		A725502D1F0CA18D00301290 /* Vector2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2D.hpp; sourceTree = "<group>"; };
+		A725502F1F0CA18D00301290 /* AssertException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssertException.cpp; sourceTree = "<group>"; };
+		A72550301F0CA18D00301290 /* AssertException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AssertException.hpp; sourceTree = "<group>"; };
+		A72550311F0CA18D00301290 /* DivideByZeroException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DivideByZeroException.cpp; sourceTree = "<group>"; };
+		A72550321F0CA18D00301290 /* DivideByZeroException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DivideByZeroException.hpp; sourceTree = "<group>"; };
+		A72550331F0CA18D00301290 /* KittException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KittException.cpp; sourceTree = "<group>"; };
+		A72550341F0CA18D00301290 /* KittException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KittException.hpp; sourceTree = "<group>"; };
+		A72550351F0CA18D00301290 /* MismatchException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MismatchException.cpp; sourceTree = "<group>"; };
+		A72550361F0CA18D00301290 /* MismatchException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MismatchException.hpp; sourceTree = "<group>"; };
+		A72550371F0CA18D00301290 /* NullReferenceException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullReferenceException.cpp; sourceTree = "<group>"; };
+		A72550381F0CA18D00301290 /* NullReferenceException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NullReferenceException.hpp; sourceTree = "<group>"; };
+		A72550391F0CA18D00301290 /* OutOfRangeException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OutOfRangeException.cpp; sourceTree = "<group>"; };
+		A725503A1F0CA18D00301290 /* OutOfRangeException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OutOfRangeException.hpp; sourceTree = "<group>"; };
+		A725503C1F0CA18D00301290 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		A725503D1F0CA18D00301290 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		A725503F1F0CA18D00301290 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		A72550401F0CA18D00301290 /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		A72550411F0CA18D00301290 /* SdlRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlRenderer.cpp; sourceTree = "<group>"; };
+		A72550421F0CA18D00301290 /* SdlRenderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlRenderer.hpp; sourceTree = "<group>"; };
+		A72550431F0CA18D00301290 /* SdlTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlTexture.cpp; sourceTree = "<group>"; };
+		A72550441F0CA18D00301290 /* SdlTexture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlTexture.hpp; sourceTree = "<group>"; };
+		A72550451F0CA18D00301290 /* SdlWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlWindow.cpp; sourceTree = "<group>"; };
+		A72550461F0CA18D00301290 /* SdlWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlWindow.hpp; sourceTree = "<group>"; };
+		A72550471F0CA18D00301290 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		A72550481F0CA18D00301290 /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
+		A72550491F0CA18D00301290 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		A725504A1F0CA18D00301290 /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		A725504B1F0CA18D00301290 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A725504C1F0CA18D00301290 /* SDL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL.h; sourceTree = "<group>"; };
+		A725504E1F0CA18D00301290 /* Assert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Assert.cpp; sourceTree = "<group>"; };
+		A725504F1F0CA18D00301290 /* Assert.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Assert.hpp; sourceTree = "<group>"; };
+		A72550501F0CA18D00301290 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		A72550511F0CA18D00301290 /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
+		A72550521F0CA18D00301290 /* TestRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRunner.cpp; sourceTree = "<group>"; };
+		A72550531F0CA18D00301290 /* TestRunner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestRunner.hpp; sourceTree = "<group>"; };
+		A72550541F0CA18D00301290 /* TestSuite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestSuite.cpp; sourceTree = "<group>"; };
+		A72550551F0CA18D00301290 /* TestSuite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestSuite.hpp; sourceTree = "<group>"; };
+		A72550571F0CA18D00301290 /* KittTestSuite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KittTestSuite.cpp; sourceTree = "<group>"; };
+		A72550581F0CA18D00301290 /* KittTestSuite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KittTestSuite.hpp; sourceTree = "<group>"; };
+		A72550591F0CA18D00301290 /* MatrixTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixTests.cpp; sourceTree = "<group>"; };
+		A725505A1F0CA18D00301290 /* MatrixTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MatrixTests.hpp; sourceTree = "<group>"; };
+		A725505B1F0CA18D00301290 /* MemoizedTrigonometryTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoizedTrigonometryTests.cpp; sourceTree = "<group>"; };
+		A725505C1F0CA18D00301290 /* MemoizedTrigonometryTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoizedTrigonometryTests.hpp; sourceTree = "<group>"; };
+		A725505D1F0CA18D00301290 /* RealtimeTrigonometryTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RealtimeTrigonometryTests.cpp; sourceTree = "<group>"; };
+		A725505E1F0CA18D00301290 /* RealtimeTrigonometryTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealtimeTrigonometryTests.hpp; sourceTree = "<group>"; };
+		A725505F1F0CA18D00301290 /* SdlTimeTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlTimeTests.cpp; sourceTree = "<group>"; };
+		A72550601F0CA18D00301290 /* SdlTimeTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlTimeTests.hpp; sourceTree = "<group>"; };
+		A72550611F0CA18D00301290 /* Vector2DTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2DTests.cpp; sourceTree = "<group>"; };
+		A72550621F0CA18D00301290 /* Vector2DTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2DTests.hpp; sourceTree = "<group>"; };
+		A725508C1F0CAB1A00301290 /* content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = content; sourceTree = "<group>"; };
 		A74E81FD1F09FBB600B8C90F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A74E82031F0A708900B8C90F /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
-		A74E82041F0A708900B8C90F /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
 		A74E82071F0A891C00B8C90F /* file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
 		A74E82091F0A891C00B8C90F /* courier.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = courier.bmp; sourceTree = "<group>"; };
-		A74E820A1F0B209800B8C90F /* Placeable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Placeable.cpp; sourceTree = "<group>"; };
-		A74E820B1F0B209800B8C90F /* Placeable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Placeable.hpp; sourceTree = "<group>"; };
-		A74E820E1F0B239C00B8C90F /* Directable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Directable.cpp; sourceTree = "<group>"; };
-		A74E820F1F0B239C00B8C90F /* Directable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Directable.hpp; sourceTree = "<group>"; };
-		A76EE3C41F0736B6009A673B /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
-		A76EE3C51F0736B6009A673B /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
-		A76EE3C61F0736B6009A673B /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
-		A76EE3C71F0736B6009A673B /* IReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IReader.hpp; sourceTree = "<group>"; };
-		A76EE3CA1F0736B6009A673B /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
-		A76EE3CB1F0736B6009A673B /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
-		A76EE3CE1F0736B6009A673B /* Vector2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2D.cpp; sourceTree = "<group>"; };
-		A76EE3CF1F0736B6009A673B /* Vector2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2D.hpp; sourceTree = "<group>"; };
-		A76EE3D01F0736B6009A673B /* Window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
-		A76EE3D21F0736B6009A673B /* AssertException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssertException.cpp; sourceTree = "<group>"; };
-		A76EE3D31F0736B6009A673B /* AssertException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AssertException.hpp; sourceTree = "<group>"; };
-		A76EE3D41F0736B6009A673B /* KittException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KittException.cpp; sourceTree = "<group>"; };
-		A76EE3D51F0736B6009A673B /* KittException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KittException.hpp; sourceTree = "<group>"; };
-		A76EE3D71F0736B6009A673B /* Assert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Assert.cpp; sourceTree = "<group>"; };
-		A76EE3D81F0736B6009A673B /* Assert.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Assert.hpp; sourceTree = "<group>"; };
-		A76EE3D91F0736B6009A673B /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
-		A76EE3DA1F0736B6009A673B /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
-		A76EE3DB1F0736B6009A673B /* TestSuite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestSuite.cpp; sourceTree = "<group>"; };
-		A76EE3DC1F0736B6009A673B /* TestSuite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestSuite.hpp; sourceTree = "<group>"; };
-		A76EE3DE1F0736B6009A673B /* KittTestSuite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KittTestSuite.cpp; sourceTree = "<group>"; };
-		A76EE3DF1F0736B6009A673B /* KittTestSuite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KittTestSuite.hpp; sourceTree = "<group>"; };
-		A76EE3E01F0736B6009A673B /* Vector2DTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2DTests.hpp; sourceTree = "<group>"; };
-		A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2DTests.cpp; sourceTree = "<group>"; };
-		A76EE3EE1F075715009A673B /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Object.cpp; path = kitt/Core/Object.cpp; sourceTree = SOURCE_ROOT; };
-		A76EE3EF1F075715009A673B /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Object.hpp; path = kitt/Core/Object.hpp; sourceTree = SOURCE_ROOT; };
-		A76EE3F41F07CEFE009A673B /* TestRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRunner.cpp; sourceTree = "<group>"; };
-		A76EE3F51F07CEFE009A673B /* TestRunner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestRunner.hpp; sourceTree = "<group>"; };
-		A76EE3F71F07E136009A673B /* DivideByZeroException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DivideByZeroException.cpp; sourceTree = "<group>"; };
-		A76EE3F81F07E136009A673B /* DivideByZeroException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DivideByZeroException.hpp; sourceTree = "<group>"; };
-		A76EE3FA1F07EC76009A673B /* Trigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trigonometry.cpp; sourceTree = "<group>"; };
-		A76EE3FB1F07EC76009A673B /* Trigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trigonometry.hpp; sourceTree = "<group>"; };
-		A76EE3FD1F07F1F2009A673B /* HasTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HasTrigonometry.cpp; sourceTree = "<group>"; };
-		A76EE3FE1F07F1F2009A673B /* HasTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HasTrigonometry.hpp; sourceTree = "<group>"; };
-		A76EE4061F080360009A673B /* Injector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Injector.cpp; sourceTree = "<group>"; };
-		A76EE4071F080360009A673B /* Injector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Injector.hpp; sourceTree = "<group>"; };
-		A76EE4091F080CB7009A673B /* NullReferenceException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullReferenceException.cpp; sourceTree = "<group>"; };
-		A76EE40A1F080CB7009A673B /* NullReferenceException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NullReferenceException.hpp; sourceTree = "<group>"; };
-		A76EE40C1F081D0C009A673B /* RealtimeTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RealtimeTrigonometry.cpp; sourceTree = "<group>"; };
-		A76EE40D1F081D0C009A673B /* RealtimeTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealtimeTrigonometry.hpp; sourceTree = "<group>"; };
-		A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoizedTrigonometry.cpp; sourceTree = "<group>"; };
-		A76EE4101F081E08009A673B /* MemoizedTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoizedTrigonometry.hpp; sourceTree = "<group>"; };
-		A76EE4121F0864C4009A673B /* RealtimeTrigonometryTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RealtimeTrigonometryTests.cpp; sourceTree = "<group>"; };
-		A76EE4131F0864C4009A673B /* RealtimeTrigonometryTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealtimeTrigonometryTests.hpp; sourceTree = "<group>"; };
-		A76EE4151F0874C6009A673B /* MemoizedTrigonometryTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoizedTrigonometryTests.cpp; sourceTree = "<group>"; };
-		A76EE4161F0874C6009A673B /* MemoizedTrigonometryTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MemoizedTrigonometryTests.hpp; sourceTree = "<group>"; };
-		A76EE41A1F094726009A673B /* constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
-		A76EE41C1F097B9B009A673B /* MatrixTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixTests.cpp; sourceTree = "<group>"; };
-		A76EE41D1F097B9B009A673B /* MatrixTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MatrixTests.hpp; sourceTree = "<group>"; };
-		A76EE41F1F0989B8009A673B /* OutOfRangeException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OutOfRangeException.cpp; sourceTree = "<group>"; };
-		A76EE4201F0989B8009A673B /* OutOfRangeException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OutOfRangeException.hpp; sourceTree = "<group>"; };
-		A76EE4221F098DDF009A673B /* MismatchException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MismatchException.cpp; sourceTree = "<group>"; };
-		A76EE4231F098DDF009A673B /* MismatchException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MismatchException.hpp; sourceTree = "<group>"; };
-		A76EE4251F09A157009A673B /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = Graphics/Texture.cpp; sourceTree = "<group>"; };
-		A76EE4261F09A157009A673B /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Texture.hpp; path = Graphics/Texture.hpp; sourceTree = "<group>"; };
-		A76EE4291F09CF47009A673B /* TrigonometryFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrigonometryFactory.cpp; sourceTree = "<group>"; };
-		A76EE42A1F09CF47009A673B /* TrigonometryFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrigonometryFactory.hpp; sourceTree = "<group>"; };
-		A76EE42C1F09D1CF009A673B /* Vector2DFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2DFactory.cpp; sourceTree = "<group>"; };
-		A76EE42D1F09D1CF009A673B /* Vector2DFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2DFactory.hpp; sourceTree = "<group>"; };
-		A76EE4311F09EDFE009A673B /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
-		A76EE4321F09EDFE009A673B /* Time.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Time.hpp; sourceTree = "<group>"; };
-		A76EE4341F09EEA7009A673B /* SdlTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlTime.cpp; sourceTree = "<group>"; };
-		A76EE4351F09EEA7009A673B /* SdlTime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlTime.hpp; sourceTree = "<group>"; };
-		A76EE4371F09F395009A673B /* TimeFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeFactory.cpp; sourceTree = "<group>"; };
-		A76EE4381F09F395009A673B /* TimeFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeFactory.hpp; sourceTree = "<group>"; };
-		A76EE43C1F09F800009A673B /* SdlTimeTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlTimeTests.cpp; sourceTree = "<group>"; };
-		A76EE43D1F09F800009A673B /* SdlTimeTests.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlTimeTests.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7ECCDBF1F04C03000011805 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +173,152 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A72550081F0CA18D00301290 /* kitt */ = {
+			isa = PBXGroup;
+			children = (
+				A725500A1F0CA18D00301290 /* Content */,
+				A72550111F0CA18D00301290 /* Core */,
+				A725502E1F0CA18D00301290 /* Exceptions */,
+				A725503B1F0CA18D00301290 /* Game */,
+				A725503E1F0CA18D00301290 /* Graphics */,
+				A725504D1F0CA18D00301290 /* Testing */,
+				A72550561F0CA18D00301290 /* Tests */,
+				A725504B1F0CA18D00301290 /* main.cpp */,
+				A725504C1F0CA18D00301290 /* SDL.h */,
+				A72550091F0CA18D00301290 /* constants.hpp */,
+			);
+			path = kitt;
+			sourceTree = "<group>";
+		};
+		A725500A1F0CA18D00301290 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				A725500B1F0CA18D00301290 /* FileReader.cpp */,
+				A725500C1F0CA18D00301290 /* FileReader.hpp */,
+				A725500D1F0CA18D00301290 /* IReader.cpp */,
+				A725500E1F0CA18D00301290 /* IReader.hpp */,
+				A725500F1F0CA18D00301290 /* Load.cpp */,
+				A72550101F0CA18D00301290 /* Load.hpp */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		A72550111F0CA18D00301290 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A72550121F0CA18D00301290 /* Directable.cpp */,
+				A72550131F0CA18D00301290 /* Directable.hpp */,
+				A72550141F0CA18D00301290 /* HasTrigonometry.cpp */,
+				A72550151F0CA18D00301290 /* HasTrigonometry.hpp */,
+				A72550161F0CA18D00301290 /* Matrix.cpp */,
+				A72550171F0CA18D00301290 /* Matrix.hpp */,
+				A72550181F0CA18D00301290 /* MemoizedTrigonometry.cpp */,
+				A72550191F0CA18D00301290 /* MemoizedTrigonometry.hpp */,
+				A725501A1F0CA18D00301290 /* Object.cpp */,
+				A725501B1F0CA18D00301290 /* Object.hpp */,
+				A725501C1F0CA18D00301290 /* Path.cpp */,
+				A725501D1F0CA18D00301290 /* Path.hpp */,
+				A725501E1F0CA18D00301290 /* Placeable.cpp */,
+				A725501F1F0CA18D00301290 /* Placeable.hpp */,
+				A72550201F0CA18D00301290 /* RealtimeTrigonometry.cpp */,
+				A72550211F0CA18D00301290 /* RealtimeTrigonometry.hpp */,
+				A72550221F0CA18D00301290 /* SdlTime.cpp */,
+				A72550231F0CA18D00301290 /* SdlTime.hpp */,
+				A72550241F0CA18D00301290 /* Time.cpp */,
+				A72550251F0CA18D00301290 /* Time.hpp */,
+				A72550261F0CA18D00301290 /* TimeFactory.cpp */,
+				A72550271F0CA18D00301290 /* TimeFactory.hpp */,
+				A72550281F0CA18D00301290 /* Trigonometry.cpp */,
+				A72550291F0CA18D00301290 /* Trigonometry.hpp */,
+				A725502A1F0CA18D00301290 /* TrigonometryFactory.cpp */,
+				A725502B1F0CA18D00301290 /* TrigonometryFactory.hpp */,
+				A725502C1F0CA18D00301290 /* Vector2D.cpp */,
+				A725502D1F0CA18D00301290 /* Vector2D.hpp */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A725502E1F0CA18D00301290 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				A725502F1F0CA18D00301290 /* AssertException.cpp */,
+				A72550301F0CA18D00301290 /* AssertException.hpp */,
+				A72550311F0CA18D00301290 /* DivideByZeroException.cpp */,
+				A72550321F0CA18D00301290 /* DivideByZeroException.hpp */,
+				A72550331F0CA18D00301290 /* KittException.cpp */,
+				A72550341F0CA18D00301290 /* KittException.hpp */,
+				A72550351F0CA18D00301290 /* MismatchException.cpp */,
+				A72550361F0CA18D00301290 /* MismatchException.hpp */,
+				A72550371F0CA18D00301290 /* NullReferenceException.cpp */,
+				A72550381F0CA18D00301290 /* NullReferenceException.hpp */,
+				A72550391F0CA18D00301290 /* OutOfRangeException.cpp */,
+				A725503A1F0CA18D00301290 /* OutOfRangeException.hpp */,
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		A725503B1F0CA18D00301290 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A725503C1F0CA18D00301290 /* Game.cpp */,
+				A725503D1F0CA18D00301290 /* Game.hpp */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		A725503E1F0CA18D00301290 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				A725503F1F0CA18D00301290 /* Renderer.cpp */,
+				A72550401F0CA18D00301290 /* Renderer.hpp */,
+				A72550411F0CA18D00301290 /* SdlRenderer.cpp */,
+				A72550421F0CA18D00301290 /* SdlRenderer.hpp */,
+				A72550431F0CA18D00301290 /* SdlTexture.cpp */,
+				A72550441F0CA18D00301290 /* SdlTexture.hpp */,
+				A72550451F0CA18D00301290 /* SdlWindow.cpp */,
+				A72550461F0CA18D00301290 /* SdlWindow.hpp */,
+				A72550471F0CA18D00301290 /* Texture.cpp */,
+				A72550481F0CA18D00301290 /* Texture.hpp */,
+				A72550491F0CA18D00301290 /* Window.cpp */,
+				A725504A1F0CA18D00301290 /* Window.hpp */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		A725504D1F0CA18D00301290 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				A725504E1F0CA18D00301290 /* Assert.cpp */,
+				A725504F1F0CA18D00301290 /* Assert.hpp */,
+				A72550501F0CA18D00301290 /* Test.cpp */,
+				A72550511F0CA18D00301290 /* Test.hpp */,
+				A72550521F0CA18D00301290 /* TestRunner.cpp */,
+				A72550531F0CA18D00301290 /* TestRunner.hpp */,
+				A72550541F0CA18D00301290 /* TestSuite.cpp */,
+				A72550551F0CA18D00301290 /* TestSuite.hpp */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		A72550561F0CA18D00301290 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A72550571F0CA18D00301290 /* KittTestSuite.cpp */,
+				A72550581F0CA18D00301290 /* KittTestSuite.hpp */,
+				A72550591F0CA18D00301290 /* MatrixTests.cpp */,
+				A725505A1F0CA18D00301290 /* MatrixTests.hpp */,
+				A725505B1F0CA18D00301290 /* MemoizedTrigonometryTests.cpp */,
+				A725505C1F0CA18D00301290 /* MemoizedTrigonometryTests.hpp */,
+				A725505D1F0CA18D00301290 /* RealtimeTrigonometryTests.cpp */,
+				A725505E1F0CA18D00301290 /* RealtimeTrigonometryTests.hpp */,
+				A725505F1F0CA18D00301290 /* SdlTimeTests.cpp */,
+				A72550601F0CA18D00301290 /* SdlTimeTests.hpp */,
+				A72550611F0CA18D00301290 /* Vector2DTests.cpp */,
+				A72550621F0CA18D00301290 /* Vector2DTests.hpp */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		A74E82061F0A891C00B8C90F /* content */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,174 +336,13 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		A74E820D1F0B234A00B8C90F /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				A74E820A1F0B209800B8C90F /* Placeable.cpp */,
-				A74E820B1F0B209800B8C90F /* Placeable.hpp */,
-				A74E820E1F0B239C00B8C90F /* Directable.cpp */,
-				A74E820F1F0B239C00B8C90F /* Directable.hpp */,
-			);
-			name = Interfaces;
-			sourceTree = "<group>";
-		};
-		A76EE3C31F0736B6009A673B /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE3C41F0736B6009A673B /* FileReader.cpp */,
-				A76EE3C51F0736B6009A673B /* FileReader.hpp */,
-				A76EE3C61F0736B6009A673B /* IReader.cpp */,
-				A76EE3C71F0736B6009A673B /* IReader.hpp */,
-			);
-			path = Content;
-			sourceTree = "<group>";
-		};
-		A76EE3C81F0736B6009A673B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				A74E820D1F0B234A00B8C90F /* Interfaces */,
-				A76EE4301F09EDEA009A673B /* Timing */,
-				A76EE42F1F09D502009A673B /* Math */,
-				A76EE4181F087952009A673B /* Trigonometry */,
-				A76EE3EE1F075715009A673B /* Object.cpp */,
-				A76EE3EF1F075715009A673B /* Object.hpp */,
-				A76EE4061F080360009A673B /* Injector.cpp */,
-				A76EE4071F080360009A673B /* Injector.hpp */,
-				A76EE3D01F0736B6009A673B /* Window.hpp */,
-				A76EE41A1F094726009A673B /* constants.hpp */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		A76EE3D11F0736B6009A673B /* Exceptions */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE3D21F0736B6009A673B /* AssertException.cpp */,
-				A76EE3D31F0736B6009A673B /* AssertException.hpp */,
-				A76EE3D41F0736B6009A673B /* KittException.cpp */,
-				A76EE3D51F0736B6009A673B /* KittException.hpp */,
-				A76EE3F71F07E136009A673B /* DivideByZeroException.cpp */,
-				A76EE3F81F07E136009A673B /* DivideByZeroException.hpp */,
-				A76EE4091F080CB7009A673B /* NullReferenceException.cpp */,
-				A76EE40A1F080CB7009A673B /* NullReferenceException.hpp */,
-				A76EE41F1F0989B8009A673B /* OutOfRangeException.cpp */,
-				A76EE4201F0989B8009A673B /* OutOfRangeException.hpp */,
-				A76EE4221F098DDF009A673B /* MismatchException.cpp */,
-				A76EE4231F098DDF009A673B /* MismatchException.hpp */,
-			);
-			path = Exceptions;
-			sourceTree = "<group>";
-		};
-		A76EE3D61F0736B6009A673B /* Testing */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE3D71F0736B6009A673B /* Assert.cpp */,
-				A76EE3D81F0736B6009A673B /* Assert.hpp */,
-				A76EE3D91F0736B6009A673B /* Test.cpp */,
-				A76EE3DA1F0736B6009A673B /* Test.hpp */,
-				A76EE3DB1F0736B6009A673B /* TestSuite.cpp */,
-				A76EE3DC1F0736B6009A673B /* TestSuite.hpp */,
-				A76EE3F41F07CEFE009A673B /* TestRunner.cpp */,
-				A76EE3F51F07CEFE009A673B /* TestRunner.hpp */,
-			);
-			path = Testing;
-			sourceTree = "<group>";
-		};
-		A76EE3DD1F0736B6009A673B /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE43B1F09F7E1009A673B /* MathTests */,
-				A76EE43A1F09F7CE009A673B /* TrigonometryTests */,
-				A76EE3DE1F0736B6009A673B /* KittTestSuite.cpp */,
-				A76EE3DF1F0736B6009A673B /* KittTestSuite.hpp */,
-				A76EE43C1F09F800009A673B /* SdlTimeTests.cpp */,
-				A76EE43D1F09F800009A673B /* SdlTimeTests.hpp */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		A76EE4181F087952009A673B /* Trigonometry */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE3FA1F07EC76009A673B /* Trigonometry.cpp */,
-				A76EE3FB1F07EC76009A673B /* Trigonometry.hpp */,
-				A76EE3FD1F07F1F2009A673B /* HasTrigonometry.cpp */,
-				A76EE3FE1F07F1F2009A673B /* HasTrigonometry.hpp */,
-				A76EE40C1F081D0C009A673B /* RealtimeTrigonometry.cpp */,
-				A76EE40D1F081D0C009A673B /* RealtimeTrigonometry.hpp */,
-				A76EE40F1F081E08009A673B /* MemoizedTrigonometry.cpp */,
-				A76EE4101F081E08009A673B /* MemoizedTrigonometry.hpp */,
-				A76EE4291F09CF47009A673B /* TrigonometryFactory.cpp */,
-				A76EE42A1F09CF47009A673B /* TrigonometryFactory.hpp */,
-			);
-			name = Trigonometry;
-			sourceTree = "<group>";
-		};
-		A76EE4281F09A1B8009A673B /* Graphics */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE4251F09A157009A673B /* Texture.cpp */,
-				A76EE4261F09A157009A673B /* Texture.hpp */,
-				A74E82031F0A708900B8C90F /* Renderer.cpp */,
-				A74E82041F0A708900B8C90F /* Renderer.hpp */,
-			);
-			name = Graphics;
-			sourceTree = "<group>";
-		};
-		A76EE42F1F09D502009A673B /* Math */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE3CA1F0736B6009A673B /* Matrix.cpp */,
-				A76EE3CB1F0736B6009A673B /* Matrix.hpp */,
-				A76EE3CE1F0736B6009A673B /* Vector2D.cpp */,
-				A76EE3CF1F0736B6009A673B /* Vector2D.hpp */,
-				A76EE42C1F09D1CF009A673B /* Vector2DFactory.cpp */,
-				A76EE42D1F09D1CF009A673B /* Vector2DFactory.hpp */,
-			);
-			name = Math;
-			sourceTree = "<group>";
-		};
-		A76EE4301F09EDEA009A673B /* Timing */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE4311F09EDFE009A673B /* Time.cpp */,
-				A76EE4321F09EDFE009A673B /* Time.hpp */,
-				A76EE4341F09EEA7009A673B /* SdlTime.cpp */,
-				A76EE4351F09EEA7009A673B /* SdlTime.hpp */,
-				A76EE4371F09F395009A673B /* TimeFactory.cpp */,
-				A76EE4381F09F395009A673B /* TimeFactory.hpp */,
-			);
-			name = Timing;
-			sourceTree = "<group>";
-		};
-		A76EE43A1F09F7CE009A673B /* TrigonometryTests */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE4121F0864C4009A673B /* RealtimeTrigonometryTests.cpp */,
-				A76EE4131F0864C4009A673B /* RealtimeTrigonometryTests.hpp */,
-				A76EE4151F0874C6009A673B /* MemoizedTrigonometryTests.cpp */,
-				A76EE4161F0874C6009A673B /* MemoizedTrigonometryTests.hpp */,
-			);
-			name = TrigonometryTests;
-			sourceTree = "<group>";
-		};
-		A76EE43B1F09F7E1009A673B /* MathTests */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE3E01F0736B6009A673B /* Vector2DTests.hpp */,
-				A76EE3E11F0736B6009A673B /* Vector2DTests.cpp */,
-				A76EE41C1F097B9B009A673B /* MatrixTests.cpp */,
-				A76EE41D1F097B9B009A673B /* MatrixTests.hpp */,
-			);
-			name = MathTests;
-			sourceTree = "<group>";
-		};
 		A7ECCDB31F04C03000011805 = {
 			isa = PBXGroup;
 			children = (
+				A725508C1F0CAB1A00301290 /* content */,
+				A72550081F0CA18D00301290 /* kitt */,
 				A74E82061F0A891C00B8C90F /* content */,
 				A74E81FD1F09FBB600B8C90F /* README.md */,
-				A7ECCDBE1F04C03000011805 /* kitt */,
 				A7ECCDBD1F04C03000011805 /* Products */,
 				A7ECCDCD1F04CA1200011805 /* Frameworks */,
 			);
@@ -351,20 +354,6 @@
 				A7ECCDBC1F04C03000011805 /* kitt.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A7ECCDBE1F04C03000011805 /* kitt */ = {
-			isa = PBXGroup;
-			children = (
-				A76EE4281F09A1B8009A673B /* Graphics */,
-				A76EE3C31F0736B6009A673B /* Content */,
-				A76EE3C81F0736B6009A673B /* Core */,
-				A76EE3D11F0736B6009A673B /* Exceptions */,
-				A76EE3D61F0736B6009A673B /* Testing */,
-				A76EE3DD1F0736B6009A673B /* Tests */,
-				A7ECCDBF1F04C03000011805 /* main.cpp */,
-			);
-			path = kitt;
 			sourceTree = "<group>";
 		};
 		A7ECCDCD1F04CA1200011805 /* Frameworks */ = {
@@ -433,43 +422,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76EE3E41F0736B6009A673B /* Matrix.cpp in Sources */,
-				A76EE3E31F0736B6009A673B /* IReader.cpp in Sources */,
-				A76EE3EB1F0736B6009A673B /* TestSuite.cpp in Sources */,
-				A74E820C1F0B209800B8C90F /* Placeable.cpp in Sources */,
-				A76EE4241F098DDF009A673B /* MismatchException.cpp in Sources */,
-				A76EE4211F0989B8009A673B /* OutOfRangeException.cpp in Sources */,
-				A76EE3FC1F07EC76009A673B /* Trigonometry.cpp in Sources */,
-				A76EE3E61F0736B6009A673B /* Vector2D.cpp in Sources */,
-				A74E82101F0B239C00B8C90F /* Directable.cpp in Sources */,
-				A76EE4391F09F395009A673B /* TimeFactory.cpp in Sources */,
-				A76EE40B1F080CB7009A673B /* NullReferenceException.cpp in Sources */,
-				A76EE3F01F075715009A673B /* Object.cpp in Sources */,
-				A76EE3E71F0736B6009A673B /* AssertException.cpp in Sources */,
-				A74E82051F0A708900B8C90F /* Renderer.cpp in Sources */,
-				A76EE3E91F0736B6009A673B /* Assert.cpp in Sources */,
-				A76EE3E21F0736B6009A673B /* FileReader.cpp in Sources */,
-				A76EE4081F080360009A673B /* Injector.cpp in Sources */,
-				A76EE3E81F0736B6009A673B /* KittException.cpp in Sources */,
-				A76EE40E1F081D0C009A673B /* RealtimeTrigonometry.cpp in Sources */,
-				A76EE3F91F07E136009A673B /* DivideByZeroException.cpp in Sources */,
-				A76EE3FF1F07F1F2009A673B /* HasTrigonometry.cpp in Sources */,
-				A76EE43E1F09F800009A673B /* SdlTimeTests.cpp in Sources */,
-				A76EE3F61F07CEFE009A673B /* TestRunner.cpp in Sources */,
-				A76EE41E1F097B9B009A673B /* MatrixTests.cpp in Sources */,
-				A76EE4361F09EEA7009A673B /* SdlTime.cpp in Sources */,
-				A76EE3ED1F0736B6009A673B /* Vector2DTests.cpp in Sources */,
-				A76EE3EC1F0736B6009A673B /* KittTestSuite.cpp in Sources */,
-				A76EE4271F09A157009A673B /* Texture.cpp in Sources */,
-				A7ECCDC01F04C03000011805 /* main.cpp in Sources */,
-				A76EE42B1F09CF47009A673B /* TrigonometryFactory.cpp in Sources */,
-				A76EE4331F09EDFE009A673B /* Time.cpp in Sources */,
+				A725507C1F0CA18D00301290 /* SdlRenderer.cpp in Sources */,
+				A725506E1F0CA18D00301290 /* SdlTime.cpp in Sources */,
+				A72550861F0CA18D00301290 /* KittTestSuite.cpp in Sources */,
+				A72550661F0CA18D00301290 /* Directable.cpp in Sources */,
+				A72550831F0CA18D00301290 /* Test.cpp in Sources */,
+				A72550731F0CA18D00301290 /* Vector2D.cpp in Sources */,
+				A72550711F0CA18D00301290 /* Trigonometry.cpp in Sources */,
+				A725506A1F0CA18D00301290 /* Object.cpp in Sources */,
+				A72550701F0CA18D00301290 /* TimeFactory.cpp in Sources */,
+				A72550651F0CA18D00301290 /* Load.cpp in Sources */,
+				A72550781F0CA18D00301290 /* NullReferenceException.cpp in Sources */,
+				A72550871F0CA18D00301290 /* MatrixTests.cpp in Sources */,
+				A72550801F0CA18D00301290 /* Window.cpp in Sources */,
+				A725507D1F0CA18D00301290 /* SdlTexture.cpp in Sources */,
+				A72550811F0CA18D00301290 /* main.cpp in Sources */,
+				A72550851F0CA18D00301290 /* TestSuite.cpp in Sources */,
+				A725507F1F0CA18D00301290 /* Texture.cpp in Sources */,
+				A72550761F0CA18D00301290 /* KittException.cpp in Sources */,
+				A72550631F0CA18D00301290 /* FileReader.cpp in Sources */,
+				A725508B1F0CA18D00301290 /* Vector2DTests.cpp in Sources */,
+				A72550841F0CA18D00301290 /* TestRunner.cpp in Sources */,
+				A725507E1F0CA18D00301290 /* SdlWindow.cpp in Sources */,
+				A72550671F0CA18D00301290 /* HasTrigonometry.cpp in Sources */,
+				A725506B1F0CA18D00301290 /* Path.cpp in Sources */,
+				A72550791F0CA18D00301290 /* OutOfRangeException.cpp in Sources */,
+				A72550821F0CA18D00301290 /* Assert.cpp in Sources */,
+				A725506D1F0CA18D00301290 /* RealtimeTrigonometry.cpp in Sources */,
+				A72550681F0CA18D00301290 /* Matrix.cpp in Sources */,
+				A72550641F0CA18D00301290 /* IReader.cpp in Sources */,
+				A725507B1F0CA18D00301290 /* Renderer.cpp in Sources */,
+				A72550741F0CA18D00301290 /* AssertException.cpp in Sources */,
+				A72550721F0CA18D00301290 /* TrigonometryFactory.cpp in Sources */,
+				A72550881F0CA18D00301290 /* MemoizedTrigonometryTests.cpp in Sources */,
 				A74E81FE1F09FBB600B8C90F /* README.md in Sources */,
-				A76EE4111F081E08009A673B /* MemoizedTrigonometry.cpp in Sources */,
-				A76EE3EA1F0736B6009A673B /* Test.cpp in Sources */,
-				A76EE4171F0874C6009A673B /* MemoizedTrigonometryTests.cpp in Sources */,
-				A76EE4141F0864C4009A673B /* RealtimeTrigonometryTests.cpp in Sources */,
-				A76EE42E1F09D1CF009A673B /* Vector2DFactory.cpp in Sources */,
+				A725506C1F0CA18D00301290 /* Placeable.cpp in Sources */,
+				A72550751F0CA18D00301290 /* DivideByZeroException.cpp in Sources */,
+				A725506F1F0CA18D00301290 /* Time.cpp in Sources */,
+				A72550771F0CA18D00301290 /* MismatchException.cpp in Sources */,
+				A725507A1F0CA18D00301290 /* Game.cpp in Sources */,
+				A725508A1F0CA18D00301290 /* SdlTimeTests.cpp in Sources */,
+				A72550691F0CA18D00301290 /* MemoizedTrigonometry.cpp in Sources */,
+				A72550891F0CA18D00301290 /* RealtimeTrigonometryTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

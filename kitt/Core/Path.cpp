@@ -24,11 +24,23 @@ namespace Core {
 
 	void Path::setRootFromArgs(const char *arg, const char *folder) {
 		string exe(arg);
-		int pos;
+		unsigned long pos;
 		char app[2] = { DS, '\0' };
-		pos = exe.find_last_of(DS); //Debug or Release
-		exe = exe.substr(0, pos);
-		pos = exe.find_last_of(DS); //root
+        pos = exe.find_last_of(DS); //Debug or Release
+        exe = exe.substr(0, pos);
+        pos = exe.find_last_of(DS); //root (win)
+#ifdef __APPLE__
+        exe = exe.substr(0, pos);
+        pos = exe.find_last_of(DS);
+        exe = exe.substr(0, pos);
+        pos = exe.find_last_of(DS);
+        exe = exe.substr(0, pos);
+        pos = exe.find_last_of(DS);
+        exe = exe.substr(0, pos);
+        pos = exe.find_last_of(DS);
+        exe = exe.substr(0, pos);
+        pos = exe.find_last_of(DS);
+#endif
 		string root = exe.substr(0, pos);
 		root.append(app);
 		root.append(folder);
@@ -50,7 +62,7 @@ namespace Core {
 		result = _root + result;
 		return result;
 #else
-		return path;
+		return _root + path;
 #endif
 	}
 

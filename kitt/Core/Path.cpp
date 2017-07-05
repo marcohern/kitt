@@ -53,15 +53,14 @@ namespace Core {
 		return this->_root;
 	}
 
-	string Path::getFullPath(const string &path) const {
+	string Path::getFullPath(const string &base, const string &path) const {
+		string result = base;
+		result.append(path);
 #ifdef _WIN32
-		string result = path;
 		replace(result.begin(), result.end(), UDS, WDS);
 		result = _root + result;
-		return result;
-#else
-		return _root + path;
 #endif
+		return result;
 	}
 
 	string Path::root() {

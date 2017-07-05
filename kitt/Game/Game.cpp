@@ -35,6 +35,7 @@ namespace Game {
         delete time;
 		delete reader;
 		delete window;
+		delete font;
     }
 
 	void Game::init() {
@@ -44,9 +45,10 @@ namespace Game {
 		}
 		trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
 		time = TimeFactory::create();
-		reader = new FileReader("content", false);
 		window = new SdlWindow(TITLE, 800, 600, false);
+		reader = new FileReader("content", window->getRenderer(), false);
 		renderer = window->getRenderer();
+		font = reader->readSurface("/fonts/courier.bmp");
 	}
 
 	void Game::update() {
@@ -62,6 +64,8 @@ namespace Game {
 		SdlRenderer *r = (SdlRenderer*)renderer;
 		SDL_SetRenderDrawColor(r->getRenderer(), 0x00, 0x00, 0x00, 0xff);
 		SDL_RenderClear(r->getRenderer());
+
+		renderer->texture(0,0,font);
 
 		SDL_SetRenderDrawColor(r->getRenderer(), 0xff, 0xff, 0x00, 0xff);
 		SDL_RenderFillRect(r->getRenderer(), &rect);
@@ -93,6 +97,7 @@ namespace Game {
 
 		while (running)
 		{
+			time->update();
 			if (SDL_PollEvent(&ev) != 0) {
 				onevent(&ev);
 			}

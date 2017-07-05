@@ -31,6 +31,7 @@ namespace Game {
 		Renderer *renderer;
 
 		IReader *reader;
+		Texture *font;
         
     public:
 		Game();

@@ -51,8 +51,11 @@ namespace Content {
     }
     
     Texture* FileReader::readSurface(const string &path) {
-		string fullpath = this->root;
-		fullpath.append(path);
+		char pre[2] = {DS, '\0'};
+		string prefix(pre);
+		prefix.append(path);
+
+		string fullpath = Path::get()->getFullPath(this->root, path);
 		SDL_Surface *surf= IMG_Load(fullpath.c_str());
 		SdlTexture *txt = new SdlTexture((SdlRenderer *)renderer, surf);
 		return txt;

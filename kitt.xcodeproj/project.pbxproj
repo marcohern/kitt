@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A72550631F0CA18D00301290 /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500B1F0CA18D00301290 /* FileReader.cpp */; };
 		A72550641F0CA18D00301290 /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500D1F0CA18D00301290 /* IReader.cpp */; };
-		A72550651F0CA18D00301290 /* Load.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500F1F0CA18D00301290 /* Load.cpp */; };
 		A72550661F0CA18D00301290 /* Directable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550121F0CA18D00301290 /* Directable.cpp */; };
 		A72550671F0CA18D00301290 /* HasTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550141F0CA18D00301290 /* HasTrigonometry.cpp */; };
 		A72550681F0CA18D00301290 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550161F0CA18D00301290 /* Matrix.cpp */; };
@@ -73,8 +72,6 @@
 		A725500C1F0CA18D00301290 /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
 		A725500D1F0CA18D00301290 /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
 		A725500E1F0CA18D00301290 /* IReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IReader.hpp; sourceTree = "<group>"; };
-		A725500F1F0CA18D00301290 /* Load.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Load.cpp; sourceTree = "<group>"; };
-		A72550101F0CA18D00301290 /* Load.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Load.hpp; sourceTree = "<group>"; };
 		A72550121F0CA18D00301290 /* Directable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Directable.cpp; sourceTree = "<group>"; };
 		A72550131F0CA18D00301290 /* Directable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Directable.hpp; sourceTree = "<group>"; };
 		A72550141F0CA18D00301290 /* HasTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HasTrigonometry.cpp; sourceTree = "<group>"; };
@@ -197,8 +194,6 @@
 				A725500C1F0CA18D00301290 /* FileReader.hpp */,
 				A725500D1F0CA18D00301290 /* IReader.cpp */,
 				A725500E1F0CA18D00301290 /* IReader.hpp */,
-				A725500F1F0CA18D00301290 /* Load.cpp */,
-				A72550101F0CA18D00301290 /* Load.hpp */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -431,7 +426,6 @@
 				A72550711F0CA18D00301290 /* Trigonometry.cpp in Sources */,
 				A725506A1F0CA18D00301290 /* Object.cpp in Sources */,
 				A72550701F0CA18D00301290 /* TimeFactory.cpp in Sources */,
-				A72550651F0CA18D00301290 /* Load.cpp in Sources */,
 				A72550781F0CA18D00301290 /* NullReferenceException.cpp in Sources */,
 				A72550871F0CA18D00301290 /* MatrixTests.cpp in Sources */,
 				A72550801F0CA18D00301290 /* Window.cpp in Sources */,
@@ -572,16 +566,20 @@
 					/opt/local/include,
 					/usr/include,
 					/usr/local/include,
+					"/Users/marcoh/Development/kitt/packages/osx/physfs-2.0.3",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
 					/opt/local/lib,
 					/usr/lib,
 				);
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
 					cocoa,
 					"-framework",
 					SDL2,
+					/usr/local/lib/libphysfs.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -599,16 +597,20 @@
 					/opt/local/include,
 					/usr/include,
 					/usr/local/include,
+					"/Users/marcoh/Development/kitt/packages/osx/physfs-2.0.3",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
 					/opt/local/lib,
 					/usr/lib,
 				);
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-framework",
 					cocoa,
 					"-framework",
 					SDL2,
+					/usr/local/lib/libphysfs.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";

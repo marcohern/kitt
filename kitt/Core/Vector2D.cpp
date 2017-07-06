@@ -42,6 +42,14 @@ namespace Core {
 		return this->y;
 	}
 
+	int Vector2D::iX() const {
+		return (int) this->x;
+	}
+
+	int Vector2D::iY() const {
+		return (int) this->y;
+	}
+
 	void Vector2D::setX(double x) {
 		this->x = x;
 	}
@@ -132,8 +140,10 @@ namespace Core {
     }
     
     void Vector2D::rotate(double radians) {
-        this->x = this->x*trigo->cos(radians) - this->y*trigo->sin(radians);
-        this->y = this->x*trigo->sin(radians) + this->y*trigo->cos(radians);
+		double xx = this->x*trigo->cos(radians) - this->y*trigo->sin(radians);
+		double yy = this->x*trigo->sin(radians) + this->y*trigo->cos(radians);
+		this->x = xx;
+		this->y = yy;
     }
     
     inline void Vector2D::addAngle(double radians) {

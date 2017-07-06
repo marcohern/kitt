@@ -63,11 +63,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\Src\marcohern.com\kitt\packages\win32\SDL2-2.0.5\include;C:\Src\marcohern.com\kitt\packages\win32\physfs-2.0.3;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Src\marcohern.com\kitt\packages\win32\physfs-2.0.3\Release;C:\Src\marcohern.com\kitt\packages\win32\SDL2-2.0.5\lib\x86;C:\Src\marcohern.com\kitt\packages\win32\SDL2_image-2.0.1\lib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Src\marcohern.com\kitt\packages\win32\SDL2-2.0.5\lib\x86;C:\Src\marcohern.com\kitt\packages\win32\SDL2_image-2.0.1\lib\x86;C:\Src\marcohern.com\kitt\packages\win32\SDL2_ttf-2.0.14\lib\x86;C:\Src\marcohern.com\kitt\packages\win32\physfs-2.0.3\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Link>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;physfs.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;physfs.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -95,6 +95,7 @@
     <ClCompile Include="kitt\Exceptions\MismatchException.cpp" />
     <ClCompile Include="kitt\Exceptions\NullReferenceException.cpp" />
     <ClCompile Include="kitt\Exceptions\OutOfRangeException.cpp" />
+    <ClCompile Include="kitt\Graphics\SdlFileReader.cpp" />
     <ClCompile Include="kitt\Graphics\SdlRenderer.cpp" />
     <ClCompile Include="kitt\Graphics\SdlTexture.cpp" />
     <ClCompile Include="kitt\Core\Path.cpp" />
@@ -140,6 +141,7 @@
     <ClInclude Include="kitt\Exceptions\MismatchException.hpp" />
     <ClInclude Include="kitt\Exceptions\NullReferenceException.hpp" />
     <ClInclude Include="kitt\Exceptions\OutOfRangeException.hpp" />
+    <ClInclude Include="kitt\Graphics\SdlFileReader.hpp" />
     <ClInclude Include="kitt\Graphics\SdlRenderer.hpp" />
     <ClInclude Include="kitt\Graphics\SdlTexture.hpp" />
     <ClInclude Include="kitt\Core\Path.hpp" />

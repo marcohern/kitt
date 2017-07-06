@@ -31,7 +31,7 @@ namespace Core {
     }
     
     int MemoizedTrigonometry::index(double r) {
-        double fm = fmod(abs(r), TAU)/TAU;
+        double fm = fmod(r, TAU)/TAU;
         int i = fm*TRIGO_TABLE_SIZE;
         return i;
     }

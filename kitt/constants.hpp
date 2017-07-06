@@ -18,10 +18,12 @@
 
 #define TRIGO_TABLE_SIZE 200000
 
-#define TRIGO_TYPE_REALTIME 0x01
-#define TRIGO_TYPE_MEMOIZED 0x02
+#define	TRIGO_TYPE_NONE		0x00
+#define	TRIGO_TYPE_REALTIME	0x01
+#define	TRIGO_TYPE_MEMOIZED	0x02
 
-#define TRIGO_TYPE TRIGO_TYPE_MEMOIZED
+#define TIME_TYPE_NONE 0x00
+#define TIME_TYPE_SDL  0x01
 
 #define WDS '\\'
 #define UDS '/'
@@ -31,5 +33,8 @@
 #else 
 	#define DS UDS
 #endif
+
+#define	TRIGO_TYPE	TRIGO_TYPE_MEMOIZED
+#define	TIME_TYPE	TIME_TYPE_SDL
 
 #endif /* constants_hpp */

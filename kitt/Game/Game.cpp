@@ -14,7 +14,7 @@
 #include "../Core/TimeFactory.hpp"
 #include "../Core/Vector2D.hpp"
 #include "../Content/IReader.hpp"
-#include "../Content/FileReader.hpp"
+#include "../Graphics/SdlFileReader.hpp"
 #include "../Graphics/SdlWindow.hpp"
 
 #include "../Core/TrigonometryFactory.hpp"
@@ -26,7 +26,8 @@ namespace Game {
 	using namespace Graphics;
 	using namespace Exceptions;
     
-	Game::Game() {
+	Game::Game()
+	{
         
     }
     
@@ -36,6 +37,7 @@ namespace Game {
 		delete reader;
 		delete window;
 		delete font;
+		delete v1;
     }
 
 	void Game::init() {
@@ -44,32 +46,29 @@ namespace Game {
 			throw KittException("Unable to initialize SDL.");
 		}
 		trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
+		v1 = new Vector2D(100,200,trigonometry);
 		time = TimeFactory::create();
-		window = new SdlWindow(TITLE, 800, 600, false);
-		reader = new FileReader("/content", window->getRenderer(), false);
+		window = new SdlWindow(TITLE, 800, 600, false, trigonometry);
 		renderer = window->getRenderer();
+		reader = new SdlFileReader("/content", renderer, false);
 		font = reader->readSurface("/fonts/courier.bmp");
 	}
 
 	void Game::update() {
-
+		SDL_Event ev;
+		if (SDL_PollEvent(&ev) != 0) {
+			onevent(&ev);
+		}
 	}
 
 	void Game::draw() {
-		SDL_Rect rect;
-		rect.w = 200;
-		rect.h = 200;
-		rect.x = window->w() / 2 - (rect.w / 2);
-		rect.y = window->h() / 2 - (rect.h / 2);
-		SdlRenderer *r = (SdlRenderer*)renderer;
-		SDL_SetRenderDrawColor(r->getRenderer(), 0x00, 0x00, 0x00, 0xff);
-		SDL_RenderClear(r->getRenderer());
+		renderer->clear();
 
 		renderer->texture(0,0,font);
+		renderer->vector2d(300, 250, 0xFFFFFFFF, *v1);
+		v1->rotate(time->getDelta()*0.4);
 
-		SDL_SetRenderDrawColor(r->getRenderer(), 0xff, 0xff, 0x00, 0xff);
-		SDL_RenderFillRect(r->getRenderer(), &rect);
-		SDL_RenderPresent(r->getRenderer());
+		renderer->present();
 	}
 
 	void Game::onevent(SDL_Event *ev) {
@@ -92,15 +91,10 @@ namespace Game {
 	void Game::run() {
 		this->init();
 
-		SDL_Event ev;
 		running = true;
-
 		while (running)
 		{
 			time->update();
-			if (SDL_PollEvent(&ev) != 0) {
-				onevent(&ev);
-			}
 			update();
 			draw();
 		}

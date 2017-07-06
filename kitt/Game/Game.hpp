@@ -32,6 +32,7 @@ namespace Game {
 
 		IReader *reader;
 		Texture *font;
+		Vector2D *v1;
         
     public:
 		Game();

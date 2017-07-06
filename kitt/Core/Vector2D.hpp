@@ -32,6 +32,9 @@ namespace Core {
         
         double getX() const;
         double getY() const;
+
+		int iX() const;
+		int iY() const;
         
         void setX(double x);
         void setY(double y);

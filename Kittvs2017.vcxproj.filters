@@ -89,9 +89,6 @@
     <ClCompile Include="kitt\Core\Placeable.cpp">
       <Filter>Core\Interfaces</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Core\SdlTime.cpp">
-      <Filter>Core\Time</Filter>
-    </ClCompile>
     <ClCompile Include="kitt\Core\Time.cpp">
       <Filter>Core\Time</Filter>
     </ClCompile>
@@ -121,6 +118,10 @@
     </ClCompile>
     <ClCompile Include="kitt\Content\ZipReader.cpp">
       <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\SdlFileReader.cpp" />
+    <ClCompile Include="kitt\Core\SdlTime.cpp">
+      <Filter>Core\Time</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -218,9 +219,6 @@
     <ClInclude Include="kitt\Core\TimeFactory.hpp">
       <Filter>Core\Time</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Core\SdlTime.hpp">
-      <Filter>Core\Time</Filter>
-    </ClInclude>
     <ClInclude Include="kitt\Core\Time.hpp">
       <Filter>Core\Time</Filter>
     </ClInclude>
@@ -250,6 +248,10 @@
     </ClInclude>
     <ClInclude Include="kitt\Content\ZipReader.hpp">
       <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\SdlFileReader.hpp" />
+    <ClInclude Include="kitt\Core\SdlTime.hpp">
+      <Filter>Core\Time</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -12,6 +12,7 @@
 #include "./Core/Path.hpp"
 #include "./Game/Game.hpp"
 #include <physfs.h>
+#include "constants.hpp"
 
 // ============================================================================
 // [SdlApplication]
@@ -83,7 +84,7 @@ int SdlApplication::init(int width, int height)
 	win = SDL_CreateWindow(APPTITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     
-    string path = Core::Path::get()->getFullPath("/content","/fonts/courier.bmp");
+    string path = Core::Path::get()->getFullPath("/fonts/courier.bmp");
     this->courier = SDL_LoadBMP(path.c_str());
 	//this->courier = IMG_Load("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
 
@@ -204,7 +205,6 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
-
     Core::Path::get()->setRootFromArgs(argv[0]);
 	PHYSFS_init(argv[0]);
 	/*
@@ -215,18 +215,18 @@ int main(int argc, char* argv[])
 	
 	PHYSFS_close(file);
 	PHYSFS_deinit();
-	
+	*/
 	
 	Game::Game game;
 	game.run();
-	return 0;
+	return 0;/*
 	
 	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;
 	testSuite.run();
-	*/
 
 	SdlApplication app;
 	return app.run(800, 600);
 	return 0;
+	*/
 }

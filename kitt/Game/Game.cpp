@@ -46,7 +46,7 @@ namespace Game {
 		trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
 		time = TimeFactory::create();
 		window = new SdlWindow(TITLE, 800, 600, false);
-		reader = new FileReader("content", window->getRenderer(), false);
+		reader = new FileReader("/content", window->getRenderer(), false);
 		renderer = window->getRenderer();
 		font = reader->readSurface("/fonts/courier.bmp");
 	}

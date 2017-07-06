@@ -7,6 +7,14 @@ namespace Core {
 	using namespace std;
 	Path *Path::instance = NULL;
 
+	string Path::normalize(const string &fullpath) {
+		string rpath = fullpath;
+#ifdef _WIN32
+		replace(rpath.begin(), rpath.end(), UDS, WDS);
+#endif
+		return rpath;
+	}
+
 	Path::Path() {
 
 	}
@@ -53,14 +61,10 @@ namespace Core {
 		return this->_root;
 	}
 
-	string Path::getFullPath(const string &base, const string &path) const {
-		string result = this->_root + base;
-		result.append(path);
-#ifdef _WIN32
-		replace(result.begin(), result.end(), UDS, WDS);
-		result = _root + result;
-#endif
-		return result;
+	string Path::getFullPath(const string &path) const {
+		string rpath = this->_root;
+		rpath.append(normalize(path));
+		return rpath;
 	}
 
 	string Path::root() {

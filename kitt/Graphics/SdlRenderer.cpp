@@ -25,8 +25,8 @@ namespace Graphics
 		SDL_Rect dstrect;
 		dstrect.x = x;
 		dstrect.y = y;
-		srcrect.w = texture->w();
-		srcrect.h = texture->h();
+		dstrect.w = texture->w();
+		dstrect.h = texture->h();
 
 		SDL_RenderCopy(renderer, txt->getSdlTexture(), &srcrect, &dstrect);
 	}

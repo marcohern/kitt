@@ -27,14 +27,13 @@ namespace Content {
 			this->root = path;
 		} else {
 			this->root = Path::root();
-			this->root.append(new char[2] { DS, '\0' });
-			this->root.append(path);
+			this->root.append(Path::normalize(path));
 		}
 	}
 
 	bool FileReader::exists(const string &path) {
 		string fullpath = this->root;
-		fullpath.append(path);
+		fullpath.append(Path::normalize(path));
 		if (FILE *f = fopen(fullpath.c_str(), "r")) {
 			fclose(f);
 			return true;
@@ -51,11 +50,9 @@ namespace Content {
     }
     
     Texture* FileReader::readSurface(const string &path) {
-		char pre[2] = {DS, '\0'};
-		string prefix(pre);
-		prefix.append(path);
-
-		string fullpath = Path::get()->getFullPath(this->root, path);
+		
+		string fullpath = this->root;
+		fullpath.append(Path::normalize(path));
 		SDL_Surface *surf= IMG_Load(fullpath.c_str());
 		SdlTexture *txt = new SdlTexture((SdlRenderer *)renderer, surf);
 		return txt;

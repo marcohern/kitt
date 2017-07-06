@@ -113,16 +113,15 @@
     <ClCompile Include="kitt\Graphics\SdlWindow.cpp">
       <Filter>Graphics\Sdl</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Content\Load.cpp">
-      <Filter>Content</Filter>
-    </ClCompile>
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Game\Game.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Content\ZipReader.cpp" />
+    <ClCompile Include="kitt\Content\ZipReader.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -243,16 +242,15 @@
     <ClInclude Include="kitt\Graphics\SdlWindow.hpp">
       <Filter>Graphics\Sdl</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Content\Load.hpp">
-      <Filter>Content</Filter>
-    </ClInclude>
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp">
       <Filter>Tests</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Game\Game.hpp">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Content\ZipReader.hpp" />
+    <ClInclude Include="kitt\Content\ZipReader.hpp">
+      <Filter>Content</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

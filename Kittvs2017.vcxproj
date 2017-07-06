@@ -74,7 +74,6 @@
   <ItemGroup>
     <ClCompile Include="kitt\Content\FileReader.cpp" />
     <ClCompile Include="kitt\Content\IReader.cpp" />
-    <ClCompile Include="kitt\Content\Load.cpp" />
     <ClCompile Include="kitt\Content\ZipReader.cpp" />
     <ClCompile Include="kitt\Core\Directable.cpp" />
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp" />
@@ -148,7 +147,6 @@
     <ClInclude Include="kitt\Graphics\Texture.hpp" />
     <ClInclude Include="kitt\Graphics\Renderer.hpp" />
     <ClInclude Include="kitt\Graphics\Window.hpp" />
-    <ClInclude Include="kitt\Content\Load.hpp" />
     <ClInclude Include="kitt\SDL.h" />
     <ClInclude Include="kitt\Testing\Assert.hpp" />
     <ClInclude Include="kitt\Testing\Test.hpp" />

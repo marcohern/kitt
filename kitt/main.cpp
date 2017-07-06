@@ -84,24 +84,24 @@ int SdlApplication::init(int width, int height)
 	win = SDL_CreateWindow(APPTITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     
-    string path = Core::Path::get()->getFullPath("/fonts/courier.bmp");
-    this->courier = SDL_LoadBMP(path.c_str());
+    string path = Core::Path::get()->getFullPath("/content/fonts/myriad.png");
+    this->courier = IMG_Load(path.c_str());
 	//this->courier = IMG_Load("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
 
     this->couriertx = SDL_CreateTextureFromSurface(renderer, this->courier);
     
     this->letter.x=0;
     this->letter.y=0;
-    this->letter.w=16;
-    this->letter.h=16;
+    this->letter.w=64;
+    this->letter.h=64;
 
 	// Success.
 	return APP_OK;
 }
 
 void SdlApplication::RenderText(string text, int x, int y) {
-    this->dst.w = this->letter.w*2;
-    this->dst.h = this->letter.h*2;
+    this->dst.w = this->letter.w/2;
+    this->dst.h = this->letter.h/2;
     this->dst.x = x;
     this->dst.y = y;
     
@@ -111,15 +111,15 @@ void SdlApplication::RenderText(string text, int x, int y) {
         int sx = cv%16;
         int sy = cv/16;
 
-		double ddx = (double)rand() / RAND_MAX;
+		double ddx = 0;// (double)rand() / RAND_MAX;
 		int tx = this->dst.x;
 		int dx = ddx*4;
         
-        this->letter.x = sx*16;
-        this->letter.y = sy*16;
+        this->letter.x = sx*64;
+        this->letter.y = sy*64;
 		this->dst.x += dx;
         SDL_RenderCopy(renderer, this->couriertx, &this->letter, &this->dst);
-        this->dst.x= tx + 16;
+        this->dst.x= tx + 24;
     }
 }
 
@@ -216,17 +216,17 @@ int main(int argc, char* argv[])
 	PHYSFS_close(file);
 	PHYSFS_deinit();
 	*/
-	
+	/*
 	Game::Game game;
 	game.run();
-	return 0;/*
+	return 0;
 	
 	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;
 	testSuite.run();
-
+	*/
 	SdlApplication app;
 	return app.run(800, 600);
 	return 0;
-	*/
+	
 }

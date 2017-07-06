@@ -8,6 +8,7 @@
 #include <math.h>
 #include <sstream>
 
+#include "../constants.hpp"
 #include "./Vector2D.hpp"
 #include "../Exceptions/DivideByZeroException.hpp"
 #include "../Exceptions/NullReferenceException.hpp"
@@ -141,13 +142,16 @@ namespace Core {
     
     void Vector2D::rotate(double radians) {
 		double xx = this->x*trigo->cos(radians) - this->y*trigo->sin(radians);
-		double yy = this->x*trigo->sin(radians) + this->y*trigo->cos(radians);
+		this->y = this->x*trigo->sin(radians) + this->y*trigo->cos(radians);
 		this->x = xx;
-		this->y = yy;
     }
+
+	void Vector2D::rotateDeg(double degrees) {
+		this->rotate(TAU*degrees/360.0);
+	}
     
     inline void Vector2D::addAngle(double radians) {
-        return this->rotate(radians);
+        this->rotate(radians);
     }
     
     Vector2D Vector2D::u() const {

@@ -51,24 +51,17 @@ namespace Graphics
 		tip1.multiply(l);
 		tip2.multiply(l);
 		
-		tip1.rotate(PI/2 + PI/4);
-		tip2.rotate(TAU - PI/2 - PI/4);
+		tip1.rotateDeg(135);
+		tip2.rotateDeg(-135);
 
 		int fx = v.iX() + x;
 		int fy = v.iY() + y;
 
 		SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 		SDL_RenderDrawLine(renderer, x, y, fx, fy);
-		SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0x00, 0xFF);
 		SDL_RenderDrawLine(renderer, fx, fy, tip1.iX() + fx, tip1.iY() + fy);
-		SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0xFF, 0xFF);
 		SDL_RenderDrawLine(renderer, fx, fy, tip2.iX() + fx, tip2.iY() + fy);
-		/*
-		SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0x00, 0xFF);
-		SDL_RenderDrawLine(renderer, x, y, t1fx, t1fy);
-		SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0xFF, 0xFF);
-		SDL_RenderDrawLine(renderer, x, y, t2fx, t2fy);
-		*/
+		
 	}
 
 	SDL_Renderer *SdlRenderer::getRenderer() {

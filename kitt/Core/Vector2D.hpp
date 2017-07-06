@@ -59,6 +59,7 @@ namespace Core {
         inline double getAngle() const;
         void setAngle(double radians);
         void rotate(double radians);
+		void rotateDeg(double degrees);
         inline void addAngle(double radians);
         
         Vector2D u() const;

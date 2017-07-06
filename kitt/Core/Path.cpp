@@ -54,7 +54,7 @@ namespace Core {
 	}
 
 	string Path::getFullPath(const string &base, const string &path) const {
-		string result = base;
+		string result = this->_root + base;
 		result.append(path);
 #ifdef _WIN32
 		replace(result.begin(), result.end(), UDS, WDS);

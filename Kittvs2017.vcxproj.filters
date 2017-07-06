@@ -123,6 +123,8 @@
     <ClCompile Include="kitt\Core\SdlTime.cpp">
       <Filter>Core\Time</Filter>
     </ClCompile>
+    <ClCompile Include="kitt\Input\SignalManager.cpp" />
+    <ClCompile Include="kitt\Input\SdlSignalManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -253,6 +255,9 @@
     <ClInclude Include="kitt\Core\SdlTime.hpp">
       <Filter>Core\Time</Filter>
     </ClInclude>
+    <ClInclude Include="kitt\Input\Signal.hpp" />
+    <ClInclude Include="kitt\Input\SignalManager.hpp" />
+    <ClInclude Include="kitt\Input\SdlSignalManager.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

@@ -16,14 +16,17 @@
 #include "../Content/IReader.hpp"
 #include "../Graphics/SdlFileReader.hpp"
 #include "../Graphics/SdlWindow.hpp"
+#include "../Input/SdlSignalManager.hpp"
 
 #include "../Core/TrigonometryFactory.hpp"
 #include "../Exceptions/KittException.hpp"
+
 
 namespace Game {
 	using namespace Core;
 	using namespace Content;
 	using namespace Graphics;
+	using namespace Input;
 	using namespace Exceptions;
     
 	Game::Game()
@@ -32,6 +35,7 @@ namespace Game {
     }
     
 	Game::~Game() {
+		delete signalm;
         delete trigonometry;
         delete time;
 		delete reader;
@@ -45,20 +49,20 @@ namespace Game {
 		{
 			throw KittException("Unable to initialize SDL.");
 		}
+		signalm = new SdlSignalManager();
 		trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
 		v1 = new Vector2D(100,200,trigonometry);
 		time = TimeFactory::create();
-		window = new SdlWindow(TITLE, 800, 600, false, trigonometry);
+		window = new SdlWindow(TITLE, 1280, 720, false, trigonometry);
 		renderer = window->getRenderer();
 		reader = new SdlFileReader("/content", renderer, false);
 		font = reader->readSurface("/fonts/courier.bmp");
 	}
 
 	void Game::update() {
-		SDL_Event ev;
-		if (SDL_PollEvent(&ev) != 0) {
-			onevent(&ev);
-		}
+		Signal *signals = signalm->getSignals();
+		onevent(signals);
+		
 	}
 
 	void Game::draw() {
@@ -71,20 +75,9 @@ namespace Game {
 		renderer->present();
 	}
 
-	void Game::onevent(SDL_Event *ev) {
-		switch (ev->type)
-		{
-		case SDL_QUIT:
+	void Game::onevent(Signal *signals) {
+		if (signals[0].quit) {
 			running = false;
-			break;
-
-		case SDL_KEYDOWN:
-		{
-			if (ev->key.keysym.sym == SDLK_ESCAPE)
-			{
-				running = false;
-			}
-		}
 		}
 	}
 

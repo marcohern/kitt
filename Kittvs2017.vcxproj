@@ -102,6 +102,8 @@
     <ClCompile Include="kitt\Graphics\SdlWindow.cpp" />
     <ClCompile Include="kitt\Graphics\Texture.cpp" />
     <ClCompile Include="kitt\Graphics\Window.cpp" />
+    <ClCompile Include="kitt\Input\SdlSignalManager.cpp" />
+    <ClCompile Include="kitt\Input\SignalManager.cpp" />
     <ClCompile Include="kitt\main.cpp" />
     <ClCompile Include="kitt\Graphics\Renderer.cpp" />
     <ClCompile Include="kitt\Testing\Assert.cpp" />
@@ -149,6 +151,9 @@
     <ClInclude Include="kitt\Graphics\Texture.hpp" />
     <ClInclude Include="kitt\Graphics\Renderer.hpp" />
     <ClInclude Include="kitt\Graphics\Window.hpp" />
+    <ClInclude Include="kitt\Input\SdlSignalManager.hpp" />
+    <ClInclude Include="kitt\Input\Signal.hpp" />
+    <ClInclude Include="kitt\Input\SignalManager.hpp" />
     <ClInclude Include="kitt\SDL.h" />
     <ClInclude Include="kitt\Testing\Assert.hpp" />
     <ClInclude Include="kitt\Testing\Test.hpp" />

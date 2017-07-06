@@ -16,11 +16,14 @@
 #include "../Core/Vector2D.hpp"
 #include "../Graphics/Window.hpp"
 #include "../Content/IReader.hpp"
+#include "../Input/SignalManager.hpp"
+#include "../Input/Signal.hpp"
 
 namespace Game {
 	using namespace Core;
 	using namespace Content;
 	using namespace Graphics;
+	using namespace Input;
 
     class Game {
     private:
@@ -29,6 +32,7 @@ namespace Game {
         Time *time;
 		Window *window;
 		Renderer *renderer;
+		SignalManager *signalm;
 
 		IReader *reader;
 		Texture *font;
@@ -41,7 +45,7 @@ namespace Game {
 		void init();
 		void update();
 		void draw();
-		void onevent(SDL_Event *ev);
+		void onevent(Signal *signals);
 		void run();
 
         Trigonometry *getTrigonometry();

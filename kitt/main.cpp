@@ -60,6 +60,7 @@ struct SdlApplication
     SDL_Texture *couriertx;
     SDL_Rect letter;
     SDL_Rect dst;
+	SDL_Texture *screen;
     void RenderText(string text, int x, int y);
 };
 
@@ -84,6 +85,8 @@ int SdlApplication::init(int width, int height)
 	win = SDL_CreateWindow(APPTITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     
+	screen = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 1920, 1080);
+
     string path = Core::Path::get()->getFullPath("/content/fonts/myriad.png");
     this->courier = IMG_Load(path.c_str());
 	//this->courier = IMG_Load("C:\\Src\\marcohern.com\\kitt\\content\\fonts\\courier.bmp");
@@ -100,8 +103,8 @@ int SdlApplication::init(int width, int height)
 }
 
 void SdlApplication::RenderText(string text, int x, int y) {
-    this->dst.w = this->letter.w/2;
-    this->dst.h = this->letter.h/2;
+    this->dst.w = this->letter.w;
+    this->dst.h = this->letter.h;
     this->dst.x = x;
     this->dst.y = y;
     
@@ -111,15 +114,15 @@ void SdlApplication::RenderText(string text, int x, int y) {
         int sx = cv%16;
         int sy = cv/16;
 
-		double ddx = 0;// (double)rand() / RAND_MAX;
+		double ddx = (double)rand() / RAND_MAX;
 		int tx = this->dst.x;
-		int dx = ddx*4;
+		int dx = ddx*8;
         
         this->letter.x = sx*64;
         this->letter.y = sy*64;
 		this->dst.x += dx;
         SDL_RenderCopy(renderer, this->couriertx, &this->letter, &this->dst);
-        this->dst.x= tx + 24;
+        this->dst.x= tx + 32;
     }
 }
 
@@ -188,13 +191,19 @@ void SdlApplication::Render()
 	
 	
 	//
-	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0xFF, 0xff);
-	SDL_RenderClear(renderer);
-    
-    RenderText("Hello. I Love you. Wont you Tell me your name?",10,10);
 	
+
+	SDL_SetRenderTarget(renderer, screen);
+	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xff);
+	SDL_RenderClear(renderer);
+
+    RenderText("Hello. I Love you, Wont you Tell me your name?",10,10);
 	SDL_SetRenderDrawColor(renderer, 0xff, 0xff, 0x00, 0xff);
 	SDL_RenderFillRect(renderer, &r);
+
+	
+	SDL_SetRenderTarget(renderer, NULL);
+	SDL_RenderCopyEx(renderer, screen, NULL, NULL, 0, NULL, SDL_FLIP_NONE);
 	SDL_RenderPresent(renderer);
 }
 

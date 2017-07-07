@@ -9,25 +9,14 @@
 #include "Placeable.hpp"
 
 namespace Core {
-    
-    Placeable::Placeable(Trigonometry *trigo)
-    : location(trigo) {
-        
-    }
-    
-    Placeable::Placeable(double x, double y, Trigonometry *trigo)
-    : location(x,y,trigo) {
-        
-    }
-    
-    Placeable::Placeable(const Vector2D &v, Trigonometry *trigo)
-    : location(v,trigo) {
-        
-    }
-    
-    Placeable::~Placeable() {
-        
-    }
+	Placeable::Placeable()                    : location() {}
+	Placeable::Placeable(double x, double y ) : location(x, y) {}
+	Placeable::Placeable(const Vector2D &v  ) : location(v) {}
+    Placeable::Placeable(Trigonometry *trigo) : location(trigo) {}
+    Placeable::Placeable(double x, double y, Trigonometry *trigo) : location(x,y,trigo) {}
+    Placeable::Placeable(const Vector2D &v, Trigonometry *trigo) : location(v,trigo) {}
+
+    Placeable::~Placeable() {}
     
     void Placeable::addLocation(double dx, double dy) {
         this->location.add(dx, dy);

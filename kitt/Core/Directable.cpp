@@ -8,6 +8,7 @@
 
 #include "Directable.hpp"
 #include "../Exceptions/NullReferenceException.hpp"
+#include "TimeInjector.hpp"
 
 namespace Core {
     using namespace Exceptions;
@@ -16,6 +17,29 @@ namespace Core {
         if (time==NULL) throw NullReferenceException("Time for Directable cannot be null.");
         this->time = time;
     }
+
+	Directable::Directable()
+		: Placeable(), direction(), delta() {
+		this->setTime(TimeInjector::inject());
+	}
+	Directable::Directable(double x, double y)
+		: Placeable(x, y), direction(), delta() {
+		this->setTime(TimeInjector::inject());
+	}
+	Directable::Directable(double x, double y, double dx, double dy)
+		: Placeable(x, y), direction(dx, dy), delta() {
+		this->setTime(TimeInjector::inject());
+	}
+
+	Directable::Directable(const Vector2D &loc)
+		: Placeable(loc), direction(), delta() {
+		this->setTime(TimeInjector::inject());
+	}
+
+	Directable::Directable(const Vector2D &loc, const Vector2D &dir)
+		: Placeable(loc), direction(dir), delta() {
+		this->setTime(TimeInjector::inject());
+	}
     
     Directable::Directable(Trigonometry *trigo, Time *time)
     : Placeable(trigo), direction(trigo), delta(trigo) {

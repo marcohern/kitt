@@ -12,7 +12,7 @@
 #include "./Vector2D.hpp"
 #include "../Exceptions/DivideByZeroException.hpp"
 #include "../Exceptions/NullReferenceException.hpp"
-#include "TrigonometryFactory.hpp"
+#include "TrigonometryInjector.hpp"
 
 namespace Core {
     using namespace std;
@@ -20,17 +20,17 @@ namespace Core {
     
     Vector2D::Vector2D()
     : x(0), y(0)
-    , HasTrigonometry(TrigonometryFactory::create(TRIGO_TYPE)) {
+    , HasTrigonometry(TrigonometryInjector::inject()) {
     }
     
     Vector2D::Vector2D(double x, double y)
     : x(x), y(y)
-    , HasTrigonometry(TrigonometryFactory::create(TRIGO_TYPE)) {
+    , HasTrigonometry(TrigonometryInjector::inject()) {
     }
     
     Vector2D::Vector2D(const Vector2D &v)
     : x(v.x), y(v.y)
-    , HasTrigonometry(TrigonometryFactory::create(TRIGO_TYPE)) {
+    , HasTrigonometry(TrigonometryInjector::inject()) {
     }
     
     Vector2D::Vector2D(Trigonometry *trigo)

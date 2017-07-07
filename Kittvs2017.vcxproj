@@ -74,9 +74,15 @@
   <ItemGroup>
     <ClCompile Include="kitt\Content\FileReader.cpp" />
     <ClCompile Include="kitt\Content\IReader.cpp" />
+    <ClCompile Include="kitt\Content\SdlFileReader.cpp" />
     <ClCompile Include="kitt\Content\ZipReader.cpp" />
+    <ClCompile Include="kitt\Core\ConfigFileSettings.cpp" />
     <ClCompile Include="kitt\Core\Directable.cpp" />
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp" />
+    <ClCompile Include="kitt\Core\Rotateable.cpp" />
+    <ClCompile Include="kitt\Core\Settings.cpp" />
+    <ClCompile Include="kitt\Core\TimeInjector.cpp" />
+    <ClCompile Include="kitt\Core\TrigonometryInjector.cpp" />
     <ClCompile Include="kitt\Game\Game.cpp" />
     <ClCompile Include="kitt\Core\Matrix.cpp" />
     <ClCompile Include="kitt\Core\MemoizedTrigonometry.cpp" />
@@ -95,7 +101,7 @@
     <ClCompile Include="kitt\Exceptions\MismatchException.cpp" />
     <ClCompile Include="kitt\Exceptions\NullReferenceException.cpp" />
     <ClCompile Include="kitt\Exceptions\OutOfRangeException.cpp" />
-    <ClCompile Include="kitt\Graphics\SdlFileReader.cpp" />
+    <ClCompile Include="kitt\Graphics\Color.cpp" />
     <ClCompile Include="kitt\Graphics\SdlRenderer.cpp" />
     <ClCompile Include="kitt\Graphics\SdlTexture.cpp" />
     <ClCompile Include="kitt\Core\Path.cpp" />
@@ -120,11 +126,17 @@
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp" />
     <ClInclude Include="kitt\Content\IReader.hpp" />
+    <ClInclude Include="kitt\Content\SdlFileReader.hpp" />
     <ClInclude Include="kitt\Content\ZipReader.hpp" />
     <ClInclude Include="kitt\Core\Camera.hpp" />
     <ClInclude Include="kitt\constants.hpp" />
+    <ClInclude Include="kitt\Core\ConfigFileSettings.hpp" />
     <ClInclude Include="kitt\Core\Directable.hpp" />
     <ClInclude Include="kitt\Core\HasTrigonometry.hpp" />
+    <ClInclude Include="kitt\Core\Rotateable.hpp" />
+    <ClInclude Include="kitt\Core\Settings.hpp" />
+    <ClInclude Include="kitt\Core\TimeInjector.hpp" />
+    <ClInclude Include="kitt\Core\TrigonometryInjector.hpp" />
     <ClInclude Include="kitt\Game\Game.hpp" />
     <ClInclude Include="kitt\Core\Matrix.hpp" />
     <ClInclude Include="kitt\Core\MemoizedTrigonometry.hpp" />
@@ -143,7 +155,7 @@
     <ClInclude Include="kitt\Exceptions\MismatchException.hpp" />
     <ClInclude Include="kitt\Exceptions\NullReferenceException.hpp" />
     <ClInclude Include="kitt\Exceptions\OutOfRangeException.hpp" />
-    <ClInclude Include="kitt\Graphics\SdlFileReader.hpp" />
+    <ClInclude Include="kitt\Graphics\Color.hpp" />
     <ClInclude Include="kitt\Graphics\SdlRenderer.hpp" />
     <ClInclude Include="kitt\Graphics\SdlTexture.hpp" />
     <ClInclude Include="kitt\Core\Path.hpp" />

@@ -23,6 +23,12 @@ namespace Core {
         Vector2D direction;
         Time *time;
     public:
+		Directable();
+		Directable(double x, double y);
+		Directable(double x, double y, double dx, double dy);
+		Directable(const Vector2D &loc);
+		Directable(const Vector2D &loc, const Vector2D &dir);
+
         Directable(Trigonometry *trigo, Time *time);
         Directable(double x, double y, Trigonometry *trigo, Time *time);
         Directable(double x, double y, double dx, double dy, Trigonometry *trigo, Time *time);

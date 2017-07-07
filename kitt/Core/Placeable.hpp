@@ -18,6 +18,10 @@ namespace Core {
     protected:
         Vector2D location;
     public:
+		Placeable();
+		Placeable(double x, double y);
+		Placeable(const Vector2D &v);
+
         Placeable(Trigonometry *trigo);
         Placeable(double x, double y, Trigonometry *trigo);
         Placeable(const Vector2D &v, Trigonometry *trigo);

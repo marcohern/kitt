@@ -119,12 +119,18 @@
     <ClCompile Include="kitt\Content\ZipReader.cpp">
       <Filter>Content</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Graphics\SdlFileReader.cpp" />
     <ClCompile Include="kitt\Core\SdlTime.cpp">
       <Filter>Core\Time</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Input\SignalManager.cpp" />
     <ClCompile Include="kitt\Input\SdlSignalManager.cpp" />
+    <ClCompile Include="kitt\Core\ConfigFileSettings.cpp" />
+    <ClCompile Include="kitt\Core\Settings.cpp" />
+    <ClCompile Include="kitt\Content\SdlFileReader.cpp" />
+    <ClCompile Include="kitt\Graphics\Color.cpp" />
+    <ClCompile Include="kitt\Core\TrigonometryInjector.cpp" />
+    <ClCompile Include="kitt\Core\Rotateable.cpp" />
+    <ClCompile Include="kitt\Core\TimeInjector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -251,13 +257,19 @@
     <ClInclude Include="kitt\Content\ZipReader.hpp">
       <Filter>Content</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Graphics\SdlFileReader.hpp" />
     <ClInclude Include="kitt\Core\SdlTime.hpp">
       <Filter>Core\Time</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Input\Signal.hpp" />
     <ClInclude Include="kitt\Input\SignalManager.hpp" />
     <ClInclude Include="kitt\Input\SdlSignalManager.hpp" />
+    <ClInclude Include="kitt\Core\ConfigFileSettings.hpp" />
+    <ClInclude Include="kitt\Core\Settings.hpp" />
+    <ClInclude Include="kitt\Content\SdlFileReader.hpp" />
+    <ClInclude Include="kitt\Graphics\Color.hpp" />
+    <ClInclude Include="kitt\Core\TrigonometryInjector.hpp" />
+    <ClInclude Include="kitt\Core\Rotateable.hpp" />
+    <ClInclude Include="kitt\Core\TimeInjector.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

@@ -14,6 +14,8 @@
 #include <physfs.h>
 #include "constants.hpp"
 #include "Exceptions/KittException.hpp"
+#include "Core/TrigonometryInjector.hpp"
+#include "Core/TimeInjector.hpp"
 
 // ============================================================================
 // [SdlApplication]
@@ -217,6 +219,8 @@ int main(int argc, char* argv[])
 {
     
     Core::Path::get()->setRootFromArgs(argv[0]);
+	Core::TrigonometryInjector::init(TRIGO_TYPE);
+	Core::TimeInjector::init(0);
     PHYSFS_init(argv[0]);
     
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) < 0)

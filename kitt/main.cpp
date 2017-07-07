@@ -13,6 +13,7 @@
 #include "./Game/Game.hpp"
 #include <physfs.h>
 #include "constants.hpp"
+#include "Exceptions/KittException.hpp"
 
 // ============================================================================
 // [SdlApplication]
@@ -214,8 +215,14 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
+    
     Core::Path::get()->setRootFromArgs(argv[0]);
-	PHYSFS_init(argv[0]);
+    PHYSFS_init(argv[0]);
+    
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) < 0)
+    {
+        throw Exceptions::KittException("Unable to initialize SDL.");
+    }
 	/*
 	PHYSFS_mount("C:\\Src\\marcohern.com\\kitt\\content.zip", "/", 0);
 
@@ -225,7 +232,6 @@ int main(int argc, char* argv[])
 	PHYSFS_close(file);
 	PHYSFS_deinit();
 	*/
-	
 	Game::Game game;
 	game.run();
 	return 0;

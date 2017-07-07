@@ -2,11 +2,10 @@
 
 #include <string>
 #include "../Content/IReader.hpp"
-#include "Renderer.hpp"
+#include "../Graphics/Renderer.hpp"
 
-namespace Graphics {
-	using namespace Content;
-
+namespace Content {
+    
 	class SdlFileReader : public IReader {
 	private:
 		Renderer *renderer;

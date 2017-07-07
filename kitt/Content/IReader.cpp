@@ -7,3 +7,9 @@
 //
 
 #include "IReader.hpp"
+
+namespace Content {
+    IReader::~IReader() {
+        
+    }
+}

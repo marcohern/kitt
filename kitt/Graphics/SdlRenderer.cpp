@@ -3,6 +3,7 @@
 #include "SdlRenderer.hpp"
 #include "SdlTexture.hpp"
 #include "../constants.hpp"
+#include "Color.hpp"
 
 namespace Graphics
 {
@@ -43,7 +44,7 @@ namespace Graphics
 		SDL_RenderCopy(renderer, txt->getSdlTexture(), &srcrect, &dstrect);
 	}
 
-	void SdlRenderer::vector2d(int x, int y, int color, const Vector2D &v) {
+	void SdlRenderer::vector2d(int x, int y, const Color &color, const Vector2D &v) {
 		double l = v.magnitude()*0.20;
 		tip1 = v.u();
 		tip2 = v.u();
@@ -57,7 +58,7 @@ namespace Graphics
 		int fx = v.iX() + x;
 		int fy = v.iY() + y;
 
-		SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+        SDL_SetRenderDrawColor(renderer, color.iR(), color.iG(), color.iB(), color.iA());
 		SDL_RenderDrawLine(renderer, x, y, fx, fy);
 		SDL_RenderDrawLine(renderer, fx, fy, tip1.iX() + fx, tip1.iY() + fy);
 		SDL_RenderDrawLine(renderer, fx, fy, tip2.iX() + fx, tip2.iY() + fy);

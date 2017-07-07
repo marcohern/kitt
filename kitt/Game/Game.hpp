@@ -10,7 +10,6 @@
 #define Injector_hpp
 
 #include <stdio.h>
-#include "../SDL.h"
 #include "../Core/Trigonometry.hpp"
 #include "../Core/Time.hpp"
 #include "../Core/Vector2D.hpp"

@@ -9,5 +9,7 @@
 #include "Renderer.hpp"
 
 namespace Graphics {
-
+    Renderer::~Renderer() {
+        
+    }
 }

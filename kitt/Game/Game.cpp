@@ -8,13 +8,11 @@
 
 #include "Game.hpp"
 
-#include "../SDL.h"
-
 #include "../Core/Trigonometry.hpp"
 #include "../Core/TimeFactory.hpp"
 #include "../Core/Vector2D.hpp"
 #include "../Content/IReader.hpp"
-#include "../Graphics/SdlFileReader.hpp"
+#include "../Content/SdlFileReader.hpp"
 #include "../Graphics/SdlWindow.hpp"
 #include "../Input/SdlSignalManager.hpp"
 
@@ -45,10 +43,6 @@ namespace Game {
     }
 
 	void Game::init() {
-		if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) < 0)
-		{
-			throw KittException("Unable to initialize SDL.");
-		}
 		signalm = new SdlSignalManager();
 		trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
 		v1 = new Vector2D(100,200,trigonometry);
@@ -69,7 +63,7 @@ namespace Game {
 		renderer->clear();
 
 		renderer->texture(0,0,font);
-		renderer->vector2d(300, 250, 0xFFFFFFFF, *v1);
+        renderer->vector2d(300, 250, Color::White, *v1);
 		v1->rotate(time->getDelta()*0.4);
 
 		renderer->present();

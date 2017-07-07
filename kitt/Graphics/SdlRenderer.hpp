@@ -6,6 +6,7 @@
 #include "Renderer.hpp"
 #include "Texture.hpp"
 #include "../Core/Trigonometry.hpp"
+#include "Color.hpp"
 
 namespace Graphics {
 	using namespace Core;
@@ -24,7 +25,7 @@ namespace Graphics {
 		void clear();
 		void present();
 		void texture(int x, int y, Texture *t);
-		void vector2d(int x, int y, int color, const Vector2D &v);
+		void vector2d(int x, int y, const Color &color, const Vector2D &v);
 
 		SDL_Renderer *getRenderer();
 	};

@@ -12,17 +12,19 @@
 #include <stdio.h>
 #include "../Core/Vector2D.hpp"
 #include "./Texture.hpp"
+#include "Color.hpp"
 
 namespace Graphics {
 	using namespace Core;
 
 	class Renderer {
 	public:
+        virtual ~Renderer();
 
 		virtual void clear() = 0;
 		virtual void present() = 0;
 		virtual void texture(int x, int y, Texture *texture) = 0;
-		virtual void vector2d(int x, int y, int color, const Vector2D &v) = 0;
+		virtual void vector2d(int x, int y, const Color &color, const Vector2D &v) = 0;
 	};
 }
 

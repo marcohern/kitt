@@ -1,10 +1,10 @@
 
 #include "SdlFileReader.hpp"
-#include "Texture.hpp"
-#include "SdlTexture.hpp"
+#include "../Graphics/Texture.hpp"
+#include "../Graphics/SdlTexture.hpp"
 #include "../Core/Path.hpp"
 
-namespace Graphics {
+namespace Content {
 
 	using namespace std;
 	using namespace Core;

@@ -12,22 +12,38 @@
 #include "./Vector2D.hpp"
 #include "../Exceptions/DivideByZeroException.hpp"
 #include "../Exceptions/NullReferenceException.hpp"
+#include "TrigonometryFactory.hpp"
 
 namespace Core {
     using namespace std;
     using namespace Exceptions;
     
+    Vector2D::Vector2D()
+    : x(0), y(0)
+    , HasTrigonometry(TrigonometryFactory::create(TRIGO_TYPE)) {
+    }
+    
+    Vector2D::Vector2D(double x, double y)
+    : x(x), y(y)
+    , HasTrigonometry(TrigonometryFactory::create(TRIGO_TYPE)) {
+    }
+    
+    Vector2D::Vector2D(const Vector2D &v)
+    : x(v.x), y(v.y)
+    , HasTrigonometry(TrigonometryFactory::create(TRIGO_TYPE)) {
+    }
+    
     Vector2D::Vector2D(Trigonometry *trigo)
     : x(0), y(0), HasTrigonometry(trigo) {
-	}
-
+    }
+    
     Vector2D::Vector2D(double x, double y, Trigonometry *trigo)
     : x(x), y(y), HasTrigonometry(trigo) {
-	}
-
+    }
+    
     Vector2D::Vector2D(const Vector2D &v, Trigonometry *trigo)
     : x(v.x), y(v.y), HasTrigonometry(trigo) {
-	}
+    }
     
     string Vector2D::toString() const {
         stringstream ss;

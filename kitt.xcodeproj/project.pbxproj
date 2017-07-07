@@ -49,6 +49,13 @@
 		A725508B1F0CA18D00301290 /* Vector2DTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550611F0CA18D00301290 /* Vector2DTests.cpp */; };
 		A725508D1F0CAB1A00301290 /* content in CopyFiles */ = {isa = PBXBuildFile; fileRef = A725508C1F0CAB1A00301290 /* content */; };
 		A74E81FE1F09FBB600B8C90F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A74E81FD1F09FBB600B8C90F /* README.md */; };
+		A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */; };
+		A78B3DB91F0F16EE0080E8F6 /* SignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB61F0F16EE0080E8F6 /* SignalManager.cpp */; };
+		A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613091F0F1B9B004CB1A8 /* SdlFileReader.cpp */; };
+		A796130E1F0F1B9B004CB1A8 /* ZipReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796130B1F0F1B9B004CB1A8 /* ZipReader.cpp */; };
+		A79613111F0F1E7C004CB1A8 /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796130F1F0F1E7C004CB1A8 /* Color.cpp */; };
+		A79613141F0F49E2004CB1A8 /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613121F0F49E2004CB1A8 /* Settings.cpp */; };
+		A79613171F0F4C30004CB1A8 /* ConfigFileSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613151F0F4C30004CB1A8 /* ConfigFileSettings.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
 /* End PBXBuildFile section */
@@ -152,6 +159,21 @@
 		A74E81FD1F09FBB600B8C90F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A74E82071F0A891C00B8C90F /* file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
 		A74E82091F0A891C00B8C90F /* courier.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = courier.bmp; sourceTree = "<group>"; };
+		A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SdlSignalManager.cpp; path = Input/SdlSignalManager.cpp; sourceTree = "<group>"; };
+		A78B3DB41F0F16EE0080E8F6 /* SdlSignalManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SdlSignalManager.hpp; path = Input/SdlSignalManager.hpp; sourceTree = "<group>"; };
+		A78B3DB51F0F16EE0080E8F6 /* Signal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Signal.hpp; path = Input/Signal.hpp; sourceTree = "<group>"; };
+		A78B3DB61F0F16EE0080E8F6 /* SignalManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SignalManager.cpp; path = Input/SignalManager.cpp; sourceTree = "<group>"; };
+		A78B3DB71F0F16EE0080E8F6 /* SignalManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SignalManager.hpp; path = Input/SignalManager.hpp; sourceTree = "<group>"; };
+		A79613091F0F1B9B004CB1A8 /* SdlFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlFileReader.cpp; sourceTree = "<group>"; };
+		A796130A1F0F1B9B004CB1A8 /* SdlFileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlFileReader.hpp; sourceTree = "<group>"; };
+		A796130B1F0F1B9B004CB1A8 /* ZipReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZipReader.cpp; sourceTree = "<group>"; };
+		A796130C1F0F1B9B004CB1A8 /* ZipReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ZipReader.hpp; sourceTree = "<group>"; };
+		A796130F1F0F1E7C004CB1A8 /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
+		A79613101F0F1E7C004CB1A8 /* Color.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Color.hpp; sourceTree = "<group>"; };
+		A79613121F0F49E2004CB1A8 /* Settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Settings.cpp; sourceTree = "<group>"; };
+		A79613131F0F49E2004CB1A8 /* Settings.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Settings.hpp; sourceTree = "<group>"; };
+		A79613151F0F4C30004CB1A8 /* ConfigFileSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigFileSettings.cpp; sourceTree = "<group>"; };
+		A79613161F0F4C30004CB1A8 /* ConfigFileSettings.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConfigFileSettings.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -173,6 +195,7 @@
 		A72550081F0CA18D00301290 /* kitt */ = {
 			isa = PBXGroup;
 			children = (
+				A78B3DB21F0F16E30080E8F6 /* Input */,
 				A725500A1F0CA18D00301290 /* Content */,
 				A72550111F0CA18D00301290 /* Core */,
 				A725502E1F0CA18D00301290 /* Exceptions */,
@@ -190,6 +213,10 @@
 		A725500A1F0CA18D00301290 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				A79613091F0F1B9B004CB1A8 /* SdlFileReader.cpp */,
+				A796130A1F0F1B9B004CB1A8 /* SdlFileReader.hpp */,
+				A796130B1F0F1B9B004CB1A8 /* ZipReader.cpp */,
+				A796130C1F0F1B9B004CB1A8 /* ZipReader.hpp */,
 				A725500B1F0CA18D00301290 /* FileReader.cpp */,
 				A725500C1F0CA18D00301290 /* FileReader.hpp */,
 				A725500D1F0CA18D00301290 /* IReader.cpp */,
@@ -229,6 +256,10 @@
 				A725502B1F0CA18D00301290 /* TrigonometryFactory.hpp */,
 				A725502C1F0CA18D00301290 /* Vector2D.cpp */,
 				A725502D1F0CA18D00301290 /* Vector2D.hpp */,
+				A79613121F0F49E2004CB1A8 /* Settings.cpp */,
+				A79613131F0F49E2004CB1A8 /* Settings.hpp */,
+				A79613151F0F4C30004CB1A8 /* ConfigFileSettings.cpp */,
+				A79613161F0F4C30004CB1A8 /* ConfigFileSettings.hpp */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -276,6 +307,8 @@
 				A72550481F0CA18D00301290 /* Texture.hpp */,
 				A72550491F0CA18D00301290 /* Window.cpp */,
 				A725504A1F0CA18D00301290 /* Window.hpp */,
+				A796130F1F0F1E7C004CB1A8 /* Color.cpp */,
+				A79613101F0F1E7C004CB1A8 /* Color.hpp */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -329,6 +362,18 @@
 				A74E82091F0A891C00B8C90F /* courier.bmp */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		A78B3DB21F0F16E30080E8F6 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */,
+				A78B3DB41F0F16EE0080E8F6 /* SdlSignalManager.hpp */,
+				A78B3DB51F0F16EE0080E8F6 /* Signal.hpp */,
+				A78B3DB61F0F16EE0080E8F6 /* SignalManager.cpp */,
+				A78B3DB71F0F16EE0080E8F6 /* SignalManager.hpp */,
+			);
+			name = Input;
 			sourceTree = "<group>";
 		};
 		A7ECCDB31F04C03000011805 = {
@@ -427,26 +472,32 @@
 				A725506A1F0CA18D00301290 /* Object.cpp in Sources */,
 				A72550701F0CA18D00301290 /* TimeFactory.cpp in Sources */,
 				A72550781F0CA18D00301290 /* NullReferenceException.cpp in Sources */,
+				A796130E1F0F1B9B004CB1A8 /* ZipReader.cpp in Sources */,
 				A72550871F0CA18D00301290 /* MatrixTests.cpp in Sources */,
 				A72550801F0CA18D00301290 /* Window.cpp in Sources */,
 				A725507D1F0CA18D00301290 /* SdlTexture.cpp in Sources */,
 				A72550811F0CA18D00301290 /* main.cpp in Sources */,
 				A72550851F0CA18D00301290 /* TestSuite.cpp in Sources */,
+				A79613141F0F49E2004CB1A8 /* Settings.cpp in Sources */,
 				A725507F1F0CA18D00301290 /* Texture.cpp in Sources */,
 				A72550761F0CA18D00301290 /* KittException.cpp in Sources */,
 				A72550631F0CA18D00301290 /* FileReader.cpp in Sources */,
 				A725508B1F0CA18D00301290 /* Vector2DTests.cpp in Sources */,
 				A72550841F0CA18D00301290 /* TestRunner.cpp in Sources */,
+				A79613111F0F1E7C004CB1A8 /* Color.cpp in Sources */,
+				A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */,
 				A725507E1F0CA18D00301290 /* SdlWindow.cpp in Sources */,
 				A72550671F0CA18D00301290 /* HasTrigonometry.cpp in Sources */,
 				A725506B1F0CA18D00301290 /* Path.cpp in Sources */,
 				A72550791F0CA18D00301290 /* OutOfRangeException.cpp in Sources */,
 				A72550821F0CA18D00301290 /* Assert.cpp in Sources */,
 				A725506D1F0CA18D00301290 /* RealtimeTrigonometry.cpp in Sources */,
+				A79613171F0F4C30004CB1A8 /* ConfigFileSettings.cpp in Sources */,
 				A72550681F0CA18D00301290 /* Matrix.cpp in Sources */,
 				A72550641F0CA18D00301290 /* IReader.cpp in Sources */,
 				A725507B1F0CA18D00301290 /* Renderer.cpp in Sources */,
 				A72550741F0CA18D00301290 /* AssertException.cpp in Sources */,
+				A78B3DB91F0F16EE0080E8F6 /* SignalManager.cpp in Sources */,
 				A72550721F0CA18D00301290 /* TrigonometryFactory.cpp in Sources */,
 				A72550881F0CA18D00301290 /* MemoizedTrigonometryTests.cpp in Sources */,
 				A74E81FE1F09FBB600B8C90F /* README.md in Sources */,
@@ -456,6 +507,7 @@
 				A72550771F0CA18D00301290 /* MismatchException.cpp in Sources */,
 				A725507A1F0CA18D00301290 /* Game.cpp in Sources */,
 				A725508A1F0CA18D00301290 /* SdlTimeTests.cpp in Sources */,
+				A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */,
 				A72550691F0CA18D00301290 /* MemoizedTrigonometry.cpp in Sources */,
 				A72550891F0CA18D00301290 /* RealtimeTrigonometryTests.cpp in Sources */,
 			);

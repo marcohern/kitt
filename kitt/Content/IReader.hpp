@@ -21,6 +21,7 @@ namespace Content {
 
     class IReader {
     public:
+        virtual ~IReader();
         virtual void open() = 0;
 		virtual bool exists(const string &path) = 0;
         virtual string readString(const string &path) = 0;

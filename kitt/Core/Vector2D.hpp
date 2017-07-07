@@ -24,6 +24,10 @@ namespace Core {
         double x, y;
         
     public:
+        Vector2D();
+        Vector2D(double x, double y);
+        Vector2D(const Vector2D &v);
+        
         Vector2D(Trigonometry *trigo);
         Vector2D(double x, double y, Trigonometry *trigo);
         Vector2D(const Vector2D &v, Trigonometry *trigo);

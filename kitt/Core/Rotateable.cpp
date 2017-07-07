@@ -49,6 +49,14 @@ namespace Core {
 		Directable::~Directable();
 	}
 
+	void Rotateable::setDeltaAngle(double radians) {
+		this->deltaAngle = radians;
+	}
+
+	void Rotateable::setDeltaAngleDeg(double degrees) {
+		this->deltaAngle = TAU * degrees / 360.0;
+	}
+
 	void Rotateable::setAngle(double radians) {
 		this->direction.setAngle(radians);
 	}
@@ -63,5 +71,10 @@ namespace Core {
 
 	void Rotateable::rotateDeg(double degrees) {
 		this->direction.rotateDeg(degrees);
+	}
+
+	void Rotateable::update() {
+		Directable::update();
+		this->direction.rotate(this->deltaAngle);
 	}
 }

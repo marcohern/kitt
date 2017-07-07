@@ -17,6 +17,7 @@ namespace Core {
     class Settings {
     protected:
         string root;
+		string contentpath;
         int screen_width;
         int screen_height;
         bool fullscreen;
@@ -29,6 +30,8 @@ namespace Core {
         virtual void save() = 0;
         
         string getRoot() const;
+		string getContentPath() const;
+		string getContentFullPath() const;
         int getScreenWidth() const;
         int getScreenHeight() const;
         bool getFullscreen() const;

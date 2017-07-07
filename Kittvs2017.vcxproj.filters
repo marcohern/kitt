@@ -125,9 +125,6 @@
     <ClCompile Include="kitt\Core\ConfigFileSettings.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Core\Rotateable.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="kitt\Input\SdlSignalManager.cpp">
       <Filter>Input</Filter>
     </ClCompile>
@@ -148,6 +145,12 @@
     </ClCompile>
     <ClCompile Include="kitt\Game\Game.cpp">
       <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\Rotateable.cpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\Animateable.cpp">
+      <Filter>Core\Interfaces</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -278,9 +281,6 @@
     <ClInclude Include="kitt\Core\ConfigFileSettings.hpp">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Core\Rotateable.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="kitt\Input\SdlSignalManager.hpp">
       <Filter>Input</Filter>
     </ClInclude>
@@ -306,6 +306,13 @@
     <ClInclude Include="kitt\Game\Game.hpp">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="kitt\Core\Rotateable.hpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="kitt\Core\Animateable.hpp">
+      <Filter>Core\Interfaces</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -326,9 +333,6 @@
     <Filter Include="Graphics">
       <UniqueIdentifier>{d7cfdb17-beca-43da-97d4-35cbd3d211a9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Trigonometry">
-      <UniqueIdentifier>{7f895f81-f433-4dfe-8ccd-bb31672ef3a8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core\Math">
       <UniqueIdentifier>{2a376737-97e5-4fdd-8a99-cc8e3d424af8}</UniqueIdentifier>
     </Filter>
@@ -347,9 +351,15 @@
     <Filter Include="Game">
       <UniqueIdentifier>{b42c6e1c-9397-4a43-9948-04ec14a64edc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Trigonometry">
+      <UniqueIdentifier>{7f895f81-f433-4dfe-8ccd-bb31672ef3a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Kittvs2017.rc" />
   </ItemGroup>
 </Project>

@@ -7,61 +7,41 @@
 //
 
 #include "Directable.hpp"
-#include "../Exceptions/NullReferenceException.hpp"
 #include "TimeInjector.hpp"
 
 namespace Core {
     using namespace Exceptions;
-    
-    void Directable::setTime(Time *time) {
-        if (time==NULL) throw NullReferenceException("Time for Directable cannot be null.");
-        this->time = time;
-    }
 
 	Directable::Directable()
-		: Placeable(), direction(), delta() {
-		this->setTime(TimeInjector::inject());
+		: Placeable(), Animateable(TimeInjector::inject()), direction() {
 	}
 	Directable::Directable(double x, double y)
-		: Placeable(x, y), direction(), delta() {
-		this->setTime(TimeInjector::inject());
+		: Placeable(x, y), Animateable(TimeInjector::inject()), direction() {
 	}
 	Directable::Directable(double x, double y, double dx, double dy)
-		: Placeable(x, y), direction(dx, dy), delta() {
-		this->setTime(TimeInjector::inject());
+		: Placeable(x, y), Animateable(TimeInjector::inject()), direction(dx, dy) {
 	}
-
 	Directable::Directable(const Vector2D &loc)
-		: Placeable(loc), direction(), delta() {
-		this->setTime(TimeInjector::inject());
+		: Placeable(loc), Animateable(TimeInjector::inject()), direction() {
 	}
-
 	Directable::Directable(const Vector2D &loc, const Vector2D &dir)
-		: Placeable(loc), direction(dir), delta() {
-		this->setTime(TimeInjector::inject());
+		: Placeable(loc), Animateable(TimeInjector::inject()), direction(dir) {
 	}
     
     Directable::Directable(Trigonometry *trigo, Time *time)
-    : Placeable(trigo), direction(trigo), delta(trigo) {
-        this->setTime(time);
+		: Placeable(trigo), Animateable(time), direction(trigo) {
     }
     Directable::Directable(double x, double y, Trigonometry *trigo, Time *time)
-    : Placeable(x,y,trigo), direction(trigo), delta(trigo) {
-        this->setTime(time);
+		: Placeable(x,y,trigo), Animateable(time), direction(trigo) {
     }
     Directable::Directable(double x, double y, double dx, double dy, Trigonometry *trigo, Time *time)
-    : Placeable(x, y, trigo), direction(dx, dy, trigo), delta(trigo) {
-        this->setTime(time);
+		: Placeable(x, y, trigo), Animateable(time), direction(dx, dy, trigo) {
     }
-    
     Directable::Directable(const Vector2D &loc, Trigonometry *trigo, Time *time)
-    : Placeable(loc,trigo), direction(trigo), delta(trigo) {
-        this->setTime(time);
+		: Placeable(loc,trigo), Animateable(time), direction(trigo) {
     }
-    
     Directable::Directable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo, Time *time)
-    : Placeable(loc,trigo), direction(dir, trigo), delta(trigo) {
-        this->setTime(time);
+		: Placeable(loc,trigo), Animateable(time), direction(dir, trigo) {
     }
     
     Directable::~Directable() {
@@ -87,9 +67,8 @@ namespace Core {
 	void Directable::addDirection(const Vector2D &v) {
 		this->direction.add(v);
 	}
-    
-    void Directable::updateLocation() {
-        this->delta.add(direction.getX() * time->getDelta(), direction.getY() * time->getDelta());
-        this->addLocation(this->delta);
-    }
+
+	void Directable::update() {
+		location.add(time->getDelta() * direction);
+	}
 }

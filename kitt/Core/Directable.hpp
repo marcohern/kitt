@@ -13,15 +13,12 @@
 #include "./Placeable.hpp"
 #include "./Trigonometry.hpp"
 #include "./Time.hpp"
+#include "./Animateable.hpp"
 
 namespace Core {
-    class Directable : public Placeable {
-    private:
-        Vector2D delta;
-        void setTime(Time *time);
+    class Directable : public Placeable, public Animateable {
     protected:
         Vector2D direction;
-        Time *time;
     public:
 		Directable();
 		Directable(double x, double y);
@@ -44,8 +41,8 @@ namespace Core {
         
         void addDirection(double dx, double dy);
         void addDirection(const Vector2D &dir);
-        
-        void updateLocation();
+
+		virtual void update();
     };
 }
 #endif /* Directable_hpp */

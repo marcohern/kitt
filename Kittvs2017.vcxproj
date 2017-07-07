@@ -76,6 +76,7 @@
     <ClCompile Include="kitt\Content\IReader.cpp" />
     <ClCompile Include="kitt\Content\SdlFileReader.cpp" />
     <ClCompile Include="kitt\Content\ZipReader.cpp" />
+    <ClCompile Include="kitt\Core\Animateable.cpp" />
     <ClCompile Include="kitt\Core\ConfigFileSettings.cpp" />
     <ClCompile Include="kitt\Core\Directable.cpp" />
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp" />
@@ -128,6 +129,7 @@
     <ClInclude Include="kitt\Content\IReader.hpp" />
     <ClInclude Include="kitt\Content\SdlFileReader.hpp" />
     <ClInclude Include="kitt\Content\ZipReader.hpp" />
+    <ClInclude Include="kitt\Core\Animateable.hpp" />
     <ClInclude Include="kitt\Core\Camera.hpp" />
     <ClInclude Include="kitt\constants.hpp" />
     <ClInclude Include="kitt\Core\ConfigFileSettings.hpp" />
@@ -177,10 +179,14 @@
     <ClInclude Include="kitt\Tests\RealtimeTrigonometryTests.hpp" />
     <ClInclude Include="kitt\Tests\SdlTimeTests.hpp" />
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Kittvs2017.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -31,6 +31,6 @@ namespace Core {
 		void rotate(double radians);
 		void rotateDeg(double degrees);
 
-		void updateRotation();
+		virtual void update();
 	};
 }

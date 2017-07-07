@@ -9,7 +9,7 @@
 #include "Settings.hpp"
 
 namespace Core {
-    Settings::Settings() {
+    Settings::Settings() : contentpath("/content") {
         
     }
     
@@ -20,6 +20,14 @@ namespace Core {
     string Settings::getRoot() const {
         return this->root;
     }
+
+	string Settings::getContentPath() const {
+		return this->contentpath;
+	}
+
+	string Settings::getContentFullPath() const {
+		return this->root + this->contentpath;
+	}
     
     int Settings::getScreenWidth() const {
         return this->screen_width;

@@ -130,7 +130,6 @@
     <ClInclude Include="kitt\Content\SdlFileReader.hpp" />
     <ClInclude Include="kitt\Content\ZipReader.hpp" />
     <ClInclude Include="kitt\Core\Animateable.hpp" />
-    <ClInclude Include="kitt\Core\Camera.hpp" />
     <ClInclude Include="kitt\constants.hpp" />
     <ClInclude Include="kitt\Core\ConfigFileSettings.hpp" />
     <ClInclude Include="kitt\Core\Directable.hpp" />
@@ -168,6 +167,7 @@
     <ClInclude Include="kitt\Input\SdlSignalManager.hpp" />
     <ClInclude Include="kitt\Input\Signal.hpp" />
     <ClInclude Include="kitt\Input\SignalManager.hpp" />
+    <ClInclude Include="kitt\json.hpp" />
     <ClInclude Include="kitt\SDL.h" />
     <ClInclude Include="kitt\Testing\Assert.hpp" />
     <ClInclude Include="kitt\Testing\Test.hpp" />
@@ -183,10 +183,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="config.json" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Kittvs2017.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="content\file.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,6 +9,7 @@
 #include "Directable.hpp"
 #include "TimeInjector.hpp"
 
+
 namespace Core {
 
 	Directable::Directable()

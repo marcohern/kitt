@@ -6,6 +6,7 @@
 #include <cmath>
 #include <string>
 #include <iostream>
+#include <fstream>
 #include "./Tests/KittTestSuite.hpp"
 #include "./Game/Game.hpp"
 #include "./Core/Trigonometry.hpp"
@@ -217,7 +218,7 @@ void SdlApplication::Render()
 
 int main(int argc, char* argv[])
 {
-    
+	
     Core::Path::get()->setRootFromArgs(argv[0]);
 	Core::TrigonometryInjector::init(TRIGO_TYPE);
 	Core::TimeInjector::init(0);

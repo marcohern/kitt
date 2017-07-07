@@ -160,9 +160,6 @@
     <ClInclude Include="kitt\Content\IReader.hpp">
       <Filter>Content</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Core\Camera.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="kitt\SDL.h" />
     <ClInclude Include="kitt\Testing\Assert.hpp">
       <Filter>Testing</Filter>
@@ -313,6 +310,7 @@
     <ClInclude Include="kitt\Core\Animateable.hpp">
       <Filter>Core\Interfaces</Filter>
     </ClInclude>
+    <ClInclude Include="kitt\json.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -358,8 +356,12 @@
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="README.md" />
+    <None Include="config.json" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Kittvs2017.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="content\file.txt" />
   </ItemGroup>
 </Project>

@@ -27,7 +27,6 @@ namespace Game {
     class Game {
     private:
 		bool running;
-        Trigonometry *trigonometry;
         Time *time;
 		Window *window;
 		Renderer *renderer;
@@ -47,7 +46,6 @@ namespace Game {
 		void onevent(Signal *signals);
 		void run();
 
-        Trigonometry *getTrigonometry();
         Time *getTime();		
 		IReader *getReader();
     };

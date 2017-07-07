@@ -20,6 +20,7 @@ namespace Graphics {
 		Vector2D tip1, tip2;
 	public:
 		SdlRenderer(SDL_Window *window, Trigonometry *trigonometry);
+		SdlRenderer(SDL_Window *window);
 		virtual ~SdlRenderer();
 
 		void clear();

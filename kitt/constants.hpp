@@ -25,6 +25,12 @@
 #define TIME_TYPE_NONE 0x00
 #define TIME_TYPE_SDL  0x01
 
+#define READER_TYPE_NONE	0x00
+#define READER_TYPE_DIR		0x01
+#define READER_TYPE_ZIP		0x02
+#define READER_TYPE_SDLDIR	0x03
+#define READER_TYPE_SDLZIP	0x04
+
 #define WDS '\\'
 #define UDS '/'
 
@@ -36,5 +42,5 @@
 
 #define	TRIGO_TYPE	TRIGO_TYPE_MEMOIZED
 #define	TIME_TYPE	TIME_TYPE_SDL
-
+#define READER_TYPE	READER_TYPE_SDLDIR
 #endif /* constants_hpp */

@@ -4,13 +4,21 @@
 #include "SdlTexture.hpp"
 #include "../constants.hpp"
 #include "Color.hpp"
+#include "../Core/TrigonometryInjector.hpp"
 
 namespace Graphics
 {
+	using namespace Core;
+
 	SdlRenderer::SdlRenderer(SDL_Window *window, Trigonometry *trigonometry) 
 		: tip1(trigonometry), tip2(trigonometry)
 	{
 		this->renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+	}
+
+	SdlRenderer::SdlRenderer(SDL_Window *window)
+		: SdlRenderer(window, TrigonometryInjector::inject())
+	{
 	}
 
 	SdlRenderer::~SdlRenderer() {

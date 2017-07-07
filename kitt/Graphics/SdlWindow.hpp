@@ -18,6 +18,7 @@ namespace Graphics {
 		SDL_Window *window;
 
 	public:
+		SdlWindow(string title, int width, int height, bool fullscreen);
 		SdlWindow(string title, int width, int height, bool fullscreen, Trigonometry *trigonometri);
 		virtual ~SdlWindow();
 

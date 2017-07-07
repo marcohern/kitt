@@ -9,16 +9,15 @@
 #include "Game.hpp"
 
 #include "../Core/Trigonometry.hpp"
-#include "../Core/TimeFactory.hpp"
 #include "../Core/Vector2D.hpp"
 #include "../Content/IReader.hpp"
 #include "../Content/SdlFileReader.hpp"
 #include "../Graphics/SdlWindow.hpp"
 #include "../Input/SdlSignalManager.hpp"
 
-#include "../Core/TrigonometryFactory.hpp"
+#include "../Core/TimeInjector.hpp"
 #include "../Exceptions/KittException.hpp"
-
+#include "../constants.hpp"
 
 namespace Game {
 	using namespace Core;
@@ -34,7 +33,6 @@ namespace Game {
     
 	Game::~Game() {
 		delete signalm;
-        delete trigonometry;
         delete time;
 		delete reader;
 		delete window;
@@ -44,10 +42,9 @@ namespace Game {
 
 	void Game::init() {
 		signalm = new SdlSignalManager();
-		trigonometry = TrigonometryFactory::create(TRIGO_TYPE);
-		v1 = new Vector2D(100,200,trigonometry);
-		time = TimeFactory::create();
-		window = new SdlWindow(TITLE, 1280, 720, false, trigonometry);
+		v1 = new Vector2D(100,200);
+		time = TimeInjector::inject();
+		window = new SdlWindow(TITLE, 1280, 720, false);
 		renderer = window->getRenderer();
 		reader = new SdlFileReader("/content", renderer, false);
 		font = reader->readSurface("/fonts/courier.bmp");
@@ -64,7 +61,7 @@ namespace Game {
 
 		renderer->texture(0,0,font);
         renderer->vector2d(300, 250, Color::White, *v1);
-		v1->rotate(time->getDelta()*0.4);
+		v1->rotate(-0.4*time->getDelta());
 
 		renderer->present();
 	}
@@ -86,10 +83,6 @@ namespace Game {
 			draw();
 		}
 	}
-    
-    Trigonometry *Game::getTrigonometry() {
-        return trigonometry;
-    }
     
     Time *Game::getTime() {
         return time;

@@ -113,24 +113,42 @@
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Game\Game.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="kitt\Content\ZipReader.cpp">
       <Filter>Content</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\SdlTime.cpp">
       <Filter>Core\Time</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Input\SignalManager.cpp" />
-    <ClCompile Include="kitt\Input\SdlSignalManager.cpp" />
-    <ClCompile Include="kitt\Core\ConfigFileSettings.cpp" />
-    <ClCompile Include="kitt\Core\Settings.cpp" />
-    <ClCompile Include="kitt\Content\SdlFileReader.cpp" />
-    <ClCompile Include="kitt\Graphics\Color.cpp" />
-    <ClCompile Include="kitt\Core\TrigonometryInjector.cpp" />
-    <ClCompile Include="kitt\Core\Rotateable.cpp" />
-    <ClCompile Include="kitt\Core\TimeInjector.cpp" />
+    <ClCompile Include="kitt\Graphics\Color.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\ConfigFileSettings.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\Rotateable.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Input\SdlSignalManager.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Input\SignalManager.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\Settings.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Content\SdlFileReader.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\TrigonometryInjector.cpp">
+      <Filter>Core\Trigonometry</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\TimeInjector.cpp">
+      <Filter>Core\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Game\Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -230,9 +248,6 @@
     <ClInclude Include="kitt\Core\Time.hpp">
       <Filter>Core\Time</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\constants.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="kitt\Core\Path.hpp">
       <Filter>Core</Filter>
     </ClInclude>
@@ -251,25 +266,46 @@
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp">
       <Filter>Tests</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Game\Game.hpp">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="kitt\Content\ZipReader.hpp">
       <Filter>Content</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\SdlTime.hpp">
       <Filter>Core\Time</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\Input\Signal.hpp" />
-    <ClInclude Include="kitt\Input\SignalManager.hpp" />
-    <ClInclude Include="kitt\Input\SdlSignalManager.hpp" />
-    <ClInclude Include="kitt\Core\ConfigFileSettings.hpp" />
-    <ClInclude Include="kitt\Core\Settings.hpp" />
-    <ClInclude Include="kitt\Content\SdlFileReader.hpp" />
-    <ClInclude Include="kitt\Graphics\Color.hpp" />
-    <ClInclude Include="kitt\Core\TrigonometryInjector.hpp" />
-    <ClInclude Include="kitt\Core\Rotateable.hpp" />
-    <ClInclude Include="kitt\Core\TimeInjector.hpp" />
+    <ClInclude Include="kitt\Graphics\Color.hpp">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Core\ConfigFileSettings.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Core\Rotateable.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Input\SdlSignalManager.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Input\Signal.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Input\SignalManager.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Core\Settings.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Content\SdlFileReader.hpp">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\constants.hpp" />
+    <ClInclude Include="kitt\Core\TrigonometryInjector.hpp">
+      <Filter>Core\Trigonometry</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Core\TimeInjector.hpp">
+      <Filter>Core\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Game\Game.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -304,6 +340,12 @@
     </Filter>
     <Filter Include="Graphics\Sdl">
       <UniqueIdentifier>{5538a9df-4054-4674-80ee-a116fe42758c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{b8db820d-76bf-42ad-a45b-4fc41b6abc3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{b42c6e1c-9397-4a43-9948-04ec14a64edc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

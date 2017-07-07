@@ -1,6 +1,7 @@
 #include <string>
 #include "SdlWindow.hpp"
 #include "../Core/Trigonometry.hpp"
+#include "../Core/TrigonometryInjector.hpp"
 #include "../constants.hpp"
 
 namespace Graphics
@@ -9,7 +10,7 @@ namespace Graphics
 	using namespace Core;
 
 	SdlWindow::SdlWindow(string title, int width, int height, bool fullscreen, Trigonometry *trigonometry)
-	: Window() {
+		: Window() {
 		this->width = width;
 		this->height = height;
 		this->_fullscreen = fullscreen;
@@ -17,6 +18,11 @@ namespace Graphics
 		if (_fullscreen) flags |= SDL_WINDOW_FULLSCREEN;
 		this->window = SDL_CreateWindow(TITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, flags);
 		this->renderer = new SdlRenderer(this->window, trigonometry);
+	}
+
+	SdlWindow::SdlWindow(string title, int width, int height, bool fullscreen)
+		:SdlWindow(title, width, height, fullscreen, TrigonometryInjector::inject()) {
+
 	}
 
 	SdlWindow::~SdlWindow() {

@@ -10,7 +10,6 @@
 #include "TimeInjector.hpp"
 
 namespace Core {
-    using namespace Exceptions;
 
 	Directable::Directable()
 		: Placeable(), Animateable(TimeInjector::inject()), direction() {

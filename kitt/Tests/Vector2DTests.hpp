@@ -45,7 +45,6 @@ namespace Tests {
         void dot_Test();
         void angleBetween_Test();
         void rotate_Test();
-        void rotate_TigoNull_Test();
         
         void op_positive_Test();
         void op_negative_Test();

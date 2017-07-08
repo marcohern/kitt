@@ -24,6 +24,8 @@ namespace Core {
         double x, y;
         
     public:
+        static const Vector2D Zero;
+        
         Vector2D();
         Vector2D(double x, double y);
         Vector2D(const Vector2D &v);

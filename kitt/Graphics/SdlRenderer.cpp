@@ -34,7 +34,7 @@ namespace Graphics
 		SDL_RenderPresent(renderer);
 	}
 
-	void SdlRenderer::texture(int x, int y, Texture *texture) {
+	void SdlRenderer::texture(const Vector2D &position, Texture *texture) {
 		SdlTexture *txt = (SdlTexture*)texture;
 		
 		SDL_Rect srcrect;
@@ -44,15 +44,15 @@ namespace Graphics
 		srcrect.h = texture->h();
 
 		SDL_Rect dstrect;
-		dstrect.x = x;
-		dstrect.y = y;
+		dstrect.x = position.iX();
+		dstrect.y = position.iY();
 		dstrect.w = texture->w();
 		dstrect.h = texture->h();
 		
 		SDL_RenderCopy(renderer, txt->getSdlTexture(), &srcrect, &dstrect);
 	}
 
-	void SdlRenderer::vector2d(int x, int y, const Color &color, const Vector2D &v) {
+	void SdlRenderer::vector2d(const Vector2D &position, const Color &color, const Vector2D &v) {
 		double l = v.magnitude()*0.20;
 		tip1 = v.u();
 		tip2 = v.u();
@@ -63,11 +63,11 @@ namespace Graphics
 		tip1.rotateDeg(135);
 		tip2.rotateDeg(-135);
 
-		int fx = v.iX() + x;
-		int fy = v.iY() + y;
+		int fx = v.iX() + position.iX();
+		int fy = v.iY() + position.iY();
 
         SDL_SetRenderDrawColor(renderer, color.iR(), color.iG(), color.iB(), color.iA());
-		SDL_RenderDrawLine(renderer, x, y, fx, fy);
+		SDL_RenderDrawLine(renderer, position.iX(), position.iY(), fx, fy);
 		SDL_RenderDrawLine(renderer, fx, fy, tip1.iX() + fx, tip1.iY() + fy);
 		SDL_RenderDrawLine(renderer, fx, fy, tip2.iX() + fx, tip2.iY() + fy);
 		

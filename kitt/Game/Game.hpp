@@ -17,6 +17,7 @@
 #include "../Content/IReader.hpp"
 #include "../Input/SignalManager.hpp"
 #include "../Input/Signal.hpp"
+#include "../Core/Rotateable.hpp"
 
 namespace Game {
 	using namespace Core;
@@ -34,7 +35,7 @@ namespace Game {
 
 		IReader *reader;
 		Texture *font;
-		Vector2D *v1;
+		Rotateable v1;
         
     public:
 		Game();

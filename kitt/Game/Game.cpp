@@ -37,12 +37,13 @@ namespace Game {
 		delete reader;
 		delete window;
 		delete font;
-		delete v1;
     }
 
 	void Game::init() {
 		signalm = new SdlSignalManager();
-		v1 = new Vector2D(100,200);
+        v1.setLocation(500,250);
+        v1.setDirection(20, 40);
+        v1.setDeltaAngle(PI/4);
 		time = TimeInjector::inject();
 		window = new SdlWindow(TITLE, 1280, 720, false);
 		renderer = window->getRenderer();
@@ -51,6 +52,7 @@ namespace Game {
 	}
 
 	void Game::update() {
+        v1.update();
 		Signal *signals = signalm->getSignals();
 		onevent(signals);
 		
@@ -59,10 +61,8 @@ namespace Game {
 	void Game::draw() {
 		renderer->clear();
 
-		renderer->texture(0,0,font);
-        renderer->vector2d(300, 250, Color::White, *v1);
-		v1->rotate(-0.4*time->getDelta());
-
+		renderer->texture(Vector2D(0,0),font);
+        renderer->vector2d(v1.getLocation(), Color::White, v1.getDirection());
 		renderer->present();
 	}
 

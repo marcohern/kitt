@@ -30,6 +30,19 @@ namespace Core {
         return this->location;
     }
     
+    Vector2D Placeable::getDisplacement(const Vector2D &displacement, double zoom) const {
+        Vector2D d(displacement);
+        d.sub(location);
+        d.divide(zoom);
+        return d;
+    }
+    
+    Vector2D Placeable::getDisplacement(const Vector2D &displacement) const {
+        Vector2D d(displacement);
+        d.sub(location);
+        return d;
+    }
+    
     void Placeable::setLocation(double x, double y) {
         this->location.set(x, y);
     }

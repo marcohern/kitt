@@ -12,7 +12,8 @@
 namespace Exceptions {
     using namespace std;
     
-    DivideByZeroException::DivideByZeroException(string message): KittException(message) {
+    DivideByZeroException::DivideByZeroException(string message)
+        : KittException(message) {
         
     }
 }

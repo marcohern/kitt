@@ -56,6 +56,14 @@
 		A79613111F0F1E7C004CB1A8 /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796130F1F0F1E7C004CB1A8 /* Color.cpp */; };
 		A79613141F0F49E2004CB1A8 /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613121F0F49E2004CB1A8 /* Settings.cpp */; };
 		A79613171F0F4C30004CB1A8 /* ConfigFileSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613151F0F4C30004CB1A8 /* ConfigFileSettings.cpp */; };
+		A79613221F105729004CB1A8 /* Animateable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796131A1F105729004CB1A8 /* Animateable.cpp */; };
+		A79613231F105729004CB1A8 /* Rotateable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796131C1F105729004CB1A8 /* Rotateable.cpp */; };
+		A79613241F105729004CB1A8 /* TimeInjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796131E1F105729004CB1A8 /* TimeInjector.cpp */; };
+		A79613251F105729004CB1A8 /* TrigonometryInjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613201F105729004CB1A8 /* TrigonometryInjector.cpp */; };
+		A79613281F1133FD004CB1A8 /* Areable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613261F1133FD004CB1A8 /* Areable.cpp */; };
+		A796132B1F113E15004CB1A8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613291F113E15004CB1A8 /* Camera.cpp */; };
+		A796132E1F114E45004CB1A8 /* Renderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796132C1F114E45004CB1A8 /* Renderable.cpp */; };
+		A79613311F115E30004CB1A8 /* Vector2DRenderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796132F1F115E30004CB1A8 /* Vector2DRenderable.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
 /* End PBXBuildFile section */
@@ -174,6 +182,24 @@
 		A79613131F0F49E2004CB1A8 /* Settings.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Settings.hpp; sourceTree = "<group>"; };
 		A79613151F0F4C30004CB1A8 /* ConfigFileSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigFileSettings.cpp; sourceTree = "<group>"; };
 		A79613161F0F4C30004CB1A8 /* ConfigFileSettings.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConfigFileSettings.hpp; sourceTree = "<group>"; };
+		A79613181F105430004CB1A8 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		A79613191F105712004CB1A8 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
+		A796131A1F105729004CB1A8 /* Animateable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animateable.cpp; sourceTree = "<group>"; };
+		A796131B1F105729004CB1A8 /* Animateable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animateable.hpp; sourceTree = "<group>"; };
+		A796131C1F105729004CB1A8 /* Rotateable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rotateable.cpp; sourceTree = "<group>"; };
+		A796131D1F105729004CB1A8 /* Rotateable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rotateable.hpp; sourceTree = "<group>"; };
+		A796131E1F105729004CB1A8 /* TimeInjector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeInjector.cpp; sourceTree = "<group>"; };
+		A796131F1F105729004CB1A8 /* TimeInjector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeInjector.hpp; sourceTree = "<group>"; };
+		A79613201F105729004CB1A8 /* TrigonometryInjector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrigonometryInjector.cpp; sourceTree = "<group>"; };
+		A79613211F105729004CB1A8 /* TrigonometryInjector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrigonometryInjector.hpp; sourceTree = "<group>"; };
+		A79613261F1133FD004CB1A8 /* Areable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Areable.cpp; sourceTree = "<group>"; };
+		A79613271F1133FD004CB1A8 /* Areable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Areable.hpp; sourceTree = "<group>"; };
+		A79613291F113E15004CB1A8 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		A796132A1F113E15004CB1A8 /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		A796132C1F114E45004CB1A8 /* Renderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderable.cpp; sourceTree = "<group>"; };
+		A796132D1F114E45004CB1A8 /* Renderable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderable.hpp; sourceTree = "<group>"; };
+		A796132F1F115E30004CB1A8 /* Vector2DRenderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2DRenderable.cpp; sourceTree = "<group>"; };
+		A79613301F115E30004CB1A8 /* Vector2DRenderable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2DRenderable.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -204,6 +230,7 @@
 				A725504D1F0CA18D00301290 /* Testing */,
 				A72550561F0CA18D00301290 /* Tests */,
 				A725504B1F0CA18D00301290 /* main.cpp */,
+				A79613191F105712004CB1A8 /* json.hpp */,
 				A725504C1F0CA18D00301290 /* SDL.h */,
 				A72550091F0CA18D00301290 /* constants.hpp */,
 			);
@@ -228,6 +255,16 @@
 		A72550111F0CA18D00301290 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A796131A1F105729004CB1A8 /* Animateable.cpp */,
+				A796131B1F105729004CB1A8 /* Animateable.hpp */,
+				A79613261F1133FD004CB1A8 /* Areable.cpp */,
+				A79613271F1133FD004CB1A8 /* Areable.hpp */,
+				A796131C1F105729004CB1A8 /* Rotateable.cpp */,
+				A796131D1F105729004CB1A8 /* Rotateable.hpp */,
+				A796131E1F105729004CB1A8 /* TimeInjector.cpp */,
+				A796131F1F105729004CB1A8 /* TimeInjector.hpp */,
+				A79613201F105729004CB1A8 /* TrigonometryInjector.cpp */,
+				A79613211F105729004CB1A8 /* TrigonometryInjector.hpp */,
 				A72550121F0CA18D00301290 /* Directable.cpp */,
 				A72550131F0CA18D00301290 /* Directable.hpp */,
 				A72550141F0CA18D00301290 /* HasTrigonometry.cpp */,
@@ -260,6 +297,8 @@
 				A79613131F0F49E2004CB1A8 /* Settings.hpp */,
 				A79613151F0F4C30004CB1A8 /* ConfigFileSettings.cpp */,
 				A79613161F0F4C30004CB1A8 /* ConfigFileSettings.hpp */,
+				A79613291F113E15004CB1A8 /* Camera.cpp */,
+				A796132A1F113E15004CB1A8 /* Camera.hpp */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -309,6 +348,10 @@
 				A725504A1F0CA18D00301290 /* Window.hpp */,
 				A796130F1F0F1E7C004CB1A8 /* Color.cpp */,
 				A79613101F0F1E7C004CB1A8 /* Color.hpp */,
+				A796132C1F114E45004CB1A8 /* Renderable.cpp */,
+				A796132D1F114E45004CB1A8 /* Renderable.hpp */,
+				A796132F1F115E30004CB1A8 /* Vector2DRenderable.cpp */,
+				A79613301F115E30004CB1A8 /* Vector2DRenderable.hpp */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -379,6 +422,7 @@
 		A7ECCDB31F04C03000011805 = {
 			isa = PBXGroup;
 			children = (
+				A79613181F105430004CB1A8 /* config.json */,
 				A725508C1F0CAB1A00301290 /* content */,
 				A72550081F0CA18D00301290 /* kitt */,
 				A74E82061F0A891C00B8C90F /* content */,
@@ -482,9 +526,12 @@
 				A725507F1F0CA18D00301290 /* Texture.cpp in Sources */,
 				A72550761F0CA18D00301290 /* KittException.cpp in Sources */,
 				A72550631F0CA18D00301290 /* FileReader.cpp in Sources */,
+				A79613311F115E30004CB1A8 /* Vector2DRenderable.cpp in Sources */,
 				A725508B1F0CA18D00301290 /* Vector2DTests.cpp in Sources */,
 				A72550841F0CA18D00301290 /* TestRunner.cpp in Sources */,
+				A796132B1F113E15004CB1A8 /* Camera.cpp in Sources */,
 				A79613111F0F1E7C004CB1A8 /* Color.cpp in Sources */,
+				A79613241F105729004CB1A8 /* TimeInjector.cpp in Sources */,
 				A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */,
 				A725507E1F0CA18D00301290 /* SdlWindow.cpp in Sources */,
 				A72550671F0CA18D00301290 /* HasTrigonometry.cpp in Sources */,
@@ -499,17 +546,22 @@
 				A72550741F0CA18D00301290 /* AssertException.cpp in Sources */,
 				A78B3DB91F0F16EE0080E8F6 /* SignalManager.cpp in Sources */,
 				A72550721F0CA18D00301290 /* TrigonometryFactory.cpp in Sources */,
+				A79613251F105729004CB1A8 /* TrigonometryInjector.cpp in Sources */,
 				A72550881F0CA18D00301290 /* MemoizedTrigonometryTests.cpp in Sources */,
 				A74E81FE1F09FBB600B8C90F /* README.md in Sources */,
+				A79613281F1133FD004CB1A8 /* Areable.cpp in Sources */,
 				A725506C1F0CA18D00301290 /* Placeable.cpp in Sources */,
+				A79613231F105729004CB1A8 /* Rotateable.cpp in Sources */,
 				A72550751F0CA18D00301290 /* DivideByZeroException.cpp in Sources */,
 				A725506F1F0CA18D00301290 /* Time.cpp in Sources */,
+				A796132E1F114E45004CB1A8 /* Renderable.cpp in Sources */,
 				A72550771F0CA18D00301290 /* MismatchException.cpp in Sources */,
 				A725507A1F0CA18D00301290 /* Game.cpp in Sources */,
 				A725508A1F0CA18D00301290 /* SdlTimeTests.cpp in Sources */,
 				A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */,
 				A72550691F0CA18D00301290 /* MemoizedTrigonometry.cpp in Sources */,
 				A72550891F0CA18D00301290 /* RealtimeTrigonometryTests.cpp in Sources */,
+				A79613221F105729004CB1A8 /* Animateable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

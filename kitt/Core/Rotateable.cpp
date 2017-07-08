@@ -47,6 +47,7 @@ namespace Core {
 
 	Rotateable::~Rotateable() {
 		Directable::~Directable();
+        Animateable::~Animateable();
 	}
 
 	void Rotateable::setDeltaAngle(double radians) {
@@ -75,6 +76,6 @@ namespace Core {
 
 	void Rotateable::update() {
 		Directable::update();
-		this->direction.rotate(this->deltaAngle);
+		this->direction.rotate(this->deltaAngle * time->getDelta());
 	}
 }

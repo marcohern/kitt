@@ -25,8 +25,8 @@ namespace Graphics {
 
 		void clear();
 		void present();
-		void texture(int x, int y, Texture *t);
-		void vector2d(int x, int y, const Color &color, const Vector2D &v);
+		void texture(const Vector2D &position, Texture *t);
+		void vector2d(const Vector2D &position, const Color &color, const Vector2D &v);
 
 		SDL_Renderer *getRenderer();
 	};

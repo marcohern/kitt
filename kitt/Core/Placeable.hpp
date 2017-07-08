@@ -16,6 +16,7 @@
 namespace Core {
     class Placeable {
     protected:
+        
         Vector2D location;
     public:
 		Placeable();
@@ -29,6 +30,8 @@ namespace Core {
         virtual ~Placeable();
         
         Vector2D getLocation() const;
+        Vector2D getDisplacement(const Vector2D &displacement, double zoom) const;
+        Vector2D getDisplacement(const Vector2D &displacement) const;
 
         void setLocation(double x, double y);
         void setLocation(const Vector2D &v);

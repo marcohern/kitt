@@ -26,11 +26,11 @@ namespace Core {
 		Directable(const Vector2D &loc);
 		Directable(const Vector2D &loc, const Vector2D &dir);
 
-        Directable(Trigonometry *trigo, Time *time);
-        Directable(double x, double y, Trigonometry *trigo, Time *time);
-        Directable(double x, double y, double dx, double dy, Trigonometry *trigo, Time *time);
-        Directable(const Vector2D &loc, Trigonometry *trigo, Time *time);
-        Directable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo, Time *time);
+        Directable(Trigonometry *trigo);
+        Directable(double x, double y, Trigonometry *trigo);
+        Directable(double x, double y, double dx, double dy, Trigonometry *trigo);
+        Directable(const Vector2D &loc, Trigonometry *trigo);
+        Directable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo);
         
         virtual ~Directable();
         
@@ -42,7 +42,7 @@ namespace Core {
         void addDirection(double dx, double dy);
         void addDirection(const Vector2D &dir);
 
-		virtual void update();
+		virtual void update(double interval);
     };
 }
 #endif /* Directable_hpp */

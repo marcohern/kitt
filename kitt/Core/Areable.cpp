@@ -24,18 +24,18 @@ namespace Core {
         
     }
     
-    Areable::Areable(Trigonometry *trigo, Time *time)
-    : Core::Rotateable(trigo, time), size(), pivot() {
+    Areable::Areable(Trigonometry *trigo)
+    : Core::Rotateable(trigo), size(), pivot() {
         
     }
     
-    Areable::Areable(const Vector2D &location, const Vector2D &size, Trigonometry *trigo, Time *time)
-    : Core::Rotateable(location, trigo, time), size(size), pivot(){
+    Areable::Areable(const Vector2D &location, const Vector2D &size, Trigonometry *trigo)
+    : Core::Rotateable(location, trigo), size(size), pivot(){
         
     }
     
-    Areable::Areable(const Vector2D &location, const Vector2D &size, const Vector2D &pivot, Trigonometry *trigo, Time *time)
-    : Core::Rotateable(location, trigo, time), size(size), pivot(pivot){
+    Areable::Areable(const Vector2D &location, const Vector2D &size, const Vector2D &pivot, Trigonometry *trigo)
+    : Core::Rotateable(location, trigo), size(size), pivot(pivot){
         
     }
     
@@ -79,5 +79,9 @@ namespace Core {
     
     double Areable::getArea() const {
         return size.getX() * size.getY();
+    }
+    
+    void Areable::update(double interval) {
+        Rotateable::update(interval);
     }
 }

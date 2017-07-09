@@ -25,25 +25,25 @@ namespace Core {
 		: Directable(loc, dir), deltaAngle(radians) {}
 
 
-	Rotateable::Rotateable(Trigonometry *trigo, Time *time)
-		: Directable(trigo, time), deltaAngle(0) {}
+	Rotateable::Rotateable(Trigonometry *trigo)
+		: Directable(trigo), deltaAngle(0) {}
 
-	Rotateable::Rotateable(double x, double y, Trigonometry *trigo, Time *time)
-		: Directable(x, y, trigo, time), deltaAngle(0) {}
-	Rotateable::Rotateable(double x, double y, double dx, double dy, Trigonometry *trigo, Time *time)
-		: Directable(x, y, dx, dy, trigo, time), deltaAngle(0) {}
+	Rotateable::Rotateable(double x, double y, Trigonometry *trigo)
+		: Directable(x, y, trigo), deltaAngle(0) {}
+	Rotateable::Rotateable(double x, double y, double dx, double dy, Trigonometry *trigo)
+		: Directable(x, y, dx, dy, trigo), deltaAngle(0) {}
 
-	Rotateable::Rotateable(double x, double y, double dx, double dy, double radians, Trigonometry *trigo, Time *time)
-		: Directable(x, y, dx, dy, trigo, time), deltaAngle(radians) {}
+	Rotateable::Rotateable(double x, double y, double dx, double dy, double radians, Trigonometry *trigo)
+		: Directable(x, y, dx, dy, trigo), deltaAngle(radians) {}
 
-	Rotateable::Rotateable(const Vector2D &loc, Trigonometry *trigo, Time *time)
-		: Directable(loc, trigo, time), deltaAngle(0) {}
+	Rotateable::Rotateable(const Vector2D &loc, Trigonometry *trigo)
+		: Directable(loc, trigo), deltaAngle(0) {}
 
-	Rotateable::Rotateable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo, Time *time)
-		: Directable(loc, dir, trigo, time), deltaAngle(0) {}
+	Rotateable::Rotateable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo)
+		: Directable(loc, dir, trigo), deltaAngle(0) {}
 
-	Rotateable::Rotateable(const Vector2D &loc, const Vector2D &dir, double radians, Trigonometry *trigo, Time *time)
-		: Directable(loc, dir, trigo, time), deltaAngle(radians) {}
+	Rotateable::Rotateable(const Vector2D &loc, const Vector2D &dir, double radians, Trigonometry *trigo)
+		: Directable(loc, dir, trigo), deltaAngle(radians) {}
 
 	Rotateable::~Rotateable() {
 		Directable::~Directable();
@@ -74,8 +74,8 @@ namespace Core {
 		this->direction.rotateDeg(degrees);
 	}
 
-	void Rotateable::update() {
-		Directable::update();
-		this->direction.rotate(this->deltaAngle * time->getDelta());
+	void Rotateable::update(double interval) {
+		Directable::update(interval);
+		this->direction.rotate(this->deltaAngle * interval);
 	}
 }

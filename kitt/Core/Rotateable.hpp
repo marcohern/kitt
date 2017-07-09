@@ -15,13 +15,13 @@ namespace Core {
 		Rotateable(const Vector2D &loc, const Vector2D &dir);
 		Rotateable(const Vector2D &loc, const Vector2D &dir, double radians);
 
-		Rotateable(Trigonometry *trigo, Time *time);
-		Rotateable(double x, double y, Trigonometry *trigo, Time *time);
-		Rotateable(double x, double y, double dx, double dy, Trigonometry *trigo, Time *time);
-		Rotateable(double x, double y, double dx, double dy, double radians, Trigonometry *trigo, Time *time);
-		Rotateable(const Vector2D &loc, Trigonometry *trigo, Time *time);
-		Rotateable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo, Time *time);
-		Rotateable(const Vector2D &loc, const Vector2D &dir, double radians, Trigonometry *trigo, Time *time);
+		Rotateable(Trigonometry *trigo);
+		Rotateable(double x, double y, Trigonometry *trigo);
+		Rotateable(double x, double y, double dx, double dy, Trigonometry *trigo);
+		Rotateable(double x, double y, double dx, double dy, double radians, Trigonometry *trigo);
+		Rotateable(const Vector2D &loc, Trigonometry *trigo);
+		Rotateable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo);
+		Rotateable(const Vector2D &loc, const Vector2D &dir, double radians, Trigonometry *trigo);
 		
 		virtual ~Rotateable();
 		void setDeltaAngle(double radians);
@@ -31,6 +31,6 @@ namespace Core {
 		void rotate(double radians);
 		void rotateDeg(double degrees);
 
-		virtual void update();
+		virtual void update(double interval);
 	};
 }

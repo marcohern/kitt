@@ -25,16 +25,16 @@ namespace Graphics
     : Areable(location, size, pivot) {
         
     }
-    Renderable::Renderable(Renderer *renderer, Time *time, Trigonometry *trigo)
-    : Areable(trigo, time) {
+    Renderable::Renderable(Renderer *renderer, Trigonometry *trigo)
+    : Areable(trigo) {
         
     }
-    Renderable::Renderable(const Vector2D &location,Renderer *renderer, Time *time, Trigonometry *trigo)
-    : Areable(location, Vector2D(0,0,trigo), trigo, time) {
+    Renderable::Renderable(const Vector2D &location,Renderer *renderer, Trigonometry *trigo)
+    : Areable(location, Vector2D(0,0,trigo), trigo) {
         
     }
-    Renderable::Renderable(const Vector2D &location, const Vector2D &size,const Vector2D &pivot,Renderer *renderer, Time *time, Trigonometry *trigo)
-    : Areable(location, size, pivot, trigo, time) {
+    Renderable::Renderable(const Vector2D &location, const Vector2D &size,const Vector2D &pivot,Renderer *renderer, Trigonometry *trigo)
+    : Areable(location, size, pivot, trigo) {
         
     }
     

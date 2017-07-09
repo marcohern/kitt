@@ -52,7 +52,7 @@ namespace Game {
 	}
 
 	void Game::update() {
-        v1.update();
+        v1.update(time->getDelta());
 		Signal *signals = signalm->getSignals();
 		onevent(signals);
 		

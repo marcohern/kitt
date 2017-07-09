@@ -13,35 +13,35 @@
 namespace Core {
 
 	Directable::Directable()
-		: Placeable(), Animateable(TimeInjector::inject()), direction() {
+		: Placeable(), Animateable(), direction() {
 	}
 	Directable::Directable(double x, double y)
-		: Placeable(x, y), Animateable(TimeInjector::inject()), direction() {
+		: Placeable(x, y), Animateable(), direction() {
 	}
 	Directable::Directable(double x, double y, double dx, double dy)
-		: Placeable(x, y), Animateable(TimeInjector::inject()), direction(dx, dy) {
+		: Placeable(x, y), Animateable(), direction(dx, dy) {
 	}
 	Directable::Directable(const Vector2D &loc)
-		: Placeable(loc), Animateable(TimeInjector::inject()), direction() {
+		: Placeable(loc), Animateable(), direction() {
 	}
 	Directable::Directable(const Vector2D &loc, const Vector2D &dir)
-		: Placeable(loc), Animateable(TimeInjector::inject()), direction(dir) {
+		: Placeable(loc), Animateable(), direction(dir) {
 	}
     
-    Directable::Directable(Trigonometry *trigo, Time *time)
-		: Placeable(trigo), Animateable(time), direction(trigo) {
+    Directable::Directable(Trigonometry *trigo)
+		: Placeable(trigo), Animateable(), direction(trigo) {
     }
-    Directable::Directable(double x, double y, Trigonometry *trigo, Time *time)
-		: Placeable(x,y,trigo), Animateable(time), direction(trigo) {
+    Directable::Directable(double x, double y, Trigonometry *trigo)
+		: Placeable(x,y,trigo), Animateable(), direction(trigo) {
     }
-    Directable::Directable(double x, double y, double dx, double dy, Trigonometry *trigo, Time *time)
-		: Placeable(x, y, trigo), Animateable(time), direction(dx, dy, trigo) {
+    Directable::Directable(double x, double y, double dx, double dy, Trigonometry *trigo)
+		: Placeable(x, y, trigo), Animateable(), direction(dx, dy, trigo) {
     }
-    Directable::Directable(const Vector2D &loc, Trigonometry *trigo, Time *time)
-		: Placeable(loc,trigo), Animateable(time), direction(trigo) {
+    Directable::Directable(const Vector2D &loc, Trigonometry *trigo)
+		: Placeable(loc,trigo), Animateable(), direction(trigo) {
     }
-    Directable::Directable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo, Time *time)
-		: Placeable(loc,trigo), Animateable(time), direction(dir, trigo) {
+    Directable::Directable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo)
+		: Placeable(loc,trigo), Animateable(), direction(dir, trigo) {
     }
     
     Directable::~Directable() {
@@ -68,7 +68,7 @@ namespace Core {
 		this->direction.add(v);
 	}
 
-	void Directable::update() {
-		location.add(time->getDelta() * direction);
+	void Directable::update(double interval) {
+		location.add(interval * direction);
 	}
 }

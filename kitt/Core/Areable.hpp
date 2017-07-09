@@ -27,9 +27,9 @@ namespace Core {
         Areable(const Vector2D &location, const Vector2D &size);
         Areable(const Vector2D &location, const Vector2D &size, const Vector2D &pivot);
         
-        Areable(Trigonometry *trigo, Time *time);
-        Areable(const Vector2D &location, const Vector2D &size, Trigonometry *trigo, Time *time);
-        Areable(const Vector2D &location, const Vector2D &size, const Vector2D &pivot, Trigonometry *trigo, Time *time);
+        Areable(Trigonometry *trigo);
+        Areable(const Vector2D &location, const Vector2D &size, Trigonometry *trigo);
+        Areable(const Vector2D &location, const Vector2D &size, const Vector2D &pivot, Trigonometry *trigo);
         
         virtual ~Areable();
         
@@ -43,6 +43,8 @@ namespace Core {
         Vector2D getPivotLocation();
         Vector2D getPivotDisplacement(const Vector2D &displacement);
         double getArea() const;
+        
+        virtual void update(double interval);
     };
 }
 #endif /* Areable_hpp */

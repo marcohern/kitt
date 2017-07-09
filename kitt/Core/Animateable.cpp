@@ -5,14 +5,10 @@
 namespace Core {
     using namespace Exceptions;
     
-	Animateable::Animateable() : time(TimeInjector::inject()) {
-		if (time == NULL) throw NullReferenceException("Time cannot be null in Animateable");
-	}
-
-	Animateable::Animateable(Time *time) : time(time) {
-		if (time == NULL) throw NullReferenceException("Time cannot be null in Animateable");
-	}
-
+    Animateable::Animateable() {
+        
+    }
+    
 	Animateable::~Animateable() {
 
 	}

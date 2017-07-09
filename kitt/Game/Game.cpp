@@ -43,7 +43,7 @@ namespace Game {
 		signalm = new SdlSignalManager();
         v1.setLocation(500,250);
         v1.setDirection(20, 40);
-        v1.setDeltaAngle(PI/4);
+        v1.setDeltaAngle(TAU);
 		time = TimeInjector::inject();
 		window = new SdlWindow(TITLE, 1280, 720, false);
 		renderer = window->getRenderer();

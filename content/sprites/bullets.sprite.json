@@ -232,5 +232,14 @@
                 { "id":"pwlaser4", "x": 62, "y":240, "w": 32, "h": 10 },
                 
                 { "id":"_last", "x":0, "y": 0, "w": 0, "h": 0 }
+    ],
+    "animations": [
+                   {"id":"rrb","speed":1.0, "frames": ["rrb01","rrb02","rrb03","rrb04"] },
+                   {"id":"grb","speed":1.0, "frames": ["grb01","grb02","grb03","grb04"] },
+                   {"id":"yrb","speed":1.0, "frames": ["yrb01","yrb02","yrb03","yrb04"] },
+                   {"id":"crb","speed":1.0, "frames": ["crb01","crb02","crb03","crb04"] },
+                   
+                   {"id":"_last","speed":0.0, "frames": [] }
+                   
     ]
 }

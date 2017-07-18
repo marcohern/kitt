@@ -152,6 +152,11 @@
     <ClCompile Include="kitt\Core\Animateable.cpp">
       <Filter>Core\Interfaces</Filter>
     </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Placeable.cpp" />
+    <ClCompile Include="kitt\Tests\PlaceableTest.cpp" />
+    <ClCompile Include="kitt\Core\Areable.cpp" />
+    <ClCompile Include="kitt\Core\Camera.cpp" />
+    <ClCompile Include="kitt\Graphics\Renderable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -311,6 +316,11 @@
       <Filter>Core\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="kitt\json.hpp" />
+    <ClInclude Include="kitt\Behaviors\Placeable.hpp" />
+    <ClInclude Include="kitt\Tests\PlaceableTest.hpp" />
+    <ClInclude Include="kitt\Core\Areable.hpp" />
+    <ClInclude Include="kitt\Core\Camera.hpp" />
+    <ClInclude Include="kitt\Graphics\Renderable.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

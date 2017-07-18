@@ -64,6 +64,8 @@
 		A796132B1F113E15004CB1A8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613291F113E15004CB1A8 /* Camera.cpp */; };
 		A796132E1F114E45004CB1A8 /* Renderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796132C1F114E45004CB1A8 /* Renderable.cpp */; };
 		A79613311F115E30004CB1A8 /* Vector2DRenderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796132F1F115E30004CB1A8 /* Vector2DRenderable.cpp */; };
+		A7BAC2BC1F15B9340050E985 /* Placeable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2BA1F15B9340050E985 /* Placeable.cpp */; };
+		A7BAC2C01F1DB89A0050E985 /* PlaceableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2BE1F1DB89A0050E985 /* PlaceableTest.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
 /* End PBXBuildFile section */
@@ -200,6 +202,10 @@
 		A796132D1F114E45004CB1A8 /* Renderable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderable.hpp; sourceTree = "<group>"; };
 		A796132F1F115E30004CB1A8 /* Vector2DRenderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2DRenderable.cpp; sourceTree = "<group>"; };
 		A79613301F115E30004CB1A8 /* Vector2DRenderable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2DRenderable.hpp; sourceTree = "<group>"; };
+		A7BAC2BA1F15B9340050E985 /* Placeable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Placeable.cpp; path = Behaviors/Placeable.cpp; sourceTree = "<group>"; };
+		A7BAC2BB1F15B9340050E985 /* Placeable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Placeable.hpp; path = Behaviors/Placeable.hpp; sourceTree = "<group>"; };
+		A7BAC2BE1F1DB89A0050E985 /* PlaceableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlaceableTest.cpp; sourceTree = "<group>"; };
+		A7BAC2BF1F1DB89A0050E985 /* PlaceableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlaceableTest.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -221,6 +227,7 @@
 		A72550081F0CA18D00301290 /* kitt */ = {
 			isa = PBXGroup;
 			children = (
+				A7BAC2BD1F15B9380050E985 /* Behaviors */,
 				A78B3DB21F0F16E30080E8F6 /* Input */,
 				A725500A1F0CA18D00301290 /* Content */,
 				A72550111F0CA18D00301290 /* Core */,
@@ -386,6 +393,8 @@
 				A72550601F0CA18D00301290 /* SdlTimeTests.hpp */,
 				A72550611F0CA18D00301290 /* Vector2DTests.cpp */,
 				A72550621F0CA18D00301290 /* Vector2DTests.hpp */,
+				A7BAC2BE1F1DB89A0050E985 /* PlaceableTest.cpp */,
+				A7BAC2BF1F1DB89A0050E985 /* PlaceableTest.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -417,6 +426,15 @@
 				A78B3DB71F0F16EE0080E8F6 /* SignalManager.hpp */,
 			);
 			name = Input;
+			sourceTree = "<group>";
+		};
+		A7BAC2BD1F15B9380050E985 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				A7BAC2BA1F15B9340050E985 /* Placeable.cpp */,
+				A7BAC2BB1F15B9340050E985 /* Placeable.hpp */,
+			);
+			name = Behaviors;
 			sourceTree = "<group>";
 		};
 		A7ECCDB31F04C03000011805 = {
@@ -524,6 +542,7 @@
 				A72550851F0CA18D00301290 /* TestSuite.cpp in Sources */,
 				A79613141F0F49E2004CB1A8 /* Settings.cpp in Sources */,
 				A725507F1F0CA18D00301290 /* Texture.cpp in Sources */,
+				A7BAC2BC1F15B9340050E985 /* Placeable.cpp in Sources */,
 				A72550761F0CA18D00301290 /* KittException.cpp in Sources */,
 				A72550631F0CA18D00301290 /* FileReader.cpp in Sources */,
 				A79613311F115E30004CB1A8 /* Vector2DRenderable.cpp in Sources */,
@@ -550,6 +569,7 @@
 				A72550881F0CA18D00301290 /* MemoizedTrigonometryTests.cpp in Sources */,
 				A74E81FE1F09FBB600B8C90F /* README.md in Sources */,
 				A79613281F1133FD004CB1A8 /* Areable.cpp in Sources */,
+				A7BAC2C01F1DB89A0050E985 /* PlaceableTest.cpp in Sources */,
 				A725506C1F0CA18D00301290 /* Placeable.cpp in Sources */,
 				A79613231F105729004CB1A8 /* Rotateable.cpp in Sources */,
 				A72550751F0CA18D00301290 /* DivideByZeroException.cpp in Sources */,

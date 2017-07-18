@@ -3,6 +3,7 @@
 #include "./RealtimeTrigonometryTests.hpp"
 #include "./MemoizedTrigonometryTests.hpp"
 #include "./MatrixTests.hpp"
+#include "./PlaceableTest.hpp"
 
 namespace Tests {
     
@@ -12,6 +13,7 @@ namespace Tests {
         this->add(new RealtimeTrigonometryTests());
         this->add(new MemoizedTrigonometryTests());
         this->add(new MatrixTests());
+        this->add(new PlaceableTest());
 	}
 
     void KittTestSuite::teardown() {

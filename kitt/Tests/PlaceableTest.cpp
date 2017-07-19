@@ -69,7 +69,7 @@ namespace Tests
     }
     
     void PlaceableTest::constructor_TrigoXY_Test() {
-        Placeable placeable(1.23,4.56);
+        Placeable placeable(1.23,4.56, trigonometry);
         assert.areEqual(placeable.getLocation().getX(), 1.23);
         assert.areEqual(placeable.getLocation().getY(), 4.56);
     }
@@ -135,11 +135,11 @@ namespace Tests
         runtest("constructor_TrigoNull_Test--", &PlaceableTest::constructor_TrigoNull_Test);
         runtest("constructor_TrigoXY_Test----", &PlaceableTest::constructor_TrigoXY_Test);
         runtest("constructor_TrigoV_Test-----", &PlaceableTest::constructor_TrigoV_Test);
-        runtest("getDisplacement_V_Test-----", &PlaceableTest::getDisplacement_V_Test);
+        runtest("getDisplacement_V_Test------", &PlaceableTest::getDisplacement_V_Test);
         runtest("getDisplacement_XY_Test-----", &PlaceableTest::getDisplacement_XY_Test);
-        runtest("setLocation_V_Test-----", &PlaceableTest::setLocation_V_Test);
-        runtest("setLocation_XY_Test-----", &PlaceableTest::setLocation_XY_Test);
-        runtest("addLocation_V_Test-----", &PlaceableTest::addLocation_V_Test);
-        runtest("addLocation_XY_Test-----", &PlaceableTest::addLocation_XY_Test);
+        runtest("setLocation_V_Test----------", &PlaceableTest::setLocation_V_Test);
+        runtest("setLocation_XY_Test---------", &PlaceableTest::setLocation_XY_Test);
+        runtest("addLocation_V_Test----------", &PlaceableTest::addLocation_V_Test);
+        runtest("addLocation_XY_Test---------", &PlaceableTest::addLocation_XY_Test);
     }
 }

@@ -66,6 +66,8 @@
 		A79613311F115E30004CB1A8 /* Vector2DRenderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796132F1F115E30004CB1A8 /* Vector2DRenderable.cpp */; };
 		A7BAC2BC1F15B9340050E985 /* Placeable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2BA1F15B9340050E985 /* Placeable.cpp */; };
 		A7BAC2C01F1DB89A0050E985 /* PlaceableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2BE1F1DB89A0050E985 /* PlaceableTest.cpp */; };
+		A7BAC2C91F1F057A0050E985 /* Directable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2C71F1F057A0050E985 /* Directable.cpp */; };
+		A7BAC2CC1F1F0B270050E985 /* DirectableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2CA1F1F0B270050E985 /* DirectableTest.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
 /* End PBXBuildFile section */
@@ -206,6 +208,10 @@
 		A7BAC2BB1F15B9340050E985 /* Placeable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Placeable.hpp; path = Behaviors/Placeable.hpp; sourceTree = "<group>"; };
 		A7BAC2BE1F1DB89A0050E985 /* PlaceableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlaceableTest.cpp; sourceTree = "<group>"; };
 		A7BAC2BF1F1DB89A0050E985 /* PlaceableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlaceableTest.hpp; sourceTree = "<group>"; };
+		A7BAC2C71F1F057A0050E985 /* Directable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Directable.cpp; path = Behaviors/Directable.cpp; sourceTree = "<group>"; };
+		A7BAC2C81F1F057A0050E985 /* Directable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Directable.hpp; path = Behaviors/Directable.hpp; sourceTree = "<group>"; };
+		A7BAC2CA1F1F0B270050E985 /* DirectableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectableTest.cpp; sourceTree = "<group>"; };
+		A7BAC2CB1F1F0B270050E985 /* DirectableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DirectableTest.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -395,6 +401,8 @@
 				A72550621F0CA18D00301290 /* Vector2DTests.hpp */,
 				A7BAC2BE1F1DB89A0050E985 /* PlaceableTest.cpp */,
 				A7BAC2BF1F1DB89A0050E985 /* PlaceableTest.hpp */,
+				A7BAC2CA1F1F0B270050E985 /* DirectableTest.cpp */,
+				A7BAC2CB1F1F0B270050E985 /* DirectableTest.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -433,6 +441,8 @@
 			children = (
 				A7BAC2BA1F15B9340050E985 /* Placeable.cpp */,
 				A7BAC2BB1F15B9340050E985 /* Placeable.hpp */,
+				A7BAC2C71F1F057A0050E985 /* Directable.cpp */,
+				A7BAC2C81F1F057A0050E985 /* Directable.hpp */,
 			);
 			name = Behaviors;
 			sourceTree = "<group>";
@@ -530,6 +540,8 @@
 				A72550661F0CA18D00301290 /* Directable.cpp in Sources */,
 				A72550831F0CA18D00301290 /* Test.cpp in Sources */,
 				A72550731F0CA18D00301290 /* Vector2D.cpp in Sources */,
+				A7BAC2CC1F1F0B270050E985 /* DirectableTest.cpp in Sources */,
+				A7BAC2C91F1F057A0050E985 /* Directable.cpp in Sources */,
 				A72550711F0CA18D00301290 /* Trigonometry.cpp in Sources */,
 				A725506A1F0CA18D00301290 /* Object.cpp in Sources */,
 				A72550701F0CA18D00301290 /* TimeFactory.cpp in Sources */,

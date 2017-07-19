@@ -4,6 +4,7 @@
 #include "./MemoizedTrigonometryTests.hpp"
 #include "./MatrixTests.hpp"
 #include "./PlaceableTest.hpp"
+#include "./DirectableTest.hpp"
 
 namespace Tests {
     
@@ -14,6 +15,7 @@ namespace Tests {
         this->add(new MemoizedTrigonometryTests());
         this->add(new MatrixTests());
         this->add(new PlaceableTest());
+        this->add(new DirectableTest());
 	}
 
     void KittTestSuite::teardown() {

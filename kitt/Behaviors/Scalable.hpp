@@ -34,15 +34,15 @@ namespace Behaviors {
         void setScale(double sx, double sy);
         void setScale(const Vector2D &scale);
         
-        Vector2D getScale();
-        double getScaleX();
-        double getScaleY();
+        Vector2D getScale() const;
+        double getScaleX() const;
+        double getScaleY() const;
         
         void addScale(double ds);
         void addScale(double dx, double dy);
         void addScale(const Vector2D &delta);
         
-        Vector2D getZoomScale(double zoom);
+        Vector2D getZoomScale(double zoom) const;
     };
 }
 #endif /* Scalable_hpp */

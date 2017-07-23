@@ -51,6 +51,8 @@
 		A74E81FE1F09FBB600B8C90F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A74E81FD1F09FBB600B8C90F /* README.md */; };
 		A774F2111F241BFA002B4DC7 /* Scalable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F20F1F241BFA002B4DC7 /* Scalable.cpp */; };
 		A774F2141F253087002B4DC7 /* ScalableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2121F253087002B4DC7 /* ScalableTest.cpp */; };
+		A774F2171F253B61002B4DC7 /* Growable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2151F253B61002B4DC7 /* Growable.cpp */; };
+		A774F21A1F2541DC002B4DC7 /* GrowableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2181F2541DC002B4DC7 /* GrowableTest.cpp */; };
 		A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */; };
 		A78B3DB91F0F16EE0080E8F6 /* SignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB61F0F16EE0080E8F6 /* SignalManager.cpp */; };
 		A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613091F0F1B9B004CB1A8 /* SdlFileReader.cpp */; };
@@ -177,6 +179,10 @@
 		A774F2101F241BFA002B4DC7 /* Scalable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Scalable.hpp; path = Behaviors/Scalable.hpp; sourceTree = "<group>"; };
 		A774F2121F253087002B4DC7 /* ScalableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScalableTest.cpp; sourceTree = "<group>"; };
 		A774F2131F253087002B4DC7 /* ScalableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalableTest.hpp; sourceTree = "<group>"; };
+		A774F2151F253B61002B4DC7 /* Growable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Growable.cpp; path = Behaviors/Growable.cpp; sourceTree = "<group>"; };
+		A774F2161F253B61002B4DC7 /* Growable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Growable.hpp; path = Behaviors/Growable.hpp; sourceTree = "<group>"; };
+		A774F2181F2541DC002B4DC7 /* GrowableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GrowableTest.cpp; sourceTree = "<group>"; };
+		A774F2191F2541DC002B4DC7 /* GrowableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GrowableTest.hpp; sourceTree = "<group>"; };
 		A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SdlSignalManager.cpp; path = Input/SdlSignalManager.cpp; sourceTree = "<group>"; };
 		A78B3DB41F0F16EE0080E8F6 /* SdlSignalManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SdlSignalManager.hpp; path = Input/SdlSignalManager.hpp; sourceTree = "<group>"; };
 		A78B3DB51F0F16EE0080E8F6 /* Signal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Signal.hpp; path = Input/Signal.hpp; sourceTree = "<group>"; };
@@ -411,6 +417,8 @@
 				A7BAC2CB1F1F0B270050E985 /* DirectableTest.hpp */,
 				A774F2121F253087002B4DC7 /* ScalableTest.cpp */,
 				A774F2131F253087002B4DC7 /* ScalableTest.hpp */,
+				A774F2181F2541DC002B4DC7 /* GrowableTest.cpp */,
+				A774F2191F2541DC002B4DC7 /* GrowableTest.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -453,6 +461,8 @@
 				A7BAC2C81F1F057A0050E985 /* Directable.hpp */,
 				A774F20F1F241BFA002B4DC7 /* Scalable.cpp */,
 				A774F2101F241BFA002B4DC7 /* Scalable.hpp */,
+				A774F2151F253B61002B4DC7 /* Growable.cpp */,
+				A774F2161F253B61002B4DC7 /* Growable.hpp */,
 			);
 			name = Behaviors;
 			sourceTree = "<group>";
@@ -558,11 +568,13 @@
 				A72550781F0CA18D00301290 /* NullReferenceException.cpp in Sources */,
 				A796130E1F0F1B9B004CB1A8 /* ZipReader.cpp in Sources */,
 				A72550871F0CA18D00301290 /* MatrixTests.cpp in Sources */,
+				A774F2171F253B61002B4DC7 /* Growable.cpp in Sources */,
 				A72550801F0CA18D00301290 /* Window.cpp in Sources */,
 				A725507D1F0CA18D00301290 /* SdlTexture.cpp in Sources */,
 				A72550811F0CA18D00301290 /* main.cpp in Sources */,
 				A72550851F0CA18D00301290 /* TestSuite.cpp in Sources */,
 				A79613141F0F49E2004CB1A8 /* Settings.cpp in Sources */,
+				A774F21A1F2541DC002B4DC7 /* GrowableTest.cpp in Sources */,
 				A725507F1F0CA18D00301290 /* Texture.cpp in Sources */,
 				A7BAC2BC1F15B9340050E985 /* Placeable.cpp in Sources */,
 				A72550761F0CA18D00301290 /* KittException.cpp in Sources */,

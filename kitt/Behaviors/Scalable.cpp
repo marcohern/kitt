@@ -46,15 +46,15 @@ namespace Behaviors {
         this->scale.set(scale);
     }
     
-    Vector2D Scalable::getScale() {
+    Vector2D Scalable::getScale() const {
         return scale;
     }
     
-    double Scalable::getScaleX() {
+    double Scalable::getScaleX() const {
         return scale.getX();
     }
     
-    double Scalable::getScaleY() {
+    double Scalable::getScaleY() const {
         return scale.getY();
     }
     
@@ -70,7 +70,7 @@ namespace Behaviors {
         scale.add(delta);
     }
     
-    Vector2D Scalable::getZoomScale(double zoom) {
+    Vector2D Scalable::getZoomScale(double zoom) const {
         Vector2D zooms(scale);
         zooms.multiply(zoom);
         return zooms;

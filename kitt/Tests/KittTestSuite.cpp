@@ -5,6 +5,7 @@
 #include "./MatrixTests.hpp"
 #include "./PlaceableTest.hpp"
 #include "./DirectableTest.hpp"
+#include "./ScalableTest.hpp"
 
 namespace Tests {
     
@@ -16,6 +17,7 @@ namespace Tests {
         this->add(new MatrixTests());
         this->add(new PlaceableTest());
         this->add(new DirectableTest());
+        this->add(new ScalableTest());
 	}
 
     void KittTestSuite::teardown() {

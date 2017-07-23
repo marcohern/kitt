@@ -49,6 +49,8 @@
 		A725508B1F0CA18D00301290 /* Vector2DTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550611F0CA18D00301290 /* Vector2DTests.cpp */; };
 		A725508D1F0CAB1A00301290 /* content in CopyFiles */ = {isa = PBXBuildFile; fileRef = A725508C1F0CAB1A00301290 /* content */; };
 		A74E81FE1F09FBB600B8C90F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A74E81FD1F09FBB600B8C90F /* README.md */; };
+		A774F2111F241BFA002B4DC7 /* Scalable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F20F1F241BFA002B4DC7 /* Scalable.cpp */; };
+		A774F2141F253087002B4DC7 /* ScalableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2121F253087002B4DC7 /* ScalableTest.cpp */; };
 		A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */; };
 		A78B3DB91F0F16EE0080E8F6 /* SignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB61F0F16EE0080E8F6 /* SignalManager.cpp */; };
 		A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613091F0F1B9B004CB1A8 /* SdlFileReader.cpp */; };
@@ -171,6 +173,10 @@
 		A74E81FD1F09FBB600B8C90F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A74E82071F0A891C00B8C90F /* file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
 		A74E82091F0A891C00B8C90F /* courier.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = courier.bmp; sourceTree = "<group>"; };
+		A774F20F1F241BFA002B4DC7 /* Scalable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scalable.cpp; path = Behaviors/Scalable.cpp; sourceTree = "<group>"; };
+		A774F2101F241BFA002B4DC7 /* Scalable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Scalable.hpp; path = Behaviors/Scalable.hpp; sourceTree = "<group>"; };
+		A774F2121F253087002B4DC7 /* ScalableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScalableTest.cpp; sourceTree = "<group>"; };
+		A774F2131F253087002B4DC7 /* ScalableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalableTest.hpp; sourceTree = "<group>"; };
 		A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SdlSignalManager.cpp; path = Input/SdlSignalManager.cpp; sourceTree = "<group>"; };
 		A78B3DB41F0F16EE0080E8F6 /* SdlSignalManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SdlSignalManager.hpp; path = Input/SdlSignalManager.hpp; sourceTree = "<group>"; };
 		A78B3DB51F0F16EE0080E8F6 /* Signal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Signal.hpp; path = Input/Signal.hpp; sourceTree = "<group>"; };
@@ -403,6 +409,8 @@
 				A7BAC2BF1F1DB89A0050E985 /* PlaceableTest.hpp */,
 				A7BAC2CA1F1F0B270050E985 /* DirectableTest.cpp */,
 				A7BAC2CB1F1F0B270050E985 /* DirectableTest.hpp */,
+				A774F2121F253087002B4DC7 /* ScalableTest.cpp */,
+				A774F2131F253087002B4DC7 /* ScalableTest.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -443,6 +451,8 @@
 				A7BAC2BB1F15B9340050E985 /* Placeable.hpp */,
 				A7BAC2C71F1F057A0050E985 /* Directable.cpp */,
 				A7BAC2C81F1F057A0050E985 /* Directable.hpp */,
+				A774F20F1F241BFA002B4DC7 /* Scalable.cpp */,
+				A774F2101F241BFA002B4DC7 /* Scalable.hpp */,
 			);
 			name = Behaviors;
 			sourceTree = "<group>";
@@ -592,7 +602,9 @@
 				A725508A1F0CA18D00301290 /* SdlTimeTests.cpp in Sources */,
 				A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */,
 				A72550691F0CA18D00301290 /* MemoizedTrigonometry.cpp in Sources */,
+				A774F2141F253087002B4DC7 /* ScalableTest.cpp in Sources */,
 				A72550891F0CA18D00301290 /* RealtimeTrigonometryTests.cpp in Sources */,
+				A774F2111F241BFA002B4DC7 /* Scalable.cpp in Sources */,
 				A79613221F105729004CB1A8 /* Animateable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,8 +6,8 @@
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
-#ifndef Areable_hpp
-#define Areable_hpp
+#ifndef CoreAreable_hpp
+#define CoreAreable_hpp
 
 #include <stdio.h>
 #include "Rotateable.hpp"

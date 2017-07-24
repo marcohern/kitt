@@ -72,7 +72,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="kitt\Behaviors\Directable.cpp" />
+    <ClCompile Include="kitt\Behaviors\Growable.cpp" />
     <ClCompile Include="kitt\Behaviors\Placeable.cpp" />
+    <ClCompile Include="kitt\Behaviors\Scalable.cpp" />
     <ClCompile Include="kitt\Content\FileReader.cpp" />
     <ClCompile Include="kitt\Content\IReader.cpp" />
     <ClCompile Include="kitt\Content\SdlFileReader.cpp" />
@@ -83,6 +86,7 @@
     <ClCompile Include="kitt\Core\ConfigFileSettings.cpp" />
     <ClCompile Include="kitt\Core\Directable.cpp" />
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp" />
+    <ClCompile Include="kitt\Core\Placeable.cpp" />
     <ClCompile Include="kitt\Core\Rotateable.cpp" />
     <ClCompile Include="kitt\Core\Settings.cpp" />
     <ClCompile Include="kitt\Core\TimeInjector.cpp" />
@@ -91,7 +95,6 @@
     <ClCompile Include="kitt\Core\Matrix.cpp" />
     <ClCompile Include="kitt\Core\MemoizedTrigonometry.cpp" />
     <ClCompile Include="kitt\Core\Object.cpp" />
-    <ClCompile Include="kitt\Core\Placeable.cpp" />
     <ClCompile Include="kitt\Core\RealtimeTrigonometry.cpp" />
     <ClCompile Include="kitt\Core\SdlTime.cpp" />
     <ClCompile Include="kitt\Core\Time.cpp" />
@@ -121,27 +124,34 @@
     <ClCompile Include="kitt\Testing\Test.cpp" />
     <ClCompile Include="kitt\Testing\TestRunner.cpp" />
     <ClCompile Include="kitt\Testing\TestSuite.cpp" />
+    <ClCompile Include="kitt\Tests\DirectableTest.cpp" />
+    <ClCompile Include="kitt\Tests\GrowableTest.cpp" />
     <ClCompile Include="kitt\Tests\KittTestSuite.cpp" />
     <ClCompile Include="kitt\Tests\MatrixTests.cpp" />
     <ClCompile Include="kitt\Tests\MemoizedTrigonometryTests.cpp" />
     <ClCompile Include="kitt\Tests\PlaceableTest.cpp" />
     <ClCompile Include="kitt\Tests\RealtimeTrigonometryTests.cpp" />
+    <ClCompile Include="kitt\Tests\ScalableTest.cpp" />
     <ClCompile Include="kitt\Tests\SdlTimeTests.cpp" />
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="kitt\Behaviors\Directable.hpp" />
+    <ClInclude Include="kitt\Behaviors\Growable.hpp" />
     <ClInclude Include="kitt\Behaviors\Placeable.hpp" />
+    <ClInclude Include="kitt\Behaviors\Scalable.hpp" />
     <ClInclude Include="kitt\Content\FileReader.hpp" />
     <ClInclude Include="kitt\Content\IReader.hpp" />
     <ClInclude Include="kitt\Content\SdlFileReader.hpp" />
     <ClInclude Include="kitt\Content\ZipReader.hpp" />
-    <ClInclude Include="kitt\Core\Animateable.hpp" />
     <ClInclude Include="kitt\constants.hpp" />
+    <ClInclude Include="kitt\Core\Animateable.hpp" />
     <ClInclude Include="kitt\Core\Areable.hpp" />
     <ClInclude Include="kitt\Core\Camera.hpp" />
     <ClInclude Include="kitt\Core\ConfigFileSettings.hpp" />
     <ClInclude Include="kitt\Core\Directable.hpp" />
     <ClInclude Include="kitt\Core\HasTrigonometry.hpp" />
+    <ClInclude Include="kitt\Core\Placeable.hpp" />
     <ClInclude Include="kitt\Core\Rotateable.hpp" />
     <ClInclude Include="kitt\Core\Settings.hpp" />
     <ClInclude Include="kitt\Core\TimeInjector.hpp" />
@@ -150,7 +160,6 @@
     <ClInclude Include="kitt\Core\Matrix.hpp" />
     <ClInclude Include="kitt\Core\MemoizedTrigonometry.hpp" />
     <ClInclude Include="kitt\Core\Object.hpp" />
-    <ClInclude Include="kitt\Core\Placeable.hpp" />
     <ClInclude Include="kitt\Core\RealtimeTrigonometry.hpp" />
     <ClInclude Include="kitt\Core\SdlTime.hpp" />
     <ClInclude Include="kitt\Core\Time.hpp" />
@@ -182,11 +191,14 @@
     <ClInclude Include="kitt\Testing\Test.hpp" />
     <ClInclude Include="kitt\Testing\TestRunner.hpp" />
     <ClInclude Include="kitt\Testing\TestSuite.hpp" />
+    <ClInclude Include="kitt\Tests\DirectableTest.hpp" />
+    <ClInclude Include="kitt\Tests\GrowableTest.hpp" />
     <ClInclude Include="kitt\Tests\KittTestSuite.hpp" />
     <ClInclude Include="kitt\Tests\MatrixTests.hpp" />
     <ClInclude Include="kitt\Tests\MemoizedTrigonometryTests.hpp" />
     <ClInclude Include="kitt\Tests\PlaceableTest.hpp" />
     <ClInclude Include="kitt\Tests\RealtimeTrigonometryTests.hpp" />
+    <ClInclude Include="kitt\Tests\ScalableTest.hpp" />
     <ClInclude Include="kitt\Tests\SdlTimeTests.hpp" />
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp" />
     <ClInclude Include="resource.h" />

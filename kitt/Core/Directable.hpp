@@ -6,8 +6,8 @@
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
-#ifndef Directable_hpp
-#define Directable_hpp
+#ifndef CoreDirectable_hpp
+#define CoreDirectable_hpp
 
 #include <stdio.h>
 #include "./Placeable.hpp"
@@ -45,4 +45,4 @@ namespace Core {
 		virtual void update(double interval);
     };
 }
-#endif /* Directable_hpp */
+#endif /* CoreDirectable_hpp */

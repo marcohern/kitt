@@ -6,8 +6,8 @@
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
-#ifndef Placeable_hpp
-#define Placeable_hpp
+#ifndef CorePlaceable_hpp
+#define CorePlaceable_hpp
 
 #include <stdio.h>
 #include "./Vector2D.hpp"

@@ -7,6 +7,7 @@
 #include "./DirectableTest.hpp"
 #include "./ScalableTest.hpp"
 #include "./GrowableTest.hpp"
+#include "./RotateableTest.hpp"
 
 namespace Tests {
     
@@ -20,6 +21,7 @@ namespace Tests {
         this->add(new DirectableTest());
         this->add(new ScalableTest());
         this->add(new GrowableTest());
+        this->add(new RotateableTest());
 	}
 
     void KittTestSuite::teardown() {

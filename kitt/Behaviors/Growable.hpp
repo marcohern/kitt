@@ -15,7 +15,7 @@
 
 namespace Behaviors{
     class Growable : public Scalable {
-    private:
+    protected:
         Vector2D growthRate;
         
     public:

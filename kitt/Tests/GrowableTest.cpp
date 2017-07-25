@@ -124,16 +124,16 @@ namespace Tests {
 
     void GrowableTest::run() {
         
-        runtest("constructor_Test",&GrowableTest::constructor_Test);
-        runtest("constructor_Trigo_Test",&GrowableTest::constructor_Trigo_Test);
-        runtest("setGrowthRate_G_Test",&GrowableTest::setGrowthRate_G_Test);
-        runtest("setGrowthRate_GV_Test",&GrowableTest::setGrowthRate_GV_Test);
-        runtest("getGrowthRate_Test",&GrowableTest::getGrowthRate_Test);
-        runtest("getGrowthRateX_Test",&GrowableTest::getGrowthRateX_Test);
-        runtest("getGrowthRateY_Test",&GrowableTest::getGrowthRateY_Test);
-        runtest("addGrowth_S_Test",&GrowableTest::addGrowth_S_Test);
-        runtest("addGrowth_V_Test",&GrowableTest::addGrowth_V_Test);
-        runtest("multiplyGrowth_S_Test",&GrowableTest::multiplyGrowth_S_Test);
-        runtest("updateScale_Test",&GrowableTest::updateScale_Test);
+        runtest("constructor_Test-------",&GrowableTest::constructor_Test);
+        runtest("constructor_Trigo_Test-",&GrowableTest::constructor_Trigo_Test);
+        runtest("setGrowthRate_G_Test---",&GrowableTest::setGrowthRate_G_Test);
+        runtest("setGrowthRate_GV_Test--",&GrowableTest::setGrowthRate_GV_Test);
+        runtest("getGrowthRate_Test-----",&GrowableTest::getGrowthRate_Test);
+        runtest("getGrowthRateX_Test----",&GrowableTest::getGrowthRateX_Test);
+        runtest("getGrowthRateY_Test----",&GrowableTest::getGrowthRateY_Test);
+        runtest("addGrowth_S_Test-------",&GrowableTest::addGrowth_S_Test);
+        runtest("addGrowth_V_Test-------",&GrowableTest::addGrowth_V_Test);
+        runtest("multiplyGrowth_S_Test--",&GrowableTest::multiplyGrowth_S_Test);
+        runtest("updateScale_Test-------",&GrowableTest::updateScale_Test);
     }
 }

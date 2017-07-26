@@ -6,8 +6,8 @@
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
-#ifndef Rotateable_hpp
-#define Rotateable_hpp
+#ifndef Angleable_hpp
+#define Angleable_hpp
 
 #include "../Core/Vector2D.hpp"
 #include "../Core/Trigonometry.hpp"

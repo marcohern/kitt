@@ -15,28 +15,28 @@
 namespace Behaviors {
     using namespace Core;
     
-    class Rotateable {
+    class Angleable {
     protected:
         double angle;
         Vector2D rotatePivot;
         
         
     public:
-        Rotateable();
-        Rotateable(double radians);
-        Rotateable(double px, double py);
-        Rotateable(const Vector2D &pivot);
-        Rotateable(double px, double py, double radians);
-        Rotateable(const Vector2D &pivot, double radians);
+        Angleable();
+        Angleable(double radians);
+        Angleable(double px, double py);
+        Angleable(const Vector2D &pivot);
+        Angleable(double px, double py, double radians);
+        Angleable(const Vector2D &pivot, double radians);
         
-        Rotateable(Trigonometry *trigo);
-        Rotateable(double radians, Trigonometry *trigo);
-        Rotateable(const Vector2D &pivot, Trigonometry *trigo);
-        Rotateable(double px, double py, Trigonometry *trigo);
-        Rotateable(const Vector2D &pivot, double radians, Trigonometry *trigo);
-        Rotateable(double px, double py, double radians, Trigonometry *trigo);
+        Angleable(Trigonometry *trigo);
+        Angleable(double radians, Trigonometry *trigo);
+        Angleable(const Vector2D &pivot, Trigonometry *trigo);
+        Angleable(double px, double py, Trigonometry *trigo);
+        Angleable(const Vector2D &pivot, double radians, Trigonometry *trigo);
+        Angleable(double px, double py, double radians, Trigonometry *trigo);
         
-        virtual ~Rotateable();
+        virtual ~Angleable();
         
         void setAngle(double radians);
         void setRotatePivot(double px, double py);

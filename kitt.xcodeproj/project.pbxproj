@@ -53,8 +53,8 @@
 		A774F2141F253087002B4DC7 /* ScalableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2121F253087002B4DC7 /* ScalableTest.cpp */; };
 		A774F2171F253B61002B4DC7 /* Growable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2151F253B61002B4DC7 /* Growable.cpp */; };
 		A774F21A1F2541DC002B4DC7 /* GrowableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2181F2541DC002B4DC7 /* GrowableTest.cpp */; };
-		A774F2201F25583A002B4DC7 /* Rotateable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F21E1F25583A002B4DC7 /* Rotateable.cpp */; };
-		A774F2231F255C4B002B4DC7 /* RotateableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2211F255C4B002B4DC7 /* RotateableTest.cpp */; };
+		A774F2201F25583A002B4DC7 /* Angleable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F21E1F25583A002B4DC7 /* Angleable.cpp */; };
+		A774F2231F255C4B002B4DC7 /* AngleableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2211F255C4B002B4DC7 /* AngleableTest.cpp */; };
 		A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */; };
 		A78B3DB91F0F16EE0080E8F6 /* SignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB61F0F16EE0080E8F6 /* SignalManager.cpp */; };
 		A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613091F0F1B9B004CB1A8 /* SdlFileReader.cpp */; };
@@ -185,10 +185,10 @@
 		A774F2161F253B61002B4DC7 /* Growable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Growable.hpp; path = Behaviors/Growable.hpp; sourceTree = "<group>"; };
 		A774F2181F2541DC002B4DC7 /* GrowableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GrowableTest.cpp; sourceTree = "<group>"; };
 		A774F2191F2541DC002B4DC7 /* GrowableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GrowableTest.hpp; sourceTree = "<group>"; };
-		A774F21E1F25583A002B4DC7 /* Rotateable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Rotateable.cpp; path = Behaviors/Rotateable.cpp; sourceTree = "<group>"; };
-		A774F21F1F25583A002B4DC7 /* Rotateable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Rotateable.hpp; path = Behaviors/Rotateable.hpp; sourceTree = "<group>"; };
-		A774F2211F255C4B002B4DC7 /* RotateableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RotateableTest.cpp; sourceTree = "<group>"; };
-		A774F2221F255C4B002B4DC7 /* RotateableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RotateableTest.hpp; sourceTree = "<group>"; };
+		A774F21E1F25583A002B4DC7 /* Angleable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Angleable.cpp; path = Behaviors/Angleable.cpp; sourceTree = "<group>"; };
+		A774F21F1F25583A002B4DC7 /* Angleable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Angleable.hpp; path = Behaviors/Angleable.hpp; sourceTree = "<group>"; };
+		A774F2211F255C4B002B4DC7 /* AngleableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AngleableTest.cpp; sourceTree = "<group>"; };
+		A774F2221F255C4B002B4DC7 /* AngleableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AngleableTest.hpp; sourceTree = "<group>"; };
 		A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SdlSignalManager.cpp; path = Input/SdlSignalManager.cpp; sourceTree = "<group>"; };
 		A78B3DB41F0F16EE0080E8F6 /* SdlSignalManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SdlSignalManager.hpp; path = Input/SdlSignalManager.hpp; sourceTree = "<group>"; };
 		A78B3DB51F0F16EE0080E8F6 /* Signal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Signal.hpp; path = Input/Signal.hpp; sourceTree = "<group>"; };
@@ -425,8 +425,8 @@
 				A774F2131F253087002B4DC7 /* ScalableTest.hpp */,
 				A774F2181F2541DC002B4DC7 /* GrowableTest.cpp */,
 				A774F2191F2541DC002B4DC7 /* GrowableTest.hpp */,
-				A774F2211F255C4B002B4DC7 /* RotateableTest.cpp */,
-				A774F2221F255C4B002B4DC7 /* RotateableTest.hpp */,
+				A774F2211F255C4B002B4DC7 /* AngleableTest.cpp */,
+				A774F2221F255C4B002B4DC7 /* AngleableTest.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -471,8 +471,8 @@
 				A774F2101F241BFA002B4DC7 /* Scalable.hpp */,
 				A774F2151F253B61002B4DC7 /* Growable.cpp */,
 				A774F2161F253B61002B4DC7 /* Growable.hpp */,
-				A774F21E1F25583A002B4DC7 /* Rotateable.cpp */,
-				A774F21F1F25583A002B4DC7 /* Rotateable.hpp */,
+				A774F21E1F25583A002B4DC7 /* Angleable.cpp */,
+				A774F21F1F25583A002B4DC7 /* Angleable.hpp */,
 			);
 			name = Behaviors;
 			sourceTree = "<group>";
@@ -594,7 +594,7 @@
 				A72550841F0CA18D00301290 /* TestRunner.cpp in Sources */,
 				A796132B1F113E15004CB1A8 /* Camera.cpp in Sources */,
 				A79613111F0F1E7C004CB1A8 /* Color.cpp in Sources */,
-				A774F2201F25583A002B4DC7 /* Rotateable.cpp in Sources */,
+				A774F2201F25583A002B4DC7 /* Angleable.cpp in Sources */,
 				A79613241F105729004CB1A8 /* TimeInjector.cpp in Sources */,
 				A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */,
 				A725507E1F0CA18D00301290 /* SdlWindow.cpp in Sources */,
@@ -624,7 +624,7 @@
 				A725507A1F0CA18D00301290 /* Game.cpp in Sources */,
 				A725508A1F0CA18D00301290 /* SdlTimeTests.cpp in Sources */,
 				A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */,
-				A774F2231F255C4B002B4DC7 /* RotateableTest.cpp in Sources */,
+				A774F2231F255C4B002B4DC7 /* AngleableTest.cpp in Sources */,
 				A72550691F0CA18D00301290 /* MemoizedTrigonometry.cpp in Sources */,
 				A774F2141F253087002B4DC7 /* ScalableTest.cpp in Sources */,
 				A72550891F0CA18D00301290 /* RealtimeTrigonometryTests.cpp in Sources */,

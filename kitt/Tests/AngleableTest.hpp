@@ -1,13 +1,13 @@
 //
-//  RotateableTest.hpp
+//  AngleableTest.hpp
 //  kitt
 //
 //  Created by Marco Hernandez on 23/07/17.
 //  Copyright © 2017 Marco Hernandez. All rights reserved.
 //
 
-#ifndef RotateableTest_hpp
-#define RotateableTest_hpp
+#ifndef AngleableTest_hpp
+#define AngleableTest_hpp
 
 
 #include "../Core/Trigonometry.hpp"
@@ -17,17 +17,17 @@ namespace Tests {
     using namespace Testing;
     using namespace Core;
     
-    class RotateableTest;
-    typedef void (RotateableTest::*RotateableTestMethod)();
+    class AngleableTest;
+    typedef void (AngleableTest::*AngleableTestMethod)();
     
-    class RotateableTest : public Test {
+    class AngleableTest : public Test {
     private:
         Trigonometry *trigonometry;
     public:
         
         void setup();
         void teardown();
-        void runtest(string name, RotateableTestMethod method);
+        void runtest(string name, AngleableTestMethod method);
         
         void constructor_Test();
         void constructor_R_Test();
@@ -60,4 +60,4 @@ namespace Tests {
 }
 
 
-#endif /* RotateableTest_hpp */
+#endif /* AngleableTest_hpp */

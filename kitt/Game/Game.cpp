@@ -14,6 +14,7 @@
 #include "../Content/SdlFileReader.hpp"
 #include "../Graphics/SdlWindow.hpp"
 #include "../Input/SdlSignalManager.hpp"
+#include "../Core/Placeable.hpp"
 
 #include "../Core/TimeInjector.hpp"
 #include "../Exceptions/KittException.hpp"

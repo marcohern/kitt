@@ -155,6 +155,11 @@
     <ClCompile Include="kitt\Tests\ScalableTest.cpp" />
     <ClCompile Include="kitt\Core\Placeable.cpp" />
     <ClCompile Include="kitt\Core\Rotateable.cpp" />
+    <ClCompile Include="kitt\Behaviors\Angleable.cpp" />
+    <ClCompile Include="kitt\Behaviors\Rotateable.cpp" />
+    <ClCompile Include="kitt\Tests\AngleableTest.cpp" />
+    <ClCompile Include="kitt\Tests\RotateableTest.cpp" />
+    <ClCompile Include="kitt\Behaviors\Areable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -317,6 +322,11 @@
     <ClInclude Include="kitt\Tests\ScalableTest.hpp" />
     <ClInclude Include="kitt\Core\Placeable.hpp" />
     <ClInclude Include="kitt\Core\Rotateable.hpp" />
+    <ClInclude Include="kitt\Behaviors\Angleable.hpp" />
+    <ClInclude Include="kitt\Behaviors\Rotateable.hpp" />
+    <ClInclude Include="kitt\Tests\AngleableTest.hpp" />
+    <ClInclude Include="kitt\Tests\RotateableTest.hpp" />
+    <ClInclude Include="kitt\Behaviors\Areable.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

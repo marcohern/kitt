@@ -21,12 +21,14 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{F9940BAD-773E-422D-86BC-7AC531804B9E}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -72,9 +74,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="kitt\Behaviors\Angleable.cpp" />
+    <ClCompile Include="kitt\Behaviors\Areable.cpp" />
     <ClCompile Include="kitt\Behaviors\Directable.cpp" />
     <ClCompile Include="kitt\Behaviors\Growable.cpp" />
     <ClCompile Include="kitt\Behaviors\Placeable.cpp" />
+    <ClCompile Include="kitt\Behaviors\Rotateable.cpp" />
     <ClCompile Include="kitt\Behaviors\Scalable.cpp" />
     <ClCompile Include="kitt\Content\FileReader.cpp" />
     <ClCompile Include="kitt\Content\IReader.cpp" />
@@ -124,6 +129,7 @@
     <ClCompile Include="kitt\Testing\Test.cpp" />
     <ClCompile Include="kitt\Testing\TestRunner.cpp" />
     <ClCompile Include="kitt\Testing\TestSuite.cpp" />
+    <ClCompile Include="kitt\Tests\AngleableTest.cpp" />
     <ClCompile Include="kitt\Tests\DirectableTest.cpp" />
     <ClCompile Include="kitt\Tests\GrowableTest.cpp" />
     <ClCompile Include="kitt\Tests\KittTestSuite.cpp" />
@@ -131,14 +137,18 @@
     <ClCompile Include="kitt\Tests\MemoizedTrigonometryTests.cpp" />
     <ClCompile Include="kitt\Tests\PlaceableTest.cpp" />
     <ClCompile Include="kitt\Tests\RealtimeTrigonometryTests.cpp" />
+    <ClCompile Include="kitt\Tests\RotateableTest.cpp" />
     <ClCompile Include="kitt\Tests\ScalableTest.cpp" />
     <ClCompile Include="kitt\Tests\SdlTimeTests.cpp" />
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="kitt\Behaviors\Angleable.hpp" />
+    <ClInclude Include="kitt\Behaviors\Areable.hpp" />
     <ClInclude Include="kitt\Behaviors\Directable.hpp" />
     <ClInclude Include="kitt\Behaviors\Growable.hpp" />
     <ClInclude Include="kitt\Behaviors\Placeable.hpp" />
+    <ClInclude Include="kitt\Behaviors\Rotateable.hpp" />
     <ClInclude Include="kitt\Behaviors\Scalable.hpp" />
     <ClInclude Include="kitt\Content\FileReader.hpp" />
     <ClInclude Include="kitt\Content\IReader.hpp" />
@@ -191,6 +201,7 @@
     <ClInclude Include="kitt\Testing\Test.hpp" />
     <ClInclude Include="kitt\Testing\TestRunner.hpp" />
     <ClInclude Include="kitt\Testing\TestSuite.hpp" />
+    <ClInclude Include="kitt\Tests\AngleableTest.hpp" />
     <ClInclude Include="kitt\Tests\DirectableTest.hpp" />
     <ClInclude Include="kitt\Tests\GrowableTest.hpp" />
     <ClInclude Include="kitt\Tests\KittTestSuite.hpp" />
@@ -198,6 +209,7 @@
     <ClInclude Include="kitt\Tests\MemoizedTrigonometryTests.hpp" />
     <ClInclude Include="kitt\Tests\PlaceableTest.hpp" />
     <ClInclude Include="kitt\Tests\RealtimeTrigonometryTests.hpp" />
+    <ClInclude Include="kitt\Tests\RotateableTest.hpp" />
     <ClInclude Include="kitt\Tests\ScalableTest.hpp" />
     <ClInclude Include="kitt\Tests\SdlTimeTests.hpp" />
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp" />

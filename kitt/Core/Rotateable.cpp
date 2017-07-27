@@ -4,43 +4,43 @@
 namespace Core {
 
 	Rotateable::Rotateable()
-		: Directable(), deltaAngle(0) {}
+		: Directable(), deltaAngle() {}
 
 	Rotateable::Rotateable(double x, double y)
-		: Directable(x, y), deltaAngle(0) {}
+		: Directable(x, y), deltaAngle() {}
 
 	Rotateable::Rotateable(double x, double y, double dx, double dy)
-		: Directable(x, y, dx, dy), deltaAngle(0) {}
+		: Directable(x, y, dx, dy), deltaAngle() {}
 
 	Rotateable::Rotateable(double x, double y, double dx, double dy, double radians) 
 		: Directable(x,y,dx,dy), deltaAngle(radians) {}
 
 	Rotateable::Rotateable(const Vector2D &loc)
-		: Directable(loc), deltaAngle(0) {}
+		: Directable(loc), deltaAngle() {}
 
 	Rotateable::Rotateable(const Vector2D &loc, const Vector2D &dir)
-		: Directable(loc, dir), deltaAngle(0) {}
+		: Directable(loc, dir), deltaAngle() {}
 
 	Rotateable::Rotateable(const Vector2D &loc, const Vector2D &dir, double radians)
 		: Directable(loc, dir), deltaAngle(radians) {}
 
 
 	Rotateable::Rotateable(Trigonometry *trigo)
-		: Directable(trigo), deltaAngle(0) {}
+		: Directable(trigo), deltaAngle() {}
 
 	Rotateable::Rotateable(double x, double y, Trigonometry *trigo)
-		: Directable(x, y, trigo), deltaAngle(0) {}
+		: Directable(x, y, trigo), deltaAngle() {}
 	Rotateable::Rotateable(double x, double y, double dx, double dy, Trigonometry *trigo)
-		: Directable(x, y, dx, dy, trigo), deltaAngle(0) {}
+		: Directable(x, y, dx, dy, trigo), deltaAngle() {}
 
 	Rotateable::Rotateable(double x, double y, double dx, double dy, double radians, Trigonometry *trigo)
 		: Directable(x, y, dx, dy, trigo), deltaAngle(radians) {}
 
 	Rotateable::Rotateable(const Vector2D &loc, Trigonometry *trigo)
-		: Directable(loc, trigo), deltaAngle(0) {}
+		: Directable(loc, trigo), deltaAngle() {}
 
 	Rotateable::Rotateable(const Vector2D &loc, const Vector2D &dir, Trigonometry *trigo)
-		: Directable(loc, dir, trigo), deltaAngle(0) {}
+		: Directable(loc, dir, trigo), deltaAngle() {}
 
 	Rotateable::Rotateable(const Vector2D &loc, const Vector2D &dir, double radians, Trigonometry *trigo)
 		: Directable(loc, dir, trigo), deltaAngle(radians) {}

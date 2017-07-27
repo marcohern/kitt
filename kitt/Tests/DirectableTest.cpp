@@ -79,8 +79,8 @@ namespace Tests {
     }
     
     void DirectableTest::constructor_TrigoV_Test(){
-        Vector2D v(1.23, 4.56, trigonometry);
-        Directable directable(v);
+        Vector2D v(1.23, 4.56);
+        Directable directable(v, trigonometry);
         assert.areEqual(directable.getDirection().getX(), 0.0);
         assert.areEqual(directable.getDirection().getY(), 0.0);
         assert.areEqual(directable.getLocation().getX(), 1.23);

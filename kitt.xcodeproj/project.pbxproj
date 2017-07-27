@@ -76,6 +76,8 @@
 		A7BAC2C01F1DB89A0050E985 /* PlaceableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2BE1F1DB89A0050E985 /* PlaceableTest.cpp */; };
 		A7BAC2C91F1F057A0050E985 /* Directable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2C71F1F057A0050E985 /* Directable.cpp */; };
 		A7BAC2CC1F1F0B270050E985 /* DirectableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2CA1F1F0B270050E985 /* DirectableTest.cpp */; };
+		A7E7D46B1F29A27A00CBB83D /* Areable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E7D4691F29A27A00CBB83D /* Areable.cpp */; };
+		A7E7D46E1F29A81600CBB83D /* AreableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E7D46C1F29A81600CBB83D /* AreableTest.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
 /* End PBXBuildFile section */
@@ -236,6 +238,10 @@
 		A7BAC2C81F1F057A0050E985 /* Directable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Directable.hpp; path = Behaviors/Directable.hpp; sourceTree = "<group>"; };
 		A7BAC2CA1F1F0B270050E985 /* DirectableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectableTest.cpp; sourceTree = "<group>"; };
 		A7BAC2CB1F1F0B270050E985 /* DirectableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DirectableTest.hpp; sourceTree = "<group>"; };
+		A7E7D4691F29A27A00CBB83D /* Areable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Areable.cpp; path = Behaviors/Areable.cpp; sourceTree = "<group>"; };
+		A7E7D46A1F29A27A00CBB83D /* Areable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Areable.hpp; path = Behaviors/Areable.hpp; sourceTree = "<group>"; };
+		A7E7D46C1F29A81600CBB83D /* AreableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AreableTest.cpp; sourceTree = "<group>"; };
+		A7E7D46D1F29A81600CBB83D /* AreableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AreableTest.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -435,6 +441,8 @@
 				A774F2221F255C4B002B4DC7 /* AngleableTest.hpp */,
 				A774F2271F2828D9002B4DC7 /* RotateableTest.cpp */,
 				A774F2281F2828D9002B4DC7 /* RotateableTest.hpp */,
+				A7E7D46C1F29A81600CBB83D /* AreableTest.cpp */,
+				A7E7D46D1F29A81600CBB83D /* AreableTest.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -483,6 +491,8 @@
 				A774F21F1F25583A002B4DC7 /* Angleable.hpp */,
 				A774F2241F282543002B4DC7 /* Rotateable.cpp */,
 				A774F2251F282543002B4DC7 /* Rotateable.hpp */,
+				A7E7D4691F29A27A00CBB83D /* Areable.cpp */,
+				A7E7D46A1F29A27A00CBB83D /* Areable.hpp */,
 			);
 			name = Behaviors;
 			sourceTree = "<group>";
@@ -578,6 +588,7 @@
 				A725506E1F0CA18D00301290 /* SdlTime.cpp in Sources */,
 				A72550861F0CA18D00301290 /* KittTestSuite.cpp in Sources */,
 				A72550661F0CA18D00301290 /* Directable.cpp in Sources */,
+				A7E7D46E1F29A81600CBB83D /* AreableTest.cpp in Sources */,
 				A72550831F0CA18D00301290 /* Test.cpp in Sources */,
 				A72550731F0CA18D00301290 /* Vector2D.cpp in Sources */,
 				A7BAC2CC1F1F0B270050E985 /* DirectableTest.cpp in Sources */,
@@ -631,6 +642,7 @@
 				A79613231F105729004CB1A8 /* Rotateable.cpp in Sources */,
 				A72550751F0CA18D00301290 /* DivideByZeroException.cpp in Sources */,
 				A725506F1F0CA18D00301290 /* Time.cpp in Sources */,
+				A7E7D46B1F29A27A00CBB83D /* Areable.cpp in Sources */,
 				A796132E1F114E45004CB1A8 /* Renderable.cpp in Sources */,
 				A72550771F0CA18D00301290 /* MismatchException.cpp in Sources */,
 				A725507A1F0CA18D00301290 /* Game.cpp in Sources */,

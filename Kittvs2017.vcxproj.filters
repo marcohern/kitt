@@ -156,10 +156,6 @@
     <ClCompile Include="kitt\Tests\AngleableTest.cpp" />
     <ClCompile Include="kitt\Tests\RotateableTest.cpp" />
     <ClCompile Include="kitt\Behaviors\Areable.cpp" />
-    <ClCompile Include="kitt\Core\_Placeable.cpp" />
-    <ClCompile Include="kitt\Core\_Directable.cpp" />
-    <ClCompile Include="kitt\Core\_Areable.cpp" />
-    <ClCompile Include="kitt\Core\_Rotateable.cpp" />
     <ClCompile Include="kitt\Tests\AreableTest.cpp" />
     <ClCompile Include="kitt\Behaviors\Transformable.cpp" />
   </ItemGroup>
@@ -325,10 +321,6 @@
     <ClInclude Include="kitt\Tests\AngleableTest.hpp" />
     <ClInclude Include="kitt\Tests\RotateableTest.hpp" />
     <ClInclude Include="kitt\Behaviors\Areable.hpp" />
-    <ClInclude Include="kitt\Core\_Placeable.hpp" />
-    <ClInclude Include="kitt\Core\_Directable.hpp" />
-    <ClInclude Include="kitt\Core\_Areable.hpp" />
-    <ClInclude Include="kitt\Core\_Rotateable.hpp" />
     <ClInclude Include="kitt\Tests\AreableTest.hpp" />
     <ClInclude Include="kitt\Behaviors\Transformable.hpp" />
   </ItemGroup>

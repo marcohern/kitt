@@ -10,11 +10,12 @@
 #define Renderable_hpp
 
 #include <stdio.h>
-#include "../Core/_Areable.hpp"
+#include "../Behaviors/Areable.hpp"
 #include "Renderer.hpp"
 
 namespace Graphics {
     using namespace Core;
+	using namespace Behaviors;
     
     class Renderable : public Areable {
     protected:

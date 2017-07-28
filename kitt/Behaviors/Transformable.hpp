@@ -5,14 +5,16 @@
 #include "Directable.hpp"
 #include "Growable.hpp"
 #include "Rotateable.hpp"
+#include "Areable.hpp"
 
 namespace Behaviors {
 	using namespace Core;
 
-	class Transformable : public Directable, public Growable, public Rotateable
+	class Transformable : public Directable, public Growable, public Rotateable, public Areable
 	{
 	private:
 		bool rotateDirection = false;
+		bool growArea = false;
 
 	public:
 		Transformable();

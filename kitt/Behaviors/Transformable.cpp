@@ -10,27 +10,27 @@ namespace Behaviors {
 	}
 
 	Transformable::Transformable(double x, double y)
-		: Directable(x,y), Growable(), Rotateable()
+		: Directable(x,y), Growable(), Rotateable(), Areable()
 	{
 	}
 
 	Transformable::Transformable(const Vector2D &location)
-		: Directable(location), Growable(), Rotateable()
+		: Directable(location), Growable(), Rotateable(), Areable()
 	{
 	}
 
 	Transformable::Transformable(Trigonometry *trigo)
-		: Directable(trigo), Growable(trigo), Rotateable(trigo)
+		: Directable(trigo), Growable(trigo), Rotateable(trigo), Areable(trigo)
 	{
 	}
 
 	Transformable::Transformable(double x, double y, Trigonometry *trigo)
-		: Directable(x, y, trigo), Growable(trigo), Rotateable(trigo)
+		: Directable(x, y, trigo), Growable(trigo), Rotateable(trigo), Areable(trigo)
 	{
 	}
 
 	Transformable::Transformable(const Vector2D &location, Trigonometry *trigo)
-		: Directable(location, trigo), Growable(trigo), Rotateable(trigo)
+		: Directable(location, trigo), Growable(trigo), Rotateable(trigo), Areable(trigo)
 	{
 	}
 
@@ -44,7 +44,6 @@ namespace Behaviors {
 
 	void Transformable::setRotateDirection(bool rotateDirection) {
 		this->rotateDirection = rotateDirection;
-		angle = direction.angle();
 	}
 
 	void Transformable::updateTransform(double interval) {
@@ -53,6 +52,9 @@ namespace Behaviors {
 		updateAngle(interval);
 		if (rotateDirection) {
 			direction.rotate(rotationRate * interval);
+		}
+		if (growArea) {
+			area.add(growthRate);
 		}
 	}
 }

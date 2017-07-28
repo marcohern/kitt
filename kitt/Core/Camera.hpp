@@ -10,12 +10,11 @@
 #define Camera_hpp
 
 #include <stdio.h>
-#include "_Directable.hpp"
 #include "Trigonometry.hpp"
 
 
 namespace Core {
-    class Camera : public Placeable {
+    class Camera {
     
     };
 }

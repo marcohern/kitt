@@ -17,12 +17,12 @@ namespace Graphics
     }
     
     Renderable::Renderable(const Vector2D &location)
-    : Areable(location, Vector2D(0,0)) {
+    : Areable() {
         
     }
     
     Renderable::Renderable(const Vector2D &location, const Vector2D &size,const Vector2D &pivot)
-    : Areable(location, size, pivot) {
+    : Areable(size) {
         
     }
     Renderable::Renderable(Renderer *renderer, Trigonometry *trigo)
@@ -30,11 +30,11 @@ namespace Graphics
         
     }
     Renderable::Renderable(const Vector2D &location,Renderer *renderer, Trigonometry *trigo)
-    : Areable(location, Vector2D(0,0,trigo), trigo) {
+    : Areable(trigo) {
         
     }
     Renderable::Renderable(const Vector2D &location, const Vector2D &size,const Vector2D &pivot,Renderer *renderer, Trigonometry *trigo)
-    : Areable(location, size, pivot, trigo) {
+    : Areable(size, trigo) {
         
     }
     

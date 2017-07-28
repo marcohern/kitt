@@ -17,13 +17,14 @@
 #include "../Content/IReader.hpp"
 #include "../Input/SignalManager.hpp"
 #include "../Input/Signal.hpp"
-#include "../Core/_Rotateable.hpp"
+#include "../Behaviors/Transformable.hpp"
 
 namespace Game {
 	using namespace Core;
 	using namespace Content;
 	using namespace Graphics;
 	using namespace Input;
+	using namespace Behaviors;
 
     class Game {
     private:
@@ -35,7 +36,7 @@ namespace Game {
 
 		IReader *reader;
 		Texture *font;
-		Rotateable v1;
+		Transformable v1;
         
     public:
 		Game();

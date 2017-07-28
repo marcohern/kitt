@@ -161,6 +161,7 @@
     <ClCompile Include="kitt\Core\_Areable.cpp" />
     <ClCompile Include="kitt\Core\_Rotateable.cpp" />
     <ClCompile Include="kitt\Tests\AreableTest.cpp" />
+    <ClCompile Include="kitt\Behaviors\Transformable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -329,6 +330,7 @@
     <ClInclude Include="kitt\Core\_Areable.hpp" />
     <ClInclude Include="kitt\Core\_Rotateable.hpp" />
     <ClInclude Include="kitt\Tests\AreableTest.hpp" />
+    <ClInclude Include="kitt\Behaviors\Transformable.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

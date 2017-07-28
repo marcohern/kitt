@@ -14,7 +14,6 @@
 #include "../Content/SdlFileReader.hpp"
 #include "../Graphics/SdlWindow.hpp"
 #include "../Input/SdlSignalManager.hpp"
-#include "../Core/_Placeable.hpp"
 
 #include "../Core/TimeInjector.hpp"
 #include "../Exceptions/KittException.hpp"
@@ -44,7 +43,8 @@ namespace Game {
 		signalm = new SdlSignalManager();
         v1.setLocation(500,250);
         v1.setDirection(20, 40);
-        v1.setDeltaAngle(TAU);
+        v1.setRotationRate(TAU);
+		v1.setRotateDirection(true);
 		time = TimeInjector::inject();
 		window = new SdlWindow(TITLE, 1280, 720, false);
 		renderer = window->getRenderer();
@@ -53,7 +53,7 @@ namespace Game {
 	}
 
 	void Game::update() {
-        v1.update(time->getDelta());
+        v1.updateTransform(time->getDelta());
 		Signal *signals = signalm->getSignals();
 		onevent(signals);
 		

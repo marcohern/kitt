@@ -142,6 +142,7 @@
     <ClCompile Include="kitt\Tests\ScalableTest.cpp" />
     <ClCompile Include="kitt\Tests\SdlTimeTests.cpp" />
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp" />
+    <ClCompile Include="kitt\Behaviors\Transformable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Behaviors\Angleable.hpp" />
@@ -216,6 +217,7 @@
     <ClInclude Include="kitt\Tests\SdlTimeTests.hpp" />
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="kitt\Behaviors\Transformable.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

@@ -235,18 +235,17 @@ int main(int argc, char* argv[])
 	int size = PHYSFS_fileLength(file);
 	
 	PHYSFS_close(file);
-	PHYSFS_deinit();
+	PHYSFS_deinit();*/
      
 	Game::Game game;
 	game.run();
      return 0;
-     */
     
+    /*
 	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;
 	testSuite.run();
-    
-    /*
+
 	SdlApplication app;
 	return app.run(1280, 720);
 	return 0;

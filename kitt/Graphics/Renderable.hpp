@@ -10,7 +10,7 @@
 #define Renderable_hpp
 
 #include <stdio.h>
-#include "../Core/Areable.hpp"
+#include "../Core/_Areable.hpp"
 #include "Renderer.hpp"
 
 namespace Graphics {

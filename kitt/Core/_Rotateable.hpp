@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Directable.hpp"
+#include "_Directable.hpp"
 
 namespace Core {
 	class Rotateable : public Directable {

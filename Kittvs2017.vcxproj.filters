@@ -146,20 +146,21 @@
     <ClCompile Include="kitt\Graphics\Renderable.cpp" />
     <ClCompile Include="kitt\Behaviors\Directable.cpp" />
     <ClCompile Include="kitt\Core\Animateable.cpp" />
-    <ClCompile Include="kitt\Core\Areable.cpp" />
-    <ClCompile Include="kitt\Core\Directable.cpp" />
     <ClCompile Include="kitt\Behaviors\Growable.cpp" />
     <ClCompile Include="kitt\Behaviors\Scalable.cpp" />
     <ClCompile Include="kitt\Tests\DirectableTest.cpp" />
     <ClCompile Include="kitt\Tests\GrowableTest.cpp" />
     <ClCompile Include="kitt\Tests\ScalableTest.cpp" />
-    <ClCompile Include="kitt\Core\Placeable.cpp" />
-    <ClCompile Include="kitt\Core\Rotateable.cpp" />
     <ClCompile Include="kitt\Behaviors\Angleable.cpp" />
     <ClCompile Include="kitt\Behaviors\Rotateable.cpp" />
     <ClCompile Include="kitt\Tests\AngleableTest.cpp" />
     <ClCompile Include="kitt\Tests\RotateableTest.cpp" />
     <ClCompile Include="kitt\Behaviors\Areable.cpp" />
+    <ClCompile Include="kitt\Core\_Placeable.cpp" />
+    <ClCompile Include="kitt\Core\_Directable.cpp" />
+    <ClCompile Include="kitt\Core\_Areable.cpp" />
+    <ClCompile Include="kitt\Core\_Rotateable.cpp" />
+    <ClCompile Include="kitt\Tests\AreableTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -313,20 +314,21 @@
     <ClInclude Include="kitt\Graphics\Renderable.hpp" />
     <ClInclude Include="kitt\Behaviors\Directable.hpp" />
     <ClInclude Include="kitt\Core\Animateable.hpp" />
-    <ClInclude Include="kitt\Core\Areable.hpp" />
-    <ClInclude Include="kitt\Core\Directable.hpp" />
     <ClInclude Include="kitt\Behaviors\Growable.hpp" />
     <ClInclude Include="kitt\Behaviors\Scalable.hpp" />
     <ClInclude Include="kitt\Tests\DirectableTest.hpp" />
     <ClInclude Include="kitt\Tests\GrowableTest.hpp" />
     <ClInclude Include="kitt\Tests\ScalableTest.hpp" />
-    <ClInclude Include="kitt\Core\Placeable.hpp" />
-    <ClInclude Include="kitt\Core\Rotateable.hpp" />
     <ClInclude Include="kitt\Behaviors\Angleable.hpp" />
     <ClInclude Include="kitt\Behaviors\Rotateable.hpp" />
     <ClInclude Include="kitt\Tests\AngleableTest.hpp" />
     <ClInclude Include="kitt\Tests\RotateableTest.hpp" />
     <ClInclude Include="kitt\Behaviors\Areable.hpp" />
+    <ClInclude Include="kitt\Core\_Placeable.hpp" />
+    <ClInclude Include="kitt\Core\_Directable.hpp" />
+    <ClInclude Include="kitt\Core\_Areable.hpp" />
+    <ClInclude Include="kitt\Core\_Rotateable.hpp" />
+    <ClInclude Include="kitt\Tests\AreableTest.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

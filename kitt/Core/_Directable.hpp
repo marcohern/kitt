@@ -10,7 +10,7 @@
 #define CoreDirectable_hpp
 
 #include <stdio.h>
-#include "./Placeable.hpp"
+#include "./_Placeable.hpp"
 #include "./Trigonometry.hpp"
 #include "./Time.hpp"
 #include "./Animateable.hpp"

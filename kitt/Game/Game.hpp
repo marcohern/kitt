@@ -17,7 +17,7 @@
 #include "../Content/IReader.hpp"
 #include "../Input/SignalManager.hpp"
 #include "../Input/Signal.hpp"
-#include "../Core/Rotateable.hpp"
+#include "../Core/_Rotateable.hpp"
 
 namespace Game {
 	using namespace Core;

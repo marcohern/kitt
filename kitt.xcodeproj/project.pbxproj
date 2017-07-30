@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A723A6681F2D417800F44DBA /* TransformableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A723A6661F2D417800F44DBA /* TransformableTest.cpp */; };
 		A72550631F0CA18D00301290 /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500B1F0CA18D00301290 /* FileReader.cpp */; };
 		A72550641F0CA18D00301290 /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500D1F0CA18D00301290 /* IReader.cpp */; };
-		A72550661F0CA18D00301290 /* Directable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550121F0CA18D00301290 /* Directable.cpp */; };
 		A72550671F0CA18D00301290 /* HasTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550141F0CA18D00301290 /* HasTrigonometry.cpp */; };
 		A72550681F0CA18D00301290 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550161F0CA18D00301290 /* Matrix.cpp */; };
 		A72550691F0CA18D00301290 /* MemoizedTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550181F0CA18D00301290 /* MemoizedTrigonometry.cpp */; };
 		A725506A1F0CA18D00301290 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725501A1F0CA18D00301290 /* Object.cpp */; };
 		A725506B1F0CA18D00301290 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725501C1F0CA18D00301290 /* Path.cpp */; };
-		A725506C1F0CA18D00301290 /* Placeable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725501E1F0CA18D00301290 /* Placeable.cpp */; };
 		A725506D1F0CA18D00301290 /* RealtimeTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550201F0CA18D00301290 /* RealtimeTrigonometry.cpp */; };
 		A725506E1F0CA18D00301290 /* SdlTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550221F0CA18D00301290 /* SdlTime.cpp */; };
 		A725506F1F0CA18D00301290 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550241F0CA18D00301290 /* Time.cpp */; };
@@ -65,10 +64,8 @@
 		A79613141F0F49E2004CB1A8 /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613121F0F49E2004CB1A8 /* Settings.cpp */; };
 		A79613171F0F4C30004CB1A8 /* ConfigFileSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613151F0F4C30004CB1A8 /* ConfigFileSettings.cpp */; };
 		A79613221F105729004CB1A8 /* Animateable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796131A1F105729004CB1A8 /* Animateable.cpp */; };
-		A79613231F105729004CB1A8 /* Rotateable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796131C1F105729004CB1A8 /* Rotateable.cpp */; };
 		A79613241F105729004CB1A8 /* TimeInjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796131E1F105729004CB1A8 /* TimeInjector.cpp */; };
 		A79613251F105729004CB1A8 /* TrigonometryInjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613201F105729004CB1A8 /* TrigonometryInjector.cpp */; };
-		A79613281F1133FD004CB1A8 /* Areable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613261F1133FD004CB1A8 /* Areable.cpp */; };
 		A796132B1F113E15004CB1A8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613291F113E15004CB1A8 /* Camera.cpp */; };
 		A796132E1F114E45004CB1A8 /* Renderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796132C1F114E45004CB1A8 /* Renderable.cpp */; };
 		A79613311F115E30004CB1A8 /* Vector2DRenderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A796132F1F115E30004CB1A8 /* Vector2DRenderable.cpp */; };
@@ -78,6 +75,7 @@
 		A7BAC2CC1F1F0B270050E985 /* DirectableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7BAC2CA1F1F0B270050E985 /* DirectableTest.cpp */; };
 		A7E7D46B1F29A27A00CBB83D /* Areable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E7D4691F29A27A00CBB83D /* Areable.cpp */; };
 		A7E7D46E1F29A81600CBB83D /* AreableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E7D46C1F29A81600CBB83D /* AreableTest.cpp */; };
+		A7E7D4711F2C133500CBB83D /* Transformable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E7D46F1F2C133500CBB83D /* Transformable.cpp */; };
 		A7ECCDD01F04CA1300011805 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */; };
 		A7ECCDD11F04CA1300011805 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECCDCF1F04CA1300011805 /* SDL2.framework */; };
 /* End PBXBuildFile section */
@@ -96,13 +94,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A723A6661F2D417800F44DBA /* TransformableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformableTest.cpp; sourceTree = "<group>"; };
+		A723A6671F2D417800F44DBA /* TransformableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TransformableTest.hpp; sourceTree = "<group>"; };
 		A72550091F0CA18D00301290 /* constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
 		A725500B1F0CA18D00301290 /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
 		A725500C1F0CA18D00301290 /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
 		A725500D1F0CA18D00301290 /* IReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IReader.cpp; sourceTree = "<group>"; };
 		A725500E1F0CA18D00301290 /* IReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IReader.hpp; sourceTree = "<group>"; };
-		A72550121F0CA18D00301290 /* Directable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Directable.cpp; sourceTree = "<group>"; };
-		A72550131F0CA18D00301290 /* Directable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Directable.hpp; sourceTree = "<group>"; };
 		A72550141F0CA18D00301290 /* HasTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HasTrigonometry.cpp; sourceTree = "<group>"; };
 		A72550151F0CA18D00301290 /* HasTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HasTrigonometry.hpp; sourceTree = "<group>"; };
 		A72550161F0CA18D00301290 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
@@ -113,8 +111,6 @@
 		A725501B1F0CA18D00301290 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		A725501C1F0CA18D00301290 /* Path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
 		A725501D1F0CA18D00301290 /* Path.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Path.hpp; sourceTree = "<group>"; };
-		A725501E1F0CA18D00301290 /* Placeable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Placeable.cpp; sourceTree = "<group>"; };
-		A725501F1F0CA18D00301290 /* Placeable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Placeable.hpp; sourceTree = "<group>"; };
 		A72550201F0CA18D00301290 /* RealtimeTrigonometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RealtimeTrigonometry.cpp; sourceTree = "<group>"; };
 		A72550211F0CA18D00301290 /* RealtimeTrigonometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RealtimeTrigonometry.hpp; sourceTree = "<group>"; };
 		A72550221F0CA18D00301290 /* SdlTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlTime.cpp; sourceTree = "<group>"; };
@@ -216,14 +212,10 @@
 		A79613191F105712004CB1A8 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
 		A796131A1F105729004CB1A8 /* Animateable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animateable.cpp; sourceTree = "<group>"; };
 		A796131B1F105729004CB1A8 /* Animateable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animateable.hpp; sourceTree = "<group>"; };
-		A796131C1F105729004CB1A8 /* Rotateable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rotateable.cpp; sourceTree = "<group>"; };
-		A796131D1F105729004CB1A8 /* Rotateable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rotateable.hpp; sourceTree = "<group>"; };
 		A796131E1F105729004CB1A8 /* TimeInjector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeInjector.cpp; sourceTree = "<group>"; };
 		A796131F1F105729004CB1A8 /* TimeInjector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeInjector.hpp; sourceTree = "<group>"; };
 		A79613201F105729004CB1A8 /* TrigonometryInjector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrigonometryInjector.cpp; sourceTree = "<group>"; };
 		A79613211F105729004CB1A8 /* TrigonometryInjector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TrigonometryInjector.hpp; sourceTree = "<group>"; };
-		A79613261F1133FD004CB1A8 /* Areable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Areable.cpp; sourceTree = "<group>"; };
-		A79613271F1133FD004CB1A8 /* Areable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Areable.hpp; sourceTree = "<group>"; };
 		A79613291F113E15004CB1A8 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		A796132A1F113E15004CB1A8 /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
 		A796132C1F114E45004CB1A8 /* Renderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderable.cpp; sourceTree = "<group>"; };
@@ -242,6 +234,8 @@
 		A7E7D46A1F29A27A00CBB83D /* Areable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Areable.hpp; path = Behaviors/Areable.hpp; sourceTree = "<group>"; };
 		A7E7D46C1F29A81600CBB83D /* AreableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AreableTest.cpp; sourceTree = "<group>"; };
 		A7E7D46D1F29A81600CBB83D /* AreableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AreableTest.hpp; sourceTree = "<group>"; };
+		A7E7D46F1F2C133500CBB83D /* Transformable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Transformable.cpp; path = Behaviors/Transformable.cpp; sourceTree = "<group>"; };
+		A7E7D4701F2C133500CBB83D /* Transformable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Transformable.hpp; path = Behaviors/Transformable.hpp; sourceTree = "<group>"; };
 		A7ECCDBC1F04C03000011805 /* kitt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7ECCDCE1F04CA1300011805 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		A7ECCDCF1F04CA1300011805 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -300,16 +294,10 @@
 			children = (
 				A796131A1F105729004CB1A8 /* Animateable.cpp */,
 				A796131B1F105729004CB1A8 /* Animateable.hpp */,
-				A79613261F1133FD004CB1A8 /* Areable.cpp */,
-				A79613271F1133FD004CB1A8 /* Areable.hpp */,
-				A796131C1F105729004CB1A8 /* Rotateable.cpp */,
-				A796131D1F105729004CB1A8 /* Rotateable.hpp */,
 				A796131E1F105729004CB1A8 /* TimeInjector.cpp */,
 				A796131F1F105729004CB1A8 /* TimeInjector.hpp */,
 				A79613201F105729004CB1A8 /* TrigonometryInjector.cpp */,
 				A79613211F105729004CB1A8 /* TrigonometryInjector.hpp */,
-				A72550121F0CA18D00301290 /* Directable.cpp */,
-				A72550131F0CA18D00301290 /* Directable.hpp */,
 				A72550141F0CA18D00301290 /* HasTrigonometry.cpp */,
 				A72550151F0CA18D00301290 /* HasTrigonometry.hpp */,
 				A72550161F0CA18D00301290 /* Matrix.cpp */,
@@ -320,8 +308,6 @@
 				A725501B1F0CA18D00301290 /* Object.hpp */,
 				A725501C1F0CA18D00301290 /* Path.cpp */,
 				A725501D1F0CA18D00301290 /* Path.hpp */,
-				A725501E1F0CA18D00301290 /* Placeable.cpp */,
-				A725501F1F0CA18D00301290 /* Placeable.hpp */,
 				A72550201F0CA18D00301290 /* RealtimeTrigonometry.cpp */,
 				A72550211F0CA18D00301290 /* RealtimeTrigonometry.hpp */,
 				A72550221F0CA18D00301290 /* SdlTime.cpp */,
@@ -443,6 +429,8 @@
 				A774F2281F2828D9002B4DC7 /* RotateableTest.hpp */,
 				A7E7D46C1F29A81600CBB83D /* AreableTest.cpp */,
 				A7E7D46D1F29A81600CBB83D /* AreableTest.hpp */,
+				A723A6661F2D417800F44DBA /* TransformableTest.cpp */,
+				A723A6671F2D417800F44DBA /* TransformableTest.hpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -479,6 +467,8 @@
 		A7BAC2BD1F15B9380050E985 /* Behaviors */ = {
 			isa = PBXGroup;
 			children = (
+				A7E7D46F1F2C133500CBB83D /* Transformable.cpp */,
+				A7E7D4701F2C133500CBB83D /* Transformable.hpp */,
 				A7BAC2BA1F15B9340050E985 /* Placeable.cpp */,
 				A7BAC2BB1F15B9340050E985 /* Placeable.hpp */,
 				A7BAC2C71F1F057A0050E985 /* Directable.cpp */,
@@ -587,7 +577,6 @@
 				A725507C1F0CA18D00301290 /* SdlRenderer.cpp in Sources */,
 				A725506E1F0CA18D00301290 /* SdlTime.cpp in Sources */,
 				A72550861F0CA18D00301290 /* KittTestSuite.cpp in Sources */,
-				A72550661F0CA18D00301290 /* Directable.cpp in Sources */,
 				A7E7D46E1F29A81600CBB83D /* AreableTest.cpp in Sources */,
 				A72550831F0CA18D00301290 /* Test.cpp in Sources */,
 				A72550731F0CA18D00301290 /* Vector2D.cpp in Sources */,
@@ -608,6 +597,7 @@
 				A774F21A1F2541DC002B4DC7 /* GrowableTest.cpp in Sources */,
 				A725507F1F0CA18D00301290 /* Texture.cpp in Sources */,
 				A7BAC2BC1F15B9340050E985 /* Placeable.cpp in Sources */,
+				A7E7D4711F2C133500CBB83D /* Transformable.cpp in Sources */,
 				A72550761F0CA18D00301290 /* KittException.cpp in Sources */,
 				A72550631F0CA18D00301290 /* FileReader.cpp in Sources */,
 				A79613311F115E30004CB1A8 /* Vector2DRenderable.cpp in Sources */,
@@ -636,11 +626,9 @@
 				A79613251F105729004CB1A8 /* TrigonometryInjector.cpp in Sources */,
 				A72550881F0CA18D00301290 /* MemoizedTrigonometryTests.cpp in Sources */,
 				A74E81FE1F09FBB600B8C90F /* README.md in Sources */,
-				A79613281F1133FD004CB1A8 /* Areable.cpp in Sources */,
 				A7BAC2C01F1DB89A0050E985 /* PlaceableTest.cpp in Sources */,
-				A725506C1F0CA18D00301290 /* Placeable.cpp in Sources */,
-				A79613231F105729004CB1A8 /* Rotateable.cpp in Sources */,
 				A72550751F0CA18D00301290 /* DivideByZeroException.cpp in Sources */,
+				A723A6681F2D417800F44DBA /* TransformableTest.cpp in Sources */,
 				A725506F1F0CA18D00301290 /* Time.cpp in Sources */,
 				A7E7D46B1F29A27A00CBB83D /* Areable.cpp in Sources */,
 				A796132E1F114E45004CB1A8 /* Renderable.cpp in Sources */,

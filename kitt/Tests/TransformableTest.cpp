@@ -57,10 +57,14 @@ namespace Tests {
     }
     
     void TransformableTest::setRotateDirection_Test(){
-        
+        Transformable trans;
+        trans.setRotateDirection(true);
+        assert.isTrue(true);
     }
     void TransformableTest::updateTransform_Test(){
-        
+        Transformable trans;
+        trans.updateTransform(1.0);
+        assert.isTrue(true);
     }
     
     void TransformableTest::run() {

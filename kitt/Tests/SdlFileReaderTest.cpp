@@ -99,6 +99,26 @@ namespace Tests {
 		render->sprite(Vector2D(310, 30), sheet->getSprite("cshsm"));
 		render->sprite(Vector2D(310, 50), sheet->getSprite("cshmd"));
 		render->sprite(Vector2D(310, 70), sheet->getSprite("cshlg"));
+
+		render->sprite(Vector2D(330, 10), sheet->getSprite("rmntn"));
+		render->sprite(Vector2D(330, 30), sheet->getSprite("rmnsm"));
+		render->sprite(Vector2D(330, 50), sheet->getSprite("rmnmd"));
+		render->sprite(Vector2D(330, 70), sheet->getSprite("rmnlg"));
+
+		render->sprite(Vector2D(350, 10), sheet->getSprite("gmntn"));
+		render->sprite(Vector2D(350, 30), sheet->getSprite("gmnsm"));
+		render->sprite(Vector2D(350, 50), sheet->getSprite("gmnmd"));
+		render->sprite(Vector2D(350, 70), sheet->getSprite("gmnlg"));
+
+		render->sprite(Vector2D(370, 10), sheet->getSprite("ymntn"));
+		render->sprite(Vector2D(370, 30), sheet->getSprite("ymnsm"));
+		render->sprite(Vector2D(370, 50), sheet->getSprite("ymnmd"));
+		render->sprite(Vector2D(370, 70), sheet->getSprite("ymnlg"));
+
+		render->sprite(Vector2D(390, 10), sheet->getSprite("cmntn"));
+		render->sprite(Vector2D(390, 30), sheet->getSprite("cmnsm"));
+		render->sprite(Vector2D(390, 50), sheet->getSprite("cmnmd"));
+		render->sprite(Vector2D(390, 70), sheet->getSprite("cmnlg"));
 		render->present();
 		assert.isTrue(true);
 	}

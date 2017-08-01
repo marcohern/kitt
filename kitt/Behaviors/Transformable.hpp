@@ -27,6 +27,7 @@ namespace Behaviors {
 		virtual ~Transformable();
 
 		void setRotateDirection(bool rotateDirection);
+		void setGrowArea(bool growArea);
 		void updateTransform(double interval);
 	};
 }

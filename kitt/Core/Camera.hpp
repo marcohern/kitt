@@ -9,7 +9,6 @@
 #ifndef Camera_hpp
 #define Camera_hpp
 
-#include <stdio.h>
 #include "Trigonometry.hpp"
 
 

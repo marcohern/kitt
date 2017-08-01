@@ -158,6 +158,11 @@
     <ClCompile Include="kitt\Behaviors\Areable.cpp" />
     <ClCompile Include="kitt\Tests\AreableTest.cpp" />
     <ClCompile Include="kitt\Behaviors\Transformable.cpp" />
+    <ClCompile Include="kitt\Tests\TransformableTest.cpp" />
+    <ClCompile Include="kitt\Graphics\Vector2DRenderable.cpp" />
+    <ClCompile Include="kitt\Graphics\Sprite.cpp" />
+    <ClCompile Include="kitt\Graphics\SpriteSheet.cpp" />
+    <ClCompile Include="kitt\Tests\SdlFileReaderTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -323,6 +328,11 @@
     <ClInclude Include="kitt\Behaviors\Areable.hpp" />
     <ClInclude Include="kitt\Tests\AreableTest.hpp" />
     <ClInclude Include="kitt\Behaviors\Transformable.hpp" />
+    <ClInclude Include="kitt\Tests\TransformableTest.hpp" />
+    <ClInclude Include="kitt\Graphics\Vector2DRenderable.hpp" />
+    <ClInclude Include="kitt\Graphics\Sprite.hpp" />
+    <ClInclude Include="kitt\Graphics\SpriteSheet.hpp" />
+    <ClInclude Include="kitt\Tests\SdlFileReaderTest.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -369,11 +379,15 @@
     <None Include=".gitignore" />
     <None Include="README.md" />
     <None Include="config.json" />
+    <None Include="content\sprites\bullets.sprite.json" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Kittvs2017.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="content\file.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="content\sprites\bullets.png" />
   </ItemGroup>
 </Project>

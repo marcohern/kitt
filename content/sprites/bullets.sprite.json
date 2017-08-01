@@ -1,5 +1,5 @@
 {
-    "source": "bullets.png",
+    "source": "/sprites/bullets.png",
     "sprites": [
                 { "id":"rrb01", "x": 12, "y": 11, "w":  8, "h": 12 },
                 { "id":"rrb02", "x": 20, "y": 11, "w": 11, "h": 12 },

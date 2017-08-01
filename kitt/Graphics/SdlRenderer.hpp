@@ -7,6 +7,7 @@
 #include "Texture.hpp"
 #include "../Core/Trigonometry.hpp"
 #include "Color.hpp"
+#include "Sprite.hpp"
 
 namespace Graphics {
 	using namespace Core;
@@ -27,6 +28,7 @@ namespace Graphics {
 		void present();
 		void texture(const Vector2D &position, Texture *t);
 		void vector2d(const Vector2D &position, const Color &color, const Vector2D &v);
+		void sprite(const Vector2D &location, Sprite *s);
 
 		SDL_Renderer *getRenderer();
 	};

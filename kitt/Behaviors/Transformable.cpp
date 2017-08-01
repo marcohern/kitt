@@ -46,6 +46,10 @@ namespace Behaviors {
 		this->rotateDirection = rotateDirection;
 	}
 
+	void Transformable::setGrowArea(bool growAarea) {
+		this->growArea = growAarea;
+	}
+
 	void Transformable::updateTransform(double interval) {
 		updateLocation(interval);
 		updateScale(interval);
@@ -54,7 +58,7 @@ namespace Behaviors {
 			direction.rotate(rotationRate * interval);
 		}
 		if (growArea) {
-			area.add(growthRate);
+			area.add(growthRate * interval);
 		}
 	}
 }

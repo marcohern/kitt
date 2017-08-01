@@ -115,7 +115,10 @@
     <ClCompile Include="kitt\Graphics\SdlTexture.cpp" />
     <ClCompile Include="kitt\Core\Path.cpp" />
     <ClCompile Include="kitt\Graphics\SdlWindow.cpp" />
+    <ClCompile Include="kitt\Graphics\Sprite.cpp" />
+    <ClCompile Include="kitt\Graphics\SpriteSheet.cpp" />
     <ClCompile Include="kitt\Graphics\Texture.cpp" />
+    <ClCompile Include="kitt\Graphics\Vector2DRenderable.cpp" />
     <ClCompile Include="kitt\Graphics\Window.cpp" />
     <ClCompile Include="kitt\Input\SdlSignalManager.cpp" />
     <ClCompile Include="kitt\Input\SignalManager.cpp" />
@@ -136,7 +139,9 @@
     <ClCompile Include="kitt\Tests\RealtimeTrigonometryTests.cpp" />
     <ClCompile Include="kitt\Tests\RotateableTest.cpp" />
     <ClCompile Include="kitt\Tests\ScalableTest.cpp" />
+    <ClCompile Include="kitt\Tests\SdlFileReaderTest.cpp" />
     <ClCompile Include="kitt\Tests\SdlTimeTests.cpp" />
+    <ClCompile Include="kitt\Tests\TransformableTest.cpp" />
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp" />
     <ClCompile Include="kitt\Behaviors\Transformable.cpp" />
   </ItemGroup>
@@ -183,8 +188,11 @@
     <ClInclude Include="kitt\Graphics\SdlTexture.hpp" />
     <ClInclude Include="kitt\Core\Path.hpp" />
     <ClInclude Include="kitt\Graphics\SdlWindow.hpp" />
+    <ClInclude Include="kitt\Graphics\Sprite.hpp" />
+    <ClInclude Include="kitt\Graphics\SpriteSheet.hpp" />
     <ClInclude Include="kitt\Graphics\Texture.hpp" />
     <ClInclude Include="kitt\Graphics\Renderer.hpp" />
+    <ClInclude Include="kitt\Graphics\Vector2DRenderable.hpp" />
     <ClInclude Include="kitt\Graphics\Window.hpp" />
     <ClInclude Include="kitt\Input\SdlSignalManager.hpp" />
     <ClInclude Include="kitt\Input\Signal.hpp" />
@@ -206,7 +214,9 @@
     <ClInclude Include="kitt\Tests\RealtimeTrigonometryTests.hpp" />
     <ClInclude Include="kitt\Tests\RotateableTest.hpp" />
     <ClInclude Include="kitt\Tests\ScalableTest.hpp" />
+    <ClInclude Include="kitt\Tests\SdlFileReaderTest.hpp" />
     <ClInclude Include="kitt\Tests\SdlTimeTests.hpp" />
+    <ClInclude Include="kitt\Tests\TransformableTest.hpp" />
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="kitt\Behaviors\Transformable.hpp" />
@@ -214,6 +224,7 @@
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="config.json" />
+    <None Include="content\sprites\bullets.sprite.json" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="content\file.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="content\sprites\bullets.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

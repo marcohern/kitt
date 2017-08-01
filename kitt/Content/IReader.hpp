@@ -13,6 +13,7 @@
 #include <string>
 #include <SDL2/SDL.h>
 #include "../Graphics/Texture.hpp"
+#include "../Graphics/SpriteSheet.hpp"
 
 namespace Content {
 
@@ -26,6 +27,7 @@ namespace Content {
 		virtual bool exists(const string &path) = 0;
         virtual string readString(const string &path) = 0;
         virtual Texture* readSurface(const string &path) = 0;
+		virtual SpriteSheet *readSpriteSheet(const string &path) = 0;
         virtual void close() = 0;
     };
     

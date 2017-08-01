@@ -17,6 +17,7 @@ namespace Content {
 		void open();
 		string readString(const string &path);
 		Texture* readSurface(const string &path);
+		SpriteSheet *readSpriteSheet(const string &path);
 		void close();
 	};
 }

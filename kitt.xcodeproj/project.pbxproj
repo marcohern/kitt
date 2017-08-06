@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A723A6681F2D417800F44DBA /* TransformableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A723A6661F2D417800F44DBA /* TransformableTest.cpp */; };
+		A723A66B1F31808600F44DBA /* SdlFileReaderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A723A6691F31808600F44DBA /* SdlFileReaderTest.cpp */; };
+		A723A6701F3180C300F44DBA /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A723A66C1F3180C300F44DBA /* Sprite.cpp */; };
+		A723A6711F3180C300F44DBA /* SpriteSheet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A723A66E1F3180C300F44DBA /* SpriteSheet.cpp */; };
 		A72550631F0CA18D00301290 /* FileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500B1F0CA18D00301290 /* FileReader.cpp */; };
 		A72550641F0CA18D00301290 /* IReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A725500D1F0CA18D00301290 /* IReader.cpp */; };
 		A72550671F0CA18D00301290 /* HasTrigonometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72550141F0CA18D00301290 /* HasTrigonometry.cpp */; };
@@ -96,6 +99,12 @@
 /* Begin PBXFileReference section */
 		A723A6661F2D417800F44DBA /* TransformableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformableTest.cpp; sourceTree = "<group>"; };
 		A723A6671F2D417800F44DBA /* TransformableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TransformableTest.hpp; sourceTree = "<group>"; };
+		A723A6691F31808600F44DBA /* SdlFileReaderTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SdlFileReaderTest.cpp; sourceTree = "<group>"; };
+		A723A66A1F31808600F44DBA /* SdlFileReaderTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SdlFileReaderTest.hpp; sourceTree = "<group>"; };
+		A723A66C1F3180C300F44DBA /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
+		A723A66D1F3180C300F44DBA /* Sprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sprite.hpp; sourceTree = "<group>"; };
+		A723A66E1F3180C300F44DBA /* SpriteSheet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteSheet.cpp; sourceTree = "<group>"; };
+		A723A66F1F3180C300F44DBA /* SpriteSheet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteSheet.hpp; sourceTree = "<group>"; };
 		A72550091F0CA18D00301290 /* constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
 		A725500B1F0CA18D00301290 /* FileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileReader.cpp; sourceTree = "<group>"; };
 		A725500C1F0CA18D00301290 /* FileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileReader.hpp; sourceTree = "<group>"; };
@@ -363,6 +372,10 @@
 		A725503E1F0CA18D00301290 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				A723A66C1F3180C300F44DBA /* Sprite.cpp */,
+				A723A66D1F3180C300F44DBA /* Sprite.hpp */,
+				A723A66E1F3180C300F44DBA /* SpriteSheet.cpp */,
+				A723A66F1F3180C300F44DBA /* SpriteSheet.hpp */,
 				A725503F1F0CA18D00301290 /* Renderer.cpp */,
 				A72550401F0CA18D00301290 /* Renderer.hpp */,
 				A72550411F0CA18D00301290 /* SdlRenderer.cpp */,
@@ -403,6 +416,8 @@
 		A72550561F0CA18D00301290 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A723A6691F31808600F44DBA /* SdlFileReaderTest.cpp */,
+				A723A66A1F31808600F44DBA /* SdlFileReaderTest.hpp */,
 				A72550571F0CA18D00301290 /* KittTestSuite.cpp */,
 				A72550581F0CA18D00301290 /* KittTestSuite.hpp */,
 				A72550591F0CA18D00301290 /* MatrixTests.cpp */,
@@ -586,6 +601,7 @@
 				A725506A1F0CA18D00301290 /* Object.cpp in Sources */,
 				A72550701F0CA18D00301290 /* TimeFactory.cpp in Sources */,
 				A72550781F0CA18D00301290 /* NullReferenceException.cpp in Sources */,
+				A723A6701F3180C300F44DBA /* Sprite.cpp in Sources */,
 				A796130E1F0F1B9B004CB1A8 /* ZipReader.cpp in Sources */,
 				A72550871F0CA18D00301290 /* MatrixTests.cpp in Sources */,
 				A774F2171F253B61002B4DC7 /* Growable.cpp in Sources */,
@@ -629,10 +645,12 @@
 				A7BAC2C01F1DB89A0050E985 /* PlaceableTest.cpp in Sources */,
 				A72550751F0CA18D00301290 /* DivideByZeroException.cpp in Sources */,
 				A723A6681F2D417800F44DBA /* TransformableTest.cpp in Sources */,
+				A723A66B1F31808600F44DBA /* SdlFileReaderTest.cpp in Sources */,
 				A725506F1F0CA18D00301290 /* Time.cpp in Sources */,
 				A7E7D46B1F29A27A00CBB83D /* Areable.cpp in Sources */,
 				A796132E1F114E45004CB1A8 /* Renderable.cpp in Sources */,
 				A72550771F0CA18D00301290 /* MismatchException.cpp in Sources */,
+				A723A6711F3180C300F44DBA /* SpriteSheet.cpp in Sources */,
 				A725507A1F0CA18D00301290 /* Game.cpp in Sources */,
 				A725508A1F0CA18D00301290 /* SdlTimeTests.cpp in Sources */,
 				A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */,

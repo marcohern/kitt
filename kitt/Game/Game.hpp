@@ -36,7 +36,8 @@ namespace Game {
 		Renderer *renderer;
 		SignalManager *signalm;
 		SpriteSheet *bullets;
-		Animation *rrb;
+		Animation *rrb, *yrb, *grb, *crb, *rrbx;
+		
 
 		IReader *reader;
 		Texture *font;

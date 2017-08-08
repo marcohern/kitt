@@ -53,6 +53,14 @@ namespace Game {
 		bullets = reader->readSpriteSheet("/sprites/bullets.sprite.json");
 		rrb = bullets->getAnimation("rrb");
 		rrb->reset();
+		yrb = bullets->getAnimation("yrb");
+		yrb->reset();
+		grb = bullets->getAnimation("grb");
+		grb->reset();
+		crb = bullets->getAnimation("crb");
+		crb->reset();
+		rrbx = bullets->getAnimation("rrbx");
+		rrbx->reset();
 	}
 
 	void Game::update() {
@@ -60,6 +68,10 @@ namespace Game {
 		Signal *signals = signalm->getSignals();
 		onevent(signals);
 		rrb->update(time->getDelta());
+		yrb->update(time->getDelta());
+		grb->update(time->getDelta());
+		crb->update(time->getDelta());
+		rrbx->update(time->getDelta());
 	}
 
 	void Game::draw() {
@@ -67,7 +79,12 @@ namespace Game {
 
 		renderer->texture(Vector2D(0,0),font);
         renderer->vector2d(v1.getLocation(), Color::White, v1.getDirection());
-		renderer->animation(Vector2D(400,20), rrb);
+		renderer->animation(Vector2D(400, 20), rrb);
+		renderer->animation(Vector2D(400, 40), yrb);
+		renderer->animation(Vector2D(400, 60), grb);
+		renderer->animation(Vector2D(400, 80), crb);
+		renderer->animation(Vector2D(400,120), rrbx);
+
 		renderer->present();
 	}
 

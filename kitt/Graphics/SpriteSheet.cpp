@@ -1,8 +1,10 @@
 
 #include "SpriteSheet.hpp"
+#include "../json.hpp"
 
 namespace Graphics {
 	using namespace std;
+    using namespace nlohmann;
 
 	SpriteSheet::SpriteSheet(Texture *texture)
 		: texture(texture), sprites(), count(0) {

@@ -50,13 +50,16 @@ namespace Game {
 		renderer = window->getRenderer();
 		reader = new SdlFileReader("/content", renderer, false);
 		font = reader->readSurface("/fonts/courier.bmp");
+		bullets = reader->readSpriteSheet("/sprites/bullets.sprite.json");
+		rrb = bullets->getAnimation("rrb");
+		rrb->reset();
 	}
 
 	void Game::update() {
         v1.updateTransform(time->getDelta());
 		Signal *signals = signalm->getSignals();
 		onevent(signals);
-		
+		rrb->update(time->getDelta());
 	}
 
 	void Game::draw() {
@@ -64,6 +67,7 @@ namespace Game {
 
 		renderer->texture(Vector2D(0,0),font);
         renderer->vector2d(v1.getLocation(), Color::White, v1.getDirection());
+		renderer->animation(Vector2D(400,20), rrb);
 		renderer->present();
 	}
 

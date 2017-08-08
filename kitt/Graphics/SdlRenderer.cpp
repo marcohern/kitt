@@ -86,6 +86,17 @@ namespace Graphics
 		//SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, 0.0, &pnt, SDL_RendererFlip::SDL_FLIP_NONE);
 	}
 
+	void SdlRenderer::animation(const Vector2D &position, Animation *animation) {
+		Sprite *sprite = animation->getCurrentSprite();
+		SdlTexture *tx = (SdlTexture *)sprite->getTexture();
+		SDL_Rect src, dst;
+		SDL_Point pnt;
+
+		src.x = sprite->getX();  src.y = sprite->getY();  src.w = sprite->getW(); src.h = sprite->getH();
+		dst.x = position.getX()-sprite->getPX(); dst.y = position.getY()-sprite->getPY(); dst.w = sprite->getW(); dst.h = sprite->getH();
+		SDL_RenderCopy(renderer, tx->getSdlTexture(), &src, &dst);
+	}
+
 	SDL_Renderer *SdlRenderer::getRenderer() {
 		return this->renderer;
 	}

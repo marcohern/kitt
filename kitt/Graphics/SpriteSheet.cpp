@@ -7,7 +7,7 @@ namespace Graphics {
     using namespace nlohmann;
 
 	SpriteSheet::SpriteSheet(Texture *texture)
-		: texture(texture), sprites(), count(0) {
+		: texture(texture), sprites(), animations(), count(0) {
 	}
 
 	SpriteSheet::~SpriteSheet() {
@@ -22,7 +22,15 @@ namespace Graphics {
 		sprites[id] = new Sprite(texture, x, y, w, h, px, py);
 	}
 
+	void SpriteSheet::addAnimation(string id, Animation *animation) {
+		animations[id] = animation;
+	}
+
 	Sprite *SpriteSheet::getSprite(string id) {
 		return sprites[id];
+	}
+
+	Animation *SpriteSheet::getAnimation(string id) {
+		return animations[id];
 	}
 }

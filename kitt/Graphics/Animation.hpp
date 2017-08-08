@@ -25,6 +25,7 @@ namespace Graphics
 		void nextSprite();
 		Sprite *getSprite(int i);
 		Sprite *getCurrentSprite();
+		void reset();
 		void update(double interval);
 	};
 }

@@ -18,6 +18,8 @@
 #include "../Input/SignalManager.hpp"
 #include "../Input/Signal.hpp"
 #include "../Behaviors/Transformable.hpp"
+#include "../Graphics/SpriteSheet.hpp"
+#include "../Graphics/Animation.hpp"
 
 namespace Game {
 	using namespace Core;
@@ -33,6 +35,8 @@ namespace Game {
 		Window *window;
 		Renderer *renderer;
 		SignalManager *signalm;
+		SpriteSheet *bullets;
+		Animation *rrb;
 
 		IReader *reader;
 		Texture *font;

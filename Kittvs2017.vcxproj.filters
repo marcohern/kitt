@@ -163,6 +163,7 @@
     <ClCompile Include="kitt\Graphics\Sprite.cpp" />
     <ClCompile Include="kitt\Graphics\SpriteSheet.cpp" />
     <ClCompile Include="kitt\Tests\SdlFileReaderTest.cpp" />
+    <ClCompile Include="kitt\Graphics\Animation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -333,7 +334,7 @@
     <ClInclude Include="kitt\Graphics\Sprite.hpp" />
     <ClInclude Include="kitt\Graphics\SpriteSheet.hpp" />
     <ClInclude Include="kitt\Tests\SdlFileReaderTest.hpp" />
-    <ClInclude Include="kitt\Graphics\Animation.h" />
+    <ClInclude Include="kitt\Graphics\Animation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

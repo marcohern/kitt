@@ -29,6 +29,7 @@ namespace Graphics {
 		void texture(const Vector2D &position, Texture *t);
 		void vector2d(const Vector2D &position, const Color &color, const Vector2D &v);
 		void sprite(const Vector2D &location, Sprite *s);
+		void animation(const Vector2D &position, Animation *animation);
 
 		SDL_Renderer *getRenderer();
 	};

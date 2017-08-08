@@ -109,6 +109,7 @@
     <ClCompile Include="kitt\Exceptions\MismatchException.cpp" />
     <ClCompile Include="kitt\Exceptions\NullReferenceException.cpp" />
     <ClCompile Include="kitt\Exceptions\OutOfRangeException.cpp" />
+    <ClCompile Include="kitt\Graphics\Animation.cpp" />
     <ClCompile Include="kitt\Graphics\Color.cpp" />
     <ClCompile Include="kitt\Graphics\Renderable.cpp" />
     <ClCompile Include="kitt\Graphics\SdlRenderer.cpp" />
@@ -182,7 +183,7 @@
     <ClInclude Include="kitt\Exceptions\MismatchException.hpp" />
     <ClInclude Include="kitt\Exceptions\NullReferenceException.hpp" />
     <ClInclude Include="kitt\Exceptions\OutOfRangeException.hpp" />
-    <ClInclude Include="kitt\Graphics\Animation.h" />
+    <ClInclude Include="kitt\Graphics\Animation.hpp" />
     <ClInclude Include="kitt\Graphics\Color.hpp" />
     <ClInclude Include="kitt\Graphics\Renderable.hpp" />
     <ClInclude Include="kitt\Graphics\SdlRenderer.hpp" />

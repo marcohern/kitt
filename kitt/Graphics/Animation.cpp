@@ -28,6 +28,10 @@ namespace Graphics
 		return sprites[i];
 	}
 
+	Sprite *Animation::getCurrentSprite() {
+		return current;
+	}
+
 	void Animation::nextSprite() {
 		index++;
 		if (index >= qty) {
@@ -36,11 +40,18 @@ namespace Graphics
 		current = sprites[index];
 	}
 
+	void Animation::reset() {
+		index = 0;
+		current = sprites[index];
+	}
+
 	void Animation::update(double interval) {
 		acc += interval;
 		if (acc > dpf) {
-			acc -= dpf;
-			nextSprite();
+			while (acc > dpf) {
+				acc -= dpf;
+				nextSprite();
+			}
 		}
 	}
 }

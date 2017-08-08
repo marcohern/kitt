@@ -17,6 +17,8 @@ namespace Graphics {
 		int getY() const;
 		int getRX() const;
 		int getRY() const;
+		int getPX() const;
+		int getPY() const;
 
 		Texture *getTexture() const;
 	};

@@ -69,6 +69,18 @@ namespace Content {
 				s["px"].get<int>(), s["py"].get<int>()
 			);
 		}
+		for (auto a : j["animations"]) {
+			string animId = a["id"].get<string>();
+			double duration = a["duration"].get<double>();
+			int qty = a["frames"].size();
+			int i = 0;
+			Animation *anim = new Animation(qty, duration);
+			for (auto f : a["frames"]) {
+				string spriteId = f.get<string>();
+				anim->setSprite(i++, sheet->getSprite(spriteId));
+			}
+			sheet->addAnimation(animId, anim);
+		}
 		return sheet;
 	}
 

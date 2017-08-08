@@ -16,8 +16,8 @@ namespace Graphics {
 		return texture;
 	}
 
-	void SpriteSheet::addSprite(string id, int x, int y, int w, int h) {
-		sprites[id] = new Sprite(texture, x, y, w, h);
+	void SpriteSheet::addSprite(string id, int x, int y, int w, int h, int px, int py) {
+		sprites[id] = new Sprite(texture, x, y, w, h, px, py);
 	}
 
 	Sprite *SpriteSheet::getSprite(string id) {

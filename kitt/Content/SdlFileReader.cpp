@@ -63,7 +63,11 @@ namespace Content {
 
 		SpriteSheet *sheet = new SpriteSheet(texture);
 		for (auto s : j["sprites"]) {
-			sheet->addSprite(s["id"].get<string>(), s["x"].get<int>(), s["y"].get<int>(), s["w"].get<int>(), s["h"].get<int>());
+			sheet->addSprite(s["id"].get<string>(),
+				s["x"].get<int>(), s["y"].get<int>(),
+				s["w"].get<int>(), s["h"].get<int>(),
+				s["px"].get<int>(), s["py"].get<int>()
+			);
 		}
 		return sheet;
 	}

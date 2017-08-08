@@ -6,15 +6,17 @@ namespace Graphics {
 	class Sprite {
 	private:
 		Texture *texture;
-		int x, y, w, h;
+		int x, y, w, h, px, py;
 
 	public:
-		Sprite(Texture *texture, int x, int y, int w, int h);
+		Sprite(Texture *texture, int x, int y, int w, int h, int px, int py);
 
 		int getW() const;
 		int getH() const;
 		int getX() const;
 		int getY() const;
+		int getRX() const;
+		int getRY() const;
 
 		Texture *getTexture() const;
 	};

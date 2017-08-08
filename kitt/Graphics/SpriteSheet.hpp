@@ -18,7 +18,7 @@ namespace Graphics {
 
 		Texture *getTexture() const;
 		
-		void addSprite(string id, int x, int y, int w, int h);
+		void addSprite(string id, int x, int y, int w, int h, int px, int py);
 		Sprite *getSprite(string id);
 	};
 }

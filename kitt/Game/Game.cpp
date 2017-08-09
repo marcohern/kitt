@@ -72,6 +72,10 @@ namespace Game {
 		br_walk_diag_up_fire = bill_rizer->getAnimation("walk_diag_up_fire");
 		br_idle_aim_up = bill_rizer->getAnimation("idle_aim_up");
 		br_idle_aim_up_fire = bill_rizer->getAnimation("idle_aim_up_fire");
+		br_idle_aim_down = bill_rizer->getAnimation("idle_aim_down");
+		br_idle_aim_down_fire = bill_rizer->getAnimation("idle_aim_down_fire");
+		br_idle_aim_diag_down = bill_rizer->getAnimation("idle_aim_diag_down");
+		br_idle_aim_diag_down_fire = bill_rizer->getAnimation("idle_aim_diag_down_fire");
 	}
 
 	void Game::update() {
@@ -92,6 +96,10 @@ namespace Game {
 		br_walk_diag_up_fire->update(time->getDelta());
 		br_idle_aim_up->update(time->getDelta());
 		br_idle_aim_up_fire->update(time->getDelta());
+		br_idle_aim_down->update(time->getDelta());
+		br_idle_aim_down_fire->update(time->getDelta());
+		br_idle_aim_diag_down->update(time->getDelta());
+		br_idle_aim_diag_down_fire->update(time->getDelta());
 	}
 
 	void Game::draw() {
@@ -114,6 +122,11 @@ namespace Game {
 		renderer->animation(Vector2D(416, 200), br_walk_diag_up_fire);
 		renderer->animation(Vector2D(480, 200), br_idle_aim_up);
 		renderer->animation(Vector2D(544, 200), br_idle_aim_up_fire);
+		renderer->animation(Vector2D(608, 200), br_idle_aim_down);
+		renderer->animation(Vector2D(672, 200), br_idle_aim_down_fire);
+		renderer->animation(Vector2D(736, 200), br_idle_aim_diag_down);
+		renderer->animation(Vector2D(800, 200), br_idle_aim_diag_down_fire);
+
 		renderer->present();
 	}
 

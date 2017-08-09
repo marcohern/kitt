@@ -35,8 +35,11 @@ namespace Game {
 		Window *window;
 		Renderer *renderer;
 		SignalManager *signalm;
-		SpriteSheet *bullets;
+		SpriteSheet *bullets, *bill_rizer;
 		Animation *rrb, *yrb, *grb, *crb, *rrbx;
+		Animation *br_idle, *br_walk, *br_crouch, *br_crouch_fire, *br_idle_fire,
+			*br_walk_diag_up, *br_walk_diag_up_fire, *br_idle_aim_up, *br_idle_aim_up_fire;
+		
 		
 
 		IReader *reader;

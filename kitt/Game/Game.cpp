@@ -61,6 +61,17 @@ namespace Game {
 		crb->reset();
 		rrbx = bullets->getAnimation("rrbx");
 		rrbx->reset();
+
+		bill_rizer = reader->readSpriteSheet("/sprites/bill_rizer_big.sprite.json");
+		br_idle = bill_rizer->getAnimation("idle");
+		br_walk = bill_rizer->getAnimation("walk");
+		br_crouch = bill_rizer->getAnimation("crouch");
+		br_crouch_fire = bill_rizer->getAnimation("crouch_fire");
+		br_idle_fire = bill_rizer->getAnimation("idle_fire");
+		br_walk_diag_up = bill_rizer->getAnimation("walk_diag_up");
+		br_walk_diag_up_fire = bill_rizer->getAnimation("walk_diag_up_fire");
+		br_idle_aim_up = bill_rizer->getAnimation("idle_aim_up");
+		br_idle_aim_up_fire = bill_rizer->getAnimation("idle_aim_up_fire");
 	}
 
 	void Game::update() {
@@ -72,6 +83,15 @@ namespace Game {
 		grb->update(time->getDelta());
 		crb->update(time->getDelta());
 		rrbx->update(time->getDelta());
+		br_idle->update(time->getDelta());
+		br_walk->update(time->getDelta());
+		br_crouch->update(time->getDelta());
+		br_crouch_fire->update(time->getDelta());
+		br_idle_fire->update(time->getDelta());
+		br_walk_diag_up->update(time->getDelta());
+		br_walk_diag_up_fire->update(time->getDelta());
+		br_idle_aim_up->update(time->getDelta());
+		br_idle_aim_up_fire->update(time->getDelta());
 	}
 
 	void Game::draw() {
@@ -85,6 +105,15 @@ namespace Game {
 		renderer->animation(Vector2D(400, 80), crb);
 		renderer->animation(Vector2D(400,120), rrbx);
 
+		renderer->animation(Vector2D(32, 200), br_idle);
+		renderer->animation(Vector2D(96, 200), br_walk);
+		renderer->animation(Vector2D(160, 200), br_crouch);
+		renderer->animation(Vector2D(224, 200), br_crouch_fire);
+		renderer->animation(Vector2D(288, 200), br_idle_fire);
+		renderer->animation(Vector2D(352, 200), br_walk_diag_up);
+		renderer->animation(Vector2D(416, 200), br_walk_diag_up_fire);
+		renderer->animation(Vector2D(480, 200), br_idle_aim_up);
+		renderer->animation(Vector2D(544, 200), br_idle_aim_up_fire);
 		renderer->present();
 	}
 

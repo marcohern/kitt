@@ -226,6 +226,7 @@
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="config.json" />
+    <None Include="content\sprites\bill_rizer.sprite.json" />
     <None Include="content\sprites\bullets.sprite.json" />
     <None Include="README.md" />
   </ItemGroup>
@@ -234,8 +235,11 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="content\file.txt" />
+    <Text Include="content\sprites\bill_rizer_big.sprite.json" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="content\sprites\bill_rizer.png" />
+    <Image Include="content\sprites\bill_rizer_big.png" />
     <Image Include="content\sprites\bullets.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

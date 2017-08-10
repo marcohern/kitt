@@ -36,6 +36,8 @@ namespace Tests {
         
         void setRotateDirection_Test();
         void updateTransform_Test();
+
+		void getScaledArea_Test();
         
         void run();
     };

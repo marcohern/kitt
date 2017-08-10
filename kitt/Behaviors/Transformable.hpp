@@ -29,6 +29,7 @@ namespace Behaviors {
 		void setRotateDirection(bool rotateDirection);
 		void setGrowArea(bool growArea);
 		void updateTransform(double interval);
+		Vector2D getScaledArea();
 	};
 }
 

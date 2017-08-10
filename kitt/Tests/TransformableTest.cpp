@@ -66,6 +66,15 @@ namespace Tests {
         trans.updateTransform(1.0);
         assert.isTrue(true);
     }
+
+	void TransformableTest::getScaledArea_Test() {
+		Transformable trans;
+		trans.setScale(2.0, 2.0);
+		trans.setAreaVector(2.0, 2.0);
+		
+		assert.areEqual(trans.getAreaVector().getX(), 4.0);
+		assert.areEqual(trans.getAreaVector().getY(), 4.0);
+	}
     
     void TransformableTest::run() {
         runtest("constructor_Test--------", &TransformableTest::constructor_Test);
@@ -76,6 +85,7 @@ namespace Tests {
         runtest("constructor_LT_Test-----", &TransformableTest::constructor_LT_Test);
         
         runtest("setRotateDirection_Test-", &TransformableTest::setRotateDirection_Test);
-        runtest("updateTransform_Test----", &TransformableTest::updateTransform_Test);
+		runtest("updateTransform_Test----", &TransformableTest::updateTransform_Test);
+		runtest("getScaledArea_Test------", &TransformableTest::getScaledArea_Test);
     }
 }

@@ -61,5 +61,9 @@ namespace Behaviors {
 			area.add(growthRate * interval);
 		}
 	}
+
+	Vector2D Transformable::getScaledArea() {
+		return Vector2D(area.getX() * scale.getX(), area.getY() * scale.getY());
+	}
 }
 

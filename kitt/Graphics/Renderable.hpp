@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "../Behaviors/Transformable.hpp"
+#include "../Core/Camera.hpp"
 #include "Animation.hpp"
 #include "Renderer.hpp"
 
@@ -19,6 +20,9 @@ namespace Graphics {
 	using namespace Behaviors;
     
     class Renderable : public Transformable {
+	private:
+		Animation *current;
+
         
     public:
         Renderable();
@@ -35,7 +39,7 @@ namespace Graphics {
         
         virtual ~Renderable();
         
-        virtual void render(Renderer *render) = 0;
+        virtual void render(Renderer *render, Camera *camera);
     };
 }
 #endif /* Renderable_hpp */

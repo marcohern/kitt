@@ -60,4 +60,9 @@ namespace Graphics
     Renderable::~Renderable() {
 		Transformable::~Transformable();
     }
+
+	void Renderable::render(Renderer *render, Camera *camera) {
+		Vector2D location = camera->getLocation();
+		render->animation(location, current);
+	}
 }

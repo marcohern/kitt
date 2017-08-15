@@ -30,6 +30,7 @@ namespace Graphics {
 		void vector2d(const Vector2D &position, const Color &color, const Vector2D &v);
 		void sprite(const Vector2D &location, Sprite *s);
 		void animation(const Vector2D &position, Animation *animation);
+		void animation(const Vector2D &position, const Vector2D &area, const Vector2D &pivot, double angle, bool vflip, bool hflip, Animation *animation);
 
 		SDL_Renderer *getRenderer();
 	};

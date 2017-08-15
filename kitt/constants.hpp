@@ -34,7 +34,7 @@
 #define WDS '\\'
 #define UDS '/'
 
-#define ANIM_TRANSLUCENT_INTERVAL 0.2
+#define ANIM_TRANSLUCENT_INTERVAL 0.05
 
 #ifdef _WIN32
 	#define DS WDS

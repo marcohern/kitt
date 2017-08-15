@@ -22,6 +22,11 @@ namespace Graphics {
     class Renderable : public Transformable {
 	private:
 		Animation *current;
+		bool translucent;
+		bool renderSwitch;
+		double translucentInterval;
+		double translucentTime;
+		double renderInterval;
 
         
     public:
@@ -40,6 +45,11 @@ namespace Graphics {
         virtual ~Renderable();
         
         virtual void render(Renderer *render, Camera *camera);
+		virtual void update(double interval);
+
+		void setTranslucent(double time);
+		void setAnimation(Animation *animation);
+		void clearAnimation();
     };
 }
 #endif /* Renderable_hpp */

@@ -7,6 +7,7 @@
 //
 
 #include "Angleable.hpp"
+#include "../constants.hpp"
 
 namespace Behaviors {
     Angleable::Angleable()
@@ -65,6 +66,10 @@ namespace Behaviors {
     double Angleable::getAngle() const {
         return angle;
     }
+
+	double Angleable::getAngleDegrees() const {
+		return (angle / TAU)*360.0;
+	}
     
     Vector2D Angleable::getRotatePivot() const {
         return rotatePivot;

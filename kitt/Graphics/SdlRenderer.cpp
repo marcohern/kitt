@@ -97,6 +97,24 @@ namespace Graphics
 		SDL_RenderCopy(renderer, tx->getSdlTexture(), &src, &dst);
 	}
 
+	void SdlRenderer::animation(const Vector2D &position, const Vector2D &area, const Vector2D &pivot, double angle, bool vflip, bool hflip, Animation *animation) {
+		Sprite *sprite = animation->getCurrentSprite();
+		SdlTexture *tx = (SdlTexture *)sprite->getTexture();
+		SDL_Rect src, dst;
+		SDL_Point pnt;
+		
+		src.x = sprite->getX(); src.y = sprite->getY(); src.w = sprite->getW(); src.h = sprite->getH();
+		dst.x = position.getX() - sprite->getPX(); dst.y = position.getY() - sprite->getPY(); dst.w = area.getX(); dst.h=area.getY();
+		pnt.x = pivot.iX(); pnt.y = pivot.iY();
+
+		SDL_RendererFlip flip = SDL_RendererFlip::SDL_FLIP_NONE;
+		if (vflip) flip = SDL_RendererFlip::SDL_FLIP_VERTICAL;
+		if (hflip) flip = SDL_RendererFlip::SDL_FLIP_HORIZONTAL;
+		
+
+		SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, angle, &pnt, flip);
+	}
+
 	SDL_Renderer *SdlRenderer::getRenderer() {
 		return this->renderer;
 	}

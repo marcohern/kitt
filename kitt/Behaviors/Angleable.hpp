@@ -43,6 +43,7 @@ namespace Behaviors {
         void setRotatePivot(const Vector2D &pivot);
         
         double getAngle() const;
+		double getAngleDegrees() const;
         Vector2D getRotatePivot() const;
         
         void addAngle(double radians);

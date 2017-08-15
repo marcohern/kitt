@@ -20,6 +20,7 @@
 #include "../Behaviors/Transformable.hpp"
 #include "../Graphics/SpriteSheet.hpp"
 #include "../Graphics/Animation.hpp"
+#include "../Graphics/Renderable.hpp"
 
 namespace Game {
 	using namespace Core;
@@ -40,6 +41,8 @@ namespace Game {
 		Animation *br_idle, *br_walk, *br_crouch, *br_crouch_fire, *br_idle_fire,
 			*br_walk_diag_up, *br_walk_diag_up_fire, *br_idle_aim_up, *br_idle_aim_up_fire,
 			*br_idle_aim_down, *br_idle_aim_down_fire, *br_idle_aim_diag_down, *br_idle_aim_diag_down_fire;
+		Renderable *renderable;
+		Camera *camera;
 		
 		
 

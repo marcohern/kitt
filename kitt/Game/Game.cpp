@@ -37,6 +37,7 @@ namespace Game {
 		delete reader;
 		delete window;
 		delete font;
+		delete renderable;
     }
 
 	void Game::init() {
@@ -76,6 +77,11 @@ namespace Game {
 		br_idle_aim_down_fire = bill_rizer->getAnimation("idle_aim_down_fire");
 		br_idle_aim_diag_down = bill_rizer->getAnimation("idle_aim_diag_down");
 		br_idle_aim_diag_down_fire = bill_rizer->getAnimation("idle_aim_diag_down_fire");
+
+		renderable = new Renderable(Vector2D(200,200), Vector2D(192,192), Vector2D(32,32), Vector2D(32,32));
+		renderable->setAnimation(br_walk);
+		renderable->setTranslucent(10);
+		camera = new Camera();
 	}
 
 	void Game::update() {
@@ -100,6 +106,7 @@ namespace Game {
 		br_idle_aim_down_fire->update(time->getDelta());
 		br_idle_aim_diag_down->update(time->getDelta());
 		br_idle_aim_diag_down_fire->update(time->getDelta());
+		renderable->update(time->getDelta());
 	}
 
 	void Game::draw() {
@@ -127,6 +134,7 @@ namespace Game {
 		renderer->animation(Vector2D(736, 200), br_idle_aim_diag_down);
 		renderer->animation(Vector2D(800, 200), br_idle_aim_diag_down_fire);
 
+		renderable->render(renderer, camera);
 		renderer->present();
 	}
 

@@ -28,7 +28,7 @@ namespace Graphics {
 		virtual void texture(const Vector2D &position, Texture *texture) = 0;
 		virtual void vector2d(const Vector2D &position, const Color &color, const Vector2D &v) = 0;
 		virtual void animation(const Vector2D &position, Animation *animation) = 0;
-		virtual void animation(const Vector2D &position, const Vector2D &area, const Vector2D &pivot, double angle, bool vflip, bool hflip, Animation *animation) = 0;
+		virtual void animation(const Vector2D &position, const Vector2D &area, const Vector2D &pivot, double angle, bool hflip, Animation *animation) = 0;
 		virtual void sprite(const Vector2D &location, Sprite *sprite) = 0;
 	};
 }

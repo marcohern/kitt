@@ -107,7 +107,7 @@ namespace Behaviors {
 	}
 
 	Transformable::Transformable(const Vector2D &location, const Vector2D &area, const Vector2D &areaPivot, const Vector2D &rotationPivot, Trigonometry *trigo)
-		: Directable(location, trigo), Growable(trigo), Rotateable(rotatePivot, trigo), Areable(area, areaPivot, trigo)
+		: Directable(location, trigo), Growable(trigo), Rotateable(rotationPivot, trigo), Areable(area, areaPivot, trigo)
 		, rotateDirection(false), growArea(false)
 	{
 	}

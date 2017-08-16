@@ -81,8 +81,7 @@ namespace Graphics
 				area,
 				this->getRotatePivot(),
 				this->getAngleDegrees(),
-				false,
-				false,
+				true,
 				this->current
 			);
 		}
@@ -96,6 +95,7 @@ namespace Graphics
 				renderInterval -= ANIM_TRANSLUCENT_INTERVAL;
 				renderSwitch = (renderSwitch) ? false : true;
 			}
+			renderSwitch = (renderSwitch) ? false : true;
 			if (translucentInterval > translucentTime) {
 				translucent = false;
 			}

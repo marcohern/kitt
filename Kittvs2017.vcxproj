@@ -228,6 +228,7 @@
     <None Include="config.json" />
     <None Include="content\sprites\bill_rizer.sprite.json" />
     <None Include="content\sprites\bullets.sprite.json" />
+    <None Include="content\sprites\explosion1.sprite.json" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +242,7 @@
     <Image Include="content\sprites\bill_rizer.png" />
     <Image Include="content\sprites\bill_rizer_big.png" />
     <Image Include="content\sprites\bullets.png" />
+    <Image Include="content\sprites\explosion1.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

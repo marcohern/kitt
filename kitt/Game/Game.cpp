@@ -52,6 +52,8 @@ namespace Game {
 		reader = new SdlFileReader("/content", renderer, false);
 		font = reader->readSurface("/fonts/courier.bmp");
 		bullets = reader->readSpriteSheet("/sprites/bullets.sprite.json");
+		explosion1_sheet = reader->readSpriteSheet("/sprites/explosion1.sprite.json");
+		explosion1 = explosion1_sheet->getAnimation("explosion");
 		rrb = bullets->getAnimation("rrb");
 		rrb->reset();
 		yrb = bullets->getAnimation("yrb");
@@ -80,9 +82,9 @@ namespace Game {
 
 		renderable = new Renderable(Vector2D(200,200), Vector2D(192,192), Vector2D(96,192), Vector2D(96,96));
 		renderable->setAnimation(br_walk);
-		renderable->setTranslucent(10);
-		//renderable->setAngle(PI);
-		renderable->setRotationRate(PI);
+		renderable->setTranslucent(5);
+		//renderable->setAngle(PI/2);
+		renderable->setRotationRate(PI/4);
 		camera = new Camera();
 	}
 
@@ -91,16 +93,20 @@ namespace Game {
         v1.updateTransform(time->getDelta());
 		Signal *signals = signalm->getSignals();
 		if (signals[0].up) {
-			camera->setLocation(camera->getLocation() + Vector2D(0,-100) * time->getDelta());
+			camera->setLocation(camera->getLocation() + Vector2D(0,-200) * time->getDelta());
 		}
 		if (signals[0].down) {
-			camera->setLocation(camera->getLocation() + Vector2D(0, 100) * time->getDelta());
+			camera->setLocation(camera->getLocation() + Vector2D(0, 200) * time->getDelta());
 		}
 		if (signals[0].left) {
-			camera->setLocation(camera->getLocation() + Vector2D(-100, 0) * time->getDelta());
+			camera->setLocation(camera->getLocation() + Vector2D(-200, 0) * time->getDelta());
 		}
 		if (signals[0].right) {
-			camera->setLocation(camera->getLocation() + Vector2D(100, 0) * time->getDelta());
+			camera->setLocation(camera->getLocation() + Vector2D(200, 0) * time->getDelta());
+		}
+
+		if (signals[0].jump) {
+			renderable->setTranslucent(5);
 		}
 		onevent(signals);
 		rrb->update(time->getDelta());
@@ -121,6 +127,7 @@ namespace Game {
 		br_idle_aim_down_fire->update(time->getDelta());
 		br_idle_aim_diag_down->update(time->getDelta());
 		br_idle_aim_diag_down_fire->update(time->getDelta());
+		explosion1->update(time->getDelta());
 		renderable->update(time->getDelta());
 	}
 
@@ -129,6 +136,7 @@ namespace Game {
 
 		renderer->texture(Vector2D(0,0),font);
         renderer->vector2d(v1.getLocation(), Color::White, v1.getDirection());
+		
 		renderer->animation(Vector2D(400, 20), rrb);
 		renderer->animation(Vector2D(400, 40), yrb);
 		renderer->animation(Vector2D(400, 60), grb);
@@ -150,6 +158,7 @@ namespace Game {
 		renderer->animation(Vector2D(800, 200), br_idle_aim_diag_down_fire);
 
 		renderable->render(renderer, camera);
+		renderer->animation(Vector2D(300, 300), explosion1);
 		renderer->present();
 	}
 

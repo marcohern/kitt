@@ -383,6 +383,7 @@
     <None Include="config.json" />
     <None Include="content\sprites\bullets.sprite.json" />
     <None Include="content\sprites\bill_rizer.sprite.json" />
+    <None Include="content\sprites\explosion1.sprite.json" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Kittvs2017.rc" />
@@ -395,5 +396,6 @@
     <Image Include="content\sprites\bullets.png" />
     <Image Include="content\sprites\bill_rizer.png" />
     <Image Include="content\sprites\bill_rizer_big.png" />
+    <Image Include="content\sprites\explosion1.png" />
   </ItemGroup>
 </Project>

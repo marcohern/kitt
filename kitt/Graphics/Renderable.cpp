@@ -82,7 +82,7 @@ namespace Graphics
 				this->getRotatePivot(),
 				this->getAngleDegrees(),
 				false,
-				true,
+				false,
 				this->current
 			);
 		}
@@ -104,6 +104,7 @@ namespace Graphics
 			renderSwitch = true;
 		}
 		current->update(interval);
+		this->updateTransform(interval);
 	}
 
 	void Renderable::setTranslucent(double time) {

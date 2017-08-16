@@ -60,11 +60,11 @@ namespace Core {
 	}
 
 	int Vector2D::iX() const {
-		return (int) this->x;
+		return (int) floor(this->x);
 	}
 
 	int Vector2D::iY() const {
-		return (int) this->y;
+		return (int) floor(this->y);
 	}
 
 	void Vector2D::setX(double x) {

@@ -111,7 +111,8 @@ namespace Graphics
 		if (vflip) flip = SDL_RendererFlip::SDL_FLIP_VERTICAL;
 		if (hflip) flip = SDL_RendererFlip::SDL_FLIP_HORIZONTAL;
 		
-
+		SDL_SetRenderDrawColor(renderer,0xFF,0x00,0x00,0x00);
+		SDL_RenderDrawRect(renderer, &dst);
 		SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, angle, &pnt, flip);
 	}
 

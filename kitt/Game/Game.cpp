@@ -78,15 +78,30 @@ namespace Game {
 		br_idle_aim_diag_down = bill_rizer->getAnimation("idle_aim_diag_down");
 		br_idle_aim_diag_down_fire = bill_rizer->getAnimation("idle_aim_diag_down_fire");
 
-		renderable = new Renderable(Vector2D(200,200), Vector2D(192,192), Vector2D(32,32), Vector2D(32,32));
+		renderable = new Renderable(Vector2D(200,200), Vector2D(192,192), Vector2D(96,192), Vector2D(96,96));
 		renderable->setAnimation(br_walk);
 		renderable->setTranslucent(10);
+		//renderable->setAngle(PI);
+		renderable->setRotationRate(PI);
 		camera = new Camera();
 	}
 
 	void Game::update() {
+
         v1.updateTransform(time->getDelta());
 		Signal *signals = signalm->getSignals();
+		if (signals[0].up) {
+			camera->setLocation(camera->getLocation() + Vector2D(0,-100) * time->getDelta());
+		}
+		if (signals[0].down) {
+			camera->setLocation(camera->getLocation() + Vector2D(0, 100) * time->getDelta());
+		}
+		if (signals[0].left) {
+			camera->setLocation(camera->getLocation() + Vector2D(-100, 0) * time->getDelta());
+		}
+		if (signals[0].right) {
+			camera->setLocation(camera->getLocation() + Vector2D(100, 0) * time->getDelta());
+		}
 		onevent(signals);
 		rrb->update(time->getDelta());
 		yrb->update(time->getDelta());

@@ -53,7 +53,7 @@ namespace Behaviors {
 	}
 
 	Transformable::Transformable(const Vector2D &location, const Vector2D &area, const Vector2D &areaPivot, const Vector2D &rotationPivot)
-		: Directable(location), Growable(), Rotateable(rotatePivot), Areable(area, areaPivot)
+		: Directable(location), Growable(), Rotateable(rotationPivot), Areable(area, areaPivot)
 		, rotateDirection(false), growArea(false)
 	{
 	}

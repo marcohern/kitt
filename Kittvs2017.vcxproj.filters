@@ -335,6 +335,7 @@
     <ClInclude Include="kitt\Graphics\SpriteSheet.hpp" />
     <ClInclude Include="kitt\Tests\SdlFileReaderTest.hpp" />
     <ClInclude Include="kitt\Graphics\Animation.hpp" />
+    <ClInclude Include="kitt\Graphics\Tintable.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

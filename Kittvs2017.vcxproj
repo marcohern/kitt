@@ -194,6 +194,7 @@
     <ClInclude Include="kitt\Graphics\SpriteSheet.hpp" />
     <ClInclude Include="kitt\Graphics\Texture.hpp" />
     <ClInclude Include="kitt\Graphics\Renderer.hpp" />
+    <ClInclude Include="kitt\Graphics\Tintable.hpp" />
     <ClInclude Include="kitt\Graphics\Vector2DRenderable.hpp" />
     <ClInclude Include="kitt\Graphics\Window.hpp" />
     <ClInclude Include="kitt\Input\SdlSignalManager.hpp" />

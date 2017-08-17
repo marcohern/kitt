@@ -72,15 +72,15 @@
 	],
 	"animations": [
 					{"id":"idle","duration":1.0, "frames": ["idle"] },
-					{"id":"walk","duration":0.8, "frames": ["walk01","walk02","walk03","walk04","walk05","walk06"] },
+					{"id":"walk","duration":1.0, "frames": ["walk01","walk02","walk03","walk04","walk05","walk06"] },
 					
 					{"id":"crouch"     ,"duration":1.0, "frames": ["crouch"] },
 					{"id":"crouch_fire","duration":0.1, "frames": ["crouch_fire0","crouch_fire1"] },
 
 					{"id":"idle_fire","duration":0.1, "frames": ["idle_fire0","idle_fire1"] },
 					
-					{"id":"walk_diag_up","duration":0.8, "frames": ["walk_dup_a01","walk_dup_a02","walk_dup_a03","walk_dup_a04","walk_dup_a05","walk_dup_a06"] },
-          {"id": "walk_diag_up_fire", "duration": 0.8, "frames": [
+					{"id":"walk_diag_up","duration":1.0, "frames": ["walk_dup_a01","walk_dup_a02","walk_dup_a03","walk_dup_a04","walk_dup_a05","walk_dup_a06"] },
+          {"id": "walk_diag_up_fire", "duration": 1.0, "frames": [
         "walk_dup_b01", "walk_dup_a01", "walk_dup_b02", "walk_dup_a02",
         "walk_dup_b03", "walk_dup_a03", "walk_dup_b04", "walk_dup_a04",
         "walk_dup_b05", "walk_dup_a05", "walk_dup_b06", "walk_dup_a06"

@@ -86,6 +86,7 @@ namespace Game {
 		//renderable->setAngle(PI/2);
 		renderable->setRotationRate(PI/4);
 		renderable->activate();
+		
 		camera = new Camera();
 	}
 

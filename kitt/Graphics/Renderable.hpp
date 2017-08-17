@@ -14,6 +14,7 @@
 #include "../Core/Camera.hpp"
 #include "Animation.hpp"
 #include "Renderer.hpp"
+#include "Color.hpp"
 
 namespace Graphics {
     using namespace Core;
@@ -22,6 +23,10 @@ namespace Graphics {
     class Renderable : public Transformable {
 	private:
 		Animation *current;
+		RendererFlip flip;
+		int blendAdd;
+		Color tint;
+
 		bool translucent;
 		bool renderSwitch;
 		double translucentInterval;
@@ -45,16 +50,31 @@ namespace Graphics {
         
         virtual ~Renderable();
         
-        virtual void render(Renderer *render, Camera *camera);
+		virtual void render(Renderer *render, Camera *camera);
 		virtual void update(double interval);
 
 		void setTranslucent(double time);
 		void setAnimation(Animation *animation);
 		void clearAnimation();
 
+		bool isTranslucent() const;
+
 		void activate();
 		void deactivate();
-		bool isActive();
+		bool isActive() const;
+
+		void setFlip(RendererFlip flip);
+		RendererFlip getFlip() const;
+		void clearFlip();
+
+		void setTint(const Color &tint);
+		Color getTint() const;
+
+		void setBlendAdd(int blendAdd);
+		int getBlendAdd() const;
+		void activateDefaultBlendAdd();
+		void clearBlendAadd();
+
     };
 }
 #endif /* Renderable_hpp */

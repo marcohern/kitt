@@ -36,6 +36,8 @@
 
 #define ANIM_TRANSLUCENT_INTERVAL 0.05
 
+#define BLEND_ADD_SHOT 3
+
 #ifdef _WIN32
 	#define DS WDS
 #else 

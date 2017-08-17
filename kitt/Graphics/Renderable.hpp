@@ -27,6 +27,7 @@ namespace Graphics {
 		double translucentInterval;
 		double translucentTime;
 		double renderInterval;
+		bool active;
 
         
     public:
@@ -50,6 +51,10 @@ namespace Graphics {
 		void setTranslucent(double time);
 		void setAnimation(Animation *animation);
 		void clearAnimation();
+
+		void activate();
+		void deactivate();
+		bool isActive();
     };
 }
 #endif /* Renderable_hpp */

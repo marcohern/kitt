@@ -137,28 +137,28 @@ namespace Game {
 		renderer->texture(Vector2D(0,0),font);
         renderer->vector2d(v1.getLocation(), Color::White, v1.getDirection());
 		
-		renderer->animation(Vector2D(400, 20), rrb);
-		renderer->animation(Vector2D(400, 40), yrb);
-		renderer->animation(Vector2D(400, 60), grb);
-		renderer->animation(Vector2D(400, 80), crb);
-		renderer->animation(Vector2D(400,120), rrbx);
+		renderer->animation(rrb, Vector2D(400, 20));
+		renderer->animation(yrb, Vector2D(400, 40));
+		renderer->animation(grb, Vector2D(400, 60));
+		renderer->animation(crb, Vector2D(400, 80));
+		renderer->animation(rrbx, Vector2D(400,120));
 
-		renderer->animation(Vector2D(32, 200), br_idle);
-		renderer->animation(Vector2D(96, 200), br_walk);
-		renderer->animation(Vector2D(160, 200), br_crouch);
-		renderer->animation(Vector2D(224, 200), br_crouch_fire);
-		renderer->animation(Vector2D(288, 200), br_idle_fire);
-		renderer->animation(Vector2D(352, 200), br_walk_diag_up);
-		renderer->animation(Vector2D(416, 200), br_walk_diag_up_fire);
-		renderer->animation(Vector2D(480, 200), br_idle_aim_up);
-		renderer->animation(Vector2D(544, 200), br_idle_aim_up_fire);
-		renderer->animation(Vector2D(608, 200), br_idle_aim_down);
-		renderer->animation(Vector2D(672, 200), br_idle_aim_down_fire);
-		renderer->animation(Vector2D(736, 200), br_idle_aim_diag_down);
-		renderer->animation(Vector2D(800, 200), br_idle_aim_diag_down_fire);
+		renderer->animation(br_idle, Vector2D(32, 200));
+		renderer->animation(br_walk, Vector2D(96, 200));
+		renderer->animation(br_crouch, Vector2D(160, 200));
+		renderer->animation(br_crouch_fire, Vector2D(224, 200));
+		renderer->animation(br_idle_fire, Vector2D(288, 200));
+		renderer->animation(br_walk_diag_up, Vector2D(352, 200));
+		renderer->animation(br_walk_diag_up_fire, Vector2D(416, 200));
+		renderer->animation(br_idle_aim_up, Vector2D(480, 200));
+		renderer->animation(br_idle_aim_up_fire, Vector2D(544, 200));
+		renderer->animation(br_idle_aim_down, Vector2D(608, 200));
+		renderer->animation(br_idle_aim_down_fire, Vector2D(672, 200));
+		renderer->animation(br_idle_aim_diag_down, Vector2D(736, 200));
+		renderer->animation(br_idle_aim_diag_down_fire, Vector2D(800, 200));
 
 		renderable->render(renderer, camera);
-		renderer->animation(Vector2D(300, 300), explosion1);
+		renderer->animation(explosion1, Vector2D(300, 300));
 		renderer->present();
 	}
 

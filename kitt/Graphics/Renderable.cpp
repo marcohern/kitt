@@ -77,12 +77,15 @@ namespace Graphics
 			Vector2D location = this->getDisplacement(camera->getLocation());
 			Vector2D area = this->getScaledArea();
 			render->animation(
+				this->current,
 				location,
 				area,
+				this->getAreaPivot(),
 				this->getRotatePivot(),
+				Color::White,
+				0,
 				this->getAngleDegrees(),
-				true,
-				this->current
+				RENDER_FLIP_HORIZONTAL
 			);
 		}
 	}

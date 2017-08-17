@@ -86,44 +86,41 @@ namespace Graphics
 		//SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, 0.0, &pnt, SDL_RendererFlip::SDL_FLIP_NONE);
 	}
 
-	void SdlRenderer::animation(const Vector2D &position, Animation *animation) {
+	void SdlRenderer::animation(
+		Animation *animation
+		, const Vector2D &position, const Vector2D &area, const Vector2D &offset, const Vector2D &pivot
+		, const Color &tint, int blendAdd, double angle, RendererFlip flip) {
 		Sprite *sprite = animation->getCurrentSprite();
 		SdlTexture *tx = (SdlTexture *)sprite->getTexture();
 		SDL_Rect src, dst;
 		SDL_Point pnt;
-		
-		src.x = sprite->getX();  src.y = sprite->getY();  src.w = sprite->getW(); src.h = sprite->getH();
-		dst.x = position.getX()-sprite->getPX(); dst.y = position.getY()-sprite->getPY(); dst.w = sprite->getW(); dst.h = sprite->getH();
-		SDL_RenderCopy(renderer, tx->getSdlTexture(), &src, &dst);
-	}
 
-	void SdlRenderer::animation(const Vector2D &position, const Vector2D &area, const Vector2D &pivot, double angle, bool hflip, Animation *animation) {
-		Sprite *sprite = animation->getCurrentSprite();
-		SdlTexture *tx = (SdlTexture *)sprite->getTexture();
-		SDL_Rect src, dst;
-		SDL_Point pnt;
-		
 		src.x = sprite->getX(); src.y = sprite->getY(); src.w = sprite->getW(); src.h = sprite->getH();
-		
+
 		dst.x = position.getX() - sprite->getPX() - pivot.getX();
 		dst.y = position.getY() - sprite->getPY() - pivot.getY();
-		dst.w = area.getX(); dst.h=area.getY();
+		dst.w = area.getX(); dst.h = area.getY();
+		if (dst.w == 0) dst.w = sprite->getW();
+		if (dst.h == 0) dst.h = sprite->getH();
 		pnt.x = pivot.iX(); pnt.y = pivot.iY();
 
-		SDL_RendererFlip flip = (hflip) ? SDL_RendererFlip::SDL_FLIP_HORIZONTAL : SDL_RendererFlip::SDL_FLIP_NONE;
-		
-		//SDL_SetTextureColorMod(tx->getSdlTexture(), 0xFF, 0x00, 0x00);
-		SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
-		
-		SDL_RenderDrawRect(renderer, &dst);
-		SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, angle, &pnt, flip);
+		SDL_RendererFlip sflip = 
+			(flip == RENDER_FLIP_HORIZONTAL) ? SDL_RendererFlip::SDL_FLIP_HORIZONTAL :
+			(flip == RENDER_FLIP_HORIZONTAL) ? SDL_RendererFlip::SDL_FLIP_VERTICAL :
+			SDL_RendererFlip::SDL_FLIP_NONE;
 
-		SDL_SetTextureBlendMode(tx->getSdlTexture(), SDL_BLENDMODE_ADD);
-		SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, angle, &pnt, flip);
-		SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, angle, &pnt, flip);
-		SDL_SetTextureBlendMode(tx->getSdlTexture(), SDL_BLENDMODE_BLEND);
+		SDL_SetTextureColorMod(tx->getSdlTexture(), tint.iR(), tint.iG(), tint.iB());
 
-		//SDL_SetTextureColorMod(tx->getSdlTexture(), 0xFF, 0xFF, 0xFF);
+		SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, angle, &pnt, sflip);
+
+		if (blendAdd > 0) {
+			SDL_SetTextureBlendMode(tx->getSdlTexture(), SDL_BLENDMODE_ADD);
+			for (int i = 0; i < blendAdd; i++) {
+				SDL_RenderCopyEx(renderer, tx->getSdlTexture(), &src, &dst, angle, &pnt, sflip);
+			}
+			SDL_SetTextureBlendMode(tx->getSdlTexture(), SDL_BLENDMODE_BLEND);
+		}
+		SDL_SetTextureColorMod(tx->getSdlTexture(), 0xFF, 0xFF, 0xFF);
 	}
 
 	SDL_Renderer *SdlRenderer::getRenderer() {

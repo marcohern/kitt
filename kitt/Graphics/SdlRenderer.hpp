@@ -29,8 +29,14 @@ namespace Graphics {
 		void texture(const Vector2D &position, Texture *t);
 		void vector2d(const Vector2D &position, const Color &color, const Vector2D &v);
 		void sprite(const Vector2D &location, Sprite *s);
-		void animation(const Vector2D &position, Animation *animation);
-		void animation(const Vector2D &position, const Vector2D &area, const Vector2D &pivot, double angle, bool hflip, Animation *animation);
+		void animation(Animation *animation
+			, const Vector2D &position
+			, const Vector2D &area = Vector2D::Zero
+			, const Vector2D &offset = Vector2D::Zero
+			, const Vector2D &pivot = Vector2D::Zero
+			, const Color &tint = Color::White
+			, int blendAdd = 0, double angle = 0
+			, RendererFlip flip = RENDER_FLIP_NONE);
 
 		SDL_Renderer *getRenderer();
 	};

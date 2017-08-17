@@ -13,10 +13,13 @@
 #include "../Exceptions/DivideByZeroException.hpp"
 #include "../Exceptions/NullReferenceException.hpp"
 #include "TrigonometryInjector.hpp"
+#include "RealtimeTrigonometry.hpp"
 
 namespace Core {
     using namespace std;
     using namespace Exceptions;
+
+	const Vector2D Vector2D::Zero(0,0, new RealtimeTrigonometry());
     
     Vector2D::Vector2D()
     : x(0), y(0)

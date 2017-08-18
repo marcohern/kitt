@@ -72,8 +72,8 @@ namespace Tests {
 		trans.setScale(2.0, 2.0);
 		trans.setAreaVector(2.0, 2.0);
 		
-		assert.areEqual(trans.getAreaVector().getX(), 4.0);
-		assert.areEqual(trans.getAreaVector().getY(), 4.0);
+		assert.areEqual(trans.getScaledArea().getX(), 4.0);
+		assert.areEqual(trans.getScaledArea().getY(), 4.0);
 	}
     
     void TransformableTest::run() {

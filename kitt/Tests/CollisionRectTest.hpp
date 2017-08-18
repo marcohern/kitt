@@ -36,6 +36,7 @@ namespace Tests {
 		void intersectsSensor_Test();
 		void getCenter_Test();
 		void getClosestPoint_Test();
+		void collidesWith_Test();
 
 		void run();
 	};

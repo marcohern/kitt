@@ -94,6 +94,8 @@ namespace Tests {
 		assert.isTrue(rect.intersectsSensor(sensor));
 		sensor.set(7, 8);
 		assert.isFalse(rect.intersectsSensor(sensor));
+		sensor.set(12, 3);
+		assert.isFalse(rect.intersectsSensor(sensor));
 	}
 
 	void CollisionRectTest::getCenter_Test() {
@@ -113,6 +115,17 @@ namespace Tests {
 		assert.areEqual(rect.getClosestPoint(sensor), Vector2D(5, 7.5));
 	}
 
+	void CollisionRectTest::collidesWith_Test() {
+		CollisionRect rect1(Vector2D(5, 5), Vector2D(5, 5));
+		CollisionRect rect2(Vector2D(20, 20), Vector2D(5, 5));
+
+		assert.isFalse(rect1.collidesWith(rect2));
+		assert.isFalse(rect2.collidesWith(rect1));
+		rect1.setLocation(Vector2D(17,17));
+		assert.isTrue(rect1.collidesWith(rect2));
+		assert.isTrue(rect2.collidesWith(rect1));
+	}
+
 	void CollisionRectTest::run() {
 		runtest("constructor_Test------", &CollisionRectTest::constructor_Test);
 		runtest("constructor_S_Test----", &CollisionRectTest::constructor_S_Test);
@@ -129,5 +142,6 @@ namespace Tests {
 		runtest("intersectsSensor_Test-", &CollisionRectTest::intersectsSensor_Test);
 		runtest("getCenter_Test--------", &CollisionRectTest::getCenter_Test);
 		runtest("getClosestPoint_Test--", &CollisionRectTest::getClosestPoint_Test);
+		runtest("collidesWith_Test-----", &CollisionRectTest::collidesWith_Test);
 	}
 }

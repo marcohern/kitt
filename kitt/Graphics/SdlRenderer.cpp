@@ -14,6 +14,9 @@ namespace Graphics
 		: tip1(trigonometry), tip2(trigonometry)
 	{
 		this->renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+		this->screen = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 1920, 1080);
+		
 	}
 
 	SdlRenderer::SdlRenderer(SDL_Window *window)
@@ -26,12 +29,17 @@ namespace Graphics
 	}
 
 	void SdlRenderer::clear() {
+		SDL_SetRenderTarget(renderer, screen);
 		SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
 		SDL_RenderClear(renderer);
 	}
 
 	void SdlRenderer::present() {
+
+		SDL_SetRenderTarget(renderer, NULL);
+		SDL_RenderCopyEx(renderer, screen, NULL, NULL, 0, NULL, SDL_FLIP_NONE);
 		SDL_RenderPresent(renderer);
+		
 	}
 
 	void SdlRenderer::texture(const Vector2D &position, Texture *texture) {
@@ -104,6 +112,8 @@ namespace Graphics
 		if (dst.h == 0) dst.h = sprite->getH();
 		pnt.x = pivot.iX(); pnt.y = pivot.iY();
 
+		SDL_SetTextureAlphaMod(tx->getSdlTexture(), tint.iA());
+
 		SDL_RendererFlip sflip = 
 			(flip == RENDER_FLIP_HORIZONTAL) ? SDL_RendererFlip::SDL_FLIP_HORIZONTAL :
 			(flip == RENDER_FLIP_HORIZONTAL) ? SDL_RendererFlip::SDL_FLIP_VERTICAL :
@@ -120,7 +130,9 @@ namespace Graphics
 			}
 			SDL_SetTextureBlendMode(tx->getSdlTexture(), SDL_BLENDMODE_BLEND);
 		}
+		SDL_SetTextureAlphaMod(tx->getSdlTexture(), 0xFF);
 		SDL_SetTextureColorMod(tx->getSdlTexture(), 0xFF, 0xFF, 0xFF);
+
 	}
 
 	SDL_Renderer *SdlRenderer::getRenderer() {

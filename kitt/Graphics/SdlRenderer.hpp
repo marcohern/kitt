@@ -18,6 +18,9 @@ namespace Graphics {
 		SDL_Renderer *renderer;
 		SDL_Surface *font_surface;
 		SDL_Texture *font_texture;
+
+		SDL_Texture *screen;
+
 		Vector2D tip1, tip2;
 	public:
 		SdlRenderer(SDL_Window *window, Trigonometry *trigonometry);

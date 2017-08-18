@@ -81,6 +81,9 @@
     <ClCompile Include="kitt\Behaviors\Placeable.cpp" />
     <ClCompile Include="kitt\Behaviors\Rotateable.cpp" />
     <ClCompile Include="kitt\Behaviors\Scalable.cpp" />
+    <ClCompile Include="kitt\Collisions\CollisionCircle.cpp" />
+    <ClCompile Include="kitt\Collisions\CollisionRect.cpp" />
+    <ClCompile Include="kitt\Collisions\CollisionShape.cpp" />
     <ClCompile Include="kitt\Content\FileReader.cpp" />
     <ClCompile Include="kitt\Content\IReader.cpp" />
     <ClCompile Include="kitt\Content\SdlFileReader.cpp" />
@@ -131,6 +134,7 @@
     <ClCompile Include="kitt\Testing\TestSuite.cpp" />
     <ClCompile Include="kitt\Tests\AngleableTest.cpp" />
     <ClCompile Include="kitt\Tests\AreableTest.cpp" />
+    <ClCompile Include="kitt\Tests\CollisionRectTest.cpp" />
     <ClCompile Include="kitt\Tests\DirectableTest.cpp" />
     <ClCompile Include="kitt\Tests\GrowableTest.cpp" />
     <ClCompile Include="kitt\Tests\KittTestSuite.cpp" />
@@ -154,6 +158,9 @@
     <ClInclude Include="kitt\Behaviors\Placeable.hpp" />
     <ClInclude Include="kitt\Behaviors\Rotateable.hpp" />
     <ClInclude Include="kitt\Behaviors\Scalable.hpp" />
+    <ClInclude Include="kitt\Collisions\CollisionCircle.hpp" />
+    <ClInclude Include="kitt\Collisions\CollisionRect.hpp" />
+    <ClInclude Include="kitt\Collisions\CollisionShape.hpp" />
     <ClInclude Include="kitt\Content\FileReader.hpp" />
     <ClInclude Include="kitt\Content\IReader.hpp" />
     <ClInclude Include="kitt\Content\SdlFileReader.hpp" />
@@ -208,6 +215,7 @@
     <ClInclude Include="kitt\Testing\TestSuite.hpp" />
     <ClInclude Include="kitt\Tests\AngleableTest.hpp" />
     <ClInclude Include="kitt\Tests\AreableTest.hpp" />
+    <ClInclude Include="kitt\Tests\CollisionRectTest.hpp" />
     <ClInclude Include="kitt\Tests\DirectableTest.hpp" />
     <ClInclude Include="kitt\Tests\GrowableTest.hpp" />
     <ClInclude Include="kitt\Tests\KittTestSuite.hpp" />

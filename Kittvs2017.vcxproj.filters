@@ -164,6 +164,10 @@
     <ClCompile Include="kitt\Graphics\SpriteSheet.cpp" />
     <ClCompile Include="kitt\Tests\SdlFileReaderTest.cpp" />
     <ClCompile Include="kitt\Graphics\Animation.cpp" />
+    <ClCompile Include="kitt\Collisions\CollisionShape.cpp" />
+    <ClCompile Include="kitt\Collisions\CollisionRect.cpp" />
+    <ClCompile Include="kitt\Collisions\CollisionCircle.cpp" />
+    <ClCompile Include="kitt\Tests\CollisionRectTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -336,6 +340,10 @@
     <ClInclude Include="kitt\Tests\SdlFileReaderTest.hpp" />
     <ClInclude Include="kitt\Graphics\Animation.hpp" />
     <ClInclude Include="kitt\Graphics\Tintable.hpp" />
+    <ClInclude Include="kitt\Collisions\CollisionShape.hpp" />
+    <ClInclude Include="kitt\Collisions\CollisionRect.hpp" />
+    <ClInclude Include="kitt\Collisions\CollisionCircle.hpp" />
+    <ClInclude Include="kitt\Tests\CollisionRectTest.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

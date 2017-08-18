@@ -11,6 +11,8 @@
 #include "./RotateableTest.hpp"
 #include "./AreableTest.hpp"
 #include "./TransformableTest.hpp"
+#include "./CollisionRectTest.hpp"
+
 #include "./SdlFileReaderTest.hpp"
 
 namespace Tests {
@@ -29,6 +31,8 @@ namespace Tests {
         this->add(new RotateableTest());
         this->add(new AreableTest());
         this->add(new TransformableTest());
+		this->add(new CollisionRectTest());
+
 		this->add(new SdlFileReaderTest());
 	}
 

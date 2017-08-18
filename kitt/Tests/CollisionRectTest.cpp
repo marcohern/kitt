@@ -3,6 +3,7 @@
 #include "../Testing/TestRunner.hpp"
 #include "../Core/RealtimeTrigonometry.hpp"
 #include "../Collisions/CollisionRect.hpp"
+#include "../Collisions/CollisionCircle.hpp"
 
 namespace Tests {
 	using namespace Core;
@@ -118,12 +119,22 @@ namespace Tests {
 	void CollisionRectTest::collidesWith_Test() {
 		CollisionRect rect1(Vector2D(5, 5), Vector2D(5, 5));
 		CollisionRect rect2(Vector2D(20, 20), Vector2D(5, 5));
+		CollisionCircle circle(Vector2D(5, 5), 5);
 
 		assert.isFalse(rect1.collidesWith(rect2));
 		assert.isFalse(rect2.collidesWith(rect1));
 		rect1.setLocation(Vector2D(17,17));
+		
 		assert.isTrue(rect1.collidesWith(rect2));
 		assert.isTrue(rect2.collidesWith(rect1));
+
+		assert.isFalse(rect1.collidesWith(circle));
+		assert.isFalse(circle.collidesWith(rect1));
+		circle.setCenter(Vector2D(15, 15));
+		assert.isFalse(rect1.collidesWith(circle));
+		assert.isFalse(circle.collidesWith(rect1));
+		circle.setCenter(Vector2D(16, 16));
+		assert.isFalse(rect1.collidesWith(circle));
 	}
 
 	void CollisionRectTest::run() {

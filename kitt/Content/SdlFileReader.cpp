@@ -10,6 +10,7 @@ namespace Content {
 
 	using namespace std;
 	using namespace Core;
+	using namespace Collisions;
 	using json = nlohmann::json;
 
 	SdlFileReader::SdlFileReader(const string &path, Renderer *renderer, bool fullpath) {
@@ -80,6 +81,17 @@ namespace Content {
 				anim->setSprite(i++, sheet->getSprite(spriteId));
 			}
 			sheet->addAnimation(animId, anim);
+		}
+		try {
+			auto collisions = j.at("colliders");
+			for (auto c : collisions) {
+				string type = c["type"].get<string>();
+				if (type == "rect") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["w"].get<double>(), c["h"].get<double>());
+				else if (type == "circle") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["r"].get<double>());
+			}
+		}
+		catch (std::out_of_range) {
+
 		}
 		return sheet;
 	}

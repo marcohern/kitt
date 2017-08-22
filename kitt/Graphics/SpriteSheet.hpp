@@ -3,16 +3,20 @@
 #include "Texture.hpp"
 #include "Sprite.hpp"
 #include "Animation.hpp"
+#include "../Collisions/CollisionShape.hpp"
 #include <map>
+#include <vector>
 
 namespace Graphics {
 	using namespace std;
+	using namespace Collisions;
 	class SpriteSheet {
 	private:
 		Texture *texture;
 		int count;
-		map<string, Sprite*> sprites;
-		map<string, Animation*> animations;
+		map<string, Sprite *> sprites;
+		map<string, Animation *> animations;
+		vector<CollisionShape *> collisions;
 
 	public:
 		SpriteSheet(Texture *texture);
@@ -22,7 +26,11 @@ namespace Graphics {
 		
 		void addSprite(string id, int x, int y, int w, int h, int px, int py);
 		void addAnimation(string id, Animation *animation);
+		void addCollider(double x, double y, double r);
+		void addCollider(double x, double y, double w, double h);
+
 		Sprite *getSprite(string id);
 		Animation *getAnimation(string id);
+		vector<CollisionShape *> getColliders() const;
 	};
 }

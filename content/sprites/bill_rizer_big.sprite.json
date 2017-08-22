@@ -70,6 +70,10 @@
 
 		{ "id":"_last", "x":0, "y": 0, "w": 0, "h": 0, "px":0, "py": 0 }
 	],
+  "colliders": [
+    {"type": "circle", "x": 31.0, "y": 15.0, "r": 3 },
+    {"type": "rect", "x": 24.0, "y": 18.0, "w": 14.0, "h": 18.0 }
+  ],
 	"animations": [
 					{"id":"idle","duration":1.0, "frames": ["idle"] },
 					{"id":"walk","duration":1.0, "frames": ["walk01","walk02","walk03","walk04","walk05","walk06"] },

@@ -29,6 +29,8 @@ namespace Collisions {
 		void addCenter(const Vector2D &delta);
 
 		bool     intersectsSensor(const Vector2D &sensor) const;
+		vector<Vector2D> getCorners() const;
 		Vector2D getClosestPoint (const Vector2D  &point) const;
+		bool collidesWith(const CollisionShape &shape) const;
 	};
 }

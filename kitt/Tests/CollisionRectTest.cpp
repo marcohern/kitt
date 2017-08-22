@@ -128,13 +128,14 @@ namespace Tests {
 		assert.isTrue(rect1.collidesWith(rect2));
 		assert.isTrue(rect2.collidesWith(rect1));
 
-		assert.isFalse(rect1.collidesWith(circle));
-		assert.isFalse(circle.collidesWith(rect1));
 		circle.setCenter(Vector2D(15, 15));
 		assert.isFalse(rect1.collidesWith(circle));
 		assert.isFalse(circle.collidesWith(rect1));
+
 		circle.setCenter(Vector2D(16, 16));
-		assert.isFalse(rect1.collidesWith(circle));
+		assert.isTrue(rect1.collidesWith(circle));
+		assert.isTrue(circle.collidesWith(rect1));
+
 	}
 
 	void CollisionRectTest::run() {

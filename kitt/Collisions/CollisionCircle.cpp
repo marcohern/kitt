@@ -2,25 +2,25 @@
 
 namespace Collisions {
 	CollisionCircle::CollisionCircle()
-		: center(), radius(0) {}
+		: CollisionShape(COLLSHAPE_CIRCLE), center(), radius(0) {}
 
 	CollisionCircle::CollisionCircle(double radius)
-		: center(), radius(radius) {}
+		: CollisionShape(COLLSHAPE_CIRCLE), center(), radius(radius) {}
 
 	CollisionCircle::CollisionCircle(const Vector2D &center, double radius)
-		: center(center), radius(radius) {}
+		: CollisionShape(COLLSHAPE_CIRCLE), center(center), radius(radius) {}
 
 	CollisionCircle::CollisionCircle(Trigonometry *trigo)
-		: center(trigo), radius(0) {}
+		: CollisionShape(COLLSHAPE_CIRCLE), center(trigo), radius(0) {}
 
 	CollisionCircle::CollisionCircle(double radius, Trigonometry *trigo)
-		: center(trigo), radius(radius) {}
+		: CollisionShape(COLLSHAPE_CIRCLE), center(trigo), radius(radius) {}
 
 	CollisionCircle::CollisionCircle(const Vector2D &center, double radius, Trigonometry *trigo)
-		: center(center, trigo), radius(radius) {}
+		: CollisionShape(COLLSHAPE_CIRCLE), center(center, trigo), radius(radius) {}
 
 	CollisionCircle::~CollisionCircle() {
-
+		CollisionShape::~CollisionShape();
 	}
 
 	double CollisionCircle::getRadius() const {
@@ -50,6 +50,10 @@ namespace Collisions {
 		return false;
 	}
 
+	vector<Vector2D> CollisionCircle::getCorners() const {
+		return vector<Vector2D>();
+	}
+
 	Vector2D CollisionCircle::getClosestPoint(const Vector2D  &point) const {
 		Vector2D toPoint(point);
 		toPoint.sub(center);
@@ -59,5 +63,15 @@ namespace Collisions {
 			return point;
 		}
 		return closestPoint;
+	}
+
+	bool CollisionCircle::collidesWith(const CollisionShape &shape) const {
+		if (shape.getType() == COLLSHAPE_RECT) {
+			return shape.collidesWith(*this);
+		}
+		else {
+			return this->intersectsSensor(shape.getClosestPoint(this->getCenter()));
+		}
+		return false;
 	}
 }

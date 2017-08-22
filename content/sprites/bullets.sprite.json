@@ -243,6 +243,9 @@
                 
                 { "id":"_last", "x":0, "y": 0, "w": 0, "h": 0, "px":0, "py": 0 }
     ],
+  "colliders": [
+    {"type": "circle", "x": 31.0, "y": 15.0, "r": 3 },
+  ],
     "animations": [
                    {"id":"rrb","duration":0.3, "frames": ["rrb01","rrb03","rrb02","rrb04"] },
                    {"id":"grb","duration":0.4, "frames": ["grb01","grb03","grb02","grb04"] },

@@ -2,6 +2,7 @@
 #include "SdlFileReader.hpp"
 #include "../Graphics/Texture.hpp"
 #include "../Graphics/SdlTexture.hpp"
+#include "../Exceptions/MissingAttributeException.hpp"
 #include "../Core/Path.hpp"
 #include "../json.hpp"
 #include <fstream>
@@ -11,6 +12,8 @@ namespace Content {
 	using namespace std;
 	using namespace Core;
 	using namespace Collisions;
+	using namespace Exceptions;
+
 	using json = nlohmann::json;
 
 	SdlFileReader::SdlFileReader(const string &path, Renderer *renderer, bool fullpath) {
@@ -52,24 +55,51 @@ namespace Content {
 		return txt;
 	}
 
-	SpriteSheet *SdlFileReader::readSpriteSheet(const string &path) {
-		string fullpath = this->root;
-		fullpath.append(Path::normalize(path));
-		ifstream f(fullpath);
-		json j;
-		f >> j;
-
-		string texturefile = j["source"].get<string>();
-		Texture *texture = this->readSurface(texturefile);
-
-		SpriteSheet *sheet = new SpriteSheet(texture);
+	void SdlFileReader::extractSprites(SpriteSheet *sheet, const json &j) const {
+		int i = 0;
 		for (auto s : j["sprites"]) {
-			sheet->addSprite(s["id"].get<string>(),
-				s["x"].get<int>(), s["y"].get<int>(),
-				s["w"].get<int>(), s["h"].get<int>(),
-				s["px"].get<int>(), s["py"].get<int>()
-			);
+			stringstream ss;
+			if (s["id"].empty()) {
+				ss << "sprites[" << i << "]: expected 'id' in spritesheet json, but not found.";
+				throw new MissingAttributeException(ss.str());
+			}
+			if (s["x"].empty()) {
+				ss << "sprites[" << i << "]: expected 'x' in spritesheet json, but not found.";
+				throw new MissingAttributeException(ss.str());
+			}
+			if (s["y"].empty()) {
+				ss << "sprites[" << i << "]: expected 'y' in spritesheet json, but not found.";
+				throw new MissingAttributeException(ss.str());
+			}
+			if (s["w"].empty()) {
+				ss << "sprites[" << i << "]: expected 'w' in spritesheet json, but not found.";
+				throw new MissingAttributeException(ss.str());
+			}
+			if (s["h"].empty()) {
+				ss << "sprites[" << i << "]: expected 'h' in spritesheet json, but not found.";
+				throw new MissingAttributeException(ss.str());
+			}
+
+			string id = s["id"].get<string>();
+			int x = s["x"].get<int>();
+			int y = s["y"].get<int>();
+			int w = s["w"].get<int>();
+			int h = s["h"].get<int>();
+			int px = (s["px"].empty()) ? 0 : s["px"].get<int>();
+			int py = (s["py"].empty()) ? 0 : s["py"].get<int>();
+			bool useGlobalColliders = (s["useGlobalColliders"].empty()) ? true : s["useGlobalColliders"].get<bool>();
+			if (!s["ugc"].empty()) useGlobalColliders = s["ugc"].get<bool>();
+
+			sheet->addSprite(id, x, y, w, h, px, py);
+
+			for (auto c : s["colliders"]) {
+
+			}
+			i++;
 		}
+	}
+
+	void SdlFileReader::extractAnimations(SpriteSheet *sheet, const json &j) const {
 		for (auto a : j["animations"]) {
 			string animId = a["id"].get<string>();
 			double duration = a["duration"].get<double>();
@@ -82,17 +112,36 @@ namespace Content {
 			}
 			sheet->addAnimation(animId, anim);
 		}
-		try {
-			auto collisions = j.at("colliders");
-			for (auto c : collisions) {
-				string type = c["type"].get<string>();
-				if (type == "rect") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["w"].get<double>(), c["h"].get<double>());
-				else if (type == "circle") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["r"].get<double>());
-			}
-		}
-		catch (std::out_of_range) {
+	}
 
+	void SdlFileReader::extractColliders(SpriteSheet *sheet, const json &j) const {
+		for (auto c : j["colliders"]) {
+			bool e = c["check"].empty();
+			string type = c["type"].get<string>();
+			if (type == "rect") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["w"].get<double>(), c["h"].get<double>());
+			else if (type == "circle") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["r"].get<double>());
 		}
+	}
+
+	SpriteSheet *SdlFileReader::readSpriteSheet(const string &path) {
+		string fullpath = this->root;
+		int i;
+		json j;
+
+		fullpath.append(Path::normalize(path));
+		ifstream f(fullpath);
+		f >> j;
+
+		if (j["source"].empty()) throw new MissingAttributeException("root: expected 'source' but not found.");
+		string texturefile = j["source"].get<string>();
+		Texture *texture = this->readSurface(texturefile);
+
+		SpriteSheet *sheet = new SpriteSheet(texture);
+
+		this->extractSprites(sheet, j);
+		this->extractAnimations(sheet, j);
+		this->extractColliders(sheet, j);
+		
 		return sheet;
 	}
 

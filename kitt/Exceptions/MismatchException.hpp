@@ -9,7 +9,6 @@
 #ifndef MismatchException_hpp
 #define MismatchException_hpp
 
-#include <stdio.h>
 #include "KittException.hpp"
 
 namespace Exceptions {

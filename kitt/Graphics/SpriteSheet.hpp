@@ -6,8 +6,10 @@
 #include "../Collisions/CollisionShape.hpp"
 #include <map>
 #include <vector>
+#include "../json.hpp"
 
 namespace Graphics {
+	using json = nlohmann::json;
 	using namespace std;
 	using namespace Collisions;
 	class SpriteSheet {

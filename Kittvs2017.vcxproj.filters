@@ -168,6 +168,7 @@
     <ClCompile Include="kitt\Collisions\CollisionRect.cpp" />
     <ClCompile Include="kitt\Collisions\CollisionCircle.cpp" />
     <ClCompile Include="kitt\Tests\CollisionRectTest.cpp" />
+    <ClCompile Include="kitt\Exceptions\MissingAttributeException.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -344,6 +345,7 @@
     <ClInclude Include="kitt\Collisions\CollisionRect.hpp" />
     <ClInclude Include="kitt\Collisions\CollisionCircle.hpp" />
     <ClInclude Include="kitt\Tests\CollisionRectTest.hpp" />
+    <ClInclude Include="kitt\Exceptions\MissingAttributeException.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

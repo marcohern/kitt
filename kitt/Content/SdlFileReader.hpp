@@ -10,6 +10,10 @@ namespace Content {
 	private:
 		Renderer *renderer;
 		string root;
+
+		void extractSprites   (SpriteSheet *sheet, const json &j) const;
+		void extractAnimations(SpriteSheet *sheet, const json &j) const;
+		void extractColliders (SpriteSheet *sheet, const json &j) const;
 	public:
 		SdlFileReader(const string &path, Renderer *renderer, bool fullpath = true);
 

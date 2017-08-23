@@ -60,6 +60,10 @@
 		A774F2231F255C4B002B4DC7 /* AngleableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2211F255C4B002B4DC7 /* AngleableTest.cpp */; };
 		A774F2261F282543002B4DC7 /* Rotateable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2241F282543002B4DC7 /* Rotateable.cpp */; };
 		A774F2291F2828D9002B4DC7 /* RotateableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A774F2271F2828D9002B4DC7 /* RotateableTest.cpp */; };
+		A784E9DE1F49F3EC00DB24B8 /* CollisionRectTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A784E9DC1F49F3EC00DB24B8 /* CollisionRectTest.cpp */; };
+		A784E9E61F49F40F00DB24B8 /* CollisionCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A784E9E01F49F40F00DB24B8 /* CollisionCircle.cpp */; };
+		A784E9E71F49F40F00DB24B8 /* CollisionRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A784E9E21F49F40F00DB24B8 /* CollisionRect.cpp */; };
+		A784E9E81F49F40F00DB24B8 /* CollisionShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A784E9E41F49F40F00DB24B8 /* CollisionShape.cpp */; };
 		A78B3DB81F0F16EE0080E8F6 /* SdlSignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */; };
 		A78B3DB91F0F16EE0080E8F6 /* SignalManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A78B3DB61F0F16EE0080E8F6 /* SignalManager.cpp */; };
 		A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79613091F0F1B9B004CB1A8 /* SdlFileReader.cpp */; };
@@ -204,6 +208,14 @@
 		A774F2251F282543002B4DC7 /* Rotateable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Rotateable.hpp; path = Behaviors/Rotateable.hpp; sourceTree = "<group>"; };
 		A774F2271F2828D9002B4DC7 /* RotateableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RotateableTest.cpp; sourceTree = "<group>"; };
 		A774F2281F2828D9002B4DC7 /* RotateableTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RotateableTest.hpp; sourceTree = "<group>"; };
+		A784E9DC1F49F3EC00DB24B8 /* CollisionRectTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionRectTest.cpp; sourceTree = "<group>"; };
+		A784E9DD1F49F3EC00DB24B8 /* CollisionRectTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CollisionRectTest.hpp; sourceTree = "<group>"; };
+		A784E9E01F49F40F00DB24B8 /* CollisionCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionCircle.cpp; path = Collisions/CollisionCircle.cpp; sourceTree = "<group>"; };
+		A784E9E11F49F40F00DB24B8 /* CollisionCircle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CollisionCircle.hpp; path = Collisions/CollisionCircle.hpp; sourceTree = "<group>"; };
+		A784E9E21F49F40F00DB24B8 /* CollisionRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionRect.cpp; path = Collisions/CollisionRect.cpp; sourceTree = "<group>"; };
+		A784E9E31F49F40F00DB24B8 /* CollisionRect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CollisionRect.hpp; path = Collisions/CollisionRect.hpp; sourceTree = "<group>"; };
+		A784E9E41F49F40F00DB24B8 /* CollisionShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionShape.cpp; path = Collisions/CollisionShape.cpp; sourceTree = "<group>"; };
+		A784E9E51F49F40F00DB24B8 /* CollisionShape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CollisionShape.hpp; path = Collisions/CollisionShape.hpp; sourceTree = "<group>"; };
 		A78B3DB31F0F16EE0080E8F6 /* SdlSignalManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SdlSignalManager.cpp; path = Input/SdlSignalManager.cpp; sourceTree = "<group>"; };
 		A78B3DB41F0F16EE0080E8F6 /* SdlSignalManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SdlSignalManager.hpp; path = Input/SdlSignalManager.hpp; sourceTree = "<group>"; };
 		A78B3DB51F0F16EE0080E8F6 /* Signal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Signal.hpp; path = Input/Signal.hpp; sourceTree = "<group>"; };
@@ -268,6 +280,7 @@
 		A72550081F0CA18D00301290 /* kitt */ = {
 			isa = PBXGroup;
 			children = (
+				A784E9DF1F49F40200DB24B8 /* Collisions */,
 				A7BAC2BD1F15B9380050E985 /* Behaviors */,
 				A78B3DB21F0F16E30080E8F6 /* Input */,
 				A725500A1F0CA18D00301290 /* Content */,
@@ -421,6 +434,8 @@
 		A72550561F0CA18D00301290 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A784E9DC1F49F3EC00DB24B8 /* CollisionRectTest.cpp */,
+				A784E9DD1F49F3EC00DB24B8 /* CollisionRectTest.hpp */,
 				A723A6691F31808600F44DBA /* SdlFileReaderTest.cpp */,
 				A723A66A1F31808600F44DBA /* SdlFileReaderTest.hpp */,
 				A72550571F0CA18D00301290 /* KittTestSuite.cpp */,
@@ -453,6 +468,19 @@
 				A723A6671F2D417800F44DBA /* TransformableTest.hpp */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		A784E9DF1F49F40200DB24B8 /* Collisions */ = {
+			isa = PBXGroup;
+			children = (
+				A784E9E01F49F40F00DB24B8 /* CollisionCircle.cpp */,
+				A784E9E11F49F40F00DB24B8 /* CollisionCircle.hpp */,
+				A784E9E21F49F40F00DB24B8 /* CollisionRect.cpp */,
+				A784E9E31F49F40F00DB24B8 /* CollisionRect.hpp */,
+				A784E9E41F49F40F00DB24B8 /* CollisionShape.cpp */,
+				A784E9E51F49F40F00DB24B8 /* CollisionShape.hpp */,
+			);
+			name = Collisions;
 			sourceTree = "<group>";
 		};
 		A78B3DB21F0F16E30080E8F6 /* Input */ = {
@@ -584,10 +612,12 @@
 				A72550731F0CA18D00301290 /* Vector2D.cpp in Sources */,
 				A7BAC2CC1F1F0B270050E985 /* DirectableTest.cpp in Sources */,
 				A7BAC2C91F1F057A0050E985 /* Directable.cpp in Sources */,
+				A784E9E81F49F40F00DB24B8 /* CollisionShape.cpp in Sources */,
 				A72550711F0CA18D00301290 /* Trigonometry.cpp in Sources */,
 				A725506A1F0CA18D00301290 /* Object.cpp in Sources */,
 				A72550701F0CA18D00301290 /* TimeFactory.cpp in Sources */,
 				A72550781F0CA18D00301290 /* NullReferenceException.cpp in Sources */,
+				A784E9E61F49F40F00DB24B8 /* CollisionCircle.cpp in Sources */,
 				A723A6701F3180C300F44DBA /* Sprite.cpp in Sources */,
 				A796130E1F0F1B9B004CB1A8 /* ZipReader.cpp in Sources */,
 				A72550871F0CA18D00301290 /* MatrixTests.cpp in Sources */,
@@ -610,6 +640,7 @@
 				A796132B1F113E15004CB1A8 /* Camera.cpp in Sources */,
 				A79613111F0F1E7C004CB1A8 /* Color.cpp in Sources */,
 				A774F2201F25583A002B4DC7 /* Angleable.cpp in Sources */,
+				A784E9DE1F49F3EC00DB24B8 /* CollisionRectTest.cpp in Sources */,
 				A79613241F105729004CB1A8 /* TimeInjector.cpp in Sources */,
 				A796130D1F0F1B9B004CB1A8 /* SdlFileReader.cpp in Sources */,
 				A725507E1F0CA18D00301290 /* SdlWindow.cpp in Sources */,
@@ -647,6 +678,7 @@
 				A774F2141F253087002B4DC7 /* ScalableTest.cpp in Sources */,
 				A72550891F0CA18D00301290 /* RealtimeTrigonometryTests.cpp in Sources */,
 				A774F2111F241BFA002B4DC7 /* Scalable.cpp in Sources */,
+				A784E9E71F49F40F00DB24B8 /* CollisionRect.cpp in Sources */,
 				A79613221F105729004CB1A8 /* Animateable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

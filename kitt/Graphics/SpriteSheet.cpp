@@ -20,8 +20,8 @@ namespace Graphics {
 		return texture;
 	}
 
-	Sprite *SpriteSheet::addSprite(string id, int x, int y, int w, int h, int px, int py) {
-		Sprite *sprite = new Sprite(texture, x, y, w, h, px, py);
+	Sprite *SpriteSheet::addSprite(string id, int x, int y, int w, int h, int px, int py, bool useGlobalColliders) {
+		Sprite *sprite = new Sprite(texture, x, y, w, h, px, py, useGlobalColliders);
 		sprites[id] = sprite;
 		return sprite;
 	}

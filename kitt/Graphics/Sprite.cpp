@@ -4,8 +4,8 @@
 #include "../Collisions/CollisionCircle.hpp"
 
 namespace Graphics {
-	Sprite::Sprite(Texture *texture, int x, int y, int w, int h, int px, int py) 
-	: texture(texture), x(x), y(y), w(w), h(h), px(px), py(py), colliders() {
+	Sprite::Sprite(Texture *texture, int x, int y, int w, int h, int px, int py, bool useGlobalColliders) 
+	: texture(texture), x(x), y(y), w(w), h(h), px(px), py(py), colliders(), ugc(useGlobalColliders) {
 	}
 
 	int Sprite::getW() const { return w; }
@@ -26,6 +26,10 @@ namespace Graphics {
 
 	void Sprite::addCollider(double x, double y, double w, double h) {
 		colliders.push_back(new CollisionRect(Vector2D(x, y), Vector2D(w, h)));
+	}
+
+	bool Sprite::useGlobalColliders() const {
+		return ugc;
 	}
 
 	vector<CollisionShape *> Sprite::getColliders() const {

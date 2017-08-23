@@ -26,7 +26,7 @@ namespace Graphics {
 
 		Texture *getTexture() const;
 		
-		Sprite *addSprite(string id, int x, int y, int w, int h, int px, int py);
+		Sprite *addSprite(string id, int x, int y, int w, int h, int px, int py, bool useGlobalColliders);
 		void addAnimation(string id, Animation *animation);
 		void addCollider(double x, double y, double r);
 		void addCollider(double x, double y, double w, double h);

@@ -90,7 +90,7 @@ namespace Content {
 			bool useGlobalColliders = (s["useGlobalColliders"].empty()) ? true : s["useGlobalColliders"].get<bool>();
 			if (!s["ugc"].empty()) useGlobalColliders = s["ugc"].get<bool>();
 
-			Sprite *sprite = sheet->addSprite(id, x, y, w, h, px, py);
+			Sprite *sprite = sheet->addSprite(id, x, y, w, h, px, py, useGlobalColliders);
 
 			for (auto c : s["colliders"]) {
 				string ctype = c["type"].get<string>();

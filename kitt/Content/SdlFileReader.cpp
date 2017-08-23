@@ -90,10 +90,12 @@ namespace Content {
 			bool useGlobalColliders = (s["useGlobalColliders"].empty()) ? true : s["useGlobalColliders"].get<bool>();
 			if (!s["ugc"].empty()) useGlobalColliders = s["ugc"].get<bool>();
 
-			sheet->addSprite(id, x, y, w, h, px, py);
+			Sprite *sprite = sheet->addSprite(id, x, y, w, h, px, py);
 
 			for (auto c : s["colliders"]) {
-
+				string ctype = c["type"].get<string>();
+				if      (ctype == "rect"  ) sprite->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["w"].get<double>(), c["h"].get<double>());
+				else if (ctype == "circle") sprite->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["r"].get<double>());
 			}
 			i++;
 		}
@@ -116,7 +118,6 @@ namespace Content {
 
 	void SdlFileReader::extractColliders(SpriteSheet *sheet, const json &j) const {
 		for (auto c : j["colliders"]) {
-			bool e = c["check"].empty();
 			string type = c["type"].get<string>();
 			if (type == "rect") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["w"].get<double>(), c["h"].get<double>());
 			else if (type == "circle") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["r"].get<double>());

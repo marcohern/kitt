@@ -20,8 +20,10 @@ namespace Graphics {
 		return texture;
 	}
 
-	void SpriteSheet::addSprite(string id, int x, int y, int w, int h, int px, int py) {
-		sprites[id] = new Sprite(texture, x, y, w, h, px, py);
+	Sprite *SpriteSheet::addSprite(string id, int x, int y, int w, int h, int px, int py) {
+		Sprite *sprite = new Sprite(texture, x, y, w, h, px, py);
+		sprites[id] = sprite;
+		return sprite;
 	}
 
 	void SpriteSheet::addAnimation(string id, Animation *animation) {

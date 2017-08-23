@@ -1,11 +1,16 @@
 #pragma once
 
 #include "Texture.hpp"
+#include "../Collisions/CollisionShape.hpp"
+#include <vector>
 
 namespace Graphics {
+	using namespace Collisions;
+
 	class Sprite {
 	private:
 		Texture *texture;
+		vector<CollisionShape *> colliders;
 		int x, y, w, h, px, py;
 
 	public:
@@ -21,5 +26,9 @@ namespace Graphics {
 		int getPY() const;
 
 		Texture *getTexture() const;
+
+		void addCollider(double x, double y, double r);
+		void addCollider(double x, double y, double w, double h);
+		vector<CollisionShape *> getColliders() const;
 	};
 }

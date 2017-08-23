@@ -1,9 +1,11 @@
 
 #include "Sprite.hpp"
+#include "../Collisions/CollisionRect.hpp"
+#include "../Collisions/CollisionCircle.hpp"
 
 namespace Graphics {
 	Sprite::Sprite(Texture *texture, int x, int y, int w, int h, int px, int py) 
-	: texture(texture), x(x), y(y), w(w), h(h), px(px), py(py) {
+	: texture(texture), x(x), y(y), w(w), h(h), px(px), py(py), colliders() {
 	}
 
 	int Sprite::getW() const { return w; }
@@ -17,4 +19,16 @@ namespace Graphics {
 
 
 	Texture *Sprite::getTexture() const { return texture; }
+
+	void Sprite::addCollider(double x, double y, double r) {
+		colliders.push_back(new CollisionCircle(Vector2D(x, y), r));
+	}
+
+	void Sprite::addCollider(double x, double y, double w, double h) {
+		colliders.push_back(new CollisionRect(Vector2D(x, y), Vector2D(w, h)));
+	}
+
+	vector<CollisionShape *> Sprite::getColliders() const {
+		return colliders;
+	}
 }

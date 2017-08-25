@@ -18,7 +18,7 @@ namespace Graphics {
 		int count;
 		map<string, Sprite *> sprites;
 		map<string, Animation *> animations;
-		vector<CollisionShape *> collisions;
+		map<string, vector<CollisionShape *>> collisions;
 
 	public:
 		SpriteSheet(Texture *texture);
@@ -26,13 +26,13 @@ namespace Graphics {
 
 		Texture *getTexture() const;
 		
-		Sprite *addSprite(string id, int x, int y, int w, int h, int px, int py, bool useGlobalColliders);
+		Sprite *addSprite(string id, int x, int y, int w, int h, int px, int py);
 		void addAnimation(string id, Animation *animation);
-		void addCollider(double x, double y, double r);
-		void addCollider(double x, double y, double w, double h);
+		void addCollider(string id, double x, double y, double r);
+		void addCollider(string id, double x, double y, double w, double h);
 
 		Sprite *getSprite(string id);
 		Animation *getAnimation(string id);
-		vector<CollisionShape *> getColliders() const;
+		vector<CollisionShape *> getColliders(string id);
 	};
 }

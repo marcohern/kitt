@@ -87,15 +87,12 @@ namespace Content {
 			int h = s["h"].get<int>();
 			int px = (s["px"].empty()) ? 0 : s["px"].get<int>();
 			int py = (s["py"].empty()) ? 0 : s["py"].get<int>();
-			bool useGlobalColliders = (s["useGlobalColliders"].empty()) ? true : s["useGlobalColliders"].get<bool>();
-			if (!s["ugc"].empty()) useGlobalColliders = s["ugc"].get<bool>();
 
-			Sprite *sprite = sheet->addSprite(id, x, y, w, h, px, py, useGlobalColliders);
-
+			Sprite *sprite = sheet->addSprite(id, x, y, w, h, px, py);
 			for (auto c : s["colliders"]) {
-				string ctype = c["type"].get<string>();
-				if      (ctype == "rect"  ) sprite->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["w"].get<double>(), c["h"].get<double>());
-				else if (ctype == "circle") sprite->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["r"].get<double>());
+				string colliderId = c.get<string>();
+				vector<CollisionShape *> colliders = sheet->getColliders(colliderId);
+				for (auto cc : colliders) sprite->addCollider(cc);
 			}
 			i++;
 		}
@@ -118,9 +115,12 @@ namespace Content {
 
 	void SdlFileReader::extractColliders(SpriteSheet *sheet, const json &j) const {
 		for (auto c : j["colliders"]) {
-			string type = c["type"].get<string>();
-			if (type == "rect") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["w"].get<double>(), c["h"].get<double>());
-			else if (type == "circle") sheet->addCollider(c["x"].get<double>(), c["y"].get<double>(), c["r"].get<double>());
+			string id = c["id"].get<string>();
+			for (auto s : c["shapes"]) {
+				string type = s["type"].get<string>();
+				if (type == "rect") sheet->addCollider(id, s["x"].get<double>(), s["y"].get<double>(), s["w"].get<double>(), s["h"].get<double>());
+				else if (type == "circle") sheet->addCollider(id, s["x"].get<double>(), s["y"].get<double>(), s["r"].get<double>());
+			}
 		}
 	}
 
@@ -139,9 +139,9 @@ namespace Content {
 
 		SpriteSheet *sheet = new SpriteSheet(texture);
 
+		this->extractColliders(sheet, j);
 		this->extractSprites(sheet, j);
 		this->extractAnimations(sheet, j);
-		this->extractColliders(sheet, j);
 		
 		return sheet;
 	}

@@ -20,8 +20,8 @@ namespace Graphics {
 		return texture;
 	}
 
-	Sprite *SpriteSheet::addSprite(string id, int x, int y, int w, int h, int px, int py, bool useGlobalColliders) {
-		Sprite *sprite = new Sprite(texture, x, y, w, h, px, py, useGlobalColliders);
+	Sprite *SpriteSheet::addSprite(string id, int x, int y, int w, int h, int px, int py) {
+		Sprite *sprite = new Sprite(texture, x, y, w, h, px, py);
 		sprites[id] = sprite;
 		return sprite;
 	}
@@ -30,25 +30,25 @@ namespace Graphics {
 		animations[id] = animation;
 	}
 
-	void SpriteSheet::addCollider(double x, double y, double r) {
+	void SpriteSheet::addCollider(string id, double x, double y, double r) {
 		CollisionCircle *circle = new CollisionCircle(Vector2D(x, y), r);
-		collisions.push_back(circle);
+		collisions[id].push_back(circle);
 	}
 
-	void SpriteSheet::addCollider(double x, double y, double w, double h) {
+	void SpriteSheet::addCollider(string id, double x, double y, double w, double h) {
 		CollisionRect *rect = new CollisionRect(Vector2D(x, y), Vector2D(w, h));
-		collisions.push_back(rect);
-	}
-
-	Sprite *SpriteSheet::getSprite(string id) {
-		return sprites[id];
+		collisions[id].push_back(rect);
 	}
 
 	Animation *SpriteSheet::getAnimation(string id) {
 		return animations[id];
 	}
 
-	vector<CollisionShape *> SpriteSheet::getColliders() const {
-		return collisions;
+	vector<CollisionShape *> SpriteSheet::getColliders(string id) {
+		return collisions[id];
+	}
+
+	Sprite *SpriteSheet::getSprite(string id) {
+		return sprites[id];
 	}
 }

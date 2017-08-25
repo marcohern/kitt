@@ -12,10 +12,9 @@ namespace Graphics {
 		Texture *texture;
 		vector<CollisionShape *> colliders;
 		int x, y, w, h, px, py;
-		bool ugc;
 
 	public:
-		Sprite(Texture *texture, int x, int y, int w, int h, int px=0, int py=0, bool useGlobalColliders=true);
+		Sprite(Texture *texture, int x, int y, int w, int h, int px=0, int py=0);
 
 		int getW() const;
 		int getH() const;
@@ -27,10 +26,11 @@ namespace Graphics {
 		int getPY() const;
 
 		Texture *getTexture() const;
-		bool useGlobalColliders() const;
 
 		void addCollider(double x, double y, double r);
 		void addCollider(double x, double y, double w, double h);
+		void addCollider(CollisionShape *shape);
+		void setColliders(const vector<CollisionShape *> &colliders);
 		vector<CollisionShape *> getColliders() const;
 	};
 }

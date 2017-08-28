@@ -10,34 +10,34 @@
 
 namespace Core {
 	Camera::Camera() 
-		: location(), offset(), focus(NULL){}
+		: location(), offset(), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(double x, double y)
-		: location(x,y), offset(), focus(NULL) {}
+		: location(x,y), offset(), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(const Vector2D &location)
-		: location(location), offset(), focus(NULL) {}
+		: location(location), offset(), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(double x, double y, double ox, double oy)
-		: location(x, y), offset(ox, oy), focus(NULL) {}
+		: location(x, y), offset(ox, oy), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(const Vector2D &location, const Vector2D &offset)
-		: location(location), offset(offset), focus(NULL) {}
+		: location(location), offset(offset), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(Trigonometry *trigo)
-		: location(trigo), offset(trigo), focus(NULL) {}
+		: location(trigo), offset(trigo), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(double x, double y, Trigonometry *trigo) 
-		: location(x, y, trigo), offset(trigo), focus(NULL) {}
+		: location(x, y, trigo), offset(trigo), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(const Vector2D &location, Trigonometry *trigo)
-		: location(location, trigo), offset(trigo), focus(NULL) {}
+		: location(location, trigo), offset(trigo), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(double x, double y, double ox, double oy, Trigonometry *trigo)
-		: location(x, y, trigo), offset(ox, oy, trigo), focus(NULL) {}
+		: location(x, y, trigo), offset(ox, oy, trigo), focus(NULL), zoom(1.0) {}
 
 	Camera::Camera(const Vector2D &location, const Vector2D &offset, Trigonometry *trigo)
-		: location(location, trigo), offset(offset, trigo), focus(NULL) {}
+		: location(location, trigo), offset(offset, trigo), focus(NULL), zoom(1.0) {}
 
 	Camera::~Camera() {
 
@@ -66,11 +66,23 @@ namespace Core {
 		this->offset.set(offset);
 	}
 
+	void Camera::setZoom(double zoom) {
+		this->zoom = zoom;
+	}
+
+	void Camera::addZoom(double z) {
+		this->zoom += z;
+	}
+
 	Vector2D Camera::getLocation() const {
 		return location;
 	}
 
 	Vector2D Camera::getOffset() const {
 		return offset;
+	}
+
+	double Camera::getZoom() const {
+		return zoom;
 	}
 }

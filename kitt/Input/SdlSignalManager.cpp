@@ -41,6 +41,15 @@ namespace Input {
 		case SDLK_ESCAPE:
 			signal.quit = value;
 			break;
+		case SDLK_F1:
+			signal.zoomIn = value;
+			break;
+		case SDLK_F2:
+			signal.zoomOut = value;
+			break;
+		case SDLK_F3:
+			signal.zoomReset = value;
+			break;
 		}
 	}
 	

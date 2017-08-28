@@ -21,6 +21,7 @@ namespace Core {
 		Vector2D location;
 		Vector2D offset;
 		Placeable *focus;
+		double zoom;
 
 	public:
 
@@ -45,8 +46,12 @@ namespace Core {
 		void setLocation(const Vector2D &location);
 		void setOffset(double x, double y);
 		void setOffset(const Vector2D &location);
+		void setZoom(double zoom);
+		void addZoom(double z);
+
 		Vector2D getLocation() const;
 		Vector2D getOffset() const;
+		double getZoom() const;
     };
 }
 #endif /* Camera_hpp */

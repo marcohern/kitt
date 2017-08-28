@@ -96,13 +96,13 @@ namespace Graphics
 		if (!active) return;
 		if (renderSwitch) {
 			Vector2D location = this->getDisplacement(camera->getLocation());
-			Vector2D area = this->getScaledArea();
+			Vector2D area = this->getScaledArea()*camera->getZoom();
 			render->animation(
 				this->current,
 				location,
 				area,
-				this->getAreaPivot(),
-				this->getRotatePivot(),
+				this->getAreaPivot()*camera->getZoom(),
+				this->getRotatePivot()*camera->getZoom(),
 				tint,
 				blendAdd,
 				this->getAngleDegrees(),

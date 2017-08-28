@@ -22,5 +22,10 @@ namespace Input {
 		bool pause = false;
 		bool accept = false;
 		bool cancel = false;
+
+		//Camera
+		bool zoomIn = false;
+		bool zoomOut = false;
+		bool zoomReset = false;
 	};
 }

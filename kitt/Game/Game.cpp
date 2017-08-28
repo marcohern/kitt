@@ -106,6 +106,15 @@ namespace Game {
 		if (signals[0].right) {
 			camera->setLocation(camera->getLocation() + Vector2D(200, 0) * time->getDelta());
 		}
+		if (signals[0].zoomIn) {
+			camera->addZoom(time->getDelta());
+		}
+		if (signals[0].zoomOut) {
+			camera->addZoom(-time->getDelta());
+		}
+		if (signals[0].zoomReset) {
+			camera->setZoom(1.0);
+		}
 
 		if (signals[0].jump) {
 			renderable->setTranslucent(5);

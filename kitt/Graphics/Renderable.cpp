@@ -95,7 +95,7 @@ namespace Graphics
 	void Renderable::render(Renderer *render, Camera *camera) {
 		if (!active) return;
 		if (renderSwitch) {
-			Vector2D location = this->getDisplacement(camera->getLocation());
+			Vector2D location = (this->getDisplacement(camera->getLocation()) - camera->getOffset())*camera->getZoom();
 			Vector2D area = this->getScaledArea()*camera->getZoom();
 			render->animation(
 				this->current,

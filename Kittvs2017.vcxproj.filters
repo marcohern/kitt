@@ -169,6 +169,7 @@
     <ClCompile Include="kitt\Collisions\CollisionCircle.cpp" />
     <ClCompile Include="kitt\Tests\CollisionRectTest.cpp" />
     <ClCompile Include="kitt\Exceptions\MissingAttributeException.cpp" />
+    <ClCompile Include="kitt\Core\QuadmemTrigonometry.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
@@ -346,6 +347,7 @@
     <ClInclude Include="kitt\Collisions\CollisionCircle.hpp" />
     <ClInclude Include="kitt\Tests\CollisionRectTest.hpp" />
     <ClInclude Include="kitt\Exceptions\MissingAttributeException.hpp" />
+    <ClInclude Include="kitt\Core\QuadmemTrigonometry.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

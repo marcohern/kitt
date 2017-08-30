@@ -80,7 +80,7 @@ namespace Game {
 		br_idle_aim_diag_down = bill_rizer->getAnimation("idle_aim_diag_down");
 		br_idle_aim_diag_down_fire = bill_rizer->getAnimation("idle_aim_diag_down_fire");
 
-		renderable = new Renderable(Vector2D(200,200), Vector2D(192,192), Vector2D(0,0), Vector2D(96,96));
+		renderable = new Renderable(Vector2D(0,0), Vector2D(192,192), Vector2D(0,0), Vector2D(96,96));
 		renderable->setAnimation(br_walk);
 		renderable->setTranslucent(5);
 		//renderable->setAngle(PI/2);
@@ -88,6 +88,7 @@ namespace Game {
 		renderable->activate();
 		
 		camera = new Camera();
+		camera->setOffset(-960,-540);
 	}
 
 	void Game::update() {

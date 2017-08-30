@@ -92,6 +92,7 @@
     <ClCompile Include="kitt\Core\Camera.cpp" />
     <ClCompile Include="kitt\Core\ConfigFileSettings.cpp" />
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp" />
+    <ClCompile Include="kitt\Core\QuadmemTrigonometry.cpp" />
     <ClCompile Include="kitt\Core\Settings.cpp" />
     <ClCompile Include="kitt\Core\TimeInjector.cpp" />
     <ClCompile Include="kitt\Core\TrigonometryInjector.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="kitt\Core\Camera.hpp" />
     <ClInclude Include="kitt\Core\ConfigFileSettings.hpp" />
     <ClInclude Include="kitt\Core\HasTrigonometry.hpp" />
+    <ClInclude Include="kitt\Core\QuadmemTrigonometry.hpp" />
     <ClInclude Include="kitt\Core\Settings.hpp" />
     <ClInclude Include="kitt\Core\TimeInjector.hpp" />
     <ClInclude Include="kitt\Core\TrigonometryInjector.hpp" />

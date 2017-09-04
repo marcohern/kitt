@@ -348,6 +348,7 @@
     <ClInclude Include="kitt\Tests\CollisionRectTest.hpp" />
     <ClInclude Include="kitt\Exceptions\MissingAttributeException.hpp" />
     <ClInclude Include="kitt\Core\QuadmemTrigonometry.hpp" />
+    <ClInclude Include="kitt\Tests\QuadmemTrigonometryTests.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

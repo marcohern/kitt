@@ -226,6 +226,7 @@
     <ClInclude Include="kitt\Tests\MatrixTests.hpp" />
     <ClInclude Include="kitt\Tests\MemoizedTrigonometryTests.hpp" />
     <ClInclude Include="kitt\Tests\PlaceableTest.hpp" />
+    <ClInclude Include="kitt\Tests\QuadmemTrigonometryTests.hpp" />
     <ClInclude Include="kitt\Tests\RealtimeTrigonometryTests.hpp" />
     <ClInclude Include="kitt\Tests\RotateableTest.hpp" />
     <ClInclude Include="kitt\Tests\ScalableTest.hpp" />

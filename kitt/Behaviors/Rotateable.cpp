@@ -27,24 +27,6 @@ namespace Behaviors {
     Rotateable::Rotateable(const Vector2D &pivot, double radians)
     : Behaviors::Angleable(pivot, radians), rotationRate(0.0) {}
     
-    Rotateable::Rotateable(Trigonometry *trigo)
-    : Behaviors::Angleable(trigo), rotationRate(0.0) {}
-    
-    Rotateable::Rotateable(double radians, Trigonometry *trigo)
-    : Behaviors::Angleable(radians, trigo), rotationRate(0.0) {}
-    
-    Rotateable::Rotateable(double px, double py, Trigonometry *trigo)
-    : Behaviors::Angleable(px, py, trigo), rotationRate(0.0) {}
-    
-    Rotateable::Rotateable(const Vector2D &pivot, Trigonometry *trigo)
-    : Behaviors::Angleable(pivot, trigo), rotationRate(0.0) {}
-    
-    Rotateable::Rotateable(double px, double py, double radians, Trigonometry *trigo)
-    : Behaviors::Angleable(px, py, radians, trigo), rotationRate(0.0) {}
-    
-    Rotateable::Rotateable(const Vector2D &pivot, double radians, Trigonometry *trigo)
-    : Behaviors::Angleable(pivot, radians, trigo), rotationRate(0.0) {}
-    
     Rotateable::~Rotateable() {
         Angleable::~Angleable();
     }

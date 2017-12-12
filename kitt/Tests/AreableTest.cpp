@@ -56,33 +56,6 @@ namespace Tests {
         assert.areEqual(areable.getAreaPivot() , Vector2D(5.6, 7.8));
     }
     
-    void AreableTest::constructor_T_Test() {
-        Areable areable(trigonometry);
-        assert.areEqual(areable.getAreaVector(), Vector2D(0.0, 0.0));
-        assert.areEqual(areable.getAreaPivot() , Vector2D(0.0, 0.0));
-    }
-    void AreableTest::constructor_WHT_Test() {
-        Areable areable(1.2, 3.4, trigonometry);
-        assert.areEqual(areable.getAreaVector(), Vector2D(1.2, 3.4));
-    }
-    void AreableTest::constructor_WHXYT_Test(){
-        Areable areable(1.2, 3.4, 5.6, 7.8, trigonometry);
-        assert.areEqual(areable.getAreaVector(), Vector2D(1.2, 3.4));
-        assert.areEqual(areable.getAreaPivot() , Vector2D(5.6, 7.8));
-    }
-    void AreableTest::constructor_AT_Test(){
-        Vector2D area(1.2, 3.4);
-        Areable areable(area, trigonometry);
-        assert.areEqual(areable.getAreaVector(), Vector2D(1.2, 3.4));
-    }
-    void AreableTest::constructor_APT_Test(){
-        Vector2D area(1.2, 3.4);
-        Vector2D pivot(5.6, 7.8);
-        Areable areable(area, pivot, trigonometry);
-        assert.areEqual(areable.getAreaVector(), Vector2D(1.2, 3.4));
-        assert.areEqual(areable.getAreaPivot() , Vector2D(5.6, 7.8));
-    }
-    
     void AreableTest::setWidth_Test(){
         Areable areable;
         areable.setWidth(1.2);
@@ -152,12 +125,6 @@ namespace Tests {
         runtest("constructor_WHXY_Test--", &AreableTest::constructor_WHXY_Test);
         runtest("constructor_A_Test-----", &AreableTest::constructor_A_Test);
         runtest("constructor_AP_Test----", &AreableTest::constructor_AP_Test);
-        
-        runtest("constructor_T_Test-----", &AreableTest::constructor_T_Test);
-        runtest("constructor_WHT_Test---", &AreableTest::constructor_WHT_Test);
-        runtest("constructor_WHXYT_Test-", &AreableTest::constructor_WHXYT_Test);
-        runtest("constructor_AT_Test----", &AreableTest::constructor_AT_Test);
-        runtest("constructor_APT_Test---", &AreableTest::constructor_APT_Test);
         
         runtest("setWidth_Test----------", &AreableTest::setWidth_Test);
         runtest("setHeight_Test---------", &AreableTest::setHeight_Test);

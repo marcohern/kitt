@@ -23,10 +23,6 @@ namespace Tests {
 		void constructor_S_Test();
 		void constructor_LS_Test();
 
-		void constructor_T_Test();
-		void constructor_ST_Test();
-		void constructor_LST_Test();
-
 		void getLocation_Test();
 		void getSize_Test();
 

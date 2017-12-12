@@ -62,28 +62,28 @@ namespace Tests {
     }
     
     void RotateableTest::constructor_T_Test(){
-        Rotateable rotateable(trigonometry);
+        Rotateable rotateable;
         assert.areEqual(0.0, rotateable.getRotationRate());
     }
     void RotateableTest::constructor_RT_Test(){
-        Rotateable rotateable(2.3, trigonometry);
+        Rotateable rotateable(2.3);
         assert.areEqual(2.3, rotateable.getAngle());
     }
     void RotateableTest::constructor_XYT_Test() {
-        Rotateable rotateable(2.3, 4.5, trigonometry);
+        Rotateable rotateable(2.3, 4.5);
         assert.areEqual(Vector2D(2.3, 4.5), rotateable.getRotatePivot());
     }
     void RotateableTest::constructor_PT_Test() {
-        Rotateable rotateable(Vector2D(2.3, 4.5), trigonometry);
+        Rotateable rotateable(Vector2D(2.3, 4.5));
         assert.areEqual(Vector2D(2.3, 4.5), rotateable.getRotatePivot());
     }
     void RotateableTest::constructor_XYRT_Test() {
-        Rotateable rotateable(2.3, 4.5, 6.7, trigonometry);
+        Rotateable rotateable(2.3, 4.5, 6.7);
         assert.areEqual(Vector2D(2.3, 4.5), rotateable.getRotatePivot());
         assert.areEqual(6.7, rotateable.getAngle());
     }
     void RotateableTest::constructor_PRT_Test(){
-        Rotateable rotateable(Vector2D(2.3, 4.5), 6.7, trigonometry);
+        Rotateable rotateable(Vector2D(2.3, 4.5), 6.7);
         assert.areEqual(Vector2D(2.3, 4.5), rotateable.getRotatePivot());
         assert.areEqual(6.7, rotateable.getAngle());
     }

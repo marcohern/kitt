@@ -10,15 +10,6 @@ namespace Collisions {
 	CollisionCircle::CollisionCircle(const Vector2D &center, double radius)
 		: CollisionShape(COLLSHAPE_CIRCLE), center(center), radius(radius) {}
 
-	CollisionCircle::CollisionCircle(Trigonometry *trigo)
-		: CollisionShape(COLLSHAPE_CIRCLE), center(trigo), radius(0) {}
-
-	CollisionCircle::CollisionCircle(double radius, Trigonometry *trigo)
-		: CollisionShape(COLLSHAPE_CIRCLE), center(trigo), radius(radius) {}
-
-	CollisionCircle::CollisionCircle(const Vector2D &center, double radius, Trigonometry *trigo)
-		: CollisionShape(COLLSHAPE_CIRCLE), center(center, trigo), radius(radius) {}
-
 	CollisionCircle::~CollisionCircle() {
 		CollisionShape::~CollisionShape();
 	}

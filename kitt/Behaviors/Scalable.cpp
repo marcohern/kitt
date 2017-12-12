@@ -14,22 +14,6 @@ namespace Behaviors {
     Scalable::Scalable(double sx, double sy) : scale(sx,sy) {}
     Scalable::Scalable(const Vector2D &scale) : scale(scale) {}
     
-    Scalable::Scalable(Trigonometry *trigo)
-    : scale(1,1, trigo)
-    {}
-    
-    Scalable::Scalable(double s, Trigonometry *trigo)
-    : scale(s,s, trigo)
-    {}
-    
-    Scalable::Scalable(double sx, double sy, Trigonometry *trigo)
-    : scale(sx,sy, trigo)
-    {}
-    
-    Scalable::Scalable(const Vector2D &scale, Trigonometry *trigo)
-    : scale(scale, trigo)
-    {}
-    
     Scalable::~Scalable() {
         
     }

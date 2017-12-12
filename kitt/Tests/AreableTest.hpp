@@ -35,12 +35,6 @@ namespace Tests {
         void constructor_A_Test();
         void constructor_AP_Test();
         
-        void constructor_T_Test();
-        void constructor_WHT_Test();
-        void constructor_WHXYT_Test();
-        void constructor_AT_Test();
-        void constructor_APT_Test();
-        
         void setWidth_Test();
         void setHeight_Test();
         void setAreaVector_WH_Test();

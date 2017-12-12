@@ -9,7 +9,7 @@ namespace Graphics
 	using namespace std;
 	using namespace Core;
 
-	SdlWindow::SdlWindow(string title, int width, int height, bool fullscreen, Trigonometry *trigonometry)
+	SdlWindow::SdlWindow(string title, int width, int height, bool fullscreen)
 		: Window() {
 		this->width = width;
 		this->height = height;
@@ -17,12 +17,7 @@ namespace Graphics
 		int flags = SDL_WINDOW_SHOWN;
 		if (_fullscreen) flags |= SDL_WINDOW_FULLSCREEN;
 		this->window = SDL_CreateWindow(TITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, flags);
-		this->renderer = new SdlRenderer(this->window, trigonometry);
-	}
-
-	SdlWindow::SdlWindow(string title, int width, int height, bool fullscreen)
-		:SdlWindow(title, width, height, fullscreen, TrigonometryInjector::inject()) {
-
+		this->renderer = new SdlRenderer(this->window);
 	}
 
 	SdlWindow::~SdlWindow() {

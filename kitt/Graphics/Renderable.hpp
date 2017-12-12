@@ -42,12 +42,6 @@ namespace Graphics {
         Renderable(const Vector2D &location, const Vector2D &size,const Vector2D &areaPivot);
 		Renderable(const Vector2D &location, const Vector2D &size, const Vector2D &areaPivot, const Vector2D &rotatePivot);
 
-        Renderable(Trigonometry *trigo);
-        Renderable(const Vector2D &location, Trigonometry *trigo);
-		Renderable(const Vector2D &location, const Vector2D &size, Trigonometry *trigo);
-        Renderable(const Vector2D &location, const Vector2D &size,const Vector2D &areaPivot, Trigonometry *trigo);
-		Renderable(const Vector2D &location, const Vector2D &size, const Vector2D &areaPivot, const Vector2D &rotatePivot, Trigonometry *trigo);
-        
         virtual ~Renderable();
         
 		virtual void render(Renderer *render, Camera *camera);

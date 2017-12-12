@@ -29,13 +29,6 @@ namespace Behaviors {
         Angleable(double px, double py, double radians);
         Angleable(const Vector2D &pivot, double radians);
         
-        Angleable(Trigonometry *trigo);
-        Angleable(double radians, Trigonometry *trigo);
-        Angleable(const Vector2D &pivot, Trigonometry *trigo);
-        Angleable(double px, double py, Trigonometry *trigo);
-        Angleable(const Vector2D &pivot, double radians, Trigonometry *trigo);
-        Angleable(double px, double py, double radians, Trigonometry *trigo);
-        
         virtual ~Angleable();
         
         void setAngle(double radians);

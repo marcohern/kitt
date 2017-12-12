@@ -33,27 +33,27 @@ namespace Tests {
     
     void TransformableTest::constructor_Test() {
         Transformable trans;
-        assert.areEqual(trans.getLocation(), Vector2D(trigonometry));
+        assert.areEqual(trans.getLocation(), Vector2D());
     }
     void TransformableTest::constructor_XY_Test(){
         Transformable trans(1.2, 3.4);
-        assert.areEqual(trans.getLocation(), Vector2D(1.2, 3.4, trigonometry));
+        assert.areEqual(trans.getLocation(), Vector2D(1.2, 3.4));
     }
     void TransformableTest::constructor_L_Test(){
         Transformable trans(Vector2D(1.2, 3.4));
-        assert.areEqual(trans.getLocation(), Vector2D(1.2, 3.4, trigonometry));
+        assert.areEqual(trans.getLocation(), Vector2D(1.2, 3.4));
     }
     void TransformableTest::constructor_T_Test(){
-        Transformable trans(trigonometry);
-        assert.areEqual(trans.getLocation(), Vector2D(trigonometry));
+        Transformable trans;
+        assert.areEqual(trans.getLocation(), Vector2D());
     }
     void TransformableTest::constructor_XYT_Test(){
-        Transformable trans(1.2, 3.4, trigonometry);
-        assert.areEqual(trans.getLocation(), Vector2D(1.2, 3.4, trigonometry));
+        Transformable trans(1.2, 3.4);
+        assert.areEqual(trans.getLocation(), Vector2D(1.2, 3.4));
     }
     void TransformableTest::constructor_LT_Test(){
-        Transformable trans(Vector2D(1.2, 3.4), trigonometry);
-        assert.areEqual(trans.getLocation(), Vector2D(1.2, 3.4, trigonometry));
+        Transformable trans(Vector2D(1.2, 3.4));
+        assert.areEqual(trans.getLocation(), Vector2D(1.2, 3.4));
     }
     
     void TransformableTest::setRotateDirection_Test(){

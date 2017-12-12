@@ -24,13 +24,6 @@ namespace Behaviors {
         Rotateable(double px, double py, double radians);
         Rotateable(const Vector2D &pivot, double radians);
         
-        Rotateable(Trigonometry *trigo);
-        Rotateable(double radians, Trigonometry *trigo);
-        Rotateable(const Vector2D &pivot, Trigonometry *trigo);
-        Rotateable(double px, double py, Trigonometry *trigo);
-        Rotateable(const Vector2D &pivot, double radians, Trigonometry *trigo);
-        Rotateable(double px, double py, double radians, Trigonometry *trigo);
-        
         ~Rotateable();
         
         void setRotationRate(double rate);

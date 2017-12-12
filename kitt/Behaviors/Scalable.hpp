@@ -23,11 +23,7 @@ namespace Behaviors {
         Scalable(double s);
         Scalable(double sx, double sy);
         Scalable(const Vector2D &scale);
-        
-        Scalable(Trigonometry *trigo);
-        Scalable(double s, Trigonometry *trigo);
-        Scalable(double sx, double sy, Trigonometry *trigo);
-        Scalable(const Vector2D &scale, Trigonometry *trigo);
+
         virtual ~Scalable();
         
         void setScale(double s);

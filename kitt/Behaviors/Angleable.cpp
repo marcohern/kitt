@@ -28,25 +28,6 @@ namespace Behaviors {
     Angleable::Angleable(const Vector2D &pivot, double radians)
     : angle(radians), rotatePivot(pivot) {}
     
-    Angleable::Angleable(Trigonometry *trigo)
-    : angle(0), rotatePivot(trigo) {}
-    
-    Angleable::Angleable(double radians, Trigonometry *trigo)
-    : angle(radians), rotatePivot(trigo) {}
-    
-    Angleable::Angleable(double px, double py, Trigonometry *trigo)
-    : angle(0), rotatePivot(px, py, trigo) {}
-    
-    Angleable::Angleable(const Vector2D &pivot, Trigonometry *trigo)
-    : angle(0), rotatePivot(pivot, trigo) {}
-    
-    Angleable::Angleable(double px, double py, double radians, Trigonometry *trigo)
-    : angle(radians), rotatePivot(px, py, trigo) {}
-    
-    Angleable::Angleable(const Vector2D &pivot, double radians, Trigonometry *trigo)
-    : angle(radians), rotatePivot(pivot, trigo) {}
-    
-    
     Angleable::~Angleable() {
         
     }

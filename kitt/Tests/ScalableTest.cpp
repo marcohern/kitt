@@ -59,23 +59,23 @@ namespace Tests {
     }
     
     void ScalableTest::constructor_Trigo_Test(){
-        Scalable scalable(trigonometry);
+        Scalable scalable;
         assert.areEqual(scalable.getScaleX(), 1.0);
         assert.areEqual(scalable.getScaleY(), 1.0);
     }
     void ScalableTest::constructor_STrigo_Test(){
-        Scalable scalable(2.0, trigonometry);
+        Scalable scalable(2.0);
         assert.areEqual(scalable.getScaleX(), 2.0);
         assert.areEqual(scalable.getScaleY(), 2.0);
     }
     void ScalableTest::constructor_SXYTrigo_Test(){
-        Scalable scalable(1.2, 3.4, trigonometry);
+        Scalable scalable(1.2, 3.4);
         assert.areEqual(scalable.getScaleX(), 1.2);
         assert.areEqual(scalable.getScaleY(), 3.4);
     }
     void ScalableTest::constructor_SVTrigo_Test(){
         Vector2D scale(1.2, 3.4);
-        Scalable scalable(scale, trigonometry);
+        Scalable scalable(scale);
         assert.areEqual(scalable.getScaleX(), 1.2);
         assert.areEqual(scalable.getScaleY(), 3.4);
     }

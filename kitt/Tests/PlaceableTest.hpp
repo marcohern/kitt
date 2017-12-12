@@ -39,10 +39,6 @@ namespace Tests {
         void constructor_Empty_Test();
         void constructor_XY_Test();
         void constructor_V_Test();
-        void constructor_Trigo_Test();
-        void constructor_TrigoNull_Test();
-        void constructor_TrigoXY_Test();
-        void constructor_TrigoV_Test();
         void getDisplacement_V_Test();
         void getDisplacement_XY_Test();
         void setLocation_V_Test();

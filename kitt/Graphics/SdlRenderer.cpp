@@ -10,18 +10,13 @@ namespace Graphics
 {
 	using namespace Core;
 
-	SdlRenderer::SdlRenderer(SDL_Window *window, Trigonometry *trigonometry) 
-		: tip1(trigonometry), tip2(trigonometry)
+	SdlRenderer::SdlRenderer(SDL_Window *window) 
+		: tip1(), tip2()
 	{
 		this->renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
 		this->screen = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 1920, 1080);
 		
-	}
-
-	SdlRenderer::SdlRenderer(SDL_Window *window)
-		: SdlRenderer(window, TrigonometryInjector::inject())
-	{
 	}
 
 	SdlRenderer::~SdlRenderer() {

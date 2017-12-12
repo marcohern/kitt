@@ -26,9 +26,6 @@ namespace Behaviors
         Directable();
         Directable(double x, double y);
         Directable(const Vector2D &v);
-        Directable(Trigonometry *trigo);
-        Directable(double x, double y, Trigonometry *trigo);
-        Directable(const Vector2D &v, Trigonometry *trigo);
         
         virtual ~Directable();
         

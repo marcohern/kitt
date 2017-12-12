@@ -23,18 +23,6 @@ namespace Behaviors {
     : Placeable(v), direction()
     { }
     
-    Directable::Directable(Trigonometry *trigo)
-    : Placeable(trigo), direction()
-    { }
-    
-    Directable::Directable(double x, double y, Trigonometry *trigo)
-    : Placeable(x, y, trigo), direction()
-    { }
-    
-    Directable::Directable(const Vector2D &v, Trigonometry *trigo)
-    : Placeable(v, trigo), direction()
-    { }
-    
     Directable::~Directable() {
         Placeable::~Placeable();
     }

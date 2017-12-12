@@ -27,12 +27,6 @@ namespace Behaviors {
         Areable(const Vector2D &area);
         Areable(const Vector2D &area, const Vector2D &pivot);
         
-        Areable(Trigonometry *trigo);
-        Areable(double w, double h, Trigonometry *trigo);
-        Areable(double w, double h, double px, double py, Trigonometry *trigo);
-        Areable(const Vector2D &area, Trigonometry *trigo);
-        Areable(const Vector2D &area, const Vector2D &pivot, Trigonometry *trigo);
-        
         virtual ~Areable();
         
         void setWidth(double w);

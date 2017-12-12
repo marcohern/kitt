@@ -19,7 +19,7 @@
 namespace Core {
     using namespace std;
     
-    class Vector2D : public Object, public HasTrigonometry {
+    class Vector2D : public Object {
     private:
         double x, y;
         
@@ -29,10 +29,6 @@ namespace Core {
         Vector2D();
         Vector2D(double x, double y);
         Vector2D(const Vector2D &v);
-        
-        Vector2D(Trigonometry *trigo);
-        Vector2D(double x, double y, Trigonometry *trigo);
-        Vector2D(const Vector2D &v, Trigonometry *trigo);
         
         virtual string toString() const;
         
@@ -63,10 +59,14 @@ namespace Core {
         double angleBetween(Vector2D &v) const;
         double angle() const;
         inline double getAngle() const;
-        void setAngle(double radians);
-        void rotate(double radians);
+        void setAngle(double radians, Trigonometry *trigo);
+		void setAngle(double radians);
+		void rotate(double radians, Trigonometry *trigo);
+		void rotate(double radians);
+		void rotateDeg(double degrees, Trigonometry *trigo);
 		void rotateDeg(double degrees);
-        inline void addAngle(double radians);
+        inline void addAngle(double radians, Trigonometry *trigo);
+		inline void addAngle(double radians);
         
         Vector2D u() const;
         void setU();

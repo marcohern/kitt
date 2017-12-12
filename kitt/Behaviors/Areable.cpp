@@ -26,21 +26,6 @@ namespace Behaviors {
     Areable::Areable(const Vector2D &area, const Vector2D &pivot)
     : area(area), areaPivot(pivot) {}
     
-    Areable::Areable(Trigonometry *trigo)
-    : area(trigo), areaPivot(trigo) {}
-    
-    Areable::Areable(double w, double h, Trigonometry *trigo)
-    : area(w,h, trigo),areaPivot(trigo) {}
-    
-    Areable::Areable(double w, double h, double px, double py, Trigonometry *trigo)
-    : area(w,h, trigo), areaPivot(px, py, trigo) {}
-    
-    Areable::Areable(const Vector2D &area, Trigonometry *trigo)
-    : area(area,trigo), areaPivot(trigo) {}
-    
-    Areable::Areable(const Vector2D &area, const Vector2D &pivot, Trigonometry *trigo)
-    : area(area,trigo), areaPivot(pivot, trigo) {}
-    
     Areable::~Areable() {
         
     }

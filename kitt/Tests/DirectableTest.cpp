@@ -57,21 +57,21 @@ namespace Tests {
     }
     
     void DirectableTest::constructor_Trigo_Test() {
-        Directable directable(trigonometry);
+        Directable directable;
         assert.areEqual(directable.getDirection().getX(), 0.0);
         assert.areEqual(directable.getDirection().getY(), 0.0);
     }
     
     void DirectableTest::constructor_TrigoNull_Test(){
         try {
-            Directable directable(NULL);
+            Directable directable;
         } catch(NullReferenceException &ex) {
             assert.isTrue(true);
         }
     }
     
     void DirectableTest::constructor_TrigoXY_Test(){
-        Directable directable(1.23, 4.56, trigonometry);
+        Directable directable(1.23, 4.56);
         assert.areEqual(directable.getDirection().getX(), 0.0);
         assert.areEqual(directable.getDirection().getY(), 0.0);
         assert.areEqual(directable.getLocation().getX(), 1.23);
@@ -80,7 +80,7 @@ namespace Tests {
     
     void DirectableTest::constructor_TrigoV_Test(){
         Vector2D v(1.23, 4.56);
-        Directable directable(v, trigonometry);
+        Directable directable(v);
         assert.areEqual(directable.getDirection().getX(), 0.0);
         assert.areEqual(directable.getDirection().getY(), 0.0);
         assert.areEqual(directable.getLocation().getX(), 1.23);

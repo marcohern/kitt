@@ -31,12 +31,6 @@ namespace Core {
 		Camera(double x, double y, double ox, double oy);
 		Camera(const Vector2D &location, const Vector2D &offset);
 
-		Camera(Trigonometry *trigo);
-		Camera(double x, double y, Trigonometry *trigo);
-		Camera(const Vector2D &location, Trigonometry *trigo);
-		Camera(double x, double y, double ox, double oy, Trigonometry *trigo);
-		Camera(const Vector2D &location, const Vector2D &offset, Trigonometry *trigo);
-
 		~Camera();
 
 		void setFocusObject(Placeable *placeable);

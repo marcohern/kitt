@@ -63,45 +63,7 @@ namespace Tests {
         Angleable angleable(Vector2D(3.4, 5.6), 7.8);
         assert.areEqual(angleable.getRotatePivot(), Vector2D(3.4, 5.6));
         assert.areEqual(angleable.getAngle(), 7.8);
-    }
-    
-    
-    void AngleableTest::constructor_T_Test() {
-        Angleable angleable(trigonometry);
-        assert.areEqual(angleable.getRotatePivot(), Vector2D(0.0, 0.0));
-        assert.areEqual(angleable.getAngle(), 0.0);
-    }
-    
-    void AngleableTest::constructor_TR_Test() {
-        Angleable angleable(1.2, trigonometry);
-        assert.areEqual(angleable.getRotatePivot(), Vector2D(0.0, 0.0));
-        assert.areEqual(angleable.getAngle(), 1.2);
-    }
-    
-    void AngleableTest::constructor_TXY_Test() {
-        Angleable angleable(3.4, 5.6, trigonometry);
-        assert.areEqual(angleable.getRotatePivot(), Vector2D(3.4, 5.6));
-        assert.areEqual(angleable.getAngle(), 0.0);
-    }
-    
-    void AngleableTest::constructor_TP_Test() {
-        Angleable angleable(Vector2D(3.4, 5.6), trigonometry);
-        assert.areEqual(angleable.getRotatePivot(), Vector2D(3.4, 5.6));
-        assert.areEqual(angleable.getAngle(), 0.0);
-    }
-    
-    void AngleableTest::constructor_TXYR_Test() {
-        Angleable angleable(3.4, 5.6, 7.8, trigonometry);
-        assert.areEqual(angleable.getRotatePivot(), Vector2D(3.4, 5.6));
-        assert.areEqual(angleable.getAngle(), 7.8);
-    }
-    
-    void AngleableTest::constructor_TPR_Test() {
-        Angleable angleable(Vector2D(3.4, 5.6), 7.8, trigonometry);
-        assert.areEqual(angleable.getRotatePivot(), Vector2D(3.4, 5.6));
-        assert.areEqual(angleable.getAngle(), 7.8);
-    }
-    
+    }    
     
     void AngleableTest::setAngle_Test() {
         Angleable angleable;
@@ -162,13 +124,6 @@ namespace Tests {
         runtest("constructor_P_Test-----------------", &AngleableTest::constructor_P_Test);
         runtest("constructor_XYR_Test---------------", &AngleableTest::constructor_XYR_Test);
         runtest("constructor_PR_Test----------------", &AngleableTest::constructor_PR_Test);
-        
-        runtest("constructor_T_Test-----------------", &AngleableTest::constructor_T_Test);
-        runtest("constructor_TR_Test----------------", &AngleableTest::constructor_TR_Test);
-        runtest("constructor_TXY_Test---------------", &AngleableTest::constructor_TXY_Test);
-        runtest("constructor_TP_Test----------------", &AngleableTest::constructor_TP_Test);
-        runtest("constructor_TXYR_Test--------------", &AngleableTest::constructor_TXYR_Test);
-        runtest("constructor_TPR_Test---------------", &AngleableTest::constructor_TPR_Test);
         
         runtest("setAngle_Test----------------------", &AngleableTest::setAngle_Test);
         runtest("setRotatePivot_XY_Test-------------", &AngleableTest::setRotatePivot_XY_Test);

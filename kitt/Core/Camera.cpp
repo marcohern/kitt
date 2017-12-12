@@ -24,21 +24,6 @@ namespace Core {
 	Camera::Camera(const Vector2D &location, const Vector2D &offset)
 		: location(location), offset(offset), focus(NULL), zoom(1.0) {}
 
-	Camera::Camera(Trigonometry *trigo)
-		: location(trigo), offset(trigo), focus(NULL), zoom(1.0) {}
-
-	Camera::Camera(double x, double y, Trigonometry *trigo) 
-		: location(x, y, trigo), offset(trigo), focus(NULL), zoom(1.0) {}
-
-	Camera::Camera(const Vector2D &location, Trigonometry *trigo)
-		: location(location, trigo), offset(trigo), focus(NULL), zoom(1.0) {}
-
-	Camera::Camera(double x, double y, double ox, double oy, Trigonometry *trigo)
-		: location(x, y, trigo), offset(ox, oy, trigo), focus(NULL), zoom(1.0) {}
-
-	Camera::Camera(const Vector2D &location, const Vector2D &offset, Trigonometry *trigo)
-		: location(location, trigo), offset(offset, trigo), focus(NULL), zoom(1.0) {}
-
 	Camera::~Camera() {
 
 	}

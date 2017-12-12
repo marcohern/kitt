@@ -13,15 +13,6 @@ namespace Collisions {
 	CollisionRect::CollisionRect(const Vector2D &location, const Vector2D &size)
 		: CollisionShape(COLLSHAPE_RECT), location(location), size(size) {}
 
-	CollisionRect::CollisionRect(Trigonometry *trigo)
-		: CollisionShape(COLLSHAPE_RECT), location(trigo), size(trigo) {}
-
-	CollisionRect::CollisionRect(const Vector2D &size, Trigonometry *trigo)
-		: CollisionShape(COLLSHAPE_RECT), location(trigo), size(size, trigo) {}
-
-	CollisionRect::CollisionRect(const Vector2D &location, const Vector2D &size, Trigonometry *trigo)
-		: CollisionShape(COLLSHAPE_RECT), location(location, trigo), size(size, trigo) {}
-
 	CollisionRect::~CollisionRect() {
 		CollisionShape::~CollisionShape();
 	}

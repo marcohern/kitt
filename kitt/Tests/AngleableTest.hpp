@@ -36,13 +36,6 @@ namespace Tests {
         void constructor_XYR_Test();
         void constructor_PR_Test();
         
-        void constructor_T_Test();
-        void constructor_TR_Test();
-        void constructor_TXY_Test();
-        void constructor_TP_Test();
-        void constructor_TXYR_Test();
-        void constructor_TPR_Test();
-        
         void setAngle_Test();
         void setRotatePivot_XY_Test();
         void setRotatePivot_P_Test();

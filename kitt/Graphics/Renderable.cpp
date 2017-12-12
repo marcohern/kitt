@@ -48,45 +48,6 @@ namespace Graphics
 		, blendAdd(0), tint(Color::White) {
 
 	}
-
-    Renderable::Renderable(Trigonometry *trigo)
-		: Transformable(trigo)
-		, current(NULL), renderSwitch(true), translucent(false), renderInterval(0.0)
-		, translucentInterval(0.0), translucentTime(0.0), active(false)
-		, blendAdd(0), tint(Color::White) {
-        
-    }
-    Renderable::Renderable(const Vector2D &location, Trigonometry *trigo)
-		: Transformable(location, trigo)
-		, current(NULL), renderSwitch(true), translucent(false), renderInterval(0.0)
-		, translucentInterval(0.0), translucentTime(0.0), active(false)
-		, blendAdd(0), tint(Color::White) {
-        
-    }
-
-	Renderable::Renderable(const Vector2D &location, const Vector2D &size, Trigonometry *trigo)
-		: Transformable(location, size, trigo)
-		, current(NULL), renderSwitch(true), translucent(false), renderInterval(0.0)
-		, translucentInterval(0.0), translucentTime(0.0), active(false)
-		, blendAdd(0), tint(Color::White) {
-
-	}
-
-	Renderable::Renderable(const Vector2D &location, const Vector2D &size, const Vector2D &areaPivot, Trigonometry *trigo)
-		: Transformable(location, size, areaPivot, trigo)
-		, current(NULL), renderSwitch(true), translucent(false), renderInterval(0.0)
-		, translucentInterval(0.0), translucentTime(0.0), active(false)
-		, blendAdd(0), tint(Color::White) {
-
-	}
-
-	Renderable::Renderable(const Vector2D &location, const Vector2D &size, const Vector2D &areaPivot, const Vector2D &rotatePivot, Trigonometry *trigo)
-		: Transformable(location, size, areaPivot, rotatePivot, trigo)
-		, current(NULL), renderSwitch(true), translucent(false), renderInterval(0.0)
-		, translucentInterval(0.0), translucentTime(0.0), active(false)
-		, blendAdd(0), tint(Color::White) {
-
-	}
     
     Renderable::~Renderable() {
 		Transformable::~Transformable();

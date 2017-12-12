@@ -22,15 +22,6 @@ namespace Behaviors {
     Placeable::Placeable(const Vector2D& v) : location(v) {
     }
     
-    Placeable::Placeable(Trigonometry *trigo) : location(trigo) {
-    }
-    
-    Placeable::Placeable(double x, double y, Trigonometry *trigo) : location(x,y, trigo) {
-    }
-    
-    Placeable::Placeable(const Vector2D& v, Trigonometry *trigo) : location(v, trigo) {
-    }
-    
     Placeable::~Placeable() {
         
     }

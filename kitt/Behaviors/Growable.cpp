@@ -17,11 +17,6 @@ namespace Behaviors
         
     }
     
-    Growable::Growable(Trigonometry *trigo)
-    : Scalable(trigo), growthRate(trigo) {
-        
-    }
-    
     Growable::~Growable() {
         Scalable::~Scalable();
     }

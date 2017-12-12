@@ -53,34 +53,6 @@ namespace Tests
         assert.areEqual(placeable.getLocation().getY(), 4.56);
     }
     
-    void PlaceableTest::constructor_Trigo_Test() {
-        Placeable placeable(trigonometry);
-        assert.areEqual(placeable.getLocation().getX(), 0.0);
-        assert.areEqual(placeable.getLocation().getY(), 0.0);
-    }
-    
-    void PlaceableTest::constructor_TrigoNull_Test() {
-        try {
-            Placeable placeable(NULL);
-            
-        } catch (NullReferenceException &ex) {
-            assert.isTrue(true);
-        }
-    }
-    
-    void PlaceableTest::constructor_TrigoXY_Test() {
-        Placeable placeable(1.23,4.56, trigonometry);
-        assert.areEqual(placeable.getLocation().getX(), 1.23);
-        assert.areEqual(placeable.getLocation().getY(), 4.56);
-    }
-    
-    void PlaceableTest::constructor_TrigoV_Test() {
-        Vector2D v(1.23, 4.56, trigonometry);
-        Placeable placeable(v);
-        assert.areEqual(placeable.getLocation().getX(), 1.23);
-        assert.areEqual(placeable.getLocation().getY(), 4.56);
-    }
-    
     
     void PlaceableTest::getDisplacement_V_Test() {
         Placeable placeable(1000,1000);
@@ -95,6 +67,7 @@ namespace Tests
         Vector2D r(800,700);
         assert.areEqual(v, r);
     }
+
     void PlaceableTest::setLocation_V_Test(){
         
         Placeable placeable;

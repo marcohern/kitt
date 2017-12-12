@@ -42,22 +42,6 @@ namespace Tests {
 		assert.areEqual(rect.getSize(), Vector2D(5.0, 5.0));
 	}
 
-	void CollisionRectTest::constructor_T_Test() {
-		CollisionRect rect(trigonometry);
-		assert.areEqual(rect.getLocation(), Vector2D(0, 0));
-		assert.areEqual(rect.getSize(), Vector2D(0, 0));
-	}
-	void CollisionRectTest::constructor_ST_Test() {
-		CollisionRect rect(Vector2D(5.0, 5.0), trigonometry);
-		assert.areEqual(rect.getSize(), Vector2D(5.0, 5.0));
-	}
-
-	void CollisionRectTest::constructor_LST_Test() {
-		CollisionRect rect(Vector2D(10.0, 15.0), Vector2D(5.0, 5.0), trigonometry);
-		assert.areEqual(rect.getLocation(), Vector2D(10.0, 15.0));
-		assert.areEqual(rect.getSize(), Vector2D(5.0, 5.0));
-	}
-
 	void CollisionRectTest::getLocation_Test() {
 		CollisionRect rect(Vector2D(10.0, 15.0), Vector2D(5.0, 5.0));
 		assert.areEqual(rect.getLocation(), Vector2D(10.0, 15.0));
@@ -142,9 +126,6 @@ namespace Tests {
 		runtest("constructor_Test------", &CollisionRectTest::constructor_Test);
 		runtest("constructor_S_Test----", &CollisionRectTest::constructor_S_Test);
 		runtest("constructor_LS_Test---", &CollisionRectTest::constructor_LS_Test);
-		runtest("constructor_T_Test----", &CollisionRectTest::constructor_T_Test);
-		runtest("constructor_ST_Test---", &CollisionRectTest::constructor_ST_Test);
-		runtest("constructor_LST_Test--", &CollisionRectTest::constructor_LST_Test);
 
 		runtest("getLocation_Test------", &CollisionRectTest::getLocation_Test);
 		runtest("getSize_Test----------", &CollisionRectTest::getSize_Test);

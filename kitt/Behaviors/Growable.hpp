@@ -20,7 +20,6 @@ namespace Behaviors{
         
     public:
         Growable();
-        Growable(Trigonometry *trigo);
         
         virtual ~Growable();
         

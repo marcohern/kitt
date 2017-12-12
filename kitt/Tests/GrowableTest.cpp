@@ -38,8 +38,8 @@ namespace Tests {
         assert.areEqual(zero, growable.getGrowthRate());
     }
     void GrowableTest::constructor_Trigo_Test() {
-        Vector2D zero(trigonometry);
-        Growable growable(trigonometry);
+        Vector2D zero;
+        Growable growable;
         assert.areEqual(zero, growable.getGrowthRate());
     }
     

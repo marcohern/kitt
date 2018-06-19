@@ -7,7 +7,7 @@
 //
 
 #include "SdlTime.hpp"
-#include <SDL2/SDL.h>
+#include "SDL.h"
 
 namespace Core {
     SdlTime::SdlTime()

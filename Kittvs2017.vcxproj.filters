@@ -398,6 +398,7 @@
     <None Include="content\sprites\bullets.sprite.json" />
     <None Include="content\sprites\bill_rizer.sprite.json" />
     <None Include="content\sprites\explosion1.sprite.json" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Kittvs2017.rc" />

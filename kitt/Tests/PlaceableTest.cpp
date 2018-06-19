@@ -104,10 +104,6 @@ namespace Tests
         runtest("constructor_Empty_Test------", &PlaceableTest::constructor_Empty_Test);
         runtest("constructor_XY_Test---------", &PlaceableTest::constructor_XY_Test);
         runtest("constructor_V_Test----------", &PlaceableTest::constructor_V_Test);
-        runtest("constructor_Trigo_Test------", &PlaceableTest::constructor_Trigo_Test);
-        runtest("constructor_TrigoNull_Test--", &PlaceableTest::constructor_TrigoNull_Test);
-        runtest("constructor_TrigoXY_Test----", &PlaceableTest::constructor_TrigoXY_Test);
-        runtest("constructor_TrigoV_Test-----", &PlaceableTest::constructor_TrigoV_Test);
         runtest("getDisplacement_V_Test------", &PlaceableTest::getDisplacement_V_Test);
         runtest("getDisplacement_XY_Test-----", &PlaceableTest::getDisplacement_XY_Test);
         runtest("setLocation_V_Test----------", &PlaceableTest::setLocation_V_Test);

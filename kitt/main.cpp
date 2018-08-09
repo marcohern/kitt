@@ -12,7 +12,6 @@
 #include "./Core/Trigonometry.hpp"
 #include "./Core/Path.hpp"
 #include "./Game/Game.hpp"
-#include <physfs.h>
 #include "constants.hpp"
 #include "Exceptions/KittException.hpp"
 #include "Core/TrigonometryInjector.hpp"

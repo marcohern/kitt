@@ -4,6 +4,7 @@
 	//Windows
 	#include <SDL.h>
 	#include <SDL_image.h>
+	#include <physfs.h>
 
 	#ifdef _WIN64
 		//Windows 64 bit only

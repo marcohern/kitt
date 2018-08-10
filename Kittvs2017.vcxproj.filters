@@ -2,415 +2,579 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="kitt\Content\FileReader.cpp">
-      <Filter>Content</Filter>
+      <Filter>src\Content</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Content\IReader.cpp">
-      <Filter>Content</Filter>
+      <Filter>src\Content</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\main.cpp" />
     <ClCompile Include="kitt\Testing\Assert.cpp">
-      <Filter>Testing</Filter>
+      <Filter>src\Testing</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Exceptions\AssertException.cpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Exceptions\DivideByZeroException.cpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Exceptions\KittException.cpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Exceptions\NullReferenceException.cpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Exceptions\OutOfRangeException.cpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Tests\KittTestSuite.cpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Tests\MatrixTests.cpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Tests\MemoizedTrigonometryTests.cpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Object.cpp">
-      <Filter>Core</Filter>
+      <Filter>src\Core</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Exceptions\MismatchException.cpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Tests\RealtimeTrigonometryTests.cpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Testing\Test.cpp">
-      <Filter>Testing</Filter>
+      <Filter>src\Testing</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Tests\SdlTimeTests.cpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Testing\TestRunner.cpp">
-      <Filter>Testing</Filter>
+      <Filter>src\Testing</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Testing\TestSuite.cpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Graphics\Renderer.cpp">
-      <Filter>Graphics</Filter>
+      <Filter>src\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Graphics\Texture.cpp">
-      <Filter>Graphics</Filter>
+      <Filter>src\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\HasTrigonometry.cpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\RealtimeTrigonometry.cpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\MemoizedTrigonometry.cpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\TrigonometryFactory.cpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Trigonometry.cpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Vector2D.cpp">
-      <Filter>Core\Math</Filter>
+      <Filter>src\Core\Math</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Matrix.cpp">
-      <Filter>Core\Math</Filter>
+      <Filter>src\Core\Math</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Time.cpp">
-      <Filter>Core\Time</Filter>
+      <Filter>src\Core\Time</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\TimeFactory.cpp">
-      <Filter>Core\Time</Filter>
+      <Filter>src\Core\Time</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Path.cpp">
-      <Filter>Core</Filter>
+      <Filter>src\Core</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Graphics\SdlRenderer.cpp">
-      <Filter>Graphics\Sdl</Filter>
+      <Filter>src\Graphics\Sdl</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Graphics\SdlTexture.cpp">
-      <Filter>Graphics\Sdl</Filter>
+      <Filter>src\Graphics\Sdl</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Graphics\Window.cpp">
-      <Filter>Graphics</Filter>
+      <Filter>src\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Graphics\SdlWindow.cpp">
-      <Filter>Graphics\Sdl</Filter>
+      <Filter>src\Graphics\Sdl</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Tests\Vector2DTests.cpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Content\ZipReader.cpp">
-      <Filter>Content</Filter>
+      <Filter>src\Content</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\SdlTime.cpp">
-      <Filter>Core\Time</Filter>
+      <Filter>src\Core\Time</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Graphics\Color.cpp">
-      <Filter>Graphics</Filter>
+      <Filter>src\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\ConfigFileSettings.cpp">
-      <Filter>Core</Filter>
+      <Filter>src\Core</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Input\SdlSignalManager.cpp">
-      <Filter>Input</Filter>
+      <Filter>src\Input</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Input\SignalManager.cpp">
-      <Filter>Input</Filter>
+      <Filter>src\Input</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\Settings.cpp">
-      <Filter>Core</Filter>
+      <Filter>src\Core</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Content\SdlFileReader.cpp">
-      <Filter>Content</Filter>
+      <Filter>src\Content</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\TrigonometryInjector.cpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Core\TimeInjector.cpp">
-      <Filter>Core\Time</Filter>
+      <Filter>src\Core\Time</Filter>
     </ClCompile>
     <ClCompile Include="kitt\Game\Game.cpp">
-      <Filter>Game</Filter>
+      <Filter>src\Game</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Behaviors\Placeable.cpp" />
-    <ClCompile Include="kitt\Tests\PlaceableTest.cpp" />
-    <ClCompile Include="kitt\Core\Camera.cpp" />
-    <ClCompile Include="kitt\Graphics\Renderable.cpp" />
-    <ClCompile Include="kitt\Behaviors\Directable.cpp" />
-    <ClCompile Include="kitt\Core\Animateable.cpp" />
-    <ClCompile Include="kitt\Behaviors\Growable.cpp" />
-    <ClCompile Include="kitt\Behaviors\Scalable.cpp" />
-    <ClCompile Include="kitt\Tests\DirectableTest.cpp" />
-    <ClCompile Include="kitt\Tests\GrowableTest.cpp" />
-    <ClCompile Include="kitt\Tests\ScalableTest.cpp" />
-    <ClCompile Include="kitt\Behaviors\Angleable.cpp" />
-    <ClCompile Include="kitt\Behaviors\Rotateable.cpp" />
-    <ClCompile Include="kitt\Tests\AngleableTest.cpp" />
-    <ClCompile Include="kitt\Tests\RotateableTest.cpp" />
-    <ClCompile Include="kitt\Behaviors\Areable.cpp" />
-    <ClCompile Include="kitt\Tests\AreableTest.cpp" />
-    <ClCompile Include="kitt\Behaviors\Transformable.cpp" />
-    <ClCompile Include="kitt\Tests\TransformableTest.cpp" />
-    <ClCompile Include="kitt\Graphics\Vector2DRenderable.cpp" />
-    <ClCompile Include="kitt\Graphics\Sprite.cpp" />
-    <ClCompile Include="kitt\Graphics\SpriteSheet.cpp" />
-    <ClCompile Include="kitt\Tests\SdlFileReaderTest.cpp" />
-    <ClCompile Include="kitt\Graphics\Animation.cpp" />
-    <ClCompile Include="kitt\Collisions\CollisionShape.cpp" />
-    <ClCompile Include="kitt\Collisions\CollisionRect.cpp" />
-    <ClCompile Include="kitt\Collisions\CollisionCircle.cpp" />
-    <ClCompile Include="kitt\Tests\CollisionRectTest.cpp" />
-    <ClCompile Include="kitt\Exceptions\MissingAttributeException.cpp" />
-    <ClCompile Include="kitt\Core\QuadmemTrigonometry.cpp" />
+    <ClCompile Include="kitt\Tests\AngleableTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Angleable.cpp">
+      <Filter>src\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Areable.cpp">
+      <Filter>src\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\Animateable.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\Animation.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\AreableTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\Camera.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Collisions\CollisionCircle.cpp">
+      <Filter>src\Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Collisions\CollisionRect.cpp">
+      <Filter>src\Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\CollisionRectTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Collisions\CollisionShape.cpp">
+      <Filter>src\Collisions</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Directable.cpp">
+      <Filter>src\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\DirectableTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Growable.cpp">
+      <Filter>src\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\GrowableTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Exceptions\MissingAttributeException.cpp">
+      <Filter>src\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Placeable.cpp">
+      <Filter>src\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Core\QuadmemTrigonometry.cpp">
+      <Filter>src\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\PlaceableTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\Renderable.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Rotateable.cpp">
+      <Filter>src\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\RotateableTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Scalable.cpp">
+      <Filter>src\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\ScalableTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\SdlFileReaderTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\Sprite.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\SpriteSheet.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Behaviors\Transformable.cpp">
+      <Filter>src\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Graphics\Vector2DRenderable.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="kitt\Tests\TransformableTest.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kitt\Content\FileReader.hpp">
-      <Filter>Content</Filter>
+      <Filter>src\Content</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Content\IReader.hpp">
-      <Filter>Content</Filter>
+      <Filter>src\Content</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\SDL.h" />
     <ClInclude Include="kitt\Testing\Assert.hpp">
-      <Filter>Testing</Filter>
+      <Filter>src\Testing</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Exceptions\AssertException.hpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Exceptions\DivideByZeroException.hpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Exceptions\KittException.hpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Exceptions\NullReferenceException.hpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Exceptions\OutOfRangeException.hpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Tests\KittTestSuite.hpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Tests\MatrixTests.hpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Tests\MemoizedTrigonometryTests.hpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Object.hpp">
-      <Filter>Core</Filter>
+      <Filter>src\Core</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Exceptions\MismatchException.hpp">
-      <Filter>Exceptions</Filter>
+      <Filter>src\Exceptions</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Tests\RealtimeTrigonometryTests.hpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Testing\Test.hpp">
-      <Filter>Testing</Filter>
+      <Filter>src\Testing</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Tests\SdlTimeTests.hpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Testing\TestRunner.hpp">
-      <Filter>Testing</Filter>
+      <Filter>src\Testing</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Testing\TestSuite.hpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Graphics\Renderer.hpp">
-      <Filter>Graphics</Filter>
+      <Filter>src\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Graphics\Texture.hpp">
-      <Filter>Graphics</Filter>
+      <Filter>src\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\HasTrigonometry.hpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\RealtimeTrigonometry.hpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\MemoizedTrigonometry.hpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\TrigonometryFactory.hpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Trigonometry.hpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Vector2D.hpp">
-      <Filter>Core\Math</Filter>
+      <Filter>src\Core\Math</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Matrix.hpp">
-      <Filter>Core\Math</Filter>
+      <Filter>src\Core\Math</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\TimeFactory.hpp">
-      <Filter>Core\Time</Filter>
+      <Filter>src\Core\Time</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Time.hpp">
-      <Filter>Core\Time</Filter>
+      <Filter>src\Core\Time</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Path.hpp">
-      <Filter>Core</Filter>
+      <Filter>src\Core</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Graphics\SdlRenderer.hpp">
-      <Filter>Graphics\Sdl</Filter>
+      <Filter>src\Graphics\Sdl</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Graphics\SdlTexture.hpp">
-      <Filter>Graphics\Sdl</Filter>
+      <Filter>src\Graphics\Sdl</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Graphics\Window.hpp">
-      <Filter>Graphics</Filter>
+      <Filter>src\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Graphics\SdlWindow.hpp">
-      <Filter>Graphics\Sdl</Filter>
+      <Filter>src\Graphics\Sdl</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Tests\Vector2DTests.hpp">
-      <Filter>Tests</Filter>
+      <Filter>src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Content\ZipReader.hpp">
-      <Filter>Content</Filter>
+      <Filter>src\Content</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\SdlTime.hpp">
-      <Filter>Core\Time</Filter>
+      <Filter>src\Core\Time</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Graphics\Color.hpp">
-      <Filter>Graphics</Filter>
+      <Filter>src\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\ConfigFileSettings.hpp">
-      <Filter>Core</Filter>
+      <Filter>src\Core</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Input\SdlSignalManager.hpp">
-      <Filter>Input</Filter>
+      <Filter>src\Input</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Input\Signal.hpp">
-      <Filter>Input</Filter>
+      <Filter>src\Input</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Input\SignalManager.hpp">
-      <Filter>Input</Filter>
+      <Filter>src\Input</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\Settings.hpp">
-      <Filter>Core</Filter>
+      <Filter>src\Core</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Content\SdlFileReader.hpp">
-      <Filter>Content</Filter>
+      <Filter>src\Content</Filter>
     </ClInclude>
-    <ClInclude Include="kitt\constants.hpp" />
     <ClInclude Include="kitt\Core\TrigonometryInjector.hpp">
-      <Filter>Core\Trigonometry</Filter>
+      <Filter>src\Core\Trigonometry</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Core\TimeInjector.hpp">
-      <Filter>Core\Time</Filter>
+      <Filter>src\Core\Time</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Game\Game.hpp">
-      <Filter>Game</Filter>
+      <Filter>src\Game</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="kitt\json.hpp" />
-    <ClInclude Include="kitt\Behaviors\Placeable.hpp" />
-    <ClInclude Include="kitt\Tests\PlaceableTest.hpp" />
-    <ClInclude Include="kitt\Core\Camera.hpp" />
-    <ClInclude Include="kitt\Graphics\Renderable.hpp" />
-    <ClInclude Include="kitt\Behaviors\Directable.hpp" />
-    <ClInclude Include="kitt\Core\Animateable.hpp" />
-    <ClInclude Include="kitt\Behaviors\Growable.hpp" />
-    <ClInclude Include="kitt\Behaviors\Scalable.hpp" />
-    <ClInclude Include="kitt\Tests\DirectableTest.hpp" />
-    <ClInclude Include="kitt\Tests\GrowableTest.hpp" />
-    <ClInclude Include="kitt\Tests\ScalableTest.hpp" />
-    <ClInclude Include="kitt\Behaviors\Angleable.hpp" />
-    <ClInclude Include="kitt\Behaviors\Rotateable.hpp" />
-    <ClInclude Include="kitt\Tests\AngleableTest.hpp" />
-    <ClInclude Include="kitt\Tests\RotateableTest.hpp" />
-    <ClInclude Include="kitt\Behaviors\Areable.hpp" />
-    <ClInclude Include="kitt\Tests\AreableTest.hpp" />
-    <ClInclude Include="kitt\Behaviors\Transformable.hpp" />
-    <ClInclude Include="kitt\Tests\TransformableTest.hpp" />
-    <ClInclude Include="kitt\Graphics\Vector2DRenderable.hpp" />
-    <ClInclude Include="kitt\Graphics\Sprite.hpp" />
-    <ClInclude Include="kitt\Graphics\SpriteSheet.hpp" />
-    <ClInclude Include="kitt\Tests\SdlFileReaderTest.hpp" />
-    <ClInclude Include="kitt\Graphics\Animation.hpp" />
-    <ClInclude Include="kitt\Graphics\Tintable.hpp" />
-    <ClInclude Include="kitt\Collisions\CollisionShape.hpp" />
-    <ClInclude Include="kitt\Collisions\CollisionRect.hpp" />
-    <ClInclude Include="kitt\Collisions\CollisionCircle.hpp" />
-    <ClInclude Include="kitt\Tests\CollisionRectTest.hpp" />
-    <ClInclude Include="kitt\Exceptions\MissingAttributeException.hpp" />
-    <ClInclude Include="kitt\Core\QuadmemTrigonometry.hpp" />
-    <ClInclude Include="kitt\Tests\QuadmemTrigonometryTests.hpp" />
+    <ClInclude Include="kitt\Tests\AngleableTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Behaviors\Angleable.hpp">
+      <Filter>src\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Behaviors\Areable.hpp">
+      <Filter>src\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Core\Animateable.hpp">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\Animation.hpp">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\AreableTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Core\Camera.hpp">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Collisions\CollisionRect.hpp">
+      <Filter>src\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Collisions\CollisionCircle.hpp">
+      <Filter>src\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\CollisionRectTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Collisions\CollisionShape.hpp">
+      <Filter>src\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Behaviors\Directable.hpp">
+      <Filter>src\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\DirectableTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Behaviors\Growable.hpp">
+      <Filter>src\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\GrowableTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Exceptions\MissingAttributeException.hpp">
+      <Filter>src\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Behaviors\Placeable.hpp">
+      <Filter>src\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Core\QuadmemTrigonometry.hpp">
+      <Filter>src\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\PlaceableTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\Renderable.hpp">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Behaviors\Rotateable.hpp">
+      <Filter>src\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\RotateableTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Behaviors\Scalable.hpp">
+      <Filter>src\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\ScalableTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\json.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\constants.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\QuadmemTrigonometryTests.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\SdlFileReaderTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\Sprite.hpp">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\SpriteSheet.hpp">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Behaviors\Transformable.hpp">
+      <Filter>src\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\SDL.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\Tintable.hpp">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Graphics\Vector2DRenderable.hpp">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="kitt\Tests\TransformableTest.hpp">
+      <Filter>src\Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Core">
-      <UniqueIdentifier>{b82efc9a-9c82-4c81-b0e5-58bf23041355}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{44db61c7-200f-4fc6-917e-cb7fa674458b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Content">
-      <UniqueIdentifier>{8df36948-8a66-4f91-8323-73d0c8bad16d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Testing">
+    <Filter Include="src\Testing">
       <UniqueIdentifier>{93a07218-f422-4422-b917-92c3d8beb6d1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Exceptions">
-      <UniqueIdentifier>{a8d3c22e-a00f-4e2d-9540-cfedb2bf5dee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Tests">
+    <Filter Include="src\Tests">
       <UniqueIdentifier>{b94e9ab7-c30f-419a-a488-bf4a52bc5e31}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Graphics">
-      <UniqueIdentifier>{d7cfdb17-beca-43da-97d4-35cbd3d211a9}</UniqueIdentifier>
+    <Filter Include="src\Collisions">
+      <UniqueIdentifier>{fdfa1ca7-fddc-4266-bf0d-f2195b56c67f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Math">
-      <UniqueIdentifier>{2a376737-97e5-4fdd-8a99-cc8e3d424af8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Core\Interfaces">
-      <UniqueIdentifier>{69dac71e-7aff-462d-8948-371b9cb56fce}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Core\Time">
-      <UniqueIdentifier>{9707aa52-de6e-4094-9818-0a5e719c3bbf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Graphics\Sdl">
-      <UniqueIdentifier>{5538a9df-4054-4674-80ee-a116fe42758c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Input">
+    <Filter Include="src\Input">
       <UniqueIdentifier>{b8db820d-76bf-42ad-a45b-4fc41b6abc3f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game">
+    <Filter Include="src\Graphics">
+      <UniqueIdentifier>{d7cfdb17-beca-43da-97d4-35cbd3d211a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Graphics\Sdl">
+      <UniqueIdentifier>{5538a9df-4054-4674-80ee-a116fe42758c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game">
       <UniqueIdentifier>{b42c6e1c-9397-4a43-9948-04ec14a64edc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Trigonometry">
+    <Filter Include="src\Exceptions">
+      <UniqueIdentifier>{a8d3c22e-a00f-4e2d-9540-cfedb2bf5dee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core">
+      <UniqueIdentifier>{b82efc9a-9c82-4c81-b0e5-58bf23041355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core\Math">
+      <UniqueIdentifier>{2a376737-97e5-4fdd-8a99-cc8e3d424af8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core\Interfaces">
+      <UniqueIdentifier>{69dac71e-7aff-462d-8948-371b9cb56fce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core\Time">
+      <UniqueIdentifier>{9707aa52-de6e-4094-9818-0a5e719c3bbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Core\Trigonometry">
       <UniqueIdentifier>{7f895f81-f433-4dfe-8ccd-bb31672ef3a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Content">
+      <UniqueIdentifier>{8df36948-8a66-4f91-8323-73d0c8bad16d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Behaviors">
+      <UniqueIdentifier>{db721ba3-8187-4e27-982f-c20500a76d89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="content">
+      <UniqueIdentifier>{c47bcaf6-b894-40a5-882e-22a6226c8098}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="README.md" />
-    <None Include="config.json" />
-    <None Include="content\sprites\bullets.sprite.json" />
-    <None Include="content\sprites\bill_rizer.sprite.json" />
-    <None Include="content\sprites\explosion1.sprite.json" />
     <None Include="packages.config" />
+    <None Include="content\sprites\bullets.sprite.json">
+      <Filter>content</Filter>
+    </None>
+    <None Include="config.json">
+      <Filter>content</Filter>
+    </None>
+    <None Include="content\sprites\bill_rizer.sprite.json">
+      <Filter>content</Filter>
+    </None>
+    <None Include="content\sprites\explosion1.sprite.json">
+      <Filter>content</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Kittvs2017.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="content\file.txt" />
-    <Text Include="content\sprites\bill_rizer_big.sprite.json" />
+    <Text Include="content\sprites\bill_rizer_big.sprite.json">
+      <Filter>content</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="content\sprites\bullets.png" />
-    <Image Include="content\sprites\bill_rizer.png" />
-    <Image Include="content\sprites\bill_rizer_big.png" />
-    <Image Include="content\sprites\explosion1.png" />
+    <Image Include="content\sprites\bullets.png">
+      <Filter>content</Filter>
+    </Image>
+    <Image Include="content\sprites\bill_rizer.png">
+      <Filter>content</Filter>
+    </Image>
+    <Image Include="content\sprites\bill_rizer_big.png">
+      <Filter>content</Filter>
+    </Image>
+    <Image Include="content\sprites\explosion1.png">
+      <Filter>content</Filter>
+    </Image>
   </ItemGroup>
 </Project>

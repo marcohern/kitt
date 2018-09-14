@@ -45,6 +45,10 @@ namespace Collisions {
 		return vector<Vector2D>();
 	}
 
+	Vector2D* CollisionCircle::getClosestCorner(const Vector2D &point) const {
+		return NULL;
+	}
+
 	Vector2D CollisionCircle::getClosestPoint(const Vector2D  &point) const {
 		Vector2D toPoint(point);
 		toPoint.sub(center);

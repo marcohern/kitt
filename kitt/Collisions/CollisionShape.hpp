@@ -25,6 +25,7 @@ namespace Collisions {
 		virtual Vector2D		 getClosestPoint (const Vector2D       &point ) const = 0;
 		virtual Vector2D		 getCenter       (							  ) const = 0;
 		virtual vector<Vector2D> getCorners		 (							  ) const = 0;
+		virtual Vector2D*        getClosestCorner(const Vector2D &point       ) const = 0;
 		virtual bool			 collidesWith    (const CollisionShape &shape ) const = 0;
 	};
 }

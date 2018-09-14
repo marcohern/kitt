@@ -47,7 +47,7 @@ namespace Game {
         v1.setRotationRate(PI/2);
 		v1.setRotateDirection(true);
 		time = TimeInjector::inject();
-		window = new SdlWindow(TITLE, 853, 480, false);
+		window = new SdlWindow(TITLE, 1280, 720, false);
 		renderer = window->getRenderer();
 		reader = new SdlFileReader("/content", renderer, false);
 		font = reader->readSurface("/fonts/courier.bmp");

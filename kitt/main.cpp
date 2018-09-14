@@ -54,13 +54,13 @@ int main(int argc, char* argv[])
 	PHYSFS_deinit();
 	*/
 
-	Game::Game game;
-	game.run();
+	//Game::Game game;
+	//game.run();
 	 
-/*	
+
 	cout<<"Testing"<<endl;
 	Tests::KittTestSuite testSuite;
 	testSuite.run();
-	*/
+
 	return 0;
 }

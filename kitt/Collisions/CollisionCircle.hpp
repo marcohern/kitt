@@ -15,9 +15,6 @@ namespace Collisions {
 		CollisionCircle();
 		CollisionCircle(double radius);
 		CollisionCircle(const Vector2D &center, double radius);
-		CollisionCircle(Trigonometry *trigo);
-		CollisionCircle(double radius, Trigonometry *trigo);
-		CollisionCircle(const Vector2D &center, double radius, Trigonometry *trigo);
 
 		~CollisionCircle();
 
@@ -30,6 +27,7 @@ namespace Collisions {
 
 		bool     intersectsSensor(const Vector2D &sensor) const;
 		vector<Vector2D> getCorners() const;
+		Vector2D* getClosestCorner(const Vector2D &point) const;
 		Vector2D getClosestPoint (const Vector2D  &point) const;
 		bool collidesWith(const CollisionShape &shape) const;
 	};

@@ -15,6 +15,10 @@
 
 namespace Behaviors
 {
+
+	/**
+	 * Allows objects to have a direction
+	 */
     class Directable : public Placeable {
     private:
         Vector2D _direction;
@@ -23,17 +27,58 @@ namespace Behaviors
         Vector2D direction;
         
     public:
+		/**
+		 * Constructor
+		 */
         Directable();
+
+		/**
+		* Constructor
+		* @param x X Direction
+		* @param y Y Direction
+		*/
         Directable(double x, double y);
+
+		/**
+		* Constructor
+		* @param v Direction Vector
+		*/
         Directable(const Vector2D &v);
         
+		/**
+		* Destructor
+		*/
         virtual ~Directable();
         
+		/**
+		* Get Direction
+		* @returns Direction Vector
+		*/
         Vector2D getDirection() const;
+
+		/**
+		* Set Direction
+		* @param dx X Direction
+		* @param dy Y Direction
+		*/
         void setDirection(double dx, double dy);
-        void setDirection(const Vector2D &v);
+        
+		/**
+		* Set Direction
+		* @param v Diretion Vector
+		*/
+		void setDirection(const Vector2D &v);
+
+		/**
+		* Add to current Direction
+		* @param v Diretion Vector to Add
+		*/
         void addDirection(const Vector2D &v);
         
+		/**
+		* Update Location using direction
+		* @param interval time interval
+		*/
         void updateLocation(double interval);
     };
 }

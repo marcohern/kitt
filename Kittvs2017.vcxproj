@@ -285,6 +285,7 @@
   <ItemGroup>
     <Text Include="content\file.txt" />
     <Text Include="content\sprites\bill_rizer_big.sprite.json" />
+    <Text Include="Design.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="content\sprites\bill_rizer.png" />

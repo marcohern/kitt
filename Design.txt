@@ -1,0 +1,27 @@
+
+
+ Placeable     Angleable        Scalable
+    ^              ^               ^
+   / \            / \             / \
+    |              |               |
+    |              |               |
+Directable    Rotateable        Areable
+    ^              ^               ^
+   / \            / \             / \
+    |              |               |
+    \              |               /
+	  -------------+--------------
+	               |
+				   |
+	         Transformable
+			       ^
+				  / \
+			       |
+				   |
+			   Renderable
+			       ^
+				  / \
+			       |
+				   |
+as
+

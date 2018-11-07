@@ -562,6 +562,7 @@
     <Text Include="content\sprites\bill_rizer_big.sprite.json">
       <Filter>content</Filter>
     </Text>
+    <Text Include="Design.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="content\sprites\bullets.png">

@@ -226,9 +226,6 @@
     <ClCompile Include="kitt\Behaviors\Transformable.cpp">
       <Filter>src\Behaviors</Filter>
     </ClCompile>
-    <ClCompile Include="kitt\Graphics\Vector2DRenderable.cpp">
-      <Filter>src\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="kitt\Tests\TransformableTest.cpp">
       <Filter>src\Tests</Filter>
     </ClCompile>
@@ -475,9 +472,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Graphics\Tintable.hpp">
-      <Filter>src\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="kitt\Graphics\Vector2DRenderable.hpp">
       <Filter>src\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="kitt\Tests\TransformableTest.hpp">

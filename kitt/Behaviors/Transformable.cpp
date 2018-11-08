@@ -6,55 +6,55 @@ namespace Behaviors {
 
 	Transformable::Transformable()
 		: Directable(), Growable(), Rotateable(), Areable()
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
 	Transformable::Transformable(double x, double y)
 		: Directable(x,y), Growable(), Rotateable(), Areable()
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
 	Transformable::Transformable(const Vector2D &location)
 		: Directable(location), Growable(), Rotateable(), Areable()
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
 	Transformable::Transformable(double x, double y, double w, double h) 
 		: Directable(x,y), Growable(), Rotateable(), Areable(w,h)
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
 	Transformable::Transformable(const Vector2D &location, const Vector2D &area) 
 		: Directable(location), Growable(), Rotateable(), Areable(area)
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
 	Transformable::Transformable(double x, double y, double w, double h, double px, double py)
 		: Directable(x,y), Growable(), Rotateable(), Areable(w,h, px, py)
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
 	Transformable::Transformable(const Vector2D &location, const Vector2D &area, const Vector2D &areaPivot)
 		: Directable(location), Growable(), Rotateable(), Areable(area, areaPivot) 
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
 	Transformable::Transformable(double x, double y, double w, double h, double px, double py, double rx, double ry)
 		: Directable(x, y), Growable(), Rotateable(rx, ry), Areable(w, h, px, py)
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
 	Transformable::Transformable(const Vector2D &location, const Vector2D &area, const Vector2D &areaPivot, const Vector2D &rotationPivot)
 		: Directable(location), Growable(), Rotateable(rotationPivot), Areable(area, areaPivot)
-		, rotateDirection(false), growArea(false)
+		, rotateClockwise(false), growArea(false)
 	{
 	}
 
@@ -66,8 +66,8 @@ namespace Behaviors {
 		Areable::~Areable();
 	}
 
-	void Transformable::setRotateDirection(bool rotateDirection) {
-		this->rotateDirection = rotateDirection;
+	void Transformable::setRotateDirection(bool rotateClockwise) {
+		this->rotateClockwise = rotateClockwise;
 	}
 
 	void Transformable::setGrowArea(bool growAarea) {
@@ -78,7 +78,7 @@ namespace Behaviors {
 		updateLocation(interval);
 		updateScale(interval);
 		updateAngle(interval);
-		if (rotateDirection) {
+		if (rotateClockwise) {
 			direction.rotate(rotationRate * interval);
 		}
 		if (growArea) {
@@ -86,8 +86,8 @@ namespace Behaviors {
 		}
 	}
 
-	bool Transformable::isDirectionRotating() {
-		return rotateDirection;
+	bool Transformable::isRotatingClockwise() {
+		return rotateClockwise;
 	}
 
 	bool Transformable::isAreaGrowing() {

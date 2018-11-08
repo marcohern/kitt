@@ -87,10 +87,10 @@ namespace Content {
 			int h = s["h"].get<int>();
 			int px = (s["px"].empty()) ? 0 : s["px"].get<int>();
 			int py = (s["py"].empty()) ? 0 : s["py"].get<int>();
-
 			Sprite *sprite = sheet->addSprite(id, x, y, w, h, px, py);
-			for (auto c : s["colliders"]) {
-				string colliderId = c["id"].get<string>();
+			string colliderId = (s["collider"].empty()) ? "" : s["collider"].get<string>();
+
+			if (!colliderId.empty()) {
 				vector<CollisionShape *> colliders = sheet->getColliders(colliderId);
 				for (auto cc : colliders) sprite->addCollider(cc);
 			}

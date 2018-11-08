@@ -90,7 +90,7 @@ namespace Content {
 
 			Sprite *sprite = sheet->addSprite(id, x, y, w, h, px, py);
 			for (auto c : s["colliders"]) {
-				string colliderId = c.get<string>();
+				string colliderId = c["id"].get<string>();
 				vector<CollisionShape *> colliders = sheet->getColliders(colliderId);
 				for (auto cc : colliders) sprite->addCollider(cc);
 			}

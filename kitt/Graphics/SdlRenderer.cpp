@@ -10,6 +10,28 @@ namespace Graphics
 {
 	using namespace Core;
 
+	void SdlRenderer::renderColliders(Animation *animation, const Vector2D &position, const Vector2D &pivot) {
+		SDL_Rect dst;
+		Sprite *sprite= animation->getCurrentSprite();
+		vector<CollisionShape *> shapes = sprite->getColliders();
+		SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0xFF, 0x77);
+		SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+		for (auto shape : shapes) {
+			if (shape->getType() == CollisionShapeType::COLLSHAPE_RECT)
+			{
+				auto corners = shape->getCorners();
+				Vector2D tl = corners[0];
+				Vector2D br = corners[3];
+				dst.x = position.getX() - sprite->getPX() - pivot.getX() + tl.getX();
+				dst.y = position.getY() - sprite->getPY() - pivot.getY() + tl.getY();
+				dst.w = br.getX() - tl.getX();
+				dst.h = br.getY() - tl.getY();
+
+				SDL_RenderFillRect(renderer, &dst);
+			}
+		}
+	}
+
 	SdlRenderer::SdlRenderer(SDL_Window *window) 
 		: tip1(), tip2()
 	{
@@ -95,7 +117,6 @@ namespace Graphics
 		, const Color &tint, int blendAdd, double angle, RendererFlip flip) {
 		Sprite *sprite = animation->getCurrentSprite();
 		SdlTexture *tx = (SdlTexture *)sprite->getTexture();
-		vector<CollisionShape *> shapes = sprite->getColliders();
 		SDL_Rect src, dst;
 		SDL_Point pnt;
 
@@ -127,26 +148,7 @@ namespace Graphics
 			SDL_SetTextureBlendMode(tx->getSdlTexture(), SDL_BLENDMODE_BLEND);
 		}
 
-		SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0xFF, 0x77);
-		SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
-		for (auto shape : shapes) {
-			if (shape->getType() == CollisionShapeType::COLLSHAPE_RECT)
-			{
-				auto corners = shape->getCorners();
-				Vector2D tl = corners[0];
-				Vector2D br = corners[3];
-				dst.x = position.getX() - sprite->getPX() - pivot.getX() + tl.getX();
-				dst.y = position.getY() - sprite->getPY() - pivot.getY() + tl.getY();
-				dst.w = br.getX() - tl.getX();
-				dst.h = br.getY() - tl.getY();
-
-				SDL_RenderFillRect(renderer, &dst);
-			}
-			else if (shape->getType() == CollisionShapeType::COLLSHAPE_CIRCLE) {
-				Vector2D center = shape->getCenter();
-				SDL_RenderFillC
-			}
-		}
+		this->renderColliders(animation, position, pivot);
 
 		SDL_SetTextureAlphaMod(tx->getSdlTexture(), 0xFF);
 		SDL_SetTextureColorMod(tx->getSdlTexture(), 0xFF, 0xFF, 0xFF);

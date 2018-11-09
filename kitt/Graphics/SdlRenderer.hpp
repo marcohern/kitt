@@ -22,6 +22,8 @@ namespace Graphics {
 		SDL_Texture *screen;
 
 		Vector2D tip1, tip2;
+
+		void renderColliders(Animation *animation, const Vector2D &position, const Vector2D &pivot);
 	public:
 		SdlRenderer(SDL_Window *window);
 		virtual ~SdlRenderer();
